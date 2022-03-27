@@ -1,3 +1,99 @@
+based on: https://pastebin.com/2qDrUheP
+
+cpk000:
+  - effect:
+    - model:
+      - ef0308 - stone debris
+      - ef0315 - sand foot step
+      - ef0702 - (machine) gun
+      - ef0700 - machine things (shields)
+      - ef0506 - broken flyer
+      - ... machine debris
+      - ef0316 - two sand foot steps
+
+cpk005:
+  - ba: (factory things and more)
+    - ba0000 - elevator door
+    - ba010c - container conveyer belt
+    - ba010d - containers angled
+    - ba0100 - intro dropped path
+    - ba0105 - elevator inside
+    - ba0106 - dropped container with opening door
+    - ba0107 - fan/ventilator blades
+    - ba0108 - container moving machine in factory (in tall circular room)
+    - ba0110 - flyer caring small container
+    - ba0111 - 2 flyers caring big container
+    - ba0120 - sliding ladder
+    - ba0121 - crane arm
+    - ba0130 - control panel
+    - ba0200 - factory elevator (tall)
+    - ba0202 - elevator door
+    - ba0203 - elevator door
+    - ba0300 - vertical path
+    - ba0410 - small stubby
+    - ba1100 - access point/transporter/snack machine
+    - ba2014 - red/golden chest small
+    - ba2015 - red/golden chest big
+    - ba2016 - red/golden chest for 9S
+    - ba4210 - maybe wall that 2b crashes through in factory in intro
+    - ba5100 - ?
+    - ba5101 - ?
+  - bg:
+    - bg0007 - ladder
+    - bg0008 - ladder
+    - bg008b - factory outside stuff
+    - bg008c - factory outside stuff
+    - bg008e - container
+    - bg20a0 - movable/pushable box
+    - bg20b0 - metal shutter
+    - bg20b0 - raised metal shutter
+    - bg0055 - tree
+    - bg0081 - intro boss battle bridge section
+    - bg0082 - intro boss battle bridge section
+    - bg0084 - rusty metal props
+    - bg0086 - rusty metal prop
+    - bg0100 - pipe machinery
+    - bg0103 - Engels hidden/concealed in intro
+    - bg0110 - light
+    - bg0111 - light
+    - bg0200 - Marx buzz saw boss wheel with rocks
+    - bg422a - before factory buildings in water
+    - bg422b - before factory buildings in water
+    - bg422c - before factory buildings in water
+    - bg422d - before factory sunk buildings
+    - bg422e - before factory (sunk) buildings in water
+    - bg422f - before factory (sunk) buildings in water
+    - bg500a - grid pane
+    - bg0510 - super low poly/LOD factory from outside in water
+    - bg0805 - Virtuous Treaty (maybe stuck in ground)
+    - bg2003 - old rusty broken abandoned car
+    - bg2004 - old rusty broken abandoned car
+    - bg2004 - old rusty broken abandoned car
+    - bg2043 - tree
+    - bg2060 - old rusty broken abandoned car w/ trailer
+    - bg4003 - old rusty factory structure
+    - bg4210 - low lod factory entrance from intro
+    - bg4211 - factory air way/path segment when entering factory with flight unit
+    - bg4217 - factory air way/path segment when entering factory with flight unit
+    - bg4410 - long water strips
+    - bg5001 - ?
+    - bg5101 - ?
+    - bg5101 - ?
+    - bga002 - sand circle/disc
+    - bga101 - sand circle/disc
+    - bgd000 - grass (few spots)
+    - bgd00b - tree
+    - bgd001 - grass (a few more spots)
+    - bgd002 - tall grass
+    - bgd004 - bush
+    - bgd005 - small rocks/stones
+    - bgfe22 - rusty steel beams
+    - bgfe28 - rusty steel boxes
+    - ...
+  - bh
+    - bh0100 - low poly small stubby
+
+
 cpk006:
   - em:
     - em0000 - small stubby
@@ -71,7 +167,7 @@ cpk006:
     - etf012 - coelacanth
     - etf013 - blowfish
     - etf014 - swordfish
-    - etf015 - mackerel
+    - etf015 - mackerel    
     - etf016 - horseshoe
     - etf017 - beetle fish
     - etf018 - starfish
@@ -130,18 +226,112 @@ cpk006:
     - wp3000 - pod 042
     - wp3001 - pod 153
     - wp3002 - pod base (i think)
-    - wp4000 - (?)
+    - wp4000 - spear (pod program)
     - wp4001 - (?) labeled as Wire
     - wp4010 - (?)
     - wp4020 - curtain when changing clothes (i think)
-    - wp4050 - (?)
+    - wp4030 - hammer (pod program)
     - wpe000 - (?)
     - (higher quality weapon textures compared to cpk016)
     - wpf000 - HD faith
     - wpf200 - HD iron will
     - wpf400 - HD pheonix lance
     - wpf600 - HD type-3 fists
-    
+
+cpk008:
+  - um:
+    - um0000 - 2B (blurry)
+    - um00a0 - eve (top) (blurry)
+    - um00b0 - 2B like model (top) (blurry)
+    - um00c0 - 9S (top) (blurry)
+    - um00d0 - machine girl in red dress (top) (blurry)
+    - um0010 - 9S (top) (blurry)
+    - um0020 - Commander (top) (blurry)
+    - um21a1 - Marx/buzz saw (blurry)
+    - ... more blurry characters
+    - ... and some blurry machines
+    - um8000 - World Map (in system menu)
+
+cpk009:
+  - UI stuff
+
+cpk010:
+  - model:
+    - broken machines & other debris
+  - it:
+    - it0040 - POD 042 broken
+    - it0041 - other POD broken
+
+cpk012:
+  - ?
+
+cpk013:
+  - textures for cpk014
+
+cpk014:
+  - actually a lot better documented [here](https://niermodding.com/res/automata/wd)
+  - wd1:
+    - gl10217 - Cube
+    - gl10218 - Desert (Oasis)
+    - gl10316 - Cube
+    - gl10317 - Cube
+    - gl10318 - Cube
+    - gl10318 - Desert (small stone ruins)
+    - gl10319 - Desert (long empty stretch)
+    - gl10415 - Desert (big empty)
+    - gl10416 - Desert (maybe adjacent to gl10318)
+    - gl10417 - Desert (small stone ruins with small staircase)
+    - gl10418 - Desert (more small stone ruins)
+    - gl10419 - Desert (entrance to Colosseum)
+    - gl10420 - Cube
+    - gl10514 - Desert (thin stretch)
+    - gl10515 - Desert (small spot)
+    - gl10516 - Desert (with some pipes)
+    - ...
+  - wd2:
+    - g20204 - Desert (Oasis) (low poly)
+    - g20304 - Desert (Emil heads) (low poly)
+    - g20404 - Desert (Canyon edge) (low poly)
+    - g20706 - Forest Kingdom (broken bridge, waterfall) (low poly)
+  - wd3:
+    - g31118 - Path between City Ruins and Desert
+
+cpk015:
+  - bg: (sorted by size DESC)
+    - bg2030 - city Ruins first building (you land on and later fight the Goliath)
+    - bg0400 - dead/broken sea monster/dark colossus/Grün
+    - bg4300 - inside the white tower; spiral, circular room
+    - bg1710 - lots of dead machine piles
+    - bg1100 - circular room (in factory probably)
+    - bg3030 - eve machine ball
+    - bg2031 - ? low LOD small river, grass, highway pillars
+    - bg3000 - desert housing complex building
+    - bg0003 - ground with grass (maybe when exiting the highway and going to factory?)
+    - bg1600 - many dead yorha members (maybe in copied city)
+    - bg0501 - flat City Ruins building with many low LOD sky scrapers (maybe where mortar canon is during missile resupply mission)
+    - bg0087 - tall factory tower with ladders and paths
+    - bg2020 - tree stump
+    - bg1421 - low LOD amusement park theater
+    - bg4440 - white tower segment
+    - bg4222 - 9S intro fight air ducts
+    - bg1720 - lots of dead machines big and small
+    - bg4220 - 9S intro air duct/pipe
+    - bgdf51 - big tree (forest)
+    - bgff51 - big tree (forest)
+    - bg0041 - big tree (forest)
+    - bg3001 - Desert ruins small structure
+    - bg0210 - broken So-Shi
+    - bg4243 - city ruins highway low LOD
+    - bg3003 - desert structure
+    - bg0040 - tree
+    - bgff50 - big tree (forest)
+    - bg3002 - desert structure (arch with stairs)
+    - bg4431 - city ruins flight path (when entering from orbit)
+    - bg003a - grass
+    - bg0038 - grass/leaf
+    - ... 1000+ more world props
+
+
 cpk016:
   - em:
     - em000a - immanuel (baby machine from forest kingdom)
@@ -342,7 +532,6 @@ cpk016:
     - emf000 - HD face (many bones)
     - emf001 - (?) same as above
     - emfffe - (?) couldn't open in blender
-  
   - et: (a bit hard to explain since i don't remember these from gameplay)
     - et000a - (?) empty
     - et001d - plug-in chip (i think)
@@ -401,7 +590,6 @@ cpk016:
     - ete005 - emil head
     - ete006 - alien head
     - ete008 - bows
-    
   - pl:
     - pl000e - dead yorha
     - pl0001 - 2b (armoured)
@@ -437,7 +625,6 @@ cpk016:
     - pl2060 - 4s (i think)
     - plf100 - HD face
     - plf200 - (?) same as above
-  
   - wp:
     - wp0013 - iron pipe
     - wp0020 - beastbane
@@ -496,12 +683,12 @@ cpk100:
     - bgb000 - rounded edge box
     - bgb001 - factory control panel
     - bgb002 - double doors
-    - bgb003 - medium biped (looking down)
+    - bgb003 - medium biped (looking down, powered off)
     - bgb004 - machine weapon accessories
     - bgb005 - box
     - bgb006 - hanging machine head
     - bgb007 - double doors (open)
-    - bgb100 - goliath flyer carrying engels head
+    - bgb100 - goliath flyer carrying engels
     - bgb103 - partial engels (area after exiting factory in beginning of game)
     - bgb500 - (?) one of the hacking regions
   - em:
