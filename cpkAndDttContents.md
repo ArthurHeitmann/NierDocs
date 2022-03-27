@@ -1,0 +1,547 @@
+cpk006:
+  - em:
+    - em0000 - small stubby
+    - em0010 - medium biped
+    - em0030 - small flyer
+    - em0070 - medium flyer connectors
+    - em0071 - flyer attachments
+    - em1000 - marx (engel arm/1st boss)
+    - em1080 - female dead yorha (songstress boss)
+    - em1081 - male dead yorha (songstress boss)
+    - em1100 - engels
+    - ema000 - brown boar
+    - ema001 - white boar
+    - ema010 - brown moose
+    - ema011 - white moose
+    - ema020 - bird
+  - et: 
+    - (hacking minigame)
+    - et0001 - (?)
+    - et001a - [> = charger
+    - et001b - <()> = defensive tower
+    - et001c - :o: = attacking core
+    - et0002 - (?)
+    - et002a - o = plain core
+    - et0006 - (?)
+    - et0007 - (?)
+    - et0008 - (?)
+    - et0009 - (?)
+    - et0010 - :> = player
+    - et0011 - :(): = attacking tower
+    - et0013 - [> = shield charger
+    - et0014 - () = plain tower
+    - et0015 - [] = cube
+    - et0016 - triangular flat gem
+    - et0017 - dodecahedron
+    - et0018 - tetrahedron
+    - et0019 - small cube
+    - et0026 - > = missile
+    - (machine parts?)
+    - et0100 - split lock washer
+    - et0101 - bolt
+    - et0102 - machine core
+    - et0103 - hex nut
+    - et0104 - hex washer screw
+    - et0105 - octo cap
+    - et0106 - small cube
+    - et0107 - chipset
+    - (intercom/bunker portraits?)
+    - et1000 - 9S portrait
+    - et1010 - 6O portrait
+    - et5000 - (?)
+    - (fishing)
+    - etf000 - arowana
+    - etf001 - twinfish
+    - etf01a - shark
+    - etf002 - killifish
+    - etf02a - machine mackerel
+    - etf02b - machine horseshoe
+    - etf02c - machine arowana
+    - etf02d - machine shark
+    - etf02e - machine ray
+    - etf003 - carp
+    - etf004 - bloat fish
+    - etf005 - koi carp
+    - etf006 - fur carp
+    - etf007 - ray
+    - etf008 - arapaima
+    - etf009 - oil sardine
+    - etf010 - water flea
+    - etf011 - twoface
+    - etf012 - coelacanth
+    - etf013 - blowfish
+    - etf014 - swordfish
+    - etf015 - mackerel
+    - etf016 - horseshoe
+    - etf017 - beetle fish
+    - etf018 - starfish
+    - etf019 - bream
+    - etf020 - machine arowana
+    - etf021 - machine koi carp
+    - etf022 - machine arapaima
+    - etf023 - machine carp
+    - etf024 - machine bloat fish
+    - etf025 - machine blowfish
+    - etf026 - machine swordfish
+    - etf027 - machine starfish
+    - etf028 - machine bream
+    - etf029 - machine coelacanth
+    - etf030 - machine head
+    - etf031 - tire
+    - etf032 - gas cylinder
+    - etf033 - battery
+    - etf034 - firearm
+    - etf040 - pod b	(same as pod 042)
+    - etf041 - pod c	(same as pod 153)
+    - etf042 - pipe
+    - etf100 - fishing chair
+    - etf101 - fishing hook
+  - pl:
+    - (player models, might be for cinematics)
+    - pl0000 - 2B
+    - pl0010 - flight unit
+    - pl0200 - 9S
+    - pl0400 - yorha armour
+    - plf000 - high detail face
+  - wp:
+    - (weapons, might be for cinematics)
+    - wp0003 - faith
+    - wp0050 - type-4O sword
+    - wp0070 - virtuous contract
+    - wp0071 - cruel oath
+    - wp0072 - small sword base (i think)
+    - wp0080 - yorha-issue blade
+    - wp0222 - large sword base (i think)
+    - wp0240 - type-4O blade
+    - wp0260 - virtuous treaty
+    - wp0261 - cruel blood oath
+    - wp0432 - spear base (i think)
+    - wp0450 - type-4O lance
+    - wp0602 - combat bracers base (i think)
+    - wp0610 - type-4O fists
+    - wp0800 - engels broken arm (maybe from first chapter's flight unit fight)
+    - wp0810 - (?) (im guessing its related to the scene above)
+    - wp1000 - small machine gun
+    - wp1010 - small machine shield
+    - wp1050 - large machine shield
+    - wp1070 - factory machines torch
+    - wp1500 - missile
+    - wp1800 - extended neck on EMP machines
+    - wp3000 - pod 042
+    - wp3001 - pod 153
+    - wp3002 - pod base (i think)
+    - wp4000 - (?)
+    - wp4001 - (?) labeled as Wire
+    - wp4010 - (?)
+    - wp4020 - curtain when changing clothes (i think)
+    - wp4050 - (?)
+    - wpe000 - (?)
+    - (higher quality weapon textures compared to cpk016)
+    - wpf000 - HD faith
+    - wpf200 - HD iron will
+    - wpf400 - HD pheonix lance
+    - wpf600 - HD type-3 fists
+    
+cpk016:
+  - em:
+    - em000a - immanuel (baby machine from forest kingdom)
+    - em000b - village small stubby
+    - em000d - bomb-carrying-factory small stubby
+    - em001b - village medium biped
+    - em001c - medium exploder
+    - em0002 - desert small stubby
+    - em0003 - amusement small stubby
+    - em003b - village small flyer
+    - em0004 - forest small stubby
+    - em004b - village goliath biped
+    - em0005 - factory small stubby
+    - em005b - village small biped
+    - em005c - small exploder
+    - em005d - bomb-carrying-factory small biped
+    - em005e - rampaging small biped
+    - em0006 - enhanced small stubby
+    - em0007 - rampaging small stubby
+    - em007a - enhanced medium flyer
+    - em007b - enhanced flyer attachments
+    - em010b - village multi-tier
+    - em010d - multi-tier legs
+    - em011a - marx feet (first boss)
+    - em011b - (same as above to my knowledge)
+    - em011e - tank top and medium flyer bases
+    - em0012 - desert medium biped
+    - em012e - goliath flyer
+    - em0013 - amusement medium biped
+    - em0014 - forest medium biped
+    - em0015 - factory medium biped
+    - em0016 - enhanced medium biped
+    - em0017 - rampaging medium biped
+    - em0019 - medium biped (higher quality than cpk06's)
+    - em0020 - multi-leg medium model
+    - em0026 - enhanced multi-leg medium model
+    - em0032 - desert small flyer
+    - em0033 - amusement small flyer
+    - em0034 - forest small flyer
+    - em0035 - factory small flyer
+    - em0036 - enhanced small flyer
+    - em0040 - EMP goliath biped (maybe)
+    - em0042 - desert goliath biped
+    - em0044 - forest goliath biped
+    - em0046 - enhanced goliath biped
+    - em0047 - (?) looks like a special EMP goliath biped
+    - em0050 - small biped
+    - em0052 - desert small biped
+    - em0053 - amusement small biped
+    - em0054 - forest small biped
+    - em0055 - factory small biped
+    - em0056 - enhanced small biped
+    - em0057 - rampaging small biped
+    - em0060 - medium quadruped
+    - em0061 - standing medium quadruped
+    - em0064 - forest medium quadruped
+    - em0065 - factory medium quadruped
+    - em0066 - enhanced medium quadruped
+    - em0067 - standing medium quadruped
+    - em0068 - standing factory medium quadruped
+    - em0069 - standing enhanced medium quadruped
+    - em0072 - desert medium flyer connectors
+    - em0073 - desert flyer attachments
+    - em0074 - amusement medium flyer connectors
+    - em0075 - amusement flyer attachments
+    - em0080 - reverse-joint goliath
+    - em0086 - enhanced reverse-joint goliath
+    - em0090 - legpower goliath biped
+    - em0092 - (?) looks like a special version of above
+    - em0094 - forest legpower goliath biped
+    - em0096 - enhanced legpower goliath biped
+    - em0100 - multi-tier
+    - em0106 - enhanced multi-tier
+    - em0110 - goliath tank
+    - em0111 - amusement goliath tank
+    - em0115 - goliath tank gunner
+    - em0116 - amusement goliath tank gunner
+    - em0120 - goliath flyer
+    - em200b - village small sphere
+    - em1010 - emil
+    - em1020 - 2B
+    - em1030 - A2 (with long hair)
+    - em1031 - A2's short hair
+    - em1040 - 9S
+    - em1050 - standard yorha (different hairstyles and decorations)
+    - em1060 - armoured yorha (with helmet)
+    - em1061 - armoured yorha (no helmet, different hairstyles and decos)
+    - em1070 - operator yorha (no hair)
+    - em1071 - (?) same as above
+    - em1072 - (?) same as above
+    - em1073 - (?) same as above
+    - em1074 - armoured operator yorha (might be 21O)
+    - em1075 - armoured operator yorha hair (might be 21O)
+    - em1090 - flight unit
+    - em1101 - engels
+    - em1102 - (?) couldn't open using blender
+    - em2000 - small flyer (with attachments)
+    - em2001 - (?) same as above
+    - em2002 - linked-sphere chain (with attachments)
+    - em2003 - linked-sphere head
+    - em2004 - 10 small gunner flyers (might be auguste's arms)
+    - em2006 - enhanced small flyer (with attachments)
+    - em2007 - enhanced linked-sphere chain (with attachments)
+    - em2008 - linked-sphere head
+    - em2100 - auguste
+    - em2101 - auguste's arm heads
+    - em3000 - beauvoir (songstress)
+    - em3001 - dead yorha (on songstress head)
+    - em3002 - songstress hair
+    - em3003 - songstress skirt + dead yorha
+    - em3004 - dead yorha post (with cosmetics)
+    - em3100 - dead yorha post (no cosmetics)
+    - em4000 - Grun upper-body (whale/water boss)
+    - em4010 - Grun head (high detail)
+    - em4100 - (?) a cubed person, might be from copied city
+    - em4110 - (?) a larger cubed person
+    - em4120 - (?) cube blob
+    - em4130 - a cube
+    - em5000 - eve
+    - em5002 - (?) same as above
+    - em5100 - adam (birth/naked)
+    - em5200 - eve (no pants/shirt)
+    - em5300 - metal-scrap arms (eve boss fight)
+    - em5301 - metal-scrap clump
+    - em5302 - metal-scrap
+    - em5400 - eve (enraged, dark skin)
+    - em5401 - eve (partially enraged)
+    - em5500 - eve (tendrils on back)
+    - em6000 - adam (clothed, glasses)
+    - em6010 - a cube
+    - em6011 - small cube
+    - em6012 - small cube
+    - em6200 - adam (no pants/shirt)
+    - em6300 - adam (no shirt)
+    - em7000 - red girl
+    - em7001 - (?) special version of above
+    - em8000 - so-shi
+    - em8001 - so-shi and boku-shi linked-sphere weapon
+    - em8002 - combined so-shi and boku-shi (i think)
+    - em8010 - ro-shi
+    - em8020 - ko-shi
+    - em8800 - (?) empty linked-sphere weapon maybe
+    - em8801 - boku-shi
+    - em8802 - emil clones (giant emil head boss)
+    - em9000 - (?) a machine head
+    - em9001 - machine clump (adam birth, i think)
+    - em9002 - machine clump (with bones)
+    - em9003 - (?) same as above
+    - em9010 - machine swarm (pre-eve boss fight)
+    - em9011 - metal shard swarm
+    - ema002 - boar (animal-loving machine)
+    - ema021 - (?)
+    - emb000 - courageous brother (hateful sister, gold small stubby)
+    - emb001 - amusement park rabbit
+    - emb002 - father servo (white belt)
+    - emb004 - gunman stubby
+    - emb005 - machine with makeup
+    - emb05a - rampaging amusement small biped
+    - emb006 - weird machine
+    - emb007 - child machine
+    - emb07a - (?) marx legs/feet
+    - emb010 - father servo (red belt)
+    - emb011 - father machine
+    - emb11b - (?) marx legs/feet
+    - emb012 - gunman medium biped
+    - emb014 - gravekeeper
+    - emb015 - rampaging amusement medium biped
+    - emb030 - (?)
+    - emb031 - gunman flyer
+    - emb032 - machine with a dream
+    - emb033 - high-speed machine
+    - emb040 - gold goliath biped
+    - emb041 - father servo (white-red belt)
+    - emb042 - dying goliath biped
+    - emb043 - (?)
+    - emb050 - animal-loving machine
+    - emb051 - father servo (brown belt)
+    - emb052 - zombie clown
+    - emb053 - machine in love
+    - emb054 - masamune
+    - emb055 - mother machine
+    - emb056 - blood-drenched machine
+    - emb057 - scientist machine
+    - emb058 - romeo
+    - emb059 - juliet
+    - emb060 - animal machine
+    - emb061 - father servo (black belt)
+    - emb070 - goliath tank
+    - emb075 - goliath tank (gunner)
+    - emb080 - monster type
+    - emb090 - armoured yorha (no helmet, different hairstyles)
+    - emb110 - desert goliath tank
+    - emb111 - (?) same as emb070
+    - emb115 - desert goliath tank (gunner)
+    - emb116 - (?) same as emb075
+    - eme000 - beauvoir (songstress, open bottom)
+    - eme010 - jean paul (sartre)
+    - emf000 - HD face (many bones)
+    - emf001 - (?) same as above
+    - emfffe - (?) couldn't open in blender
+  
+  - et: (a bit hard to explain since i don't remember these from gameplay)
+    - et000a - (?) empty
+    - et001d - plug-in chip (i think)
+    - (hacking minigame)
+    - et001f - missile (not trail)
+    - et002b - rectangular box (obstacle blocks)
+    - et002c - taller rectangular box
+    - et002d - raised rectangular box
+    - et002e - (?)
+    - et0003 - (?)
+    - et0004 - (?)
+    - et0005 - (?)
+    - et0012 - (?)
+    - et0020 - missile with trail
+    - et0021 - (?) a sphere in a container (diamond with cut top/bottom) 
+    - et0022 - (?) a sphere in a container (torus with pyramids outside)
+    - et0023 - (?) oval cylinder with spheres in long ends
+    - et0024 - (?) sphere with panels on side
+    - et0025 - (?) a triangle with a sphere in middle
+    - et0027 - a small sphere
+    - et0028 - a cube with beveled edges
+    - et0029 - (?) empty
+    - et0110 - machine core
+    - et400a - small stubby (low poly)
+    - et400b - songstress (low poly)
+    - et400c - engels (low poly)
+    - et400d - grun (low poly)
+    - et400e - adam (low poly)
+    - et400f - eve (low poly)
+    - et2000 - one of the spindles of The Tower
+    - et2010 - balloon
+    - et2020 - flag
+    - et2021 - sister machines' bows
+    - et2022 - checkered flag
+    - et2030 - exploder body
+    - et3000 - a cup
+    - et4000 - 2b statue
+    - et4001 - a2 pose
+    - et4002 - yorha (standard armament)
+    - et4003 - yorha (heavy armament)
+    - et4004 - goliath flyer
+    - et4005 - so-shi/ko-shi
+    - et4006 - hegel
+    - et4007 - machine clump
+    - et4008 - machine swarm (positioned)
+    - et4009 - auguste (positioned)
+    - et4010 - emil (speaker phone)
+    - et4011 - emil head
+    - et4012 - immanuel (baby machine)
+    - et4013 - kierkegaard
+    - et6000 - (?) empty
+    - ete000 - flowers
+    - ete001 - desert mask
+    - ete002 - glasses
+    - ete004 - emil mask
+    - ete005 - emil head
+    - ete006 - alien head
+    - ete008 - bows
+    
+  - pl:
+    - pl000e - dead yorha
+    - pl0001 - 2b (armoured)
+    - pl0013 - yorha flight unit
+    - pl020e - dead yorha (with bones)
+    - pl0100 - a2 (long hair)
+    - pl0101 - a2's short hair
+    - pl0203 - 9s
+    - pl0300 - yorha (various hairstyles and decos)
+    - pl0500 - devola
+    - pl0600 - popola
+    - pl1000 - pascal
+    - pl1001 - pascal (flying)
+    - pl1010 - emil
+    - pl1011 - emil head
+    - pl1020 - commander
+    - pl1030 - anemone
+    - pl1040 - devola (has different .dat files)
+    - pl1050 - popola (has different .dat files)
+    - pl1100 - engels' back (from initial black box scene)
+    - pl2000 - yorha (various hairstyles and decos)
+    - pl2010 - yorha (armoured)
+    - pl2020 - operator base
+    - pl2021 - operator 21O hair
+    - pl2022 - operator 6O hair
+    - pl2023 - adam hair
+    - pl2024 - (?)
+    - pl2030 - jackass
+    - pl2031 - strange resistance woman
+    - pl2040 - resistance androids (various hairstyles and decos)
+    - pl2042 - (?) same as above
+    - pl2050 - more resistance androids
+    - pl2060 - 4s (i think)
+    - plf100 - HD face
+    - plf200 - (?) same as above
+  
+  - wp:
+    - wp0013 - iron pipe
+    - wp0020 - beastbane
+    - wp0030 - ancient overlord
+    - wp0040 - pheonix dagger
+    - wp0060 - type-3 sword
+    - wp0075 - engine blade
+    - wp0076 - cypress stick
+    - wp0081 - sword sheath
+    - wp0090 - machine sword
+    - wp0203 - iron will
+    - wp0213 - fang of the twins
+    - wp0220 - beastlord
+    - wp0230 - pheonix sword
+    - wp0250 - type-3 blade
+    - wp0270 - machine axe
+    - wp0400 - pheonix lance
+    - wp0420 - beastcurse
+    - wp0430 - dragoon lance
+    - wp0440 - spear of the usurper
+    - wp0460 - type-3 lance
+    - wp0470 - virtuous dignity
+    - wp0471 - cruel arrogance
+    - wp0480 - machine spear
+    - wp0600 - type-3 fists
+    - wp0620 - virtuous grief
+    - wp0621 - cruel lament
+    - wp0630 - demon's cty
+    - wp0640 - angel's folly
+    - wp0650 - machine heads
+    - wp0655 - emil heads
+    - wp0900 - commander's baton
+    - wp1020 - machine spear (used by enemies)
+    - wp1021 - (?) same as above
+    - wp1030 - machine sword (used by enemies)
+    - wp1031 - (?) same as above
+    - wp1040 - machine axe
+    - wp1041 - (?) same as above
+    - wp1060 - machine saw weapon
+    - wp1071 - torch (factory weapon)
+    - wp1501 - missile (small)
+    - wp1600 - (?)
+    - wp1601 - (?)
+    - wp1602 - (?)
+    - wp1700 - grun's emp weapon
+    - wp3020 - (?)
+    - wp5000 - missile (large, flooded city)
+    
+cpk100:
+  - ba:
+    - bab000 - contains all machine weapons and some extra textures
+    - bab001 - contains various world objects (gas tanks, barrels)
+    - bab200 - elevator
+    - bab202 - elevator doors
+  - bg:
+    - bgb000 - rounded edge box
+    - bgb001 - factory control panel
+    - bgb002 - double doors
+    - bgb003 - medium biped (looking down)
+    - bgb004 - machine weapon accessories
+    - bgb005 - box
+    - bgb006 - hanging machine head
+    - bgb007 - double doors (open)
+    - bgb100 - goliath flyer carrying engels head
+    - bgb103 - partial engels (area after exiting factory in beginning of game)
+    - bgb500 - (?) one of the hacking regions
+  - em:
+    - em000e - bomb-carrying small stubby
+    - em001d - rampaging medium biped
+    - em002d - multi-leg medium model (with weapons)
+    - em004d - goliath biped
+    - em005a - bomb-carrying small biped
+    - em011c - marx's feet
+    - em0112 - goliath tank
+    - em0117 - goliath tank gunner
+    - em200d - small flyer (with weapons)
+    - em560d - yosuke matsuda
+    - em3010 - songstress (open skirt)
+    - em3011 - dead yorha on songstress' head
+    - em3012 - songstress hair
+    - em3013 - songstress skirt
+    - em3014 - dead yorha post (with cosmetics)
+    - em5600 - eve
+    - em6400 - adam
+    - em8030 - so-shi/ko-shi
+    - em8040 - (?) same as above
+    - emb05d - masamune
+    - emb016 - forest mediump biped
+    - emb017 - medium biped
+  - et:
+    - ete00a - desert mask
+    - ete00b - yosuke matsuda head
+    - ete00c - kenichi sato head
+    - ete009 - cruel lament mask
+  - pl:
+    - pl000d - 2b (with dlc clothes)
+    - pl010d - a2 (long hair, with dlc clothes)
+    - pl010e - a2's short hair
+    - pl020d - 9s (with dlc clothes)
+    - plf00d - face (many bones)
+    - plf10d - face (many bones)
+    - plf20d - face (many bones)
+  - wd5:
+    - g5a800:colosseum (underground)
+    - g5a900:colosseum (flooded city)
+    - g5aa00:colosseum (desert)
+    - g5ac00:factory (underground part)
