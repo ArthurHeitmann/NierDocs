@@ -5,11 +5,16 @@ cpk000:
     - model:
       - ef0308 - stone debris
       - ef0315 - sand foot step
+      - ef0316 - two sand foot steps
       - ef0702 - (machine) gun
       - ef0700 - machine things (shields)
       - ef0506 - broken flyer
       - ... machine debris
-      - ef0316 - two sand foot steps
+  - it:
+    - it0020 - android
+
+cpk003:
+  - textures for cpk004
 
 cpk005:
   - ba: (factory things and more)
@@ -89,7 +94,6 @@ cpk005:
     - bgd005 - small rocks/stones
     - bgfe22 - rusty steel beams
     - bgfe28 - rusty steel boxes
-    - ...
   - bh
     - bh0100 - low poly small stubby
 
@@ -249,7 +253,7 @@ cpk008:
     - um0020 - Commander (top) (blurry)
     - um21a1 - Marx/buzz saw (blurry)
     - ... more blurry characters
-    - ... and some blurry machines
+    - ... and some machines
     - um8000 - World Map (in system menu)
 
 cpk009:
@@ -257,7 +261,7 @@ cpk009:
 
 cpk010:
   - model:
-    - broken machines & other debris
+    - lot's of broken/destroyed things 
   - it:
     - it0040 - POD 042 broken
     - it0041 - other POD broken
@@ -297,39 +301,7 @@ cpk014:
     - g31118 - Path between City Ruins and Desert
 
 cpk015:
-  - bg: (sorted by size DESC)
-    - bg2030 - city Ruins first building (you land on and later fight the Goliath)
-    - bg0400 - dead/broken sea monster/dark colossus/Grün
-    - bg4300 - inside the white tower; spiral, circular room
-    - bg1710 - lots of dead machine piles
-    - bg1100 - circular room (in factory probably)
-    - bg3030 - eve machine ball
-    - bg2031 - ? low LOD small river, grass, highway pillars
-    - bg3000 - desert housing complex building
-    - bg0003 - ground with grass (maybe when exiting the highway and going to factory?)
-    - bg1600 - many dead yorha members (maybe in copied city)
-    - bg0501 - flat City Ruins building with many low LOD sky scrapers (maybe where mortar canon is during missile resupply mission)
-    - bg0087 - tall factory tower with ladders and paths
-    - bg2020 - tree stump
-    - bg1421 - low LOD amusement park theater
-    - bg4440 - white tower segment
-    - bg4222 - 9S intro fight air ducts
-    - bg1720 - lots of dead machines big and small
-    - bg4220 - 9S intro air duct/pipe
-    - bgdf51 - big tree (forest)
-    - bgff51 - big tree (forest)
-    - bg0041 - big tree (forest)
-    - bg3001 - Desert ruins small structure
-    - bg0210 - broken So-Shi
-    - bg4243 - city ruins highway low LOD
-    - bg3003 - desert structure
-    - bg0040 - tree
-    - bgff50 - big tree (forest)
-    - bg3002 - desert structure (arch with stairs)
-    - bg4431 - city ruins flight path (when entering from orbit)
-    - bg003a - grass
-    - bg0038 - grass/leaf
-    - ... 1000+ more world props
+  - [Partial documentation](./cpk015DttContents.md)
 
 
 cpk016:
@@ -732,3 +704,27 @@ cpk100:
     - g5a900:colosseum (flooded city)
     - g5aa00:colosseum (desert)
     - g5ac00:factory (underground part)
+
+cpk101:
+  - wp:
+    - wp3011 - Grimoire Weiss
+
+cpk102:
+  - et:
+    - ete003 - machine head
+
+cpk103:
+  - et:
+    - ete007 - valve (cosmetic for eyes & head)
+
+cpk105:
+  - wp:
+    - wp3012 - Cardboard Pod
+
+cpk107:
+  - wp:
+    - wp3014 - Retro Red Pod
+
+cpk108:
+  - wp:
+    - wp3017 - Retro Grey Pod
