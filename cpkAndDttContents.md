@@ -273,32 +273,9 @@ cpk013:
   - textures for cpk014
 
 cpk014:
-  - actually a lot better documented [here](https://niermodding.com/res/automata/wd)
-  - wd1:
-    - gl10217 - Cube
-    - gl10218 - Desert (Oasis)
-    - gl10316 - Cube
-    - gl10317 - Cube
-    - gl10318 - Cube
-    - gl10318 - Desert (small stone ruins)
-    - gl10319 - Desert (long empty stretch)
-    - gl10415 - Desert (big empty)
-    - gl10416 - Desert (maybe adjacent to gl10318)
-    - gl10417 - Desert (small stone ruins with small staircase)
-    - gl10418 - Desert (more small stone ruins)
-    - gl10419 - Desert (entrance to Colosseum)
-    - gl10420 - Cube
-    - gl10514 - Desert (thin stretch)
-    - gl10515 - Desert (small spot)
-    - gl10516 - Desert (with some pipes)
-    - ...
-  - wd2:
-    - g20204 - Desert (Oasis) (low poly)
-    - g20304 - Desert (Emil heads) (low poly)
-    - g20404 - Desert (Canyon edge) (low poly)
-    - g20706 - Forest Kingdom (broken bridge, waterfall) (low poly)
-  - wd3:
-    - g31118 - Path between City Ruins and Desert
+  - [Desert Map](./mapMap/desertMap.md)
+  - [City Ruins, Forest, Amusement Park Map](./mapMap/city%2Cforest%2Cpark%20Map.md)
+  - Also documented [here](https://niermodding.com/res/automata/wd)
 
 cpk015:
   - [Partial documentation](./cpk015DttContents.md)
