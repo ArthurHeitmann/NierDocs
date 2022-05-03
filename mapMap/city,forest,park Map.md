@@ -1,3 +1,7 @@
+# Outdated
+
+See [here](./fullMap.md) instead.
+
 # City Ruins, Forest, Amusement Park Map
 
 ![map](./city%2Cforest%2Cpark%20Map.jpg)

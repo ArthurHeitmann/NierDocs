@@ -273,8 +273,8 @@ cpk013:
   - textures for cpk014
 
 cpk014:
+  - [Full Map](./mapMap/fullMap.md)
   - [Desert Map](./mapMap/desertMap.md)
-  - [City Ruins, Forest, Amusement Park Map](./mapMap/city%2Cforest%2Cpark%20Map.md)
   - Also documented [here](https://niermodding.com/res/automata/wd)
 
 cpk015:
