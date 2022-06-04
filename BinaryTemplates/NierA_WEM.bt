@@ -1,0 +1,240 @@
+/**
+ * Structs found in wem files from Nier:Automata
+ */
+
+
+// From vorbis_bitreader.h in vgmstream
+const uint32 MASK_TABLE[33] = {
+	0x00000000, 0x00000001, 0x00000003, 0x00000007, 0x0000000f, 0x0000001f, 0x0000003f, 0x0000007f, 0x000000ff,
+	0x000001ff, 0x000003ff, 0x000007ff, 0x00000fff, 0x00001fff, 0x00003fff, 0x00007fff, 0x0000ffff, 0x0001ffff,
+	0x0003ffff, 0x0007ffff, 0x000fffff, 0x001fffff, 0x003fffff, 0x007fffff, 0x00ffffff, 0x01ffffff, 0x03ffffff,
+	0x07ffffff, 0x0fffffff, 0x1fffffff, 0x3fffffff, 0x7fffffff, 0xffffffff
+};
+uint32 readNBits(uint32 nBits, uint32 offset, uint32 bitPos) {
+	local uint32 i;
+	local uint32 bytePos = bitPos / 8;
+	local uint32 bitShift = bitPos % 8;
+	local uint32 mask = MASK_TABLE[nBits];
+
+	local uint32 val = ReadUByte(bytePos + offset + 0) >> bitShift;;
+	if (nBits + bitShift > 8) {
+		val |= ReadUByte(bytePos + offset + 1) << (8 - bitShift);
+		if (nBits + bitShift > 16) {
+			val |= ReadUByte(bytePos + offset + 2) << (16 - bitShift);
+			if (nBits + bitShift > 24) {
+				val |= ReadUByte(bytePos + offset + 3) << (24 - bitShift);
+				if (nBits + bitShift > 32) {
+					val |= ReadUByte(bytePos + offset + 4) << (32 - bitShift);
+				}
+			}
+		}
+	}
+
+	return val & mask;
+}
+
+struct RiffHeader
+{
+	char chunkID[4];
+	uint32 chunkSize <format=hex>;
+	char format[4];
+};
+
+struct RiffChunk
+{
+	char chunkID[4];
+	uint32 chunkSize <format=hex>;
+	ubyte chunkData[chunkSize] <format=hex>;
+};
+
+struct FormatChunk
+{
+	char chunkID[4];
+	uint32 chunkSize <format=hex>;
+	uint16 audioFormat <format=hex>;
+	uint16 numChannels <format=decimal>;
+	uint32 sampleRate <format=decimal>;
+	uint32 avgBytesPerSec <format=decimal>;
+	uint16 blockAlign <format=hex>;
+	uint16 bitsPerSample <format=decimal>;
+	uint16 extraSize <format=hex>;
+	uint16 zeroMaybe;
+	local int extraOffset = FTell();
+	uint32 channelLayoutMask <comment="https://github.com/etodd/lasercrabs/blob/master/external/wwise/AK/SoundEngine/Common/AkSpeakerConfig.h">;
+	int32 numSamples;
+	ubyte extraUknown[0x10 - 4] <format=hex>;
+	uint32 setupPacketOffset <format=hex>;
+	uint32 firstAudioPacketOffset <format=hex>;
+	ubyte extraDataUknown[0x28 - 0x10 - 0x08 - 0x04] <format=hex>;
+	uint32 uidMaybe;		// fromm https://github.com/hcs64/ww2ogg/blob/master/src/wwriff.cpp#L419
+	ubyte blockSize0Exp <format=hex>;
+	ubyte blockSize1Exp <format=hex>;
+};
+
+struct AkdChunk
+{
+	char chunkID[4];
+	uint32 chunkSize <format=hex>;
+	float unknownFloat1;
+	float unknownFloat2;
+	uint32 unknownZero1;
+	uint32 unknownZero2;
+};
+
+// Stores a list of cue points or markers to points in the data
+// https://www.lim.di.unimi.it/IEEE/VROS/RIFF.HTM#:~:text=fields%20are%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20present.-,Cue%2DPoints%20Chunk,-The%20%3Ccue%2Dck
+
+struct CuePoint {
+	int32 dwName <comment="Unique cue point name">;
+	int32 dwPosition <comment="sample position">;
+	char fccChunk[4] <comment="chunk id with audio data">;
+	int32 dwChunkStart <comment="">;
+	int32 dwBlockStart <comment="">;
+	int32 dwSampleOffset <format=hex, comment="offset relative to block">;
+};
+
+struct CueChunk {
+	char chunkID[4];
+	int32 chunkSize <format=hex>;
+	local int pos = FTell();
+	int32 dwCuePoints;
+	CuePoint points[dwCuePoints];
+
+	// Unknown data at the end of the chunk
+	if( chunkSize > (FTell() - pos) )
+		uchar unknown[ chunkSize - (FTell() - pos) ];
+};
+
+struct AdtlMarker {
+	char type[4];
+	uint32 size <format=hex>;
+	uint32 associatedCueIdentifier;
+	char textLabel[size - 4];
+};
+
+/** Associate Data List */
+struct AdtlListChunk {
+	char chunkID[4];
+	uint32 chunkSize <format=hex>;
+	char chunkName[4];
+	
+	local int pos = FTell();
+	while (FTell() - pos < chunkSize - 4) {
+		AdtlMarker marker;
+	}
+};
+
+struct SetupPacket
+{
+	// Reference: vorbis_custom_utils_wwise.c from vgmstream library
+
+	uint16 size <format=hex>;
+	ubyte codebookCountLess1 <format=hex>;
+
+	struct {} placeholder0 <name="For more data, click show local variables">;
+
+	local uint32 offset <hidden=true> = FTell();
+	local uint32 bitPos <hidden=true> = 0;
+	// Codebooks
+	local uint16 codebookIds[codebookCountLess1 + 1] <format=hex>;
+	local uint32 i <hidden=true>;
+	for (i = 0; i < codebookCountLess1 + 1; i++) {
+		codebookIds[i] = readNBits(10, offset, bitPos);
+		bitPos += 10;
+	}
+
+	// Floors
+	local ubyte floorCountLess1 <format=hex> = readNBits(6, offset, bitPos);
+	bitPos += 6;
+	local struct {} placeholder0 <name="TODO floors, residues, mappings, modes">;
+	// local ubyte floorPartitions[floorCountLess1 + 1] <format=hex>;
+	// for (i = 0; i < floorCountLess1 + 1; i++) {
+	// 	floorPartitions[i] = readNBits(5, offset, bitPos);
+	// 	bitPos += 5;
+	// 	// TODO
+	// }
+
+	// TODO Residues
+
+	// TODO Mappings
+
+	// TODO Modes
+
+	ubyte data[size - 1 - 1] <format=hex>;
+	ubyte one;
+};
+
+struct WwisePacket
+{
+	uint16 size <format=hex>;
+	ubyte modeNumber : 1 <format=hex>;
+	ubyte dataRemainder : 7 <format=hex>;
+	ubyte data[size - 1] <format=hex>;
+};
+
+
+struct WwisePackets
+{
+	local int size = 0;
+	while (size < chunkSize - format.firstAudioPacketOffset) {
+		Assert(!FEof(), "Unexpected end of file! Data chunk larger than file!");
+		WwisePacket packet <comment="Warning: Data is not byte aligned! 1 Wwise Pck != 1 Vorbis Pck">;
+		size += packet.size + 2;
+	}
+	if (size != chunkSize - format.firstAudioPacketOffset)
+		Printf("Warning: WwisePackets size mismatch: %d != %d\n", size, chunkSize - format.firstAudioPacketOffset);
+};
+
+
+struct DataChunk
+{
+	char chunkID[4];
+	uint32 chunkSize <format=hex>;
+	if (exists(format)) {
+		ubyte unknownData[format.setupPacketOffset] <format=hex, bgcolor=0x738d9c>;
+		SetupPacket setupPacket <bgcolor=0x346a8a>;
+		Assert(format.firstAudioPacketOffset - format.setupPacketOffset == sizeof(setupPacket));
+		// ubyte audioPackets[chunkSize - format.firstAudioPacketOffset] <format=hex, bgcolor=0x158dcf>;
+		WwisePackets audioPackets <bgcolor=0x158dcf>;
+	}
+	else {
+		ubyte data[chunkSize] <format=hex>;
+	}
+};
+
+
+RiffHeader header <bgcolor=0xb03b17>;
+
+local char tag[5] <hidden=true>;
+local uint size <format=hex, hidden=true>;
+while(!FEof() && FileSize() - FTell() > 4)
+{
+	ReadBytes( tag, FTell(), 4 );
+	tag[4] = 0;
+
+	switch( tag )
+	{
+		case "fmt ":
+			FormatChunk format <bgcolor=0x5eb017>;
+			break;
+		case "JUNK":
+			RiffChunk junk <bgcolor=0x595959>;
+			break;
+		case "akd ":
+			AkdChunk akd <bgcolor=0x2b2b2b>;
+			break;
+		case "cue ":
+			CueChunk cue <bgcolor=0x8a4d66>;
+			break;
+		case "LIST":
+			AdtlListChunk adtl <bgcolor=0xb51b8f>;
+			break;
+		case "data":
+			DataChunk data <bgcolor=0x578299>;
+			break;
+		default:
+			ubyte zeroPad[FileSize() - FTell()] <bgcolor=0x595c29>;
+	}
+}
+if (!FEof())
+	ubyte zeroPad[FileSize() - FTell()] <bgcolor=0x595c29>;
