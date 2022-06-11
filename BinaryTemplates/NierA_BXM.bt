@@ -1,0 +1,88 @@
+BigEndian();
+
+struct Header {
+  char      id[4];
+  uint32    unknown;
+  int16     nodeNumber;
+  int16     dataNumber;
+  uint32    dataSize;
+} header;
+
+local uint32 infosOffset =   0x10;
+local uint32 dataOffOffset = 0x10 + 8*header.nodeNumber;
+local uint32 stringsOffset = 0x10 + 8*header.nodeNumber + header.dataNumber * 4;
+
+string dataOffToStr(const struct DataOffsets& off) {
+	if (exists(off.name) && exists(off.value)) {
+		return Str("DataOffset - %s: %s    ", off.name, off.value);
+	} else if (exists(off.name)) {
+		return Str("DataOffset - %s:    ", off.name);
+	} else if (exists(off.value)) {
+		return Str("DataOffset - :%s    ", off.value);
+	} else {
+		return Str("DataOffset -    ");
+	}
+	
+}
+
+struct DataOffsets {
+	int16 nameOffset;
+	int16 dataOffset;
+	local int pos = FTell();
+	if (nameOffset != -1) {
+		FSeek(stringsOffset + nameOffset);
+		string name;
+	}
+	if (dataOffset != -1) {
+		FSeek(stringsOffset + dataOffset);
+		string value;
+	}
+	FSeek(pos);
+};
+
+FSeek(dataOffOffset);
+struct {
+	local int i;
+	for (i = 0; i < header.dataNumber; i++) {
+		DataOffsets o <name=dataOffToStr(this)>;
+	}
+} dataOffsets;
+
+struct {
+	while (FTell() < FileSize()) {
+		struct {
+			string str<name=Str("str_%s", this)>;
+		} str_;
+	}
+} Strings;
+
+FSeek(infosOffset);
+local int i, j;
+local int pos = FTell();
+struct {
+	for (i = 0; i < header.nodeNumber; i++) {
+		struct {
+			FSeek(pos);
+			int16   childNumber;
+			int16   firstChildIndex;
+			int16   attributeNumber;
+			int16   dataIndex;
+
+			pos = FTell();
+			// tag name
+			FSeek(stringsOffset + dataOffsets.o[dataIndex].nameOffset);
+			string tagName;
+			for (j = 0; j < attributeNumber; j++) {
+				FSeek(pos);
+				struct {
+					FSeek(stringsOffset + dataOffsets.o[dataIndex + 1 + j].nameOffset);
+					string name;
+					FSeek(stringsOffset + dataOffsets.o[dataIndex + 1 + j].dataOffset);
+					string value;
+				} Attribute <name=Str("%s=\"%s\"", this.name, this.value)>;
+			}
+			FSeek(pos);
+		} NodeInfo <name=Str("NodeInfo <%s>", this.tagName)>;
+	}
+} NodeInfos;
+
