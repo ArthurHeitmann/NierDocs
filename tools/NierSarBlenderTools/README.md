@@ -1,3 +1,5 @@
+Blender addon for viewing and editing Nier Automata .sar files. Sar files seem to contain data about ambient sounds and music.
+
 # Installation
 
 (Requires Blender 3 or later)
