@@ -31,10 +31,10 @@ class ImportSar(bpy.types.Operator, ImportHelper):
 
     def doImport(self, filepath):
         from . import sarImporter
-        from . import sar
+        from . import bxm
 
         if self.onlyToXml:
-            xml = sar.bxmToXml(filepath)
+            xml = bxm.bxmToXml(filepath)
             with open(filepath + ".xml", "wb") as f:
                 f.write(ET.tostring(xml))
         else:
@@ -64,6 +64,23 @@ class ExportSar(bpy.types.Operator, ExportHelper):
     def execute(self, context):
         from . import sarExporter
         sarExporter.exportSar(self.filepath)
+        return {'FINISHED'}
+
+class ImportGaArea(bpy.types.Operator, ImportHelper):
+    '''Load a Nier:Automata Ga Area File.'''
+    bl_idname = "import_scene.gaArea"
+    bl_label = "Import Ga Area Data"
+    bl_options = {'PRESET', 'UNDO'}
+
+    filename_ext = ".bxm"
+    filter_glob: bpy.props.StringProperty(default="*.bxm", options={'HIDDEN'})
+
+    def doImport(self, filepath):
+        from . import gaAreaImporter
+        gaAreaImporter.importGaArea(filepath)
+
+    def execute(self, context):
+        self.doImport(self.filepath)
         return {'FINISHED'}
 
 def importMenuAdditions(self, context):

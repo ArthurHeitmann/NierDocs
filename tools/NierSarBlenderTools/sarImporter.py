@@ -1,5 +1,5 @@
 import os
-from .sar import *
+from .bxm import *
 import bpy
 import xml.etree.ElementTree as ET
 from .approxMapOffsets import approxMapOffsets

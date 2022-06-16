@@ -1,6 +1,6 @@
 from __future__ import annotations
 from io import BufferedReader
-from .sarUtil import *
+from .util import *
 import xml.etree.ElementTree as ET
 from typing import List, Dict
 
