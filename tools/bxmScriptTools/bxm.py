@@ -1,6 +1,6 @@
 from __future__ import annotations
 from io import BufferedReader
-from sarUtil import *
+from bxmUtil import *
 import xml.etree.ElementTree as ET
 
 class BxmHeader:

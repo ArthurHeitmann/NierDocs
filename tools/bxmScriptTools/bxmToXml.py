@@ -1,4 +1,4 @@
-import sar
+import bxm
 import sys
 import xml.dom.minidom
 import xml.etree.ElementTree as ET
@@ -6,7 +6,7 @@ import xml.etree.ElementTree as ET
 bxmFile = sys.argv[1]
 xmlFile = sys.argv[2] if len(sys.argv) > 2 else f"{bxmFile}.xml"
 
-xmlResult = sar.bxmToXml(bxmFile)
+xmlResult = bxm.bxmToXml(bxmFile)
 
 try:
 	xmlStr = ET.tostring(xmlResult.toXml())
