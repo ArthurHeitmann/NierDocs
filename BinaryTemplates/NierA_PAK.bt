@@ -1,0 +1,48 @@
+// everything is 4 byte aligned
+LittleEndian();
+
+typedef int bool;
+
+struct HeaderEntry
+{
+	uint32 uncompressedSizeMaybe;
+	uint32 offset;
+	uint32 unknownSmall;
+};
+
+struct File(uint32 size, bool isCompressed)
+{
+	uint32 unknown;
+	if (isCompressed) {
+		ubyte data[unknown];
+		ubyte paddingEnd[size - unknown - 4];
+	}
+	else {
+		ubyte data[size - 4];
+		// padding?
+	}
+};
+
+local uint32 firstOffset = ReadUInt(0x8);
+local uint32 entriesCount = (firstOffset - 0x4) / sizeof(HeaderEntry);
+
+uint32 version;
+HeaderEntry headerEntries[entriesCount];
+
+
+local uint32 i;
+local uint32 lastOffset = firstOffset;
+local uint32 fileSizes[entriesCount];
+local uint32 fileSize;
+for (i = 1; i < entriesCount; i++)
+{
+	fileSizes[i - 1] = headerEntries[i].offset - lastOffset;
+	lastOffset = headerEntries[i].offset;
+}
+fileSizes[entriesCount - 1] = FileSize() - lastOffset;
+
+local bool isCompressed;
+for (i = 0; i < entriesCount; i++) {
+	isCompressed = headerEntries[i].uncompressedSizeMaybe > fileSizes[i];
+	File file(fileSizes[i], isCompressed);
+}
