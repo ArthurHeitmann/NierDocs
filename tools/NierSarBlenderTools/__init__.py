@@ -68,7 +68,7 @@ class ExportSar(bpy.types.Operator, ExportHelper):
 
 class ImportGaArea(bpy.types.Operator, ImportHelper):
     '''Load a Nier:Automata Ga Area File.'''
-    bl_idname = "import_scene.gaArea"
+    bl_idname = "import_scene.ga_area"
     bl_label = "Import Ga Area Data"
     bl_options = {'PRESET', 'UNDO'}
 
@@ -83,15 +83,32 @@ class ImportGaArea(bpy.types.Operator, ImportHelper):
         self.doImport(self.filepath)
         return {'FINISHED'}
 
+class ExportGaArea(bpy.types.Operator, ExportHelper):
+    '''Export a Nier:Automata Ga Area File.'''
+    bl_idname = "export_scene.ga_area"
+    bl_label = "Export Ga Area Data"
+    bl_options = {'PRESET', 'UNDO'}
+    filename_ext = ".bxm"
+    filter_glob: bpy.props.StringProperty(default="*.bxm", options={'HIDDEN'})
+
+    def execute(self, context):
+        from . import gaAreaExporter
+        gaAreaExporter.exportGaArea(self.filepath)
+        return {'FINISHED'}
+
 def importMenuAdditions(self, context):
     self.layout.operator(ImportSar.bl_idname, text="Sar for Nier:Automata (.sar)")
+    self.layout.operator(ImportGaArea.bl_idname, text="Ga Area for Nier:Automata (.bxm)")
 
 def exportMenuAdditions(self, context):
     self.layout.operator(ExportSar.bl_idname, text="Sar for Nier:Automata (.sar)")
+    self.layout.operator(ExportGaArea.bl_idname, text="Ga Area for Nier:Automata (.bxm)")
 
 def register():
     bpy.utils.register_class(ImportSar)
     bpy.utils.register_class(ExportSar)
+    bpy.utils.register_class(ImportGaArea)
+    bpy.utils.register_class(ExportGaArea)
 
     bpy.types.TOPBAR_MT_file_import.append(importMenuAdditions)
     bpy.types.TOPBAR_MT_file_export.append(exportMenuAdditions)
@@ -99,6 +116,8 @@ def register():
 def unregister():
     bpy.utils.unregister_class(ImportSar)
     bpy.utils.unregister_class(ExportSar)
+    bpy.utils.unregister_class(ImportGaArea)
+    bpy.utils.unregister_class(ExportGaArea)
 
     bpy.types.TOPBAR_MT_file_import.remove(importMenuAdditions)
     bpy.types.TOPBAR_MT_file_export.remove(exportMenuAdditions)
