@@ -238,7 +238,6 @@ def xmlToBxm(root: ET.Element, outFileName: str) -> None:
 			dataOffsets.append(dataOffset)
 	
 	# make node infos
-	nodeInfos: list[NodeInfo] = []
 	nodeInfoToXmlNode: dict[NodeInfo, ET.Element] = {}
 	nodeCombos: list[(NodeInfo, ET.Element)] = []
 	parentMap = { child: parent for parent in nodes for child in parent }
@@ -251,6 +250,8 @@ def xmlToBxm(root: ET.Element, outFileName: str) -> None:
 		nodeCombos.append((nodeInfo, node))
 		return nodeInfo
 	
+	# xml nodes to node infos in correct order
+	nodeInfos: list[NodeInfo] = []
 	def addNodeChildrenToInfos(node: ET.Element):
 		for child in node:
 			nodeInfos.append(nodeToNodeInfo(child))
@@ -258,15 +259,17 @@ def xmlToBxm(root: ET.Element, outFileName: str) -> None:
 			addNodeChildrenToInfos(child)
 	nodeInfos.append(nodeToNodeInfo(root))
 	addNodeChildrenToInfos(root)
+	# set first child index / next sibling index
 	for nodeInfo in nodeInfos:
 		nextIndex = -1
 		if nodeInfo.childCount > 0:
 			firstChild = nodeInfoToXmlNode[nodeInfo].find("*")
+			# index of first child in node
 			nextIndex = next(i for i, (childInfo, child) in enumerate(nodeCombos) if child == firstChild)
 		else:
 			xmlNode = nodeInfoToXmlNode[nodeInfo]
 			parent = parentMap[xmlNode]
-			lastChild = parent.find("*[last()]")
+			lastChild = parent[-1]
 			lastChildIndex = next(i for i, (childInfo, child) in enumerate(nodeCombos) if child == lastChild)
 			nextIndex = lastChildIndex + 1
 		nodeInfo.firstChildIndex = nextIndex

@@ -248,7 +248,7 @@ def xmlToBxm(root: ET.Element, outFileName: str) -> None:
 		else:
 			xmlNode = nodeInfoToXmlNode[nodeInfo]
 			parent = parentMap[xmlNode]
-			lastChild = parent.find("*[last()]")
+			lastChild = parent[-1]
 			lastChildIndex = next(i for i, (childInfo, child) in enumerate(nodeCombos) if child == lastChild)
 			nextIndex = lastChildIndex + 1
 		nodeInfo.firstChildIndex = nextIndex
