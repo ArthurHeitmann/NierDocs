@@ -1,0 +1,68 @@
+// YAX - Yet Another Xml encoding
+
+string getTagName(uint32 id) {
+	local uint32 i;
+	switch (id) {
+		case 0x5E237E06: 	return "name";
+		case 0xBF396750: 	return "id";
+		case 0x6DC044C5: 	return "group";
+		case 0xF7C0246A: 	return "size";
+		case 0x47CC8C92: 	return "action";
+		case 0x77153098: 	return "code";
+		case 0xFA7AEFFB: 	return "attribute";
+		case 0xD7943D68: 	return "area";
+		case 0x1D775834: 	return "value";
+		case 0x462CE4F5: 	return "position";
+		case 0x297C98F1: 	return "rotation";
+		case 0xEC462584: 	return "scale";
+		case 0x27BA8E29: 	return "points";
+		case 0xF54DE50F: 	return "height";
+		case 0xE18651F2: 	return "StageType";
+		case 0xA213B07: 	return "AreaType";
+		// case 0x: 	return "";
+		default:			return "?";
+	}
+}
+
+string makeIndentStr(uint32 indents) {
+	local uint32 i;
+	local string s = "";
+	for (i = 0; i < indents; i++) {
+		s += "    ";
+	}
+	return s;
+}
+
+string getNodeText(uint32 offset) {
+	if (offset == 0)
+		return "";
+	return ReadString(offset);
+}
+
+string PrettyPrintXmlNode (struct XmlNode& entry) {
+	local string tagName = getTagName(entry.tagNameOffsetOrId);
+	local string indentStr = makeIndentStr(entry.indentation);
+	local string text = getNodeText(entry.stringOffset);
+	local string s = indentStr + "<" + tagName + ">" + text + "</" + tagName + ">";
+	return s;
+}
+
+struct XmlNode {
+	ubyte indentation;
+	uint32 tagNameOffsetOrId;
+	uint32 stringOffset;
+};
+
+uint32 nodeCount;
+
+XmlNode nodes[nodeCount] <name=PrettyPrintXmlNode>;
+
+struct String {
+	string s;
+};
+
+struct {
+	while (!FEof()) {
+		String s <name=this.s>;
+	}
+} Strings;

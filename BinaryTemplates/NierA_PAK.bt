@@ -7,10 +7,10 @@ struct HeaderEntry
 {
 	uint32 uncompressedSizeMaybe;
 	uint32 offset;
-	uint32 unknownSmall;
+	uint32 unknown;
 };
 
-struct File(uint32 size, bool isCompressed)
+struct File(uint32 size, uint32 uncompressedSize, bool isCompressed)
 {
 	uint32 unknown;
 	if (isCompressed) {
@@ -18,8 +18,9 @@ struct File(uint32 size, bool isCompressed)
 		ubyte paddingEnd[size - unknown - 4];
 	}
 	else {
-		ubyte data[size - 4];
-		// padding?
+		local uint32 paddingEndSize = (4 - (uncompressedSize % 4)) % 4;
+		ubyte data[size - 4 - paddingEndSize];
+		ubyte paddingEnd[paddingEndSize];
 	}
 };
 
@@ -44,5 +45,5 @@ fileSizes[entriesCount - 1] = FileSize() - lastOffset;
 local bool isCompressed;
 for (i = 0; i < entriesCount; i++) {
 	isCompressed = headerEntries[i].uncompressedSizeMaybe > fileSizes[i];
-	File file(fileSizes[i], isCompressed);
+	File file(fileSizes[i], headerEntries[i].uncompressedSizeMaybe, isCompressed);
 }
