@@ -19,6 +19,22 @@ string getTagName(uint32 id) {
 		case 0xF54DE50F: 	return "height";
 		case 0xE18651F2: 	return "StageType";
 		case 0xA213B07: 	return "AreaType";
+		case 0x624B37F2:	return "objID";
+		case 0x85D94462:	return "count";
+        case 0x5E9E89CB:    return "location";
+        case 0x55307634:    return "layouts";
+        case 0x4317F817:    return "quest";
+        case 0x8CDE5729:    return "type";
+        case 0x58EBF836:    return "type2";
+        case 0xC87C17FD:    return "terminateArea";
+        case 0x218568E4:    return "normal";
+        case 0x0B0541BA:    return "flags";
+        case 0x3D8E604F:    return "parent";
+        case 0xA4FA7C89:    return "param";
+        case 0xDBA80BB2:    return "body";
+        case 0xC1151FD2:    return "hard";
+        case 0x6F0E5340:    return "extream";
+        case 0x4B748449:    return "bForwardState";
 		// case 0x: 	return "";
 		default:			return "?";
 	}
@@ -63,6 +79,6 @@ struct String {
 
 struct {
 	while (!FEof()) {
-		String s <name=this.s>;
+		String s;
 	}
 } Strings;
