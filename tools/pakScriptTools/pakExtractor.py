@@ -1,4 +1,4 @@
-from io import BufferedReader
+from io import BufferedReader, BufferedWriter
 import json
 import os
 import struct
@@ -7,7 +7,7 @@ import pathlib
 from typing import List
 import zlib
 
-def read_uint32(file) -> int:
+def read_uint32(file: BufferedWriter) -> int:
 	entry = file.read(4)
 	return struct.unpack('<I', entry)[0]
 
@@ -39,7 +39,7 @@ class FilEntry:
 
 		self.data = file.read(entrySize - paddingEndLength)
 
-pakFile = sys.argv[1] if len(sys.argv) > 1 else "D:\\delete\\mods\\na\\blender\\extracted\\data012.cpk_unpacked\\st5\\nier2blender_extracted\\r501.dat\\r501_hap.pak"
+pakFile = sys.argv[1]
 
 with open(pakFile, "rb") as f:
 	fileSize = os.fstat(f.fileno()).st_size
@@ -94,7 +94,6 @@ with open(pakFile, "rb") as f:
 
 		with open(os.path.join(extractionFolder, f"{i}.yax"), "wb") as f:
 			f.write(data)
-		print(f"Extracted file {i}.yax")
 
-	print("Extraction complete")
+	print(f"Extracted {fileCount} files")
 
