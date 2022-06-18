@@ -2,9 +2,10 @@ from __future__ import annotations
 from io import BufferedReader
 import struct
 import sys
-from typing import List
+from typing import Dict, List
 import xml.dom.minidom
 from xml.etree.ElementTree import Element, SubElement, tostring as xmlToString
+from yaxTagIdsAndNames import TAG_ID_TO_NAME, UNKNOWN_TAG_NAME
 
 def read_uint32(file) -> int:
 	entry = file.read(4)
@@ -27,11 +28,12 @@ def read_string(file: BufferedReader, pos) -> str:
 	return binaryString.decode('shift-jis')
 
 def getTagName(id: int) -> str:
-	return "UNKNOWN"
+	return TAG_ID_TO_NAME.get(id, UNKNOWN_TAG_NAME)
 
 class XmlNode:
 	indentation: int
 	tag: str
+	tagId: int
 	value: str
 
 	children: List[XmlNode]
@@ -39,6 +41,7 @@ class XmlNode:
 	def __init__(self, file: BufferedReader = None):
 		self.indentation = -1
 		self.tag = ""
+		self.tagId = 0
 		self.value = ""
 		self.children = []
 		if not file:
@@ -46,6 +49,7 @@ class XmlNode:
 		self.indentation = read_uint8(file)
 		tagId = read_uint32(file)
 		self.tag = getTagName(tagId)
+		self.tagId = tagId
 		valueOffset = read_uint32(file)
 		if valueOffset != 0:
 			self.value = read_string(file, valueOffset)
@@ -56,6 +60,7 @@ class XmlNode:
 	def toXml(self) -> Element:
 		element = Element(self.tag)
 		element.text = self.value
+		element.set("id", hex(self.tagId))
 		for child in self.children:
 			element.append(child.toXml())
 		return element
