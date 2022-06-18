@@ -69,11 +69,11 @@ string getTagName(uint32 id) {
 		case 0xF68803D6:    return "connectWalkDist_";
 		case 0x26961117:    return "connectWalkCaptionWait_";
 
-		case 0x1DF0B5A4:    return "?? bStop";
-		case 0xB1BDD6CB:    return "?? phase";
-		case 0x9D4BDE90:    return "?? releaseWhenLeaveLoadArea";
+		case 0x1DF0B5A4:    return "ukn_bStop";
+		case 0xB1BDD6CB:    return "ukn_phase";
+		case 0x9D4BDE90:    return "ukn_releaseWhenLeaveLoadArea";
 
-		case 0x57655AB9:    return "???? upDirection";
+		case 0x57655AB9:    return "ukn_upDirection";
 
 		case 0xA5646B84:    return "Rotation_X";
 		case 0xD2635B12:    return "Rotation_Y";
@@ -92,6 +92,89 @@ string getTagName(uint32 id) {
 		case 0xEDF7CF4D:    return "accType";
 		case 0x292EE151:    return "playerStop";
 		case 0x49A66FE5:    return "actionCamStop";
+        case 0x37F95F05:    return "rotateOnly";
+        case 0xB2FCC4C1:    return "distanceOnly";
+        case 0x0DD5C291:    return "disableCameraHit";
+        case 0x1489C6AD:    return "newInter";
+        case 0xCEA6FE34:    return "endInter";
+        case 0xAB627A9A:    return "endAccType";
+        case 0x4B6A0AA8:    return "Rotation_Z";
+        case 0x6EDF07D2:    return "noControlTarget";
+        case 0x3E5BEA70:    return "overwriteNormalInterRate";
+        case 0xBEC5FD31:    return "normalInterRate";
+        case 0xD3B72D3C:    return "useMoveOffset_0";
+        case 0xD19B3010:    return "moveOffsetScale_10";
+        case 0x95FD2202:    return "moveOffsetInterp_";
+        case 0x273E1E66:    return "moveOffsetInterpStop_";
+        case 0x61E4DA85:    return "useHold";
+        case 0xDC130E22:    return "holdDistance_X";
+        case 0xEE256CA0:    return "holdDistance_Z";
+        case 0x681C045D:    return "useHandOffInterp_";
+        case 0x9A421D36:    return "handOffInterpRate";
+        case 0xEB9BDD4C:    return "fixHeightUse_";
+        case 0x5B4BB4E5:    return "fixHeight_";
+        case 0x09F32C52:    return "playerForceIn_";
+        case 0x14DE6FF5:    return "leavePlayer_";
+        
+        case 0x062EFD80:    return "cameraInterpEnable";
+        case 0x798A5E8C:    return "useStartEndInter_";
+
+        case 0x86FB7EBE:    return "interpTimeDistance_";
+        case 0x45BB7468:    return "interpTimeAngle_";
+        case 0x564AC09B:    return "interpTimeFov_";
+        case 0xD1C975E5:    return "interpTimePosition_";
+        case 0xA73B92D0:    return "interpTimeTarget_";
+
+        case 0x55B7EDC0:    return "interpTimeAccTypeDistance_";
+        case 0x7E412FC0:    return "interpTimeAccTypeAngle_";
+        case 0x49116412:    return "interpTimeAccTypeFov_";
+        case 0x0285E69B:    return "interpTimeAccTypePosition_";
+        case 0x7F0D4351:    return "interpTimeAccTypeTarget_";
+
+        case 0x0A09493C:    return "endInterpTimeDistance_";
+        case 0xCF3A30B1:    return "endInterpTimeAngle_";
+        case 0xD5B0D017:    return "endInterpTimeFov_";
+        case 0x5D3B4267:    return "endInterpTimePosition_";
+        case 0x58BE79E4:    return "endInterpTimeTarget_";
+
+        case 0xC63A2BB0:    return "endInterpTimeAccTypeDistance_";
+        case 0xDAB1EE51:    return "endInterpTimeAccTypeAngle_";
+        case 0xF819B726:    return "endInterpTimeAccTypeFov_";
+        case 0x910820EB:    return "endInterpTimeAccTypePosition_";
+        case 0xF8A11042:    return "endInterpTimeAccTypeTarget_";
+
+        case 0x02C42079:    return "route";
+        case 0x1D3D05FC:    return "nodes";
+        case 0xFDD30F8A:    return "resolution";
+        case 0x9B2C7CE8:    return "playerPath";
+        case 0xB7A5F324:    return "point";
+        case 0xFDF58A70:    return "playerY";
+        case 0x082D2158:    return "branchDist";
+        case 0x673541D8:    return "excludeArea";
+
+        case 0xE12E16F9:    return "useOffsetPlDir";
+        case 0xF22D7BF3:    return "useOffsetPlDirRate_";
+        case 0x2755CF13:    return "sideViewCameraPathDirOffsetEnable_";
+        case 0x0BA7A529:    return "sideViewCameraPathDirOffsetLengthSlow_";
+        case 0x3400E6DA:    return "sideViewCameraPathDirOffsetLengthMiddle_";
+        case 0xE800ACAE:    return "sideViewCameraPathDirOffsetLengthHigh_";
+        case 0xF42FED42:    return "sideViewCameraPathDirOffsetInterp_";
+        case 0xAF626175:    return "sideViewCameraPathDirOffsetInterpStop_";
+        case 0xA74B4854:    return "sideViewCameraInterpSeparate";
+        case 0x59C60B78:    return "sideViewCameraInterpSeparateXZ_";
+        case 0x132DDACB:    return "sideViewCameraInterpSeparateY_";
+        case 0xE588C446:    return "useFovy_";
+        case 0xE640089D:    return "fovy_";
+        case 0xB674CB76:    return "viewOffsetInterp_";
+        case 0xEEE40E86:    return "viewOffsetGround_";
+        case 0x704C8A63:    return "viewOffsetAir_";
+
+        case 0xFAC63E6D:    return "slideUp_";
+        case 0x33E50497:    return "slideDown_";
+        case 0xD8163D73:    return "slideX_";
+        case 0x6885013F:    return "forceAdjust_";
+        case 0xF18CFF4E:    return "useInterpLimit_";
+        case 0xF5B27ACA:    return "interpLimit_";
 		// case 0x: 	return "";
 		default:			return "?";
 	}
