@@ -7,13 +7,13 @@ import xml.dom.minidom
 from xml.etree.ElementTree import Element, SubElement, tostring as xmlToString
 from yaxTagIdsAndNames import TAG_ID_TO_NAME, UNKNOWN_TAG_NAME
 
-def read_uint32(file) -> int:
-	entry = file.read(4)
-	return struct.unpack('<I', entry)[0]
-
 def read_uint8(file) -> int:
 	entry = file.read(1)
 	return struct.unpack('<B', entry)[0]
+
+def read_uint32(file) -> int:
+	entry = file.read(4)
+	return struct.unpack('<I', entry)[0]
 
 def read_string(file: BufferedReader, pos) -> str:
 	initialPos = file.tell()
@@ -66,7 +66,7 @@ class XmlNode:
 		return element
 
 
-yaxFile = sys.argv[1] #if len(sys.argv) > 1 else "D:\\delete\\mods\\na\\blender\\extracted\\data012.cpk_unpacked\\st5\\nier2blender_extracted\\r501.dat\\pakExtracted\\r501_hap.pak\\0.yax"
+yaxFile = sys.argv[1]
 
 with open(yaxFile, "rb") as f:
 	nodeCount = read_uint32(f)
@@ -91,14 +91,14 @@ with open(yaxFile, "rb") as f:
 
 	# write xml
 	rootXml = rootNode.toXml()
-	rawXmlStr = xmlToString(rootXml)
+	rawXmlStr = xmlToString(rootXml, encoding="utf-8")
 	if type(rawXmlStr) == bytes:
 		xmlStr = rawXmlStr.decode("utf-8")
 		print("Warning: using fallback string representation")
 	dom = xml.dom.minidom.parseString(xmlStr)
-	xmlStr = dom.toprettyxml(indent="\t")
+	xmlStr = dom.toprettyxml(indent="\t", encoding="utf-8")
 	
-	with open(f"{yaxFile}.xml", "w", encoding="utf-8") as f:
+	with open(f"{yaxFile}.xml", "wb") as f:
 		f.write(xmlStr)
 
-	
+print("Done!")	
