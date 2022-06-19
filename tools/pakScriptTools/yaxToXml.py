@@ -65,40 +65,42 @@ class XmlNode:
 			element.append(child.toXml())
 		return element
 
+def yaxToXml(yaxFile: str):
+	with open(yaxFile, "rb") as f:
+		nodeCount = read_uint32(f)
+		
+		# read flat tree
+		nodes: List[XmlNode] = []
+		for i in range(nodeCount):
+			nodes.append(XmlNode(f))
+		
+		# assemble tree from indents
+		rootNode = XmlNode()
+		rootNode.tag = "root"
+		for node in nodes:
+			if node.indentation == 0:
+				rootNode.children.append(node)
+				continue
+			targetIndent = node.indentation - 1
+			parent = rootNode.children[-1]
+			while parent.indentation != targetIndent:
+				parent = parent.children[-1]
+			parent.children.append(node)
 
-yaxFile = sys.argv[1]
+		# write xml
+		rootXml = rootNode.toXml()
+		rawXmlStr = xmlToString(rootXml, encoding="utf-8")
+		if type(rawXmlStr) == bytes:
+			xmlStr = rawXmlStr.decode("utf-8")
+			print("Warning: using fallback string representation")
+		dom = xml.dom.minidom.parseString(xmlStr)
+		xmlStr = dom.toprettyxml(indent="\t", encoding="utf-8")
+		
+		xmlName = yaxFile.replace(".yax", ".xml") if ".yax" in yaxFile else yaxFile + ".xml"
+		with open(xmlName, "wb") as f:
+			f.write(xmlStr)
 
-with open(yaxFile, "rb") as f:
-	nodeCount = read_uint32(f)
-	
-	# read flat tree
-	nodes: List[XmlNode] = []
-	for i in range(nodeCount):
-		nodes.append(XmlNode(f))
-	
-	# assemble tree from indents
-	rootNode = XmlNode()
-	rootNode.tag = "root"
-	for node in nodes:
-		if node.indentation == 0:
-			rootNode.children.append(node)
-			continue
-		targetIndent = node.indentation - 1
-		parent = rootNode.children[-1]
-		while parent.indentation != targetIndent:
-			parent = parent.children[-1]
-		parent.children.append(node)
-
-	# write xml
-	rootXml = rootNode.toXml()
-	rawXmlStr = xmlToString(rootXml, encoding="utf-8")
-	if type(rawXmlStr) == bytes:
-		xmlStr = rawXmlStr.decode("utf-8")
-		print("Warning: using fallback string representation")
-	dom = xml.dom.minidom.parseString(xmlStr)
-	xmlStr = dom.toprettyxml(indent="\t", encoding="utf-8")
-	
-	with open(f"{yaxFile}.xml", "wb") as f:
-		f.write(xmlStr)
-
-print("Done!")	
+yaxFiles = sys.argv[1:]
+for yaxFile in yaxFiles:
+	yaxToXml(yaxFile)
+	print(f"Converted {yaxFile} to xml")

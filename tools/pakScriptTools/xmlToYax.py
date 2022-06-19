@@ -33,9 +33,9 @@ class XmlNode:
 		writeUint32(self.valueOffset, file)
 
 
-yaxFile = sys.argv[1]
+xmlFile = sys.argv[1]
 
-with open(yaxFile, "r", encoding="utf-8") as file:
+with open(xmlFile, "r", encoding="utf-8") as file:
 	xmlBytes = file.read()
 	xmlFileContents = xmlBytes
 xmlRoot = xmlFromString(xmlFileContents)
@@ -73,7 +73,7 @@ lastOffset = 4 + len(nodes) * 9
 for node in nodes:
 	node.valueOffset = putStringGetOffset(node.value)
 
-outFileName = yaxFile + ".yax"
+outFileName = xmlFile.replace(".xml", ".yax") if ".xml" in xmlFile else xmlFile + ".yax"
 with open(outFileName, "wb") as f:
 	# node length
 	writeUint32(len(nodes), f)
