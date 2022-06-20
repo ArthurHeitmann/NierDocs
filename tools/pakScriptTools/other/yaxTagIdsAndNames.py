@@ -16,7 +16,7 @@ TAG_ID_TO_NAME = {
 	0x27BA8E29: "points",
 	0xF54DE50F: "height",
 	0xE18651F2: "StageType",
-	0xA213B07:  "AreaType",
+	0xA213B07: "AreaType",
 	0x624B37F2: "objID",
 	0x85D94462: "count",
 	0x5E9E89CB: "location",
@@ -66,10 +66,13 @@ TAG_ID_TO_NAME = {
 	0x666016A9: "loadArea",
 	0xF68803D6: "connectWalkDist_",
 	0x26961117: "connectWalkCaptionWait_",
-	0x1DF0B5A4: "ukn_bStop",
+	0x1DF0B5A4: "bStop",
+
 	0xB1BDD6CB: "ukn_phase",
 	0x9D4BDE90: "ukn_releaseWhenLeaveLoadArea",
+
 	0x57655AB9: "ukn_upDirection",
+
 	0xA5646B84: "Rotation_X",
 	0xD2635B12: "Rotation_Y",
 	0x8C0C4308: "Fovy",
@@ -110,28 +113,34 @@ TAG_ID_TO_NAME = {
 	0x5B4BB4E5: "fixHeight_",
 	0x09F32C52: "playerForceIn_",
 	0x14DE6FF5: "leavePlayer_",
+        
 	0x062EFD80: "cameraInterpEnable",
 	0x798A5E8C: "useStartEndInter_",
+
 	0x86FB7EBE: "interpTimeDistance_",
 	0x45BB7468: "interpTimeAngle_",
 	0x564AC09B: "interpTimeFov_",
 	0xD1C975E5: "interpTimePosition_",
 	0xA73B92D0: "interpTimeTarget_",
+
 	0x55B7EDC0: "interpTimeAccTypeDistance_",
 	0x7E412FC0: "interpTimeAccTypeAngle_",
 	0x49116412: "interpTimeAccTypeFov_",
 	0x0285E69B: "interpTimeAccTypePosition_",
 	0x7F0D4351: "interpTimeAccTypeTarget_",
+
 	0x0A09493C: "endInterpTimeDistance_",
 	0xCF3A30B1: "endInterpTimeAngle_",
 	0xD5B0D017: "endInterpTimeFov_",
 	0x5D3B4267: "endInterpTimePosition_",
 	0x58BE79E4: "endInterpTimeTarget_",
+
 	0xC63A2BB0: "endInterpTimeAccTypeDistance_",
 	0xDAB1EE51: "endInterpTimeAccTypeAngle_",
 	0xF819B726: "endInterpTimeAccTypeFov_",
 	0x910820EB: "endInterpTimeAccTypePosition_",
 	0xF8A11042: "endInterpTimeAccTypeTarget_",
+
 	0x02C42079: "route",
 	0x1D3D05FC: "nodes",
 	0xFDD30F8A: "resolution",
@@ -140,6 +149,7 @@ TAG_ID_TO_NAME = {
 	0xFDF58A70: "playerY",
 	0x082D2158: "branchDist",
 	0x673541D8: "excludeArea",
+
 	0xE12E16F9: "useOffsetPlDir",
 	0xF22D7BF3: "useOffsetPlDirRate_",
 	0x2755CF13: "sideViewCameraPathDirOffsetEnable_",
@@ -156,10 +166,24 @@ TAG_ID_TO_NAME = {
 	0xB674CB76: "viewOffsetInterp_",
 	0xEEE40E86: "viewOffsetGround_",
 	0x704C8A63: "viewOffsetAir_",
+
 	0xFAC63E6D: "slideUp_",
 	0x33E50497: "slideDown_",
 	0xD8163D73: "slideX_",
 	0x6885013F: "forceAdjust_",
 	0xF18CFF4E: "useInterpLimit_",
-	0xF5B27ACA: "interpLimit_"
+	0xF5B27ACA: "interpLimit_",
+
+	0xDFEC3F39: "rate",
+	0xFB4D2F3C: "chooseRange",
+	0xA17B1DD0: "min",
+	0x13336F99: "resets",
+	0xB04EB611: "repeatType",
+	0xC95238E1: "minDistance",
+	0x6646FE47: "levelRange",
+	0x9D4337C2: "spawnRange",
+	0x8EC2983F: "createRange",
+	0x29A5B95F: "relativeLevel",
+	0xFE76FF13: "searchArea",
+	0x62DD00ED: "escapeArea",
 }
