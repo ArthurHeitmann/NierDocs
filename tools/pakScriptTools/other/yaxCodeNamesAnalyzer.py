@@ -3,7 +3,7 @@ import os
 from typing import Dict, Tuple
 import xml.etree.ElementTree as ET
 
-searchPath = "D:\\delete\\mods\\na\\blender\\extracted\\data002.cpk_unpacked\\core\\nier2blender_extracted\\corehap.dat\\pakExtracted\\"
+searchPath = "D:\\delete\\mods\\na\\blender\\extracted"
 fileExt = "yax"
 resultsPath = "./results.json"
 
@@ -37,7 +37,15 @@ def analyzeXml(root: ET.Element, filePath: str):
 			codeData = codeNames[codeHex]
 
 		parentTag = parent.tag
-		siblingName = parent.find("name").text if parent.find("name") is not None else ""
+		sibling = parent.find("name")
+		if sibling is not None:
+			if "eng" in sibling.attrib and sibling.attrib["eng"]:
+				siblingName = sibling.attrib["eng"]
+			else:
+				siblingName = sibling.text
+		else:
+			siblingName = ""
+
 		if parentTag not in codeData["parents"]:
 			codeData["parents"].append(parentTag)
 		if siblingName not in codeData["names"]:
@@ -57,7 +65,7 @@ for root, dirs, files in os.walk(searchPath):
 			continue
 
 		tree = ET.parse(yaxXml, ET.XMLParser(encoding="utf-8"))
-		analyzeXml(tree.getroot(), yaxXml)
+		analyzeXml(tree.getroot(), yaxXml.replace(searchPath, ""))
 
 
 with open(resultsPath, "w", encoding="utf-8") as f:

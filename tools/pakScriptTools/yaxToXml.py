@@ -5,7 +5,10 @@ import sys
 from typing import Dict, List
 import xml.dom.minidom
 from xml.etree.ElementTree import Element, SubElement, tostring as xmlToString
-from yaxTagIdsAndNames import TAG_ID_TO_NAME, UNKNOWN_TAG_NAME
+from other.yaxTagIdsAndNames import TAG_ID_TO_NAME, UNKNOWN_TAG_NAME
+from other.japToEngTranslation import japToEng
+
+# Utils
 
 def read_uint8(file) -> int:
 	entry = file.read(1)
@@ -30,11 +33,21 @@ def read_string(file: BufferedReader, pos) -> str:
 def getTagName(id: int) -> str:
 	return TAG_ID_TO_NAME.get(id, UNKNOWN_TAG_NAME)
 
+def isAscii(s: str) -> bool:
+	try:
+		s.encode("ascii")
+		return True
+	except UnicodeEncodeError:
+		return False
+
+# Data structures
+	
 class XmlNode:
 	indentation: int
 	tag: str
 	tagId: int
 	value: str
+	translatedValue: str
 
 	children: List[XmlNode]
 
@@ -43,6 +56,7 @@ class XmlNode:
 		self.tag = ""
 		self.tagId = 0
 		self.value = ""
+		self.translatedValue = ""
 		self.children = []
 		if not file:
 			return
@@ -53,17 +67,23 @@ class XmlNode:
 		valueOffset = read_uint32(file)
 		if valueOffset != 0:
 			self.value = read_string(file, valueOffset)
+			if not isAscii(self.value):
+				self.translatedValue = japToEng(self.value)
 	
 	def __str__(self):
 		return f"{'    ' * self.indentation}{self.tag}: {self.value}"
 	
 	def toXml(self) -> Element:
 		element = Element(self.tag)
-		element.text = self.value
 		element.set("id", hex(self.tagId))
+		element.text = self.value
+		if self.translatedValue:
+			element.set("eng", self.translatedValue)
 		for child in self.children:
 			element.append(child.toXml())
 		return element
+
+# Main
 
 def yaxToXml(yaxFile: str):
 	with open(yaxFile, "rb") as f:
