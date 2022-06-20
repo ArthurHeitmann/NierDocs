@@ -188,6 +188,26 @@ string getTagName(uint32 id) {
         case 0x29A5B95F:    return "relativeLevel";
         case 0xFE76FF13:    return "searchArea";
         case 0x62DD00ED:    return "escapeArea";
+
+        case 0x5AD22641:    return "command_another_with_args";
+        case 0x63B1BAE8:    return "command_another_no_args";
+
+        case 0x57995DB7:    return "curve";
+        case 0xFAED8C3F:    return "controls";
+        case 0x5F0C5BA7:    return "cp";
+
+        case 0x09B629C8:    return "on";
+        case 0x989A8AE1:    return "attack_";
+        case 0x23F3E57F:    return "escape_";
+        case 0xB2E217FC:    return "run_";
+        case 0xDDA5A5BF:    return "jump_";
+        case 0xD525B051:    return "gun_";
+        case 0xE7E97A93:    return "skill_";
+        case 0xE26AED6B:    return "suicide_";
+        case 0x325A97E9:    return "walk_";
+        case 0x6A68DEBF:    return "area_";
+        case 0xF372C161:    return "ukn_forceWalkArea_";
+        case 0x27D2E589:    return "ukn_noCaption_";
 		// case 0x: 	return "";
 		default:			return "?";
 	}
