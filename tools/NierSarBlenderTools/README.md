@@ -23,7 +23,7 @@ Locations where you can find sar files:
 - data003/data013
 	- wd1/wd3
 
-More information [here](../../sar/sarContents.md).
+More information [here](../../cpkAndDttContents.md) under cpk002 and cpk012.
 
 ## Exporting
 
