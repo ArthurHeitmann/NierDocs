@@ -43,7 +43,7 @@ def xmlToYax(xmlFile: str):
 	stringOffsets: Dict[str, int] = {}
 	lastOffset = 0
 	def putStringGetOffset(string: str) -> int:
-		global lastOffset
+		nonlocal lastOffset
 		if not string:
 			return 0
 		if string in stringSet:
