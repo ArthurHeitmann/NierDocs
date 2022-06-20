@@ -68,8 +68,8 @@ string getTagName(uint32 id) {
 		case 0x666016A9:    return "loadArea";
 		case 0xF68803D6:    return "connectWalkDist_";
 		case 0x26961117:    return "connectWalkCaptionWait_";
+		case 0x1DF0B5A4:    return "bStop";
 
-		case 0x1DF0B5A4:    return "ukn_bStop";
 		case 0xB1BDD6CB:    return "ukn_phase";
 		case 0x9D4BDE90:    return "ukn_releaseWhenLeaveLoadArea";
 
@@ -175,6 +175,19 @@ string getTagName(uint32 id) {
         case 0x6885013F:    return "forceAdjust_";
         case 0xF18CFF4E:    return "useInterpLimit_";
         case 0xF5B27ACA:    return "interpLimit_";
+
+        case 0xDFEC3F39:    return "rate";
+        case 0xFB4D2F3C:    return "chooseRange";
+        case 0xA17B1DD0:    return "min";
+        case 0x13336F99:    return "resets";
+        case 0xB04EB611:    return "repeatType";
+        case 0xC95238E1:    return "minDistance";
+        case 0x6646FE47:    return "levelRange";
+        case 0x9D4337C2:    return "spawnRange";
+        case 0x8EC2983F:    return "createRange";
+        case 0x29A5B95F:    return "relativeLevel";
+        case 0xFE76FF13:    return "searchArea";
+        case 0x62DD00ED:    return "escapeArea";
 		// case 0x: 	return "";
 		default:			return "?";
 	}
