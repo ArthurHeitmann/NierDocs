@@ -186,4 +186,24 @@ TAG_ID_TO_NAME = {
 	0x29A5B95F: "relativeLevel",
 	0xFE76FF13: "searchArea",
 	0x62DD00ED: "escapeArea",
+
+	0x5AD22641: "command_another_with_args",
+	0x63B1BAE8: "command_another_no_args",
+
+	0x57995DB7: "curve",
+	0xFAED8C3F: "controls",
+	0x5F0C5BA7: "cp",
+
+	0x09B629C8: "on",
+	0x989A8AE1: "attack_",
+	0x23F3E57F: "escape_",
+	0xB2E217FC: "run_",
+	0xDDA5A5BF: "jump_",
+	0xD525B051: "gun_",
+	0xE7E97A93: "skill_",
+	0xE26AED6B: "suicide_",
+	0x325A97E9: "walk_",
+	0x6A68DEBF: "area_",
+	0xF372C161: "ukn_forceWalkArea_",
+	0x27D2E589: "ukn_noCaption_",
 }
