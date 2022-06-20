@@ -53,30 +53,35 @@ class FileEntry:
 			paddingEndLength = (4 - (self.uncompressedSize % 4)) % 4
 			file.write(bytes(paddingEndLength))
 
+def repackPak(pakDir: str):
+	infoJsonFile = os.path.join(pakDir, "pakInfo.json")
+	with open(infoJsonFile, "r") as f:
+		pakInfo = json.load(f)
 
-extractedPakDir = sys.argv[1]
+	pakFileName = pathlib.Path(pakDir).parts[-1]
+	pakFile = str(pathlib.Path(pakDir).parent.parent / pakFileName)
 
-infoJsonFile = os.path.join(extractedPakDir, "pakInfo.json")
-with open(infoJsonFile, "r") as f:
-	pakInfo = json.load(f)
+	with open(pakFile, "wb") as pakF:
+		writeUint32(pakF, pakInfo["version"])
 
-pakFileName = pathlib.Path(extractedPakDir).parts[-1]
-pakFile = str(pathlib.Path(extractedPakDir).parent.parent / pakFileName)
+		filesOffset = len(pakInfo["files"]) * 12 + 0x4
+		lastFileOffset = filesOffset
+		fileEntries: List[FileEntry] = []
+		for yaxFile in pakInfo["files"]:
+			with (open(os.path.join(pakDir, yaxFile["name"]), "rb")) as yaxF:
+				fileEntry = FileEntry(yaxF, lastFileOffset, yaxFile["unknown1"])
+				fileEntries.append(fileEntry)
+				fileEntry.writeHeaderEntryToFile(pakF)
+				lastFileOffset += fileEntry.pakSize
+		
+		for fileEntry in fileEntries:
+			fileEntry.writeFileEntryToFile(pakF)
 
-with open(pakFile, "wb") as pakF:
-	writeUint32(pakF, pakInfo["version"])
+	print(f"Pak file {pakFileName} created ({len(fileEntries)} file repacked)")
 
-	filesOffset = len(pakInfo["files"]) * 12 + 0x4
-	lastFileOffset = filesOffset
-	fileEntries: List[FileEntry] = []
-	for yaxFile in pakInfo["files"]:
-		with (open(os.path.join(extractedPakDir, yaxFile["name"]), "rb")) as yaxF:
-			fileEntry = FileEntry(yaxF, lastFileOffset, yaxFile["unknown1"])
-			fileEntries.append(fileEntry)
-			fileEntry.writeHeaderEntryToFile(pakF)
-			lastFileOffset += fileEntry.pakSize
-	
-	for fileEntry in fileEntries:
-		fileEntry.writeFileEntryToFile(pakF)
 
-print(f"Pak file {pakFileName} created ({len(fileEntries)} file repacked)")
+if __name__ == "__main__":
+	extractedPakDirs = sys.argv[1:]
+
+	for pakDir in extractedPakDirs:
+		repackPak(pakDir)

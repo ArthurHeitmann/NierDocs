@@ -33,55 +33,59 @@ class XmlNode:
 		writeUint32(self.valueOffset, file)
 
 
-xmlFile = sys.argv[1]
+def xmlToYax(xmlFile: str):
+	with open(xmlFile, "r", encoding="utf-8") as file:
+		xmlBytes = file.read()
+		xmlFileContents = xmlBytes
+	xmlRoot = xmlFromString(xmlFileContents)
 
-with open(xmlFile, "r", encoding="utf-8") as file:
-	xmlBytes = file.read()
-	xmlFileContents = xmlBytes
-xmlRoot = xmlFromString(xmlFileContents)
+	stringSet: List[str] = []
+	stringOffsets: Dict[str, int] = {}
+	lastOffset = 0
+	def putStringGetOffset(string: str) -> int:
+		global lastOffset
+		if not string:
+			return 0
+		if string in stringSet:
+			return stringOffsets[string]
 
-stringSet: List[str] = []
-stringOffsets: Dict[str, int] = {}
-lastOffset = 0
-def putStringGetOffset(string: str) -> int:
-	global lastOffset
-	if not string:
-		return 0
-	if string in stringSet:
-		return stringOffsets[string]
+		stringSet.append(string)
+		stringOffsets[string] = lastOffset
+		retOff = lastOffset
+		strByteLength = len(string.encode('shift-jis')) + 1
+		lastOffset += strByteLength
+		return retOff
 
-	stringSet.append(string)
-	stringOffsets[string] = lastOffset
-	retOff = lastOffset
-	strByteLength = len(string.encode('shift-jis')) + 1
-	lastOffset += strByteLength
-	return retOff
+	# read flat tree, create nodes
+	nodes: List[XmlNode] = []
+	def addNodeToList(node: Element, indentation: int):
+		tagId = int(node.get("id"), 16)
+		nodeText = node.text.strip()
+		nodes.append(XmlNode(indentation, tagId, nodeText))
+		for child in node:
+			addNodeToList(child, indentation + 1)
+	for child in xmlRoot:
+		addNodeToList(child, 0)
 
-# read flat tree, create nodes
-nodes: List[XmlNode] = []
-def addNodeToList(node: Element, indentation: int):
-	tagId = int(node.get("id"), 16)
-	nodeText = node.text.strip()
-	nodes.append(XmlNode(indentation, tagId, nodeText))
-	for child in node:
-		addNodeToList(child, indentation + 1)
-for child in xmlRoot:
-	addNodeToList(child, 0)
-
-# make string set
-lastOffset = 4 + len(nodes) * 9
-for node in nodes:
-	node.valueOffset = putStringGetOffset(node.value)
-
-outFileName = xmlFile.replace(".xml", ".yax") if ".xml" in xmlFile else xmlFile + ".yax"
-with open(outFileName, "wb") as f:
-	# node length
-	writeUint32(len(nodes), f)
-	# nodes
+	# make string set
+	lastOffset = 4 + len(nodes) * 9
 	for node in nodes:
-		node.writeToFile(f)
-	# strings
-	for string in stringSet:
-		writeString(string, f)
+		node.valueOffset = putStringGetOffset(node.value)
 
-print("Done!")
+	outFileName = xmlFile.replace(".xml", ".yax") if ".xml" in xmlFile else xmlFile + ".yax"
+	with open(outFileName, "wb") as f:
+		# node length
+		writeUint32(len(nodes), f)
+		# nodes
+		for node in nodes:
+			node.writeToFile(f)
+		# strings
+		for string in stringSet:
+			writeString(string, f)
+
+if __name__ == "__main__":
+	xmlFiles = sys.argv[1:]
+
+	for xmlFile in xmlFiles:
+		xmlToYax(xmlFile)
+		print(f"Converted {xmlFile} to yax")

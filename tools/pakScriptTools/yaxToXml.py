@@ -92,7 +92,6 @@ def yaxToXml(yaxFile: str):
 		rawXmlStr = xmlToString(rootXml, encoding="utf-8")
 		if type(rawXmlStr) == bytes:
 			xmlStr = rawXmlStr.decode("utf-8")
-			print("Warning: using fallback string representation")
 		dom = xml.dom.minidom.parseString(xmlStr)
 		xmlStr = dom.toprettyxml(indent="\t", encoding="utf-8")
 		
@@ -100,7 +99,8 @@ def yaxToXml(yaxFile: str):
 		with open(xmlName, "wb") as f:
 			f.write(xmlStr)
 
-yaxFiles = sys.argv[1:]
-for yaxFile in yaxFiles:
-	yaxToXml(yaxFile)
-	print(f"Converted {yaxFile} to xml")
+if __name__ == "__main__":
+	yaxFiles = sys.argv[1:]
+	for yaxFile in yaxFiles:
+		yaxToXml(yaxFile)
+		print(f"Converted {yaxFile} to xml")
