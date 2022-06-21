@@ -96,9 +96,39 @@ class ExportGaArea(bpy.types.Operator, ExportHelper):
         gaAreaExporter.exportGaArea(self.filepath)
         return {'FINISHED'}
 
+class ImportYaxXml(bpy.types.Operator, ImportHelper):
+    '''Load a Nier:Automata Yax XML File.'''
+    bl_idname = "import_scene.yax_xml"
+    bl_label = "Import Yax XML Data"
+    bl_options = {'PRESET', 'UNDO'}
+    filename_ext = ".xml"
+    filter_glob: bpy.props.StringProperty(default="*.xml", options={'HIDDEN'})
+
+    importAllRecursively: bpy.props.BoolProperty(name="Import all recursively", default=False)
+
+    def doImport(self, filepath):
+        from .pakYaxXml.xmlToBlender import importXml
+        xmlRoot = ET.parse(filepath).getroot()
+        prefix = os.path.split(filepath)[1].split('.')[0]
+        importXml(xmlRoot, prefix)
+    
+    def execute(self, context):
+        if self.importAllRecursively:
+            directory = os.path.split(self.filepath)[0]
+            for root, dirs, files in os.walk(directory):
+                for file in files:
+                    if file.endswith(".xml"):
+                        self.doImport(root + '\\' + file)
+            print("Imported all files!")
+        else:
+            self.doImport(self.filepath)
+        return {'FINISHED'}
+
+
 def importMenuAdditions(self, context):
     self.layout.operator(ImportSar.bl_idname, text="Sar for Nier:Automata (.sar)")
     self.layout.operator(ImportGaArea.bl_idname, text="Ga Area for Nier:Automata (.bxm)")
+    self.layout.operator(ImportYaxXml.bl_idname, text="Yax XML for Nier:Automata (.xml)")
 
 def exportMenuAdditions(self, context):
     self.layout.operator(ExportSar.bl_idname, text="Sar for Nier:Automata (.sar)")
@@ -109,6 +139,7 @@ def register():
     bpy.utils.register_class(ExportSar)
     bpy.utils.register_class(ImportGaArea)
     bpy.utils.register_class(ExportGaArea)
+    bpy.utils.register_class(ImportYaxXml)
 
     bpy.types.TOPBAR_MT_file_import.append(importMenuAdditions)
     bpy.types.TOPBAR_MT_file_export.append(exportMenuAdditions)
@@ -118,6 +149,7 @@ def unregister():
     bpy.utils.unregister_class(ExportSar)
     bpy.utils.unregister_class(ImportGaArea)
     bpy.utils.unregister_class(ExportGaArea)
+    bpy.utils.unregister_class(ImportYaxXml)
 
     bpy.types.TOPBAR_MT_file_import.remove(importMenuAdditions)
     bpy.types.TOPBAR_MT_file_export.remove(exportMenuAdditions)

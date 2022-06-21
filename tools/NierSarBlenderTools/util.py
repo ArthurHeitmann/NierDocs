@@ -57,7 +57,7 @@ def makeMeshObj(name: str, vertices: List[float], edges: List[List[float]], face
 
 	return cubeObj
 
-def makeCube(name, parent: bpy.types.Object, color: List[float]) -> bpy.types.Object:
+def makeCube(name, parent: bpy.types.Object, color: List[float], originAtCorner = True) -> bpy.types.Object:
 	vertices = [
 		[0, 0, 0],
 		[1, 0, 0],
@@ -68,6 +68,10 @@ def makeCube(name, parent: bpy.types.Object, color: List[float]) -> bpy.types.Ob
 		[1, 1, 1],
 		[0, 1, 1]
 	]
+	if not originAtCorner:
+		for i in range(len(vertices)):
+			for j in range(3):
+				vertices[i][j] -= 0.5
 	faces = [
 		[0, 1, 2, 3],
 		[4, 5, 6, 7],
@@ -125,7 +129,7 @@ def makeCircle(name: str, radius: float, parent: bpy.types.Object, color: List[f
 # importing - misc
 
 seedOffsets: Dict[str, int] = {}
-def randomRgb(seed: str) -> List[float]:
+def randomRgb(seed: str = "") -> List[float]:
 	if seed not in seedOffsets:
 		seedOffsets[seed] = 0
 	random.seed(seed + str(seedOffsets[seed]))
