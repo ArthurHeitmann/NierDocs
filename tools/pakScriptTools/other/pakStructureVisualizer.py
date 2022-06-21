@@ -51,7 +51,7 @@ class YaxGroup:
 			"actions": [action.toDictionary() for action in self.actions]
 		}
 
-xml0 = sys.argv[1] if len(sys.argv) > 1 else "D:\\delete\\mods\\na\\blender\\extracted\\data012.cpk_unpacked\\st5\\nier2blender_extracted\\r501.dat\\pakExtracted\\r501_hap.pak\\0.xml"
+xml0 = sys.argv[1]
 
 groupsXml = ET.parse(xml0)
 
