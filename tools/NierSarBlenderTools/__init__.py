@@ -108,9 +108,13 @@ class ImportYaxXml(bpy.types.Operator, ImportHelper):
 
     def doImport(self, filepath):
         from .pakYaxXml.xmlToBlender import importXml
-        xmlRoot = ET.parse(filepath).getroot()
-        prefix = os.path.split(filepath)[1].split('.')[0]
-        importXml(xmlRoot, prefix)
+        try:
+            xmlRoot = ET.parse(filepath).getroot()
+            prefix = os.path.split(filepath)[1].split('.')[0]
+            importXml(xmlRoot, prefix)
+        except Exception as e:
+            print(e)
+            print("Failed to import " + filepath)
     
     def execute(self, context):
         if self.importAllRecursively:
