@@ -194,8 +194,8 @@ string getTagName(uint32 id) {
 		case 0xFE76FF13: 	return "searchArea";
 		case 0x62DD00ED: 	return "escapeArea";
 
-		case 0x5AD22641: 	return "command_another_with_args";
-		case 0x63B1BAE8: 	return "command_another_no_args";
+		case 0x5AD22641: 	return "command_onEnter";
+		case 0x63B1BAE8: 	return "command_onExit";
 
 		case 0x57995DB7: 	return "curve";
 		case 0xFAED8C3F: 	return "controls";
