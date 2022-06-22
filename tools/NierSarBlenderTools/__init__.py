@@ -114,6 +114,7 @@ class ImportYaxXml(bpy.types.Operator, ImportHelper):
             importXml(xmlRoot, prefix)
         except Exception as e:
             print(e)
+            print(e.__traceback__)
             print("Failed to import " + filepath)
     
     def execute(self, context):

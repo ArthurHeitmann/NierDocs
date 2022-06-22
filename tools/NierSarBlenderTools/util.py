@@ -120,6 +120,31 @@ def makeCurve(name: str, points: List[List[float]], radius: float, isLoop: bool,
 
 	return curveObj
 
+def makeBezier(name: str, points: List[List[float]], leftHandles: List[List[float]], rightHandles: List[List[float]], parent: bpy.types.Object, color: List[float]) -> bpy.types.Object:
+	curve: bpy.types.Curve = bpy.data.curves.new(name, "CURVE")
+	curveObj = bpy.data.objects.new(name, curve)
+	prepareObject(curveObj, name, parent, color)
+
+	curve.dimensions = "3D"
+	curve.splines.new(type="BEZIER")
+
+	locations = points
+
+	curve.splines.active.bezier_points.add(len(locations) - 1)
+	for i in range(len(locations)):
+		curvePoint = curve.splines[0].bezier_points[i]
+		loc = locations[i]
+		leftHandle = leftHandles[i]
+		rightHandle = rightHandles[i]
+		curvePoint.co = loc
+		curvePoint.handle_left = leftHandle
+		curvePoint.handle_right = rightHandle
+	# curve.splines[0].use_endpoint_u = True
+	# curve.splines[0].use_endpoint_v = False
+	curve.splines[0].use_cyclic_u = True
+	
+	return curveObj
+
 def makeCircle(name: str, radius: float, parent: bpy.types.Object, color: List[float]) -> bpy.types.Object:
 	bpy.ops.curve.primitive_bezier_circle_add(radius=radius)
 	circleObj = bpy.context.active_object

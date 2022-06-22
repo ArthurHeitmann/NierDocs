@@ -4,7 +4,9 @@ import xml.etree.ElementTree as ET
 
 from mathutils import Vector
 
-from ..util import makeCube, makeSphereObj, randomRgb, setCurrentCollection, strToFloat, tryAddCollection, xmlVecToVec3
+from ..util import makeBezier, makeCube, makeSphereObj, randomRgb, setCurrentCollection, strToFloat, tryAddCollection, xmlVecToVec3
+
+yaxColl: bpy.types.Collection
 
 def getNameOfThing(thing: ET.Element, prefix: str) -> str:
 	nameEl = thing.find("name")
@@ -15,20 +17,18 @@ def getNameOfThing(thing: ET.Element, prefix: str) -> str:
 		name = prefix
 	return name
 
-def importAreaCommand(action: ET.Element, color: List[float]):
-	"""
-	<area id="0xd7943d68">
-		<size id="0xf7c0246a">1</size>
-		<value id="0x1d775834">
-			<code id="0x77153098">0x18cffd98</code>
-			<position id="0x462ce4f5">274.931 -116.08 461.156</position>
-			<rotation id="0x297c98f1">0 0 0</rotation>
-			<scale id="0xec462584">13.318955 13.195042 16.192425</scale>
-			<points id="0x27ba8e29">-1 -1 1 -1 1 1 -1 1</points>
-			<height id="0xf54de50f">1</height>
-		</value>
-	</area>
-		"""
+def importArea(area: ET.Element, color: List[float]):
+	for i, areaObj in enumerate(area.findall("value")):
+		loc = xmlVecToVec3(areaObj.find("position").text)
+		rot = xmlVecToVec3(areaObj.find("rotation").text) if areaObj.find("rotation") is not None else (0, 0, 0)
+		scale = xmlVecToVec3(areaObj.find("scale").text) if areaObj.find("scale") is not None else (1, 1, 1)
+		cube = makeCube(f"{i}-Cube", None, color, False)
+		cube.location = loc
+		cube.rotation_euler = rot
+		cube.scale = Vector(scale) * 2
+
+def importAreaCommand(action: ET.Element, color: List[float], prefix: str):
+	setCurrentCollection(tryAddCollection(getNameOfThing(action, f"{prefix}-Action"), yaxColl))
 	area = action.find("area")
 	for i, areaObj in enumerate(area.findall("value")):
 		loc = xmlVecToVec3(areaObj.find("position").text)
@@ -39,30 +39,61 @@ def importAreaCommand(action: ET.Element, color: List[float]):
 		cube.rotation_euler = rot
 		cube.scale = Vector(scale) * 2
 
-def importEnemyGenerator(action: ET.Element, color: List[float]):
-	"""
-	<points id="0x27ba8e29">
-		<attribute id="0xfa7aeffb">0x0</attribute>
-		<nodes id="0x1d3d05fc">
-			<size id="0xf7c0246a">1</size>
-			<value id="0x1d775834">
-				<point id="0xb7a5f324">325.75589 -113.48423 491.934448</point>
-				<radius id="0x3b7c6e5a">5</radius>
-				<rate id="0xdfec3f39">0</rate>
-				<minDistance id="0xc95238e1">0</minDistance>
-			</value>
-		</nodes>
-	</points>
-	"""
+def importEnemyGenerator(action: ET.Element, color: List[float], prefix: str):
+	setCurrentCollection(tryAddCollection(getNameOfThing(action, f"{prefix}-Action"), yaxColl))
 	points = action.find("points")
 	for i, point in enumerate(points.find("nodes").findall("value")):
 		loc = xmlVecToVec3(point.find("point").text)
 		radius = strToFloat(point.find("radius").text)
 		sphere = makeSphereObj(f"{i}-Sphere", radius, None, color)
 		sphere.location = loc
+	
+	# if action.find("area") is not None:
+	# 	importArea(action.find("area"), color)
+	# if action.find("resetArea") is not None:
+	# 	importArea(action.find("resetArea"), color)
+	# if action.find("escapeArea") is not None:
+	# 	importArea(action.find("escapeArea"), color)
 
+def importEnemySet(action: ET.Element, color: List[float], prefix: str) -> None:
+	setCurrentCollection(tryAddCollection(getNameOfThing(action, f"{prefix}-Action"), yaxColl))
+
+	for i, layout in enumerate(action.find("layouts")):
+		for j, enemy in enumerate(layout.find("layouts").findall("value")):
+			emId = enemy.find("objID").text
+			dummyCube = makeCube(f"{i}x{j}-{emId}", None, color)
+			dummyCube.location = xmlVecToVec3(enemy.find("location").find("position").text)
+			dummyCube.rotation_euler = xmlVecToVec3(enemy.find("location").find("rotation").text)
+			dummyCube.scale = (1, 0.2, 2)
+			# dummyCube.location[2] += 0.75
+
+	# if action.find("area") is not None:
+	# 	importArea(action.find("area"), color)
+	# if action.find("resetArea") is not None:
+	# 	importArea(action.find("resetArea"), color)
+	# if action.find("escapeArea") is not None:
+	# 	importArea(action.find("escapeArea"), color)
+
+def importBezier(action: ET.Element, color: List[float], prefix: str) -> None:
+	setCurrentCollection(tryAddCollection(getNameOfThing(action, f"{prefix}-Action"), yaxColl))
+
+	curveData = action.find("curve")
+	points = curveData.find("nodes").findall("value")
+	points = [xmlVecToVec3(point.find("point").text) for point in points]
+	
+	handles = curveData.find("controls").findall("value")
+	handles = [val.find("cp").text.split(" ") for val in handles]
+	leftHandles = [xmlVecToVec3(" ".join(handle[:3])) for handle in handles]
+	rightHandles = [xmlVecToVec3(" ".join(handle[3:])) for handle in handles]
+	for i, invHandle in enumerate(leftHandles):
+		vecToPoint = Vector(points[i]) - Vector(invHandle)
+		leftHandles[i] = Vector(points[i]) + vecToPoint
+	
+	makeBezier(f"{prefix}-Bezier", points, leftHandles, rightHandles, None, color)
 
 def importXml(root: ET.Element, prefix: str) -> None:
+	global yaxColl
+
 	yaxName = getNameOfThing(root, prefix)
 	print(f"Importing {yaxName}")
 	yaxRootColl = tryAddCollection("YAX", bpy.context.scene.collection)
@@ -75,10 +106,16 @@ def importXml(root: ET.Element, prefix: str) -> None:
 		actionCode = action.find("code").text
 		if actionCode in ["0x58534a9e", "0x8cf2e32", "0x1571c131"]:
 			# area command
-			importAreaCommand(action, color)
+			importAreaCommand(action, color, prefix)
 			actionsImported = True
 		elif actionCode == "0x6f0fb5bd":	# enemy generator
-			importEnemyGenerator(action, color)
+			importEnemyGenerator(action, color, prefix)
+			actionsImported = True
+		elif actionCode == "0xe8fefe4b":	# enemy set
+			importEnemySet(action, color, prefix)
+			actionsImported = True
+		elif actionCode == "0x5874fcd9":	# bezier
+			importBezier(action, color, prefix)
 			actionsImported = True
 		else:
 			...
