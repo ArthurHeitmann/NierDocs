@@ -1,4 +1,5 @@
 import os
+import traceback
 import bpy
 import bpy_extras
 from bpy_extras.io_utils import ImportHelper, ExportHelper
@@ -113,9 +114,8 @@ class ImportYaxXml(bpy.types.Operator, ImportHelper):
             prefix = os.path.split(filepath)[1].split('.')[0]
             importXml(xmlRoot, prefix)
         except Exception as e:
-            print(e)
-            print(e.__traceback__)
             print("Failed to import " + filepath)
+            print(traceback.format_exc())
     
     def execute(self, context):
         if self.importAllRecursively:

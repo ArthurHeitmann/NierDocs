@@ -4,7 +4,7 @@ import xml.etree.ElementTree as ET
 
 from mathutils import Vector
 
-from ..util import makeBezier, makeCube, makeSphereObj, randomRgb, setCurrentCollection, strToFloat, tryAddCollection, xmlVecToVec3
+from ..util import makeBezier, makeCube, makeCurve, makeSphereObj, randomRgb, setCurrentCollection, strToFloat, tryAddCollection, xmlVecToVec3
 
 yaxColl: bpy.types.Collection
 
@@ -65,7 +65,6 @@ def importEnemySet(action: ET.Element, color: List[float], prefix: str) -> None:
 			dummyCube.location = xmlVecToVec3(enemy.find("location").find("position").text)
 			dummyCube.rotation_euler = xmlVecToVec3(enemy.find("location").find("rotation").text)
 			dummyCube.scale = (1, 0.2, 2)
-			# dummyCube.location[2] += 0.75
 
 	# if action.find("area") is not None:
 	# 	importArea(action.find("area"), color)
@@ -89,7 +88,32 @@ def importBezier(action: ET.Element, color: List[float], prefix: str) -> None:
 		vecToPoint = Vector(points[i]) - Vector(invHandle)
 		leftHandles[i] = Vector(points[i]) + vecToPoint
 	
-	makeBezier(f"{prefix}-Bezier", points, leftHandles, rightHandles, None, color)
+	loopFlag = int(curveData.find("attribute").text) & 0xF
+	if loopFlag != 4 or loopFlag != 5:
+		print(f"Unknown loop flag: {loopFlag}")
+	loops = loopFlag == 5
+	makeBezier(f"{prefix}-Bezier", points, leftHandles, rightHandles, loops, None, 0.1, color)
+
+def importPathCamera(action: ET.Element, color: List[float], prefix: str) -> None:
+	setCurrentCollection(tryAddCollection(getNameOfThing(action, f"{prefix}-Action"), yaxColl))
+
+	routePoints = action.find("route").find("nodes").findall("value")
+	routePoints = [xmlVecToVec3(point.find("point").text) for point in routePoints]
+
+	curve = makeBezier(f"{prefix}-CameraPath-Route", routePoints, None, None, False, None, 0.1, color)
+	curveData: bpy.types.Curve = curve.data
+	for point in curveData.splines[0].bezier_points:
+		point.handle_left_type = "AUTO"
+		point.handle_right_type = "AUTO"
+
+	playerPathPoints = action.find("playerPath").find("nodes").findall("value")
+	playerPathPoints = [xmlVecToVec3(point.find("point").text) for point in playerPathPoints]
+
+	curve = makeBezier(f"{prefix}-CameraPath-PlayerPath", playerPathPoints, None, None, False, None, 0.1, color)
+	curveData: bpy.types.Curve = curve.data
+	for point in curveData.splines[0].bezier_points:
+		point.handle_left_type = "AUTO"
+		point.handle_right_type = "AUTO"
 
 def importXml(root: ET.Element, prefix: str) -> None:
 	global yaxColl
@@ -116,6 +140,9 @@ def importXml(root: ET.Element, prefix: str) -> None:
 			actionsImported = True
 		elif actionCode == "0x5874fcd9":	# bezier
 			importBezier(action, color, prefix)
+			actionsImported = True
+		elif actionCode == "0xf0213c66":
+			importPathCamera(action, color, prefix)
 			actionsImported = True
 		else:
 			...

@@ -101,15 +101,19 @@ def makeCurve(name: str, points: List[List[float]], radius: float, isLoop: bool,
 	curve.splines.new(type="POLY")
 
 	locations = points
-	wLocs = [loc[3] for loc in locations]
-	curveObj["allPosW"] = wLocs
+	if len(locations[0]) == 4:
+		wLocs = [loc[3] for loc in locations]
+		curveObj["allPosW"] = wLocs
 	if isLoop:
 		locations.append(locations[0])
 
 	curve.splines.active.points.add(len(locations) - 1)
 	for i, loc in enumerate(locations):
 		curvePoint = curve.splines[0].points[i]
-		loc[3] = 1
+		if len(loc) == 4:
+			loc[3] = 1
+		else:
+			loc.append(1)
 		curvePoint.co = loc
 	curve.splines[0].use_endpoint_u = True
 	curve.splines[0].use_endpoint_v = False
@@ -120,7 +124,15 @@ def makeCurve(name: str, points: List[List[float]], radius: float, isLoop: bool,
 
 	return curveObj
 
-def makeBezier(name: str, points: List[List[float]], leftHandles: List[List[float]], rightHandles: List[List[float]], parent: bpy.types.Object, color: List[float]) -> bpy.types.Object:
+def makeBezier(
+	name: str,
+	points: List[List[float]],
+	leftHandles: List[List[float]], rightHandles: List[List[float]],
+	loops: bool,
+	parent: bpy.types.Object,
+	radius: float,
+	color: List[float]
+) -> bpy.types.Object:
 	curve: bpy.types.Curve = bpy.data.curves.new(name, "CURVE")
 	curveObj = bpy.data.objects.new(name, curve)
 	prepareObject(curveObj, name, parent, color)
@@ -133,15 +145,16 @@ def makeBezier(name: str, points: List[List[float]], leftHandles: List[List[floa
 	curve.splines.active.bezier_points.add(len(locations) - 1)
 	for i in range(len(locations)):
 		curvePoint = curve.splines[0].bezier_points[i]
-		loc = locations[i]
-		leftHandle = leftHandles[i]
-		rightHandle = rightHandles[i]
-		curvePoint.co = loc
-		curvePoint.handle_left = leftHandle
-		curvePoint.handle_right = rightHandle
-	# curve.splines[0].use_endpoint_u = True
-	# curve.splines[0].use_endpoint_v = False
-	curve.splines[0].use_cyclic_u = True
+		curvePoint.co = locations[i]
+		curvePoint.handle_left = leftHandles[i] if leftHandles else locations[i]
+		curvePoint.handle_right = rightHandles[i] if rightHandles else locations[i]
+
+	curve.splines[0].use_cyclic_u = loops
+
+	if radius > 0:
+		curve.bevel_mode = "ROUND"
+		curve.bevel_depth = radius
+		curve.bevel_resolution = 8
 	
 	return curveObj
 
