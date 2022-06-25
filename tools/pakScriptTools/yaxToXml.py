@@ -5,8 +5,8 @@ import sys
 from typing import Dict, List
 import xml.dom.minidom
 from xml.etree.ElementTree import Element, SubElement, tostring as xmlToString
-from other.yaxTagIdsAndNames import TAG_ID_TO_NAME, UNKNOWN_TAG_NAME
 from other.japToEngTranslation import japToEng
+from other.hashToStringMap import hashToStringMap
 
 # Utils
 
@@ -30,8 +30,13 @@ def read_string(file: BufferedReader, pos) -> str:
 	file.seek(initialPos)
 	return binaryString.decode('shift-jis')
 
-def getTagName(id: int) -> str:
-	return TAG_ID_TO_NAME.get(id, UNKNOWN_TAG_NAME)
+def lookupElementHash(element: Element):
+	try:
+		hashVal = int(element.text, 16)
+		if hashVal != 0 and hashVal in hashToStringMap:
+			element.attrib["str"] = hashToStringMap[hashVal]
+	except:
+		pass
 
 def isAscii(s: str) -> bool:
 	try:
@@ -41,7 +46,7 @@ def isAscii(s: str) -> bool:
 		return False
 
 # Data structures
-	
+
 class XmlNode:
 	indentation: int
 	tag: str
@@ -62,14 +67,14 @@ class XmlNode:
 			return
 		self.indentation = read_uint8(file)
 		tagId = read_uint32(file)
-		self.tag = getTagName(tagId)
+		self.tag = hashToStringMap.get(tagId, "UNKNOWN")
 		self.tagId = tagId
 		valueOffset = read_uint32(file)
 		if valueOffset != 0:
 			self.value = read_string(file, valueOffset)
 			if not isAscii(self.value):
 				self.translatedValue = japToEng(self.value)
-	
+
 	def __str__(self):
 		return f"{'    ' * self.indentation}{self.tag}: {self.value}"
 	
@@ -77,6 +82,8 @@ class XmlNode:
 		element = Element(self.tag)
 		element.set("id", hex(self.tagId))
 		element.text = self.value
+		if self.tag == "id" or self.tag == "code":
+			lookupElementHash(element)
 		if self.translatedValue:
 			element.set("eng", self.translatedValue)
 		for child in self.children:
