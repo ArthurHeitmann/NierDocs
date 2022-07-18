@@ -1,9 +1,14 @@
+import os
 import bxm
 import sys
 import xml.etree.ElementTree as ET
 
-xmlFile = sys.argv[1]
-bxmFile = sys.argv[2] if len(sys.argv) > 2 else f"{xmlFile}.bxm"
+xmlFiles = [f for f in sys.argv[1:] if f.endswith('.xml')]
+if len(xmlFiles) == 1 and len(sys.argv) >= 3:
+	bxmFiles = sys.argv[2:]
+else:
+	[os.path.splitext(f)[0] + '.bxm' for f in xmlFiles]
 
-xmlRoot = ET.parse(xmlFile).getroot()
-bxm.xmlToBxm(xmlRoot, bxmFile)
+for i, xmlFile in enumerate(xmlFiles):
+	xmlRoot = ET.parse(xmlFile).getroot()
+	bxm.xmlToBxm(xmlRoot, bxmFiles[i])

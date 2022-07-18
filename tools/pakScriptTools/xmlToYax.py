@@ -33,7 +33,7 @@ class XmlNode:
 		writeUint32(self.valueOffset, file)
 
 
-def xmlToYax(xmlFile: str):
+def xmlToYax(xmlFile: str, outFile: str|None = None):
 	with open(xmlFile, "r", encoding="utf-8") as file:
 		xmlBytes = file.read()
 		xmlFileContents = xmlBytes
@@ -60,7 +60,7 @@ def xmlToYax(xmlFile: str):
 	nodes: List[XmlNode] = []
 	def addNodeToList(node: Element, indentation: int):
 		tagId = int(node.get("id"), 16)
-		nodeText = node.text.strip()
+		nodeText = node.text.strip() if node.text else ""
 		nodes.append(XmlNode(indentation, tagId, nodeText))
 		for child in node:
 			addNodeToList(child, indentation + 1)
@@ -72,7 +72,7 @@ def xmlToYax(xmlFile: str):
 	for node in nodes:
 		node.valueOffset = putStringGetOffset(node.value)
 
-	outFileName = xmlFile.replace(".xml", ".yax") if ".xml" in xmlFile else xmlFile + ".yax"
+	outFileName = outFile or xmlFile.replace(".xml", ".yax") if ".xml" in xmlFile else xmlFile + ".yax"
 	with open(outFileName, "wb") as f:
 		# node length
 		writeUint32(len(nodes), f)

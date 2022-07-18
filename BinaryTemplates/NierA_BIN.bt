@@ -1,0 +1,214 @@
+// for https://github.com/mruby/mruby.git
+// for commit 065966dae4d9052215300afa2517b6b09bf68e6d (2015)
+
+BigEndian();
+
+string getOpCode(uint32 i) {
+	switch (i)
+	{
+		case 0: return "OP_NOP";
+		case 1: return "OP_MOVE";
+		case 2: return "OP_LOADL";
+		case 3: return "OP_LOADI";
+		case 4: return "OP_LOADSYM";
+		case 5: return "OP_LOADNIL";
+		case 6: return "OP_LOADSELF";
+		case 7: return "OP_LOADT";
+		case 8: return "OP_LOADF";
+		case 9: return "OP_GETGLOBAL";
+		case 10: return "OP_SETGLOBAL";
+		case 11: return "OP_GETSPECIAL";
+		case 12: return "OP_SETSPECIAL";
+		case 13: return "OP_GETIV";
+		case 14: return "OP_SETIV";
+		case 15: return "OP_GETCV";
+		case 16: return "OP_SETCV";
+		case 17: return "OP_GETCONST";
+		case 18: return "OP_SETCONST";
+		case 19: return "OP_GETMCNST";
+		case 20: return "OP_SETMCNST";
+		case 21: return "OP_GETUPVAR";
+		case 22: return "OP_SETUPVAR";
+		case 23: return "OP_JMP";
+		case 24: return "OP_JMPIF";
+		case 25: return "OP_JMPNOT";
+		case 26: return "OP_ONERR";
+		case 27: return "OP_RESCUE";
+		case 28: return "OP_POPERR";
+		case 29: return "OP_RAISE";
+		case 30: return "OP_EPUSH";
+		case 31: return "OP_EPOP";
+		case 32: return "OP_SEND";
+		case 33: return "OP_SENDB";
+		case 34: return "OP_FSEND";
+		case 35: return "OP_CALL";
+		case 36: return "OP_SUPER";
+		case 37: return "OP_ARGARY";
+		case 38: return "OP_ENTER";
+		case 39: return "OP_KARG";
+		case 40: return "OP_KDICT";
+		case 41: return "OP_RETURN";
+		case 42: return "OP_TAILCALL";
+		case 43: return "OP_BLKPUSH";
+		case 44: return "OP_ADD";
+		case 45: return "OP_ADDI";
+		case 46: return "OP_SUB";
+		case 47: return "OP_SUBI";
+		case 48: return "OP_MUL";
+		case 49: return "OP_DIV";
+		case 50: return "OP_EQ";
+		case 51: return "OP_LT";
+		case 52: return "OP_LE";
+		case 53: return "OP_GT";
+		case 54: return "OP_GE";
+		case 55: return "OP_ARRAY";
+		case 56: return "OP_ARYCAT";
+		case 57: return "OP_ARYPUSH";
+		case 58: return "OP_AREF";
+		case 59: return "OP_ASET";
+		case 60: return "OP_APOST";
+		case 61: return "OP_STRING";
+		case 62: return "OP_STRCAT";
+		case 63: return "OP_HASH";
+		case 64: return "OP_LAMBDA";
+		case 65: return "OP_RANGE";
+		case 66: return "OP_OCLASS";
+		case 67: return "OP_CLASS";
+		case 68: return "OP_MODULE";
+		case 69: return "OP_EXEC";
+		case 70: return "OP_METHOD";
+		case 71: return "OP_SCLASS";
+		case 72: return "OP_TCLASS";
+		case 73: return "OP_DEBUG";
+		case 74: return "OP_STOP";
+		case 75: return "OP_ERR";
+		case 76: return "OP_RSVD1";
+		case 77: return "OP_RSVD2";
+		case 78: return "OP_RSVD3";
+		case 79: return "OP_RSVD4";
+		case 80: return "OP_RSVD5";
+		default: return "OP_UNKNOWN";
+	}
+}
+
+string stringifyMrbCode(uint32 code) {
+	return Str("%s: A: 0x%x,	 B: 0x%x,	 C: 0x%x,	 Bx: 0x%x,	 sBx: %d,	 Ax: 0x%x,	 Bz: %x,	 Cz: %x",
+		getOpCode(code & 0x7f),
+		(code >> 23) & 0x1ff,
+		(code >> 14) & 0x1ff,
+		(code >> 7)  & 0x7f,
+		(code >> 7)  & 0xffff,
+	   ((code >> 7) & 0xffff) - (0xffff >> 1),
+		(code >> 7)  & 0x1ffffff,
+		(code >> 9)   & 0x3fff,
+		(code >> 7)  & 0x3
+	);
+}
+
+struct RiteBinaryHeader {
+	char binaryIdentifier[4];
+	char binaryFormatMajorVersion[2];
+	char binaryFormatMinorVersion[2];
+	ubyte crc[2];
+	uint32 binarySize;
+	char compilerName[4];
+	char compilerVersion[4];
+} riteHeader;
+
+struct RiteSectionHeader
+{
+	char sectionIdentifier[4];
+	uint32 sectionSize;
+};
+
+struct IrepSection;
+struct IrepSection {
+	uint32 recordSize;
+	uint16 numLocalVariables;
+	uint16 numRegisterVariables;
+	uint16 numChildIreps;
+	
+	uint32 iLen;
+	byte padding[-FTell() & 3];
+	if (iLen > 0) {
+		uint32 iSeqMrbCodes[iLen] <read=stringifyMrbCode>;	// TODO load.c L85, check byteorder
+	}
+
+	uint32 poolLen;
+	if (poolLen > 0) {
+		struct {
+			ubyte tt;
+			uint16 poolDataLen;
+			char poolData[poolDataLen];
+		} pools[poolLen] <optimize = false, read=(this.poolDataLen > 0 ? this.poolData : "\"\"")>;
+	}
+
+	uint32 symbolsLen;
+	if (symbolsLen > 0) {
+		struct {
+			uint16 symbolNameLength;
+			if (symbolNameLength != 0xffff)
+				char symbol[symbolNameLength + 1];
+			else
+				char symbol[0];
+		} symbols[symbolsLen] <optimize = false, read=(exists(this.symbol) ? this.symbol : "NULL")>;
+	}
+
+	if (numChildIreps > 0) {
+		IrepSection childIreps[numChildIreps] <optimize = false>;
+	}
+};
+
+
+struct Sym {
+	uint16 strLen;
+	char str[strLen];
+};
+
+struct Lvar {
+	uint16 symbolIndex;
+	uint16 symbolRegister;
+};
+
+struct LvarRecord;
+struct LvarSection (uint32 sectionSize, const IrepSection& irepSection) {
+	uint32 symbolsLen;
+	Sym symbols[symbolsLen] <optimize = false, read=this.str>;
+	struct LvarRecord(const IrepSection& irepSection) {
+		Lvar lvars[irepSection.numLocalVariables - 1];
+
+		local int i;
+		for (i = 0; i < irepSection.numChildIreps; i++) {
+			LvarRecord childRecord(irepSection.childIreps[i]) <optimize = false>;
+		}
+	};
+	LvarRecord record(irepSection);
+};
+
+
+const string RITE_SECTION_IREP_IDENT = "IREP";
+const string RITE_SECTION_DEBUG_IDENT = "DBG\0";
+const string RITE_SECTION_LV_IDENT = "LVAR";
+
+local int remainingSize = riteHeader.binarySize - sizeof(RiteBinaryHeader);
+struct {
+	struct {
+		char sectionIdentifier[4];
+		uint32 sectionSize;
+		char version[4];
+	} riteIrepSectionHeader;
+	IrepSection irepSection1;
+} irepSectionBlock;
+remainingSize -= sizeof(irepSectionBlock);
+
+if (remainingSize > sizeof(RiteSectionHeader)) {
+	struct {
+		RiteSectionHeader sectionHeader;
+		LvarSection lvarSection(sectionHeader.sectionSize, irepSectionBlock.irepSection1);
+	} lvarSectionBlock;
+
+	remainingSize -= sizeof(lvarSectionBlock);
+}
+
+char binaryEOF[4];
+uint32 binaryEOFSize;

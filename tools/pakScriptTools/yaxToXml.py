@@ -82,7 +82,7 @@ class XmlNode:
 		element = Element(self.tag)
 		element.set("id", hex(self.tagId))
 		element.text = self.value
-		if self.tag == "id" or self.tag == "code":
+		if self.value.startswith("0x") and len(self.value) > 2:
 			lookupElementHash(element)
 		if self.translatedValue:
 			element.set("eng", self.translatedValue)
@@ -92,7 +92,7 @@ class XmlNode:
 
 # Main
 
-def yaxToXml(yaxFile: str):
+def yaxToXml(yaxFile: str, outFile: str|None = None):
 	with open(yaxFile, "rb") as f:
 		nodeCount = read_uint32(f)
 		
@@ -122,7 +122,7 @@ def yaxToXml(yaxFile: str):
 		dom = xml.dom.minidom.parseString(xmlStr)
 		xmlStr = dom.toprettyxml(indent="\t", encoding="utf-8")
 		
-		xmlName = yaxFile.replace(".yax", ".xml") if ".yax" in yaxFile else yaxFile + ".xml"
+		xmlName = outFile or yaxFile.replace(".yax", ".xml") if ".yax" in yaxFile else yaxFile + ".xml"
 		with open(xmlName, "wb") as f:
 			f.write(xmlStr)
 

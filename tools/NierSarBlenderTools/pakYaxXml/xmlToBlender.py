@@ -60,7 +60,7 @@ def importEnemySet(action: ET.Element, color: List[float], prefix: str) -> None:
 
 	for i, layout in enumerate(action.find("layouts")):
 		for j, enemy in enumerate(layout.find("layouts").findall("value")):
-			emId = enemy.find("objID").text
+			emId = enemy.find("objID").text if enemy.find("objID") is not None else enemy.find("objId").text
 			dummyCube = makeCube(f"{i}x{j}-{emId}", None, color)
 			dummyCube.location = xmlVecToVec3(enemy.find("location").find("position").text)
 			dummyCube.rotation_euler = xmlVecToVec3(enemy.find("location").find("rotation").text)
@@ -88,7 +88,7 @@ def importBezier(action: ET.Element, color: List[float], prefix: str) -> None:
 		vecToPoint = Vector(points[i]) - Vector(invHandle)
 		leftHandles[i] = Vector(points[i]) + vecToPoint
 	
-	loopFlag = int(curveData.find("attribute").text) & 0xF
+	loopFlag = int(curveData.find("attribute").text, 16) & 0xF
 	if loopFlag != 4 or loopFlag != 5:
 		print(f"Unknown loop flag: {loopFlag}")
 	loops = loopFlag == 5
