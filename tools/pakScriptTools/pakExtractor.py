@@ -13,16 +13,16 @@ def read_uint32(file: BufferedWriter) -> int:
 	return struct.unpack('<I', entry)[0]
 
 class HeaderEntry:
+	type: int
 	uncompressedSize: int
 	offset: int
-	unknown: int
 
 	pakSize: int
 
 	def __init__(self, file: BufferedReader):
+		self.type = read_uint32(file)
 		self.uncompressedSize = read_uint32(file)
 		self.offset = read_uint32(file)
-		self.unknown = read_uint32(file)
 
 class FilEntry:
 	data: bytes
@@ -40,7 +40,7 @@ class FilEntry:
 
 		self.data = file.read(entrySize - paddingEndLength)
 
-def extractPakFile(pakFile: str, convertYaxToXml: bool = False):
+def extractPakFile(pakFile: str, convertYaxToXml: bool = False, updateInfoOnly: bool = False):
 	with open(pakFile, "rb") as f:
 		fileSize = os.fstat(f.fileno()).st_size
 		f.seek(0x8)
@@ -48,7 +48,6 @@ def extractPakFile(pakFile: str, convertYaxToXml: bool = False):
 		fileCount = (firstOffset - 0x4) // 12
 		
 		f.seek(0)
-		version = read_uint32(f)
 		# gather entries
 		headerEntries: List[HeaderEntry] = []
 		for i in range(fileCount):
@@ -73,17 +72,20 @@ def extractPakFile(pakFile: str, convertYaxToXml: bool = False):
 		pathlib.Path(extractionFolder).mkdir(parents=True, exist_ok=True)
 
 		pakInfoJson = {
-			"version": version,
 			"files": [
 				{
 					"name": f"{i}.yax",	# yax, cause Yet Another Xml encoding
-					"unknown1": headerEntries[i].unknown,
+					"type": headerEntries[i].type,
 				}
 				for i in range(fileCount)
 			]
 		}
 		with open(os.path.join(extractionFolder, "pakInfo.json"), "w") as f:
 			f.write(json.dumps(pakInfoJson, indent=4))
+		
+		if updateInfoOnly:
+			print("Info updated")
+			return
 		
 		for i in range(fileCount):
 			data: bytes
@@ -102,7 +104,8 @@ def extractPakFile(pakFile: str, convertYaxToXml: bool = False):
 				yaxToXml(os.path.join(extractionFolder, f"{i}.yax"))
 
 if __name__ == "__main__":
-	pakFiles = sys.argv[1:]
+	pakFiles = [f for f in sys.argv[1:] if f.endswith(".pak")]
+	updateInfoOnly = "-u" in sys.argv
 	
 	for pakFile in pakFiles:
-		extractPakFile(pakFile)
+		extractPakFile(pakFile, updateInfoOnly=updateInfoOnly)

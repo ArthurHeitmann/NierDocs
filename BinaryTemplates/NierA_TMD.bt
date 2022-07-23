@@ -1,0 +1,11 @@
+
+struct Entry {
+	uint32 idSize;
+	wchar_t id[idSize];
+	uint32 textSize;
+	wchar_t text[textSize];
+};
+
+uint32 count;
+while (FTell() + 8 < FileSize())
+	Entry entry;

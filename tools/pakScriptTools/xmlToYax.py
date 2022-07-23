@@ -4,6 +4,7 @@ import struct
 import sys
 from typing import Dict, List, Set
 from xml.etree.ElementTree import XMLParser, fromstring as xmlFromString, Element
+import zlib
 
 def writeString(string: str, file: BufferedWriter):
 	file.write(string.encode('shift-jis'))
@@ -14,6 +15,12 @@ def writeUint8(value: int, file: BufferedWriter):
 
 def writeUint32(value: int, file: BufferedWriter):
 	file.write(struct.pack('<I', value))
+
+def crc32(text: str) -> int:
+	return zlib.crc32(text.encode('ascii')) & 0xFFFFFFFF
+
+def getTagId(tag: Element) -> int:
+	return int(tag.get("id"), 16) if tag.tag == "UNKNOWN" else crc32(tag.tag)
 
 class XmlNode:
 	indentation: int
@@ -59,7 +66,7 @@ def xmlToYax(xmlFile: str, outFile: str|None = None):
 	# read flat tree, create nodes
 	nodes: List[XmlNode] = []
 	def addNodeToList(node: Element, indentation: int):
-		tagId = int(node.get("id"), 16)
+		tagId = getTagId(node)
 		nodeText = node.text.strip() if node.text else ""
 		nodes.append(XmlNode(indentation, tagId, nodeText))
 		for child in node:

@@ -80,7 +80,8 @@ class XmlNode:
 	
 	def toXml(self) -> Element:
 		element = Element(self.tag)
-		element.set("id", hex(self.tagId))
+		if self.tag == "UNKNOWN":
+			element.set("id", hex(self.tagId))
 		element.text = self.value
 		if self.value.startswith("0x") and len(self.value) > 2:
 			lookupElementHash(element)
