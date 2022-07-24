@@ -17,7 +17,7 @@ string getNodeText(uint32 offset) {
 }
 
 string PrettyPrintXmlNode (struct XmlNode& entry) {
-	local string tagName = getTagName(entry.tagNameOffsetOrId);
+	local string tagName = getTagName(entry.tagNameHash);
 	local string indentStr = makeIndentStr(entry.indentation);
 	local string text = getNodeText(entry.stringOffset);
 	local string s = indentStr + "<" + tagName + ">" + text + "</" + tagName + ">";
@@ -26,7 +26,7 @@ string PrettyPrintXmlNode (struct XmlNode& entry) {
 
 struct XmlNode {
 	ubyte indentation;
-	uint32 tagNameOffsetOrId;
+	uint32 tagNameHash;
 	uint32 stringOffset;
 };
 

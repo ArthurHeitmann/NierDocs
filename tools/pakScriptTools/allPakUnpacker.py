@@ -1,7 +1,9 @@
 import os
+import sys
 from pakExtractor import extractPakFile
 
-searchPath = "D:\\delete\\mods\\na\\blender\\extracted"
+fallbackPath = "D:\\delete\\mods\\na\\blender\\extracted"
+searchPath = sys.argv[1] if len(sys.argv) > 1 else fallbackPath
 fileExt = "pak"
 
 extractedPakFiles = 0
