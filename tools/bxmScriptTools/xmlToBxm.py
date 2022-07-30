@@ -7,7 +7,7 @@ xmlFiles = [f for f in sys.argv[1:] if f.endswith('.xml')]
 if len(xmlFiles) == 1 and len(sys.argv) >= 3:
 	bxmFiles = sys.argv[2:]
 else:
-	[os.path.splitext(f)[0] + '.bxm' for f in xmlFiles]
+	bxmFiles = [os.path.splitext(f)[0] + '.bxm' for f in xmlFiles]
 
 for i, xmlFile in enumerate(xmlFiles):
 	xmlRoot = ET.parse(xmlFile).getroot()

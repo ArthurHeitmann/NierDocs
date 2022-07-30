@@ -1,0 +1,6 @@
+uint32 filesCount;
+uint32 maxStrLen;
+struct
+{
+	char str[maxStrLen];
+} files[filesCount] <read=this.str>;
