@@ -1,3 +1,10 @@
+# NOW NO LONGER NEEDED
+# It's included in the N2B2N blender addon
+
+# ---------
+# ---------
+# ---------
+
 Blender addon for viewing and editing Nier Automata .sar files. Sar files seem to contain data about ambient sounds and music.
 
 # Installation

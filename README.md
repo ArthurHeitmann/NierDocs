@@ -3,12 +3,12 @@ A collection tools & resources for modding Nier Automata.
 # Contents
 
 - CPK, DAT/DTT file contents
-	- [Majority here](./cpkAndDttContents.md)
-	- [cpk015](./cpk015DttContents.md)
+	- [Majority here](./docs/cpkAndDttContents/cpkAndDttContents.md)
+	- [cpk015](./docs/cpkAndDttContents/cpk015DttContents.md)
 	- [Map](./mapMap/fullMap.md)
 - [Binary Templates](./BinaryTemplates/)
-	- [bxm (binary xml)](./BinaryTemplates/NierA_BXM.bt)
-	- [wem (music files)](./BinaryTemplates/NierA_WEM.bt)
 - Tools
 	- [BXM conversion](./tools/bxmScriptTools/)
-	- [SAR Blender Addon](./tools/NierSarBlenderTools/)
+	- [XML Scripting](./tools/pakScriptTools/)
+	- [Ruby Scripting](https://github.com/ArthurHeitmann/MrubyDecompiler)
+	- [Auto rebuild pak & recompile ruby scripts](https://github.com/ArthurHeitmann/NierAutoRebuildr)

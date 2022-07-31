@@ -1,0 +1,1273 @@
+[
+    {
+        "codeHex": "0xa10e3dbc",
+        "name": "SendCommand",
+        "attributes": [
+            "0x0",
+            "0x1",
+            "0x2",
+            "0x3",
+            "0x8",
+            "0x9",
+            "0xa",
+            "0xb",
+            "0x10",
+            "0x11",
+            "0x12",
+            "0x13",
+            "0x18",
+            "0x1a",
+            "0x1b",
+            "0x400",
+            "0x408",
+            "0x410",
+            "0x418"
+        ],
+        "encountered": 2813
+    },
+    {
+        "codeHex": "0x606fe5c4",
+        "name": "ConditionBlock",
+        "attributes": [
+            "0x0",
+            "0x8",
+            "0x9",
+            "0xa",
+            "0xb",
+            "0x10",
+            "0x18",
+            "0x19",
+            "0x1a",
+            "0x1b"
+        ],
+        "encountered": 1492
+    },
+    {
+        "codeHex": "0xda948617",
+        "name": "EntityLayoutAction",
+        "attributes": [
+            "0x0",
+            "0x1",
+            "0x2",
+            "0x3",
+            "0x8",
+            "0xa",
+            "0x10",
+            "0x11",
+            "0x12",
+            "0x13",
+            "0x408",
+            "0x40a",
+            "0x418",
+            "0x1000010",
+            "0x6000010",
+            "0xff000010",
+            "0xff000012",
+            "0xff000418"
+        ],
+        "encountered": 1412
+    },
+    {
+        "codeHex": "0x7d30118c",
+        "name": "ConditionCommands",
+        "attributes": [
+            "0x0",
+            "0x1",
+            "0x2",
+            "0x3",
+            "0x8",
+            "0x10",
+            "0x11",
+            "0x12",
+            "0x13",
+            "0x18",
+            "0x400",
+            "0x6000010"
+        ],
+        "encountered": 1246
+    },
+    {
+        "codeHex": "0x8cf2e32",
+        "name": "AreaAction",
+        "attributes": [
+            "0x0",
+            "0x1",
+            "0x2",
+            "0x3",
+            "0x8",
+            "0x9",
+            "0xa",
+            "0x10",
+            "0x11",
+            "0x12",
+            "0x13",
+            "0x18",
+            "0x19",
+            "0x1b",
+            "0x408",
+            "0x10000",
+            "0x10001",
+            "0x10002",
+            "0x10008",
+            "0x10012"
+        ],
+        "encountered": 918
+    },
+    {
+        "codeHex": "0x149c7bdf",
+        "name": "DelayAction",
+        "attributes": [
+            "0x0",
+            "0x8",
+            "0x9",
+            "0xa",
+            "0xb",
+            "0x18",
+            "0x19",
+            "0x1b"
+        ],
+        "encountered": 810
+    },
+    {
+        "codeHex": "0xfb085793",
+        "name": "EnemySetAction",
+        "attributes": [
+            "0x0",
+            "0x1",
+            "0x2",
+            "0x3",
+            "0x8",
+            "0x9",
+            "0xa",
+            "0x10",
+            "0x12",
+            "0x13",
+            "0x408",
+            "0x40a",
+            "0x418",
+            "0x800",
+            "0x802",
+            "0x803",
+            "0x808",
+            "0x810",
+            "0xc08",
+            "0xc0a",
+            "0xc18"
+        ],
+        "encountered": 736
+    },
+    {
+        "codeHex": "0xe8fefe4b",
+        "name": "EnemySetArea",
+        "attributes": [
+            "0x0",
+            "0x1",
+            "0x2",
+            "0x3",
+            "0x8",
+            "0x9",
+            "0x10",
+            "0x11",
+            "0x12",
+            "0x13",
+            "0x18",
+            "0x19",
+            "0x408",
+            "0x418",
+            "0x800",
+            "0x808",
+            "0x810",
+            "0x811",
+            "0x812",
+            "0xc08",
+            "0xc0a",
+            "0x1000",
+            "0x1001",
+            "0x1002",
+            "0x1003",
+            "0x1010",
+            "0x1012",
+            "0x1418",
+            "0x1810",
+            "0x1812",
+            "0x2810",
+            "0x2812"
+        ],
+        "encountered": 680
+    },
+    {
+        "codeHex": "0x6f0fb5bd",
+        "name": "EnemyGenerator",
+        "attributes": [
+            "0x0",
+            "0x1",
+            "0x2",
+            "0x3",
+            "0x10",
+            "0x12"
+        ],
+        "encountered": 679
+    },
+    {
+        "codeHex": "0x4d5c2719",
+        "name": "ShootingEnemyCurveAction",
+        "attributes": [
+            "0x0",
+            "0x2",
+            "0x3"
+        ],
+        "encountered": 594
+    },
+    {
+        "codeHex": "0xd9783e91",
+        "name": "SendCommands",
+        "attributes": [
+            "0x0",
+            "0x1",
+            "0x2",
+            "0x3",
+            "0x8",
+            "0xa",
+            "0xb",
+            "0x10",
+            "0x11",
+            "0x12",
+            "0x18"
+        ],
+        "encountered": 470
+    },
+    {
+        "codeHex": "0xad895807",
+        "name": "CameraAction",
+        "attributes": [
+            "0x0",
+            "0x1",
+            "0x2",
+            "0x3",
+            "0x10",
+            "0x12",
+            "0x13"
+        ],
+        "encountered": 439
+    },
+    {
+        "codeHex": "0xbeaf915f",
+        "name": "ScriptAction",
+        "attributes": [
+            "0x0",
+            "0x1",
+            "0x2",
+            "0x3",
+            "0x10",
+            "0x400",
+            "0x410"
+        ],
+        "encountered": 363
+    },
+    {
+        "codeHex": "0x69108577",
+        "name": "PhaseEventAction",
+        "attributes": [
+            "0x0",
+            "0x1",
+            "0x2",
+            "0x3",
+            "0x8",
+            "0x9",
+            "0xa",
+            "0xb",
+            "0x10",
+            "0x12",
+            "0x18",
+            "0x1b",
+            "0x408",
+            "0x409",
+            "0x418",
+            "0x2000",
+            "0x2008",
+            "0x2018",
+            "0x2408",
+            "0x10000",
+            "0x10002",
+            "0x10008",
+            "0x10010",
+            "0x10018",
+            "0x10408",
+            "0x10418"
+        ],
+        "encountered": 346
+    },
+    {
+        "codeHex": "0xb0757267",
+        "name": "HapMultiMarkLocationAction",
+        "attributes": [
+            "0x0",
+            "0x2",
+            "0x3",
+            "0x10",
+            "0x11",
+            "0x12",
+            "0x13"
+        ],
+        "encountered": 314
+    },
+    {
+        "codeHex": "0x7c4724ad",
+        "name": "HapGoalLocationAction",
+        "attributes": [
+            "0x0",
+            "0x2",
+            "0x3",
+            "0x10",
+            "0x12",
+            "0x13"
+        ],
+        "encountered": 268
+    },
+    {
+        "codeHex": "0x58534a9e",
+        "name": "AreaCommand",
+        "attributes": [
+            "0x0",
+            "0x1",
+            "0x2",
+            "0x3",
+            "0x10",
+            "0x12",
+            "0x18",
+            "0x10000"
+        ],
+        "encountered": 252
+    },
+    {
+        "codeHex": "0x5874fcd9",
+        "name": "BezierCurveAction",
+        "attributes": [
+            "0x0",
+            "0x1",
+            "0x3",
+            "0x10"
+        ],
+        "encountered": 250
+    },
+    {
+        "codeHex": "0x227440da",
+        "name": "PhaseJumpAction",
+        "attributes": [
+            "0x0",
+            "0x1",
+            "0x2",
+            "0x3",
+            "0x10",
+            "0x12",
+            "0x13",
+            "0x400",
+            "0x401",
+            "0x402",
+            "0x410",
+            "0x412",
+            "0x418",
+            "0x10000",
+            "0x10001",
+            "0x10002",
+            "0x10003",
+            "0x10010"
+        ],
+        "encountered": 228
+    },
+    {
+        "codeHex": "0x4f925d24",
+        "name": "CameraTargetAction",
+        "attributes": [
+            "0x0",
+            "0x1",
+            "0x2",
+            "0x3",
+            "0x10",
+            "0x12",
+            "0x400",
+            "0x401",
+            "0x402",
+            "0x403",
+            "0x410",
+            "0x411",
+            "0x412",
+            "0x413"
+        ],
+        "encountered": 227
+    },
+    {
+        "codeHex": "0xcf775473",
+        "name": "EntityLayoutArea",
+        "attributes": [
+            "0x0",
+            "0x1",
+            "0x2",
+            "0x3",
+            "0x8",
+            "0x10",
+            "0x408",
+            "0xff000010"
+        ],
+        "encountered": 221
+    },
+    {
+        "codeHex": "0x43173c6f",
+        "name": "HapLocationAction",
+        "attributes": [
+            "0x0",
+            "0x1",
+            "0x2",
+            "0x3",
+            "0x10"
+        ],
+        "encountered": 211
+    },
+    {
+        "codeHex": "0xe58b4e99",
+        "name": "MultiConditionBlock",
+        "attributes": [
+            "0x0",
+            "0x8",
+            "0x9",
+            "0xa",
+            "0xb",
+            "0x10",
+            "0x18",
+            "0x19",
+            "0x1a"
+        ],
+        "encountered": 191
+    },
+    {
+        "codeHex": "0xf0213c66",
+        "name": "PathCameraArea",
+        "attributes": [
+            "0x0",
+            "0x1",
+            "0x2",
+            "0x3",
+            "0x10",
+            "0x12",
+            "0x13",
+            "0x400"
+        ],
+        "encountered": 177
+    },
+    {
+        "codeHex": "0x2662e9b7",
+        "name": "HackingRequestEndAction",
+        "attributes": [
+            "0x0",
+            "0x1",
+            "0x2"
+        ],
+        "encountered": 156
+    },
+    {
+        "codeHex": "0xbea4fc64",
+        "name": "MemorySaveAction",
+        "attributes": [
+            "0x0",
+            "0x2",
+            "0x10",
+            "0x12",
+            "0x400",
+            "0x402",
+            "0x410",
+            "0x800",
+            "0x810",
+            "0x812",
+            "0xc00",
+            "0xc10"
+        ],
+        "encountered": 152
+    },
+    {
+        "codeHex": "0x1b1fe1ea",
+        "name": "CameraShooting",
+        "attributes": [
+            "0x0",
+            "0x1",
+            "0x2",
+            "0x3"
+        ],
+        "encountered": 146
+    },
+    {
+        "codeHex": "0x676cbe32",
+        "name": "PlayerCombatLimitAction",
+        "attributes": [
+            "0x0",
+            "0x1",
+            "0x2",
+            "0x3",
+            "0x10",
+            "0x12",
+            "0x13"
+        ],
+        "encountered": 131
+    },
+    {
+        "codeHex": "0x312ef487",
+        "name": "HackingAction",
+        "attributes": [
+            "0x0",
+            "0x1",
+            "0x2"
+        ],
+        "encountered": 125
+    },
+    {
+        "codeHex": "0x12067bf0",
+        "name": "SubPhaseAction",
+        "attributes": [
+            "0x0",
+            "0x2",
+            "0x10",
+            "0x11",
+            "0x12",
+            "0x400",
+            "0x401",
+            "0x402",
+            "0x403",
+            "0x410",
+            "0x412",
+            "0x10400",
+            "0x10402",
+            "0x10410"
+        ],
+        "encountered": 105
+    },
+    {
+        "codeHex": "0xecfcefb4",
+        "name": "UITimerAction",
+        "attributes": [
+            "0x0",
+            "0x2"
+        ],
+        "encountered": 94
+    },
+    {
+        "codeHex": "0xc43b97cd",
+        "name": "ResetAction",
+        "attributes": [
+            "0x0",
+            "0x1",
+            "0x2",
+            "0x3",
+            "0x10",
+            "0x400"
+        ],
+        "encountered": 90
+    },
+    {
+        "codeHex": "0x21239c6e",
+        "name": "HackingCollectiveSetAction",
+        "attributes": [
+            "0x0",
+            "0x2"
+        ],
+        "encountered": 90
+    },
+    {
+        "codeHex": "0x47bb6f72",
+        "name": "FadeAction",
+        "attributes": [
+            "0x0",
+            "0x2",
+            "0x3",
+            "0x8",
+            "0x10",
+            "0x12",
+            "0x18",
+            "0x19",
+            "0x400",
+            "0x401",
+            "0x402",
+            "0x408",
+            "0x410",
+            "0x418",
+            "0x1000",
+            "0x1002",
+            "0x1010",
+            "0x1402",
+            "0x1818"
+        ],
+        "encountered": 81
+    },
+    {
+        "codeHex": "0x39c170f9",
+        "name": "Caption",
+        "attributes": [
+            "0x0",
+            "0x1",
+            "0x2",
+            "0x3",
+            "0x10",
+            "0x11",
+            "0x12"
+        ],
+        "encountered": 72
+    },
+    {
+        "codeHex": "0x96ddbb3e",
+        "name": "RecoveryPointArea",
+        "attributes": [
+            "0x0",
+            "0x1"
+        ],
+        "encountered": 62
+    },
+    {
+        "codeHex": "0x1c24e8ca",
+        "name": "AreaEntityAction",
+        "attributes": [
+            "0x0",
+            "0x2",
+            "0x3",
+            "0x8",
+            "0x10"
+        ],
+        "encountered": 53
+    },
+    {
+        "codeHex": "0x71cf264b",
+        "name": "HackingStageDmgAction",
+        "attributes": [
+            "0x0"
+        ],
+        "encountered": 52
+    },
+    {
+        "codeHex": "0xa21fc075",
+        "name": "RouteMove",
+        "attributes": [
+            "0x0",
+            "0x2",
+            "0x10",
+            "0x400",
+            "0xc02"
+        ],
+        "encountered": 48
+    },
+    {
+        "codeHex": "0xfbac492d",
+        "name": "TravelPointAction",
+        "attributes": [
+            "0x0",
+            "0x10"
+        ],
+        "encountered": 46
+    },
+    {
+        "codeHex": "0x1571c131",
+        "name": "ChangeAreaAction",
+        "attributes": [
+            "0x0"
+        ],
+        "encountered": 46
+    },
+    {
+        "codeHex": "0xe300079d",
+        "name": "PositionSet",
+        "attributes": [
+            "0x0",
+            "0x1",
+            "0x2",
+            "0x10",
+            "0x11",
+            "0x12",
+            "0x800",
+            "0x802",
+            "0x803"
+        ],
+        "encountered": 40
+    },
+    {
+        "codeHex": "0x2754c126",
+        "name": "EntityLayoutLottery",
+        "attributes": [
+            "0x0",
+            "0x2"
+        ],
+        "encountered": 39
+    },
+    {
+        "codeHex": "0xd0bcb63c",
+        "name": "CommentAction",
+        "attributes": [
+            "0x10000",
+            "0x10003",
+            "0x10012"
+        ],
+        "encountered": 35
+    },
+    {
+        "codeHex": "0xe14742dd",
+        "name": "PlayerTurnOffAction",
+        "attributes": [
+            "0x0",
+            "0x2",
+            "0x10",
+            "0x12",
+            "0x13"
+        ],
+        "encountered": 32
+    },
+    {
+        "codeHex": "0xa66d6332",
+        "name": "PositionJump",
+        "attributes": [
+            "0x0",
+            "0x1",
+            "0x2",
+            "0x3",
+            "0x10",
+            "0x800",
+            "0x802",
+            "0x803",
+            "0x811",
+            "0x10000"
+        ],
+        "encountered": 32
+    },
+    {
+        "codeHex": "0x9ec6d8c2",
+        "name": "PressAreaAction",
+        "attributes": [
+            "0x0",
+            "0x2",
+            "0x10008"
+        ],
+        "encountered": 32
+    },
+    {
+        "codeHex": "0xc168700d",
+        "name": "EmListUnlockAction",
+        "attributes": [
+            "0x0",
+            "0x2",
+            "0x10",
+            "0x12"
+        ],
+        "encountered": 28
+    },
+    {
+        "codeHex": "0x3f1d9dbf",
+        "name": "Tutorial",
+        "attributes": [
+            "0x0",
+            "0x2",
+            "0x10",
+            "0x12"
+        ],
+        "encountered": 26
+    },
+    {
+        "codeHex": "0x683f6b9b",
+        "name": "NoAnimalArea",
+        "attributes": [
+            "0x0",
+            "0x3"
+        ],
+        "encountered": 24
+    },
+    {
+        "codeHex": "0xa4170d",
+        "name": "MinimapAreaAction",
+        "attributes": [
+            "0x0"
+        ],
+        "encountered": 24
+    },
+    {
+        "codeHex": "0x9d850907",
+        "name": "UIMessageBlock",
+        "attributes": [
+            "0x0"
+        ],
+        "encountered": 22
+    },
+    {
+        "codeHex": "0xfb252867",
+        "name": "CameraArea",
+        "attributes": [
+            "0x0",
+            "0x10"
+        ],
+        "encountered": 20
+    },
+    {
+        "codeHex": "0xf16c2de1",
+        "name": "RandomCommandsArea",
+        "attributes": [
+            "0x0",
+            "0x400"
+        ],
+        "encountered": 19
+    },
+    {
+        "codeHex": "0x3a0c6272",
+        "name": "tr::BattleCounter",
+        "attributes": [
+            "0x0",
+            "0x10"
+        ],
+        "encountered": 17
+    },
+    {
+        "codeHex": "0x5797c250",
+        "name": "TravelPointConditionResetAction",
+        "attributes": [
+            "0x0",
+            "0x1"
+        ],
+        "encountered": 16
+    },
+    {
+        "codeHex": "0xe4e7661e",
+        "name": "HackingRetryAction",
+        "attributes": [
+            "0x0",
+            "0x2"
+        ],
+        "encountered": 16
+    },
+    {
+        "codeHex": "0x646751eb",
+        "name": "RecoveryArea",
+        "attributes": [
+            "0x0",
+            "0x1",
+            "0x3"
+        ],
+        "encountered": 15
+    },
+    {
+        "codeHex": "0x1ecb41d7",
+        "name": "ArchiveAction",
+        "attributes": [
+            "0x0",
+            "0x2",
+            "0x10",
+            "0x12"
+        ],
+        "encountered": 15
+    },
+    {
+        "codeHex": "0xfd74c4a9",
+        "name": "SeamlessMapStopArea",
+        "attributes": [
+            "0x0",
+            "0x1"
+        ],
+        "encountered": 14
+    },
+    {
+        "codeHex": "0x72d78995",
+        "name": "HackingRequestStartAction",
+        "attributes": [
+            "0x0",
+            "0x2"
+        ],
+        "encountered": 14
+    },
+    {
+        "codeHex": "0x223e4df9",
+        "name": "LoopElevatorAction",
+        "attributes": [
+            "0x0",
+            "0x10"
+        ],
+        "encountered": 14
+    },
+    {
+        "codeHex": "0x73b058dd",
+        "name": "ConditionLayout",
+        "attributes": [
+            "0x0",
+            "0x2",
+            "0x10"
+        ],
+        "encountered": 13
+    },
+    {
+        "codeHex": "0xe46bfad",
+        "name": "ConditionAction",
+        "attributes": [
+            "0x0",
+            "0x1",
+            "0x2",
+            "0x3",
+            "0x10"
+        ],
+        "encountered": 13
+    },
+    {
+        "codeHex": "0xa8c59a0e",
+        "name": "SoundNovelAction",
+        "attributes": [
+            "0x818",
+            "0x1000",
+            "0x1802",
+            "0x1818",
+            "0x1c08"
+        ],
+        "encountered": 13
+    },
+    {
+        "codeHex": "0x8745576",
+        "name": "ScrollMap",
+        "attributes": [
+            "0x0"
+        ],
+        "encountered": 12
+    },
+    {
+        "codeHex": "0x43e6f90c",
+        "name": "PositionSetBunker",
+        "attributes": [
+            "0x0",
+            "0x10",
+            "0x12",
+            "0x13",
+            "0x810",
+            "0x813"
+        ],
+        "encountered": 12
+    },
+    {
+        "codeHex": "0x8b0bf6e1",
+        "name": "QuestBindArea",
+        "attributes": [
+            "0x0",
+            "0x800",
+            "0x810",
+            "0x1000"
+        ],
+        "encountered": 12
+    },
+    {
+        "codeHex": "0x6918c907",
+        "name": "QuestArea",
+        "attributes": [
+            "0x0"
+        ],
+        "encountered": 10
+    },
+    {
+        "codeHex": "0x94706d0a",
+        "name": "LadderPointAction",
+        "attributes": [
+            "0x0",
+            "0x6000012"
+        ],
+        "encountered": 10
+    },
+    {
+        "codeHex": "0xa5f44707",
+        "name": "BattleBgmAction",
+        "attributes": [
+            "0x0",
+            "0x12"
+        ],
+        "encountered": 10
+    },
+    {
+        "codeHex": "0x8f96a9ae",
+        "name": "AirCurveAction",
+        "attributes": [
+            "0x0",
+            "0x1",
+            "0x2",
+            "0x3"
+        ],
+        "encountered": 8
+    },
+    {
+        "codeHex": "0x8ff939",
+        "name": "CameraFovy",
+        "attributes": [
+            "0x0",
+            "0x1"
+        ],
+        "encountered": 7
+    },
+    {
+        "codeHex": "0x367aa6d3",
+        "name": "ElevatorAction",
+        "attributes": [
+            "0x0",
+            "0x10"
+        ],
+        "encountered": 6
+    },
+    {
+        "codeHex": "0x517c12ab",
+        "name": "UINameTagAction",
+        "attributes": [
+            "0x2"
+        ],
+        "encountered": 6
+    },
+    {
+        "codeHex": "0x18813e7f",
+        "name": "NoticeAction",
+        "attributes": [
+            "0x10000",
+            "0x10002"
+        ],
+        "encountered": 6
+    },
+    {
+        "codeHex": "0xd78093af",
+        "name": "BgmAction",
+        "attributes": [
+            "0x0",
+            "0x2"
+        ],
+        "encountered": 6
+    },
+    {
+        "codeHex": "0x1fb7c472",
+        "name": "PositionLoadJump",
+        "attributes": [
+            "0x0",
+            "0x8"
+        ],
+        "encountered": 6
+    },
+    {
+        "codeHex": "0x40c4b1a1",
+        "name": "ElevatorWayPoint",
+        "attributes": [
+            "0x0"
+        ],
+        "encountered": 6
+    },
+    {
+        "codeHex": "0x8a64ca63",
+        "name": "MultiRouteMove",
+        "attributes": [
+            "0x0",
+            "0xc00"
+        ],
+        "encountered": 5
+    },
+    {
+        "codeHex": "0x20b7caf9",
+        "name": "CameraResetAction",
+        "attributes": [
+            "0x0",
+            "0x1"
+        ],
+        "encountered": 4
+    },
+    {
+        "codeHex": "0x58b709d",
+        "name": "MessageWalkAction",
+        "attributes": [
+            "0x0",
+            "0x2",
+            "0x10"
+        ],
+        "encountered": 4
+    },
+    {
+        "codeHex": "0xa90432fd",
+        "name": "ActionKeyArea",
+        "attributes": [
+            "0x10000",
+            "0x10002"
+        ],
+        "encountered": 4
+    },
+    {
+        "codeHex": "0x73120530",
+        "name": "MinimapReadStopAreaAction",
+        "attributes": [
+            "0x0"
+        ],
+        "encountered": 4
+    },
+    {
+        "codeHex": "0xa2de6cb5",
+        "name": "AirBezierAction",
+        "attributes": [
+            "0x2"
+        ],
+        "encountered": 3
+    },
+    {
+        "codeHex": "0xae48b63f",
+        "name": "PathCameraAction",
+        "attributes": [
+            "0x2",
+            "0x3"
+        ],
+        "encountered": 3
+    },
+    {
+        "codeHex": "0xd1bbd841",
+        "name": "RouteAction",
+        "attributes": [
+            "0x0"
+        ],
+        "encountered": 3
+    },
+    {
+        "codeHex": "0x54d6fa81",
+        "name": "HapSOSLocationAction",
+        "attributes": [
+            "0x12"
+        ],
+        "encountered": 3
+    },
+    {
+        "codeHex": "0x5c5f675",
+        "name": "PressConveyorAction",
+        "attributes": [
+            "0x0",
+            "0x1"
+        ],
+        "encountered": 3
+    },
+    {
+        "codeHex": "0xce830ca9",
+        "name": "ScriptLibraryAction",
+        "attributes": [
+            "0x0"
+        ],
+        "encountered": 2
+    },
+    {
+        "codeHex": "0x53229e21",
+        "name": "HackingCheckClearAction",
+        "attributes": [
+            "0x0"
+        ],
+        "encountered": 2
+    },
+    {
+        "codeHex": "0x26a6c6cb",
+        "name": "OffsetCameraAction",
+        "attributes": [
+            "0x3"
+        ],
+        "encountered": 2
+    },
+    {
+        "codeHex": "0xc454673",
+        "name": "TravelPointChanger",
+        "attributes": [
+            "0x0",
+            "0x10"
+        ],
+        "encountered": 2
+    },
+    {
+        "codeHex": "0xd731a90c",
+        "name": "PodWait",
+        "attributes": [
+            "0x10"
+        ],
+        "encountered": 2
+    },
+    {
+        "codeHex": "0xbd4ba4ae",
+        "name": "SacredArea",
+        "attributes": [
+            "0x0"
+        ],
+        "encountered": 2
+    },
+    {
+        "codeHex": "0x63e7ed47",
+        "name": "ConditionBgm",
+        "attributes": [
+            "0x0"
+        ],
+        "encountered": 2
+    },
+    {
+        "codeHex": "0x877f1dc5",
+        "name": "RoboOilArea",
+        "attributes": [
+            "0x10"
+        ],
+        "encountered": 1
+    },
+    {
+        "codeHex": "0x6c2ad835",
+        "name": "BunkerStop",
+        "attributes": [
+            "0x0"
+        ],
+        "encountered": 1
+    },
+    {
+        "codeHex": "0x46382feb",
+        "name": "UISkillDlGaugeAction",
+        "attributes": [
+            "0x12"
+        ],
+        "encountered": 1
+    },
+    {
+        "codeHex": "0x74842aaa",
+        "name": "SubphaseChangeAction",
+        "attributes": [
+            "0x0"
+        ],
+        "encountered": 1
+    },
+    {
+        "codeHex": "0x7aed10c3",
+        "name": "KillArea",
+        "attributes": [
+            "0x1"
+        ],
+        "encountered": 1
+    },
+    {
+        "codeHex": "0xea31b0bd",
+        "name": "ShootingLaserAction",
+        "attributes": [
+            "0x3"
+        ],
+        "encountered": 1
+    },
+    {
+        "codeHex": "0xf6092fa",
+        "name": "UIHudAction",
+        "attributes": [
+            "0x12"
+        ],
+        "encountered": 1
+    },
+    {
+        "codeHex": "0x2bbe7dd1",
+        "name": "BunkerAction",
+        "attributes": [
+            "0x0"
+        ],
+        "encountered": 1
+    },
+    {
+        "codeHex": "0x3ff17a64",
+        "name": "HapSandStormAreaAction",
+        "attributes": [
+            "0x0"
+        ],
+        "encountered": 1
+    },
+    {
+        "codeHex": "0xab62db7f",
+        "name": "GlaringArea",
+        "attributes": [
+            "0x0"
+        ],
+        "encountered": 1
+    }
+]
