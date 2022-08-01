@@ -310,7 +310,7 @@ based on: https://pastebin.com/2qDrUheP
 ### cpk012
   - ph2:
     - p200 - Most scripting logic after big bang and route C (?)
-    - p200 - Most scripting for route C (?)
+    - p300 - Most scripting for route C (?)
   - quest:
     - q020 - Side quest Jean-Paul's Melancholy
     - q031 - Side quest Machine Examination 1
