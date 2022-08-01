@@ -15,7 +15,7 @@
 
 ## What you need
 
-You can download the decompiler and compiler with pre built mruby binaries from [here](../../tools/pakScriptTools).
+You can download the decompiler and compiler with pre built mruby binaries from [here](https://github.com/ArthurHeitmann/MrubyDecompiler).
 
 Or optionally get the [auto rebuild tool](https://github.com/ArthurHeitmann/NierAutoRebuild).
 
