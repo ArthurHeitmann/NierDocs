@@ -40,9 +40,11 @@ based on: https://pastebin.com/2qDrUheP
     - it0020 - android
   
 ### cpk002
+  - ph1:
+    - p100 - Most scripting logic before the big bang (?)
   - st1:
-    - r100: City Ruins before big bang
-    - r120: Factory
+    - r100 - City Ruins before big bang
+    - r120 - Factory
 
 ### cpk003
   - textures for cpk004
@@ -306,6 +308,76 @@ based on: https://pastebin.com/2qDrUheP
     - it0041 - other POD broken
 
 ### cpk012
+  - ph2:
+    - p200 - Most scripting logic after big bang and route C (?)
+    - p200 - Most scripting for route C (?)
+  - quest:
+    - q020 - Side quest Jean-Paul's Melancholy
+    - q031 - Side quest Machine Examination 1
+    - q032 - Side quest Machine Examination 2
+    - q040 - Side quest Family Squabble 
+    - q070 - Side quest Of Machines and Beasts
+    - q071 - Side quest Animal Care
+    - q072 - Side quest Turf War
+    - q100 - Side quest Robo Dojo - White Belt
+    - q101 - Side quest Robo Dojo - Brown Belt
+    - q102 - Side quest Robo Dojo - Black Belt
+    - q103 - Side quest Robo Dojo - Red and White Belt
+    - q104 - Side quest Robo Dojo - Red Belt
+    - q110 - Side quest Lost Girl 
+    - q120 - Side quest The Supply Trader's Request
+    - q121 - Side quest The Manager's Request
+    - q122 - Side quest Camp Development
+    - q123 - Side quest Anemone's Past
+    - q130 - Side quest Amnesia
+    - q140 - Side quest Resistance Disappearance
+    - q150 - Side quest Jackass's Research
+    - q160 - Side quest Improving Communications
+    - q162 - Side quest Investigating Communications
+    - q170 - Side quest Terminal Repairs
+    - q171 - Side quest Find a Present
+    - q180 - Side quest Data Analysis Freak
+    - q181 - Side quest Data Analysis Freak 2
+    - q210 - Side quest Lord of the Valley
+    - q220 - Side quest Vanquish the Bad Bot
+    - q221 - Side quest Play with Us!
+    - qUs! - Side quest Storage Element
+    - q240 - Side quest Half-wit Inventor
+    - q250 - Side quest Idiot Savant
+    - q290 - Side quest Game Dev Machine Lv.1
+    - q291 - Side quest Game Dev Machine Lv.2
+    - q292 - Side quest Game Dev Machine Lv.3
+    - q300 - Side quest Speed Star
+    - q330 - Side quest Emil's Memories
+    - q340 - Side quest Photographs
+    - q360 - Side quest In A High Place
+    - q400 - Side quest The Vengeful Warrior
+    - q401 - Side quest The Vengeful Warrior Returns
+    - q403 - Side quest The Vengeful Warrior's Finale
+    - q410 - Side quest 11B's Memento
+    - q440 - Side quest Treasure Hunt at the Castle
+    - q500 - Side quest The Wandering Couple
+    - q520 - Side quest Data on the Old World
+    - q532 - Side quest Culinary Researcher
+    - q540 - Side quest YoRHa Betrayers
+    - q550 - Side quest Reconnaissance Squad
+    - q560 - Side quest Devola's Request
+    - q561 - Side quest Popola's Errand
+    - q562 - Side quest The Twins' Request
+    - q590 - Side quest Heritage of the Past
+    - q640 - Side quest Retrieve the Confidential Intel
+    - q650 - Side quest Sorting Trouble
+    - q651 - Side quest Sorting Trouble 2
+    - q652 - Side quest Sorting Trouble 3
+    - q660 - Side quest Stamp Collecting
+    - q680 - Side quest Parade Escort
+    - q720 - Side quest Gathering Keepsakes
+    - q770 - Side quest The Weapon Dealer's Request
+    - q800 - Side quest The Recluse
+    - q801 - Side quest The Recluse Stays Home
+    - q802 - Side quest The Permanent Recluse
+    - q900 - Side quest Emil's Determination
+    - q920 - Side quest A Steal of a Deal
   - st1:
     - r110 - Resistance Camp
     - r130 - Amusement Park
