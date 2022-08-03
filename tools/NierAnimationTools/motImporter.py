@@ -21,9 +21,11 @@ def importMot(file: str) -> None:
 		# clear pose data
 		for bone in armatureObj.pose.bones:
 			bone.location = (0, 0, 0)
-			bone.rotation_quaternion = (1, 0, 0, 0)
+			bone.rotation_mode = "XYZ"
 			bone.rotation_euler = (0, 0, 0)
 			bone.scale = (1, 1, 1)
+
+		boneRotOffsets = makeBoneRotOffsetMap(armatureObj)
 
 		# import
 		f.seek(header.recordsOffset)
@@ -60,8 +62,8 @@ def importMot(file: str) -> None:
 		
 		# sort by hierarchy, since translation is relative to parent
 		animations.sort(key=lambda a: f"{len(a.bone.parent_recursive)}:{int(a.bone.name[4:])}")
-		
+
 		# apply to blender
 		for animation in animations:
-			animation.applyToBlender()
+			animation.applyToBlender(boneRotOffsets)
 

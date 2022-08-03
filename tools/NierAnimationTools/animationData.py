@@ -1,4 +1,5 @@
 from __future__ import annotations
+from ast import Dict
 import math
 from typing import List, Set, Tuple
 import bpy
@@ -166,7 +167,7 @@ class PropertyAnimation:
 		# 			self.channelKeyFrames[2][i].m0 *= -1
 		# 			self.channelKeyFrames[2][i].m1 *= -1
 			
-	def applyToBlender(self):
+	def applyToBlender(self, boneRotOffsets: Dict[bpy.types.PoseBone, Vector]):
 		# print("=================")
 		# print(self.bone.name)
 		# print(self.propertyName)
@@ -190,26 +191,14 @@ class PropertyAnimation:
 					self.bone.keyframe_insert(data_path=self.propertyName, index=c, frame=self.channelKeyFrames[0][i].frame)
 					# TODO bezier handles
 			elif self.propertyName == "rotation_euler":
-				# initialLocation = self.bone.location.copy()
-				# initialScale = self.bone.scale.copy()
-				# self.bone.rotation_euler = (0, 0, 0)
-				targetRotMat = Euler(valueVec).to_matrix()
-				boneGlobal: Matrix = rig.matrix_world @ self.bone.matrix
-				boneGlobalLoc, boneGlobalRot, boneGlobalScale = boneGlobal.decompose()
-				boneGlobalRotMat = boneGlobalRot.to_euler("XYZ", prevRot).to_matrix()
-				boneTargetGlobRotMat: Matrix = targetRotMat @ boneGlobalRotMat
-				boneTargetGlobQuat = boneTargetGlobRotMat.to_quaternion()
-				boneTargetGlobal =  Matrix.LocRotScale(boneGlobalLoc, boneTargetGlobQuat, boneGlobalScale)
-				boneTargetMatrix = rig.matrix_world.inverted() @ boneTargetGlobal
-				self.bone.matrix = boneTargetMatrix
-				prevRot = self.bone.rotation_euler.copy()
-				# self.bone.location = initialLocation
-				# self.bone.scale = initialScale
-				self.bone.keyframe_insert(data_path=self.propertyName, frame=self.channelKeyFrames[0][i].frame)
-				# for c in range(3):
-					# boneProp[c] = localRot[c]
-					# self.bone.keyframe_insert(data_path=self.propertyName, index=c, frame=self.channelKeyFrames[0][i].frame)
+				continue
+				offsetRot = valueVec - boneRotOffsets[self.bone]
+				for c in range(3):
+					boneProp[c] = offsetRot[c]
+					self.bone.keyframe_insert(data_path=self.propertyName, index=c, frame=self.channelKeyFrames[0][i].frame)
 					# TODO bezier handles
+
+
 			else:
 				for c in range(3):
 					boneProp[c] = valueVec[c]

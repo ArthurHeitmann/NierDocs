@@ -1,4 +1,5 @@
-from typing import List
+from math import radians
+from typing import Dict, List
 import bpy
 from mathutils import Euler, Matrix, Vector
 
@@ -116,3 +117,9 @@ def boneGlobalRotationToLocal(bone: bpy.types.PoseBone, armatureObj: bpy.types.O
 		from_space="WORLD",
 		to_space="LOCAL"
 	).to_euler())
+
+def makeBoneRotOffsetMap(armatureObj: bpy.types.Object) -> Dict[bpy.types.PoseBone, Vector]:
+	map = {}
+	for bone in armatureObj.pose.bones:
+		map[bone] = boneGlobalRotationToLocal(bone, armatureObj, (radians(90), 0, 0)) * -1
+	return map
