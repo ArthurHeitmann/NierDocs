@@ -130,5 +130,11 @@ def yaxToXml(yaxFile: str, outFile: str|None = None):
 if __name__ == "__main__":
 	yaxFiles = sys.argv[1:]
 	for yaxFile in yaxFiles:
+		if not "yax" in yaxFile:
+			if len(yaxFiles) > 1:
+				#To allow manually processing singular non *.yax files
+				print(yaxFile , " is not a *.yax file. Skipping...")
+				continue
+		
 		yaxToXml(yaxFile)
 		print(f"Converted {yaxFile} to xml")
