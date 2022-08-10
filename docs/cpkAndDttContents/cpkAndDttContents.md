@@ -51,7 +51,7 @@ based on: https://pastebin.com/2qDrUheP
 
 ### cpk004
   - Most just the factory
-  - [Full Map](./mapMap/fullMap.md)
+  - [Full Map](../../mapMap/fullMap.md)
   - Also documented [here](https://niermodding.com/res/automata/wd)
 
 ### cpk003
@@ -404,8 +404,8 @@ based on: https://pastebin.com/2qDrUheP
   - textures for cpk014
 
 ### cpk014
-  - [Full Map](./mapMap/fullMap.md)
-  - [Desert Map](./mapMap/desertMap.md)
+  - [Full Map](../../mapMap/fullMap.md)
+  - [Desert Map](../../mapMap/desertMap.md)
   - Also documented [here](https://niermodding.com/res/automata/wd)
 
 ### cpk015
