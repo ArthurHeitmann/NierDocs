@@ -14,5 +14,5 @@ A collection tools & resources for modding Nier Automata.
 	- [BXM conversion](./tools/bxmScriptTools/)
 	- [XML Scripting](./tools/pakScriptTools/)
 	- [Ruby Scripting](https://github.com/ArthurHeitmann/MrubyDecompiler)
-	- [Auto rebuild pak & recompile ruby scripts](https://github.com/ArthurHeitmann/NierAutoRebuildr)
+	- [Auto rebuild pak & recompile ruby scripts](https://github.com/ArthurHeitmann/NierAutoRebuild)
 	- [Other utility scripts](./tools/miniScripts/)

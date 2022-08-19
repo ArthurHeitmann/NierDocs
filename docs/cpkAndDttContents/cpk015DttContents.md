@@ -272,7 +272,7 @@ cok015:
     - bg4241 - sunken buildings (probably when entering city from orbit via flight unit)
     - bg4420 - flat planet earth from space
     - bg5510 - copied city (?) voxel structure
-    - bg6000 - huge crystal sky structure (from route C)
+    - bg6000 - huge crystal white tower (from route C)
     - bga001 - sky sphere
     - bgd013 - road blocking wall (city ruins)
     - bgd023 - rusty broken old car

@@ -78,9 +78,9 @@ based on: https://pastebin.com/2qDrUheP
     - ba0300 - vertical path
     - ba0410 - small stubby
     - ba1100 - access point/transporter/snack machine
-    - ba2014 - red/golden chest small
-    - ba2015 - red/golden chest big
-    - ba2016 - red/golden chest for 9S
+    - ba2014 - chest small
+    - ba2015 - chest big
+    - ba2016 - chest for 9S
     - ba4210 - maybe wall that 2b crashes through in factory in intro
     - ba5100 - ?
     - ba5101 - ?
@@ -410,7 +410,6 @@ based on: https://pastebin.com/2qDrUheP
 
 ### cpk015
   - [Partial documentation](./cpk015DttContents.md)
-
 
 ### cpk016
   - em:
