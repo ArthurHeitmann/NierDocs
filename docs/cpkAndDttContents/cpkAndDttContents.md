@@ -278,10 +278,10 @@ based on: https://pastebin.com/2qDrUheP
     - wp4030 - hammer (pod program)
     - wpe000 - (?)
     - (higher quality weapon textures compared to cpk016)
-    - wpf000 - HD faith
-    - wpf200 - HD iron will
-    - wpf400 - HD pheonix lance
-    - wpf600 - HD type-3 fists
+    - wpf000 - Animation & combo data for all small weapons (+ HD faith)
+    - wpf200 - Animation & combo data for all long swords (+ HD iron will)
+    - wpf400 - Animation & combo data for all spears (+ HD phoenix lance)
+    - wpf600 - Animation & combo data for all knuckles (+ HD type-3 fists)
 
 ### cpk008
   - um:
