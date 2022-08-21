@@ -1,0 +1,27 @@
+PART@:	sEffectParticleGenerationData
+"?1":		sEffectMoveData
+EMIF0:	sEffectEmitterData
+TEX:	  sEffectTextureInfoData
+SZSA:	  sEffectSizeSinAnimation
+PSSA:	  sEffectPosSinAnimation
+RTSA:	  sEffectRotSinAnimation
+FVWKP:	sEffectFreeVecWork
+FWK:	  sEffectFreeWork
+"?2":		EffectEmitterMoveData
+EMSA:	  Emitter_EffectSizeSinAnimation
+EMPA:	  Emitter_EffectPosSinAnimation
+EMRA:	  Emitter_EffectRotSinAnimation
+EMFVP:	Emitter_EffectFreeVecWork
+EMFW:	  Emitter_EffectFreeWork
+TSC P:	EffectTextureSettingColor
+TSM P:	EffectTextureSettingMask
+TSN P:	EffectTextureSettingNormal
+REND0:	EffectRenderSetting
+MJSG:	  ModelShaderJackSettingData
+MJCMP:	ModelShaderColorMap
+MJNMP:	ModelShaderNormalMap
+MJMMP:	ModelShaderMaskMap
+MJDTP:	ModelShaderJackDistortionData
+MJFN@:	ModelShaderJackFresnelData
+"?3":		ModelShaderJackCubeMapData
+MJVA0:	ModelShaderJackVertexAnimation
