@@ -274,6 +274,7 @@ cok015:
     - bg5510 - copied city (?) voxel structure
     - bg6000 - huge crystal white tower (from route C)
     - bga001 - sky sphere
+    - bga102 - Empty object with interaction prompt
     - bgd013 - road blocking wall (city ruins)
     - bgd023 - rusty broken old car
     - bgd024 - road blocking wall (city ruins)
