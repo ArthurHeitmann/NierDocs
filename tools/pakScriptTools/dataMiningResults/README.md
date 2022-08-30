@@ -1,3 +1,4 @@
 - [List of all action types used in the pak files](./ActionCodes.json)
 - [List of all actions (might be some duplicates in there)](./ActionIds.json)
 - [List of all command labels and the contexts the are used in](./AllLabels.json)
+- [XML schema or pak XML files](./XmlScriptingSchema.xml)

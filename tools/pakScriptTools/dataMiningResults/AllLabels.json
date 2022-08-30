@@ -2,191 +2,209 @@
     {
         "label": "DISABLE",
         "actions": [
-            "ConditionCommands",
-            "SendCommand",
-            "SendCommands",
             "AreaCommand",
             "ConditionAction",
-            "RandomCommandsArea"
+            "ConditionCommands",
+            "RandomCommandsArea",
+            "SendCommand",
+            "SendCommands"
         ],
         "puids": [
-            "hap::Hap",
-            "hap::Action",
+            "0x0",
+            "LayoutObj",
             "app::EntityLayout",
+            "hap::Action",
             "hap::GroupImpl",
-            "hap::SceneEntities",
-            "",
-            "LayoutObj"
+            "hap::Hap",
+            "hap::SceneEntities"
         ],
-        "encountered": 1392,
+        "encountered": 1422,
         "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 484
+        },
         "targetActions": [
-            "HapMultiMarkLocationAction",
-            "PlayerCombatLimitAction",
-            "EnemyGenerator",
-            "PathCameraArea",
-            "PlayerTurnOffAction",
-            "HapGoalLocationAction",
-            "CameraTargetAction",
-            "ConditionCommands",
-            "AreaAction",
-            "EntityLayoutAction",
-            "Caption",
-            "CameraAction",
-            "PhaseEventAction",
-            "CameraShooting",
-            "Tutorial",
-            "SendCommand",
-            "EnemySetAction",
-            "ConditionBlock",
-            "DelayAction",
-            "SendCommands",
-            "EntityLayoutArea",
-            "UINameTagAction",
-            "EnemySetArea",
-            "PositionJump",
-            "PathCameraAction",
-            "PositionSetBunker",
-            "AreaEntityAction",
-            "ResetAction",
-            "MultiConditionBlock",
-            "CameraArea",
-            "ScriptAction",
-            "HapSOSLocationAction",
-            "AreaCommand",
+            "ActionKeyArea",
             "ArchiveAction",
-            "QuestBindArea",
-            "FadeAction",
+            "AreaAction",
+            "AreaCommand",
+            "AreaEntityAction",
+            "CameraAction",
+            "CameraArea",
+            "CameraShooting",
+            "CameraTargetAction",
+            "Caption",
             "CommentAction",
+            "ConditionBlock",
+            "ConditionCommands",
+            "DelayAction",
+            "EnemyGenerator",
+            "EnemySetAction",
+            "EnemySetArea",
+            "EntityLayoutAction",
+            "EntityLayoutArea",
+            "FadeAction",
             "HackingRetryAction",
-            "UITimerAction",
-            "ActionKeyArea"
+            "HapGoalLocationAction",
+            "HapMultiMarkLocationAction",
+            "HapSOSLocationAction",
+            "MultiConditionBlock",
+            "PathCameraAction",
+            "PathCameraArea",
+            "PhaseEventAction",
+            "PlayerCombatLimitAction",
+            "PlayerTurnOffAction",
+            "PositionJump",
+            "PositionSetBunker",
+            "QuestBindArea",
+            "ResetAction",
+            "SQ090_Layout",
+            "ScriptAction",
+            "SendCommand",
+            "SendCommands",
+            "Tutorial",
+            "UINameTagAction",
+            "UITimerAction"
         ]
     },
     {
         "label": "DONE",
         "actions": [
-            "TravelPointAction",
-            "ConditionCommands",
+            "ConditionAction",
             "ConditionBlock",
-            "MultiConditionBlock",
+            "ConditionCommands",
             "EnemySetAction",
-            "ConditionAction"
+            "MultiConditionBlock",
+            "TravelPointAction"
         ],
         "puids": [
-            "hap::Action",
-            ""
+            "0x0",
+            "hap::Action"
         ],
-        "encountered": 1196,
+        "encountered": 1243,
         "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 608,
+            "0": 487,
+            "1": 110,
+            "2": 38
+        },
         "targetActions": [
-            "EnemyGenerator",
-            "CameraAction",
-            "EnemySetArea",
-            "EnemySetAction",
-            "EntityLayoutAction",
-            "PhaseEventAction",
-            "SendCommands",
-            "ConditionCommands",
-            "ScrollMap",
-            "DelayAction",
-            "SendCommand",
-            "SoundNovelAction",
-            "FadeAction",
-            "ConditionBlock",
-            "PhaseJumpAction",
-            "UITimerAction",
-            "MultiConditionBlock",
-            "tr::BattleCounter",
-            "ArchiveAction",
-            "EntityLayoutArea",
-            "ScriptAction",
-            "PressAreaAction",
             "ActionKeyArea",
+            "ArchiveAction",
+            "CameraAction",
+            "ConditionBlock",
+            "ConditionCommands",
+            "DelayAction",
+            "EnemyGenerator",
+            "EnemySetAction",
+            "EnemySetArea",
+            "EntityLayoutAction",
+            "EntityLayoutArea",
+            "FadeAction",
+            "MultiConditionBlock",
+            "PhaseEventAction",
+            "PhaseJumpAction",
+            "PositionSet",
+            "PressAreaAction",
+            "ScriptAction",
+            "ScrollMap",
+            "SendCommand",
+            "SendCommands",
+            "SoundNovelAction",
             "UIMessageBlock",
-            "PositionSet"
+            "UITimerAction",
+            "tr::BattleCounter"
         ]
     },
     {
         "label": "ENABLE",
         "actions": [
-            "ConditionCommands",
-            "SendCommand",
+            "ActionKeyArea",
             "AreaCommand",
-            "SendCommands",
             "ConditionAction",
+            "ConditionCommands",
             "RandomCommandsArea",
-            "ActionKeyArea"
+            "SendCommand",
+            "SendCommands"
         ],
         "puids": [
-            "hap::Hap",
-            "hap::Action",
+            "0x0",
             "app::EntityLayout",
+            "hap::Action",
             "hap::GroupImpl",
-            ""
+            "hap::Hap"
         ],
-        "encountered": 820,
+        "encountered": 838,
         "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 407
+        },
         "targetActions": [
+            "ActionKeyArea",
+            "AreaAction",
+            "AreaCommand",
+            "AreaEntityAction",
+            "BgmAction",
+            "CameraAction",
+            "CameraShooting",
+            "CameraTargetAction",
+            "Caption",
+            "ConditionBlock",
+            "ConditionCommands",
+            "ConditionLayout",
+            "DelayAction",
+            "EmListUnlockAction",
+            "EnemyGenerator",
+            "EnemySetAction",
+            "EnemySetArea",
+            "EntityLayoutAction",
+            "EntityLayoutArea",
+            "FadeAction",
+            "HackingCollectiveSetAction",
+            "HackingRetryAction",
+            "HapGoalLocationAction",
             "HapMultiMarkLocationAction",
-            "PlayerCombatLimitAction",
-            "PathCameraArea",
+            "HapSOSLocationAction",
+            "LadderPointAction",
             "MemorySaveAction",
+            "MultiConditionBlock",
+            "PathCameraAction",
+            "PathCameraArea",
+            "PhaseEventAction",
+            "PhaseJumpAction",
+            "PlayerCombatLimitAction",
+            "PlayerTurnOffAction",
+            "PositionSet",
+            "PositionSetBunker",
+            "QuestBindArea",
+            "ScriptAction",
+            "SeamlessMapStopArea",
             "SendCommand",
             "SendCommands",
-            "HapGoalLocationAction",
-            "AreaCommand",
-            "Tutorial",
-            "AreaAction",
-            "EnemySetArea",
-            "Caption",
-            "CameraTargetAction",
-            "CameraShooting",
             "SubPhaseAction",
-            "CameraAction",
-            "ConditionCommands",
-            "EnemySetAction",
-            "ConditionBlock",
-            "MultiConditionBlock",
-            "EntityLayoutAction",
+            "Tutorial",
             "UINameTagAction",
-            "LadderPointAction",
-            "PathCameraAction",
-            "PhaseJumpAction",
-            "PositionSetBunker",
-            "PhaseEventAction",
-            "PositionSet",
-            "FadeAction",
-            "DelayAction",
-            "EnemyGenerator",
-            "HapSOSLocationAction",
-            "EntityLayoutArea",
-            "ConditionLayout",
-            "AreaEntityAction",
-            "QuestBindArea",
-            "EmListUnlockAction",
-            "PlayerTurnOffAction",
-            "HackingRetryAction",
-            "HackingCollectiveSetAction",
-            "ActionKeyArea",
-            "BgmAction",
-            "SeamlessMapStopArea"
+            "UITimerAction"
         ]
     },
     {
         "label": "Action.signal",
         "actions": [
+            "AreaCommand",
+            "ConditionAction",
             "ConditionCommands",
             "SendCommand",
-            "SendCommands",
-            "AreaCommand",
-            "ConditionAction"
+            "SendCommands"
         ],
         "puids": [
             "hap::Action"
         ],
-        "encountered": 582,
+        "encountered": 627,
         "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 340
+        },
         "targetActions": [
             "ScriptAction",
             "SendCommand"
@@ -195,52 +213,59 @@
     {
         "label": "RESET",
         "actions": [
-            "SendCommand",
-            "ConditionCommands",
             "AreaCommand",
-            "SendCommands",
-            "ConditionAction"
+            "ConditionAction",
+            "ConditionCommands",
+            "SendCommand",
+            "SendCommands"
         ],
         "puids": [
             "hap::Action",
-            "hap::Hap",
-            "hap::GroupImpl"
+            "hap::GroupImpl",
+            "hap::Hap"
         ],
-        "encountered": 366,
+        "encountered": 364,
         "maybeHasArgs": true,
         "targetActions": [
-            "SendCommand",
-            "EnemySetArea",
-            "ConditionCommands",
-            "EnemyGenerator",
-            "PlayerTurnOffAction",
+            "ActionKeyArea",
             "CameraTargetAction",
+            "ConditionBlock",
+            "ConditionCommands",
+            "ConditionLayout",
             "DelayAction",
+            "EnemyGenerator",
+            "EnemySetAction",
+            "EnemySetArea",
+            "EntityLayoutAction",
+            "EntityLayoutArea",
             "MemorySaveAction",
             "PhaseEventAction",
-            "EnemySetAction",
-            "ConditionBlock",
-            "SendCommands",
-            "ConditionLayout",
+            "PlayerTurnOffAction",
+            "SQ090_Layout",
             "ScriptAction",
-            "ActionKeyArea",
-            "EntityLayoutAction",
-            "EntityLayoutArea"
-        ]
+            "SendCommand",
+            "SendCommands"
+        ],
+        "conditionTypes": {
+            "noType": 182
+        }
     },
     {
         "label": "SceneStateSystem.has",
         "actions": [
-            "ConditionCommands",
-            "TravelPointAction",
             "ConditionBlock",
-            "MultiConditionBlock"
+            "ConditionCommands",
+            "MultiConditionBlock",
+            "TravelPointAction"
         ],
         "puids": [
             "hap::StateObject"
         ],
-        "encountered": 287,
-        "maybeHasArgs": true
+        "encountered": 303,
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "2": 303
+        }
     },
     {
         "label": "disable_vfx",
@@ -250,30 +275,68 @@
             "SendCommands"
         ],
         "puids": [
-            "hap::Action",
-            "app::EntityLayout"
+            "app::EntityLayout",
+            "hap::Action"
         ],
-        "encountered": 260,
+        "encountered": 263,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 29
+        },
         "targetActions": [
-            "EntityLayoutAction",
-            "EnemySetAction"
+            "EnemySetAction",
+            "EntityLayoutAction"
+        ]
+    },
+    {
+        "label": "BATTLE",
+        "actions": [
+            "ConditionBlock",
+            "ConditionCommands",
+            "EnemyGenerator",
+            "EnemySetAction",
+            "EnemySetArea",
+            "MultiConditionBlock"
+        ],
+        "puids": [
+            "0x0",
+            "hap::Action"
+        ],
+        "encountered": 253,
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 125,
+            "0": 89,
+            "1": 17,
+            "2": 4
+        },
+        "targetActions": [
+            "CameraAction",
+            "ColosseumAction",
+            "EnemyGenerator",
+            "EnemySetAction",
+            "EnemySetArea",
+            "PhaseEventAction",
+            "tr::BattleCounter"
         ]
     },
     {
         "label": "SceneStateSystem.set",
         "actions": [
+            "AreaCommand",
             "ConditionCommands",
             "SendCommand",
-            "SendCommands",
-            "AreaCommand"
+            "SendCommands"
         ],
         "puids": [
-            "hap::StateObject",
-            "hap::Action"
+            "hap::Action",
+            "hap::StateObject"
         ],
-        "encountered": 235,
+        "encountered": 250,
         "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 84
+        },
         "targetActions": [
             "SendCommand"
         ]
@@ -281,44 +344,25 @@
     {
         "label": "INSIDE",
         "actions": [
-            "MultiConditionBlock",
+            "ConditionBlock",
             "ConditionCommands",
-            "ConditionBlock"
+            "MultiConditionBlock"
         ],
         "puids": [
             "hap::Action"
         ],
-        "encountered": 196,
+        "encountered": 197,
         "maybeHasArgs": true,
+        "conditionTypes": {
+            "0": 117,
+            "2": 40,
+            "noType": 21,
+            "1": 19
+        },
         "targetActions": [
-            "AreaEntityAction",
             "AreaAction",
-            "AreaCommand"
-        ]
-    },
-    {
-        "label": "BATTLE",
-        "actions": [
-            "ConditionBlock",
-            "MultiConditionBlock",
-            "ConditionCommands",
-            "EnemySetArea",
-            "EnemyGenerator",
-            "EnemySetAction"
-        ],
-        "puids": [
-            "hap::Action",
-            ""
-        ],
-        "encountered": 195,
-        "maybeHasArgs": true,
-        "targetActions": [
-            "EnemySetAction",
-            "EnemyGenerator",
-            "EnemySetArea",
-            "tr::BattleCounter",
-            "PhaseEventAction",
-            "CameraAction"
+            "AreaCommand",
+            "AreaEntityAction"
         ]
     },
     {
@@ -330,7 +374,10 @@
             "app::EntityLayout"
         ],
         "encountered": 147,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 147
+        }
     },
     {
         "label": "PLAYING",
@@ -344,6 +391,11 @@
         ],
         "encountered": 146,
         "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 98,
+            "0": 37,
+            "1": 11
+        },
         "targetActions": [
             "PhaseEventAction",
             "SoundNovelAction"
@@ -352,35 +404,46 @@
     {
         "label": "OUTSIDE",
         "actions": [
-            "MultiConditionBlock",
-            "ConditionCommands",
+            "ConditionAction",
             "ConditionBlock",
-            "ConditionAction"
+            "ConditionCommands",
+            "MultiConditionBlock"
         ],
         "puids": [
             "hap::Action"
         ],
-        "encountered": 139,
+        "encountered": 143,
         "maybeHasArgs": true,
+        "conditionTypes": {
+            "0": 80,
+            "noType": 29,
+            "1": 18,
+            "2": 16
+        },
         "targetActions": [
-            "AreaEntityAction",
             "AreaAction",
+            "AreaEntityAction",
+            "ConditionCommands",
             "PressAreaAction"
         ]
     },
     {
         "label": "PLAY",
         "actions": [
+            "ConditionBlock",
             "ConditionCommands",
             "SendCommand",
-            "SendCommands",
-            "ConditionBlock"
+            "SendCommands"
         ],
         "puids": [
             "hap::Action"
         ],
         "encountered": 132,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 21,
+            "0": 1
+        },
         "targetActions": [
             "CameraAction",
             "PhaseEventAction"
@@ -400,29 +463,36 @@
     {
         "label": "BehaviorAppBase.getHpRate100",
         "actions": [
-            "MultiConditionBlock",
+            "ConditionAction",
             "ConditionBlock",
             "ConditionCommands",
-            "ConditionAction"
+            "EnemySetAction",
+            "MultiConditionBlock"
         ],
         "puids": [
             "app::EntityLayout"
         ],
-        "encountered": 117,
-        "maybeHasArgs": true
+        "encountered": 126,
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "2": 126
+        }
     },
     {
         "label": "EntityLayoutAction.layoutIsDone",
         "actions": [
-            "MultiConditionBlock",
             "ConditionBlock",
-            "ConditionCommands"
+            "ConditionCommands",
+            "MultiConditionBlock"
         ],
         "puids": [
             "hap::Action"
         ],
-        "encountered": 115,
+        "encountered": 116,
         "maybeHasArgs": true,
+        "conditionTypes": {
+            "2": 116
+        },
         "targetActions": [
             "EntityLayoutAction",
             "EntityLayoutArea"
@@ -431,28 +501,18 @@
     {
         "label": "HackingEnemy.enableDamage",
         "actions": [
+            "ConditionCommands",
             "SendCommand",
-            "SendCommands",
-            "ConditionCommands"
+            "SendCommands"
         ],
         "puids": [
             "app::EntityLayout"
         ],
-        "encountered": 108,
-        "maybeHasArgs": true
-    },
-    {
-        "label": "MiscState.GAME_ON",
-        "actions": [
-            "SendCommands",
-            "SendCommand",
-            "ConditionCommands"
-        ],
-        "puids": [
-            "hap::StateObject"
-        ],
-        "encountered": 89,
-        "maybeHasArgs": true
+        "encountered": 113,
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 26
+        }
     },
     {
         "label": "TICK",
@@ -462,44 +522,122 @@
         "puids": [
             "hap::Action"
         ],
-        "encountered": 88,
+        "encountered": 93,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 93
+        },
         "targetActions": [
             "UITimerAction"
         ]
     },
     {
+        "label": "MiscState.GAME_ON",
+        "actions": [
+            "ConditionCommands",
+            "SendCommand",
+            "SendCommands"
+        ],
+        "puids": [
+            "hap::StateObject"
+        ],
+        "encountered": 89,
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 2
+        }
+    },
+    {
+        "label": "MiscState.callBgm",
+        "actions": [
+            "ConditionCommands",
+            "SendCommand",
+            "SendCommands"
+        ],
+        "puids": [
+            "hap::StateObject"
+        ],
+        "encountered": 89,
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 58
+        }
+    },
+    {
         "label": "BehaviorAppBase.setTalkDisable",
         "actions": [
-            "SendCommand",
+            "AreaCommand",
             "ConditionCommands",
-            "SendCommands",
-            "AreaCommand"
+            "SendCommand",
+            "SendCommands"
         ],
         "puids": [
             "app::EntityLayout"
         ],
-        "encountered": 86,
-        "maybeHasArgs": true
+        "encountered": 87,
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 24
+        }
+    },
+    {
+        "label": "MiscState.callSe",
+        "actions": [
+            "ConditionCommands",
+            "SendCommand",
+            "SendCommands"
+        ],
+        "puids": [
+            "hap::StateObject"
+        ],
+        "encountered": 82,
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 11
+        }
+    },
+    {
+        "label": "SceneStateSystem.reset",
+        "actions": [
+            "AreaCommand",
+            "ConditionCommands",
+            "SendCommand",
+            "SendCommands"
+        ],
+        "puids": [
+            "hap::Action",
+            "hap::StateObject"
+        ],
+        "encountered": 82,
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 12
+        },
+        "targetActions": [
+            "SendCommand"
+        ]
     },
     {
         "label": "MiscState.GAME_OFF",
         "actions": [
+            "ConditionCommands",
             "SendCommand",
-            "SendCommands",
-            "ConditionCommands"
+            "SendCommands"
         ],
         "puids": [
             "hap::StateObject"
         ],
         "encountered": 81,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 3
+        }
     },
     {
         "label": "CREATED",
         "actions": [
-            "ConditionCommands",
             "ConditionBlock",
+            "ConditionCommands",
             "MultiConditionBlock"
         ],
         "puids": [
@@ -508,6 +646,11 @@
         ],
         "encountered": 80,
         "maybeHasArgs": true,
+        "conditionTypes": {
+            "4": 42,
+            "noType": 21,
+            "0": 17
+        },
         "targetActions": [
             "EntityLayoutAction",
             "EntityLayoutArea"
@@ -516,79 +659,84 @@
     {
         "label": "TERMINATED",
         "actions": [
+            "ConditionBgm",
             "ConditionBlock",
-            "ConditionCommands",
-            "ConditionBgm"
+            "ConditionCommands"
         ],
         "puids": [
             "app::EntityLayout"
         ],
         "encountered": 80,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 62,
+            "2": 12,
+            "0": 4
+        }
     },
     {
-        "label": "MiscState.callSe",
+        "label": "Behavior.setSuspend",
         "actions": [
-            "SendCommand",
-            "SendCommands",
-            "ConditionCommands"
-        ],
-        "puids": [
-            "hap::StateObject"
-        ],
-        "encountered": 78,
-        "maybeHasArgs": true
-    },
-    {
-        "label": "SceneStateSystem.reset",
-        "actions": [
-            "SendCommand",
-            "SendCommands",
+            "AreaCommand",
             "ConditionCommands",
-            "AreaCommand"
+            "SendCommand",
+            "SendCommands"
         ],
         "puids": [
-            "hap::StateObject",
-            "hap::Action"
+            "app::EntityLayout",
+            "hap::Action",
+            "hap::SceneEntities"
         ],
-        "encountered": 76,
+        "encountered": 72,
         "maybeHasArgs": true,
         "targetActions": [
             "SendCommand"
-        ]
+        ],
+        "conditionTypes": {
+            "noType": 30
+        }
     },
     {
         "label": "BehaviorAutoDoor.doorLock",
         "actions": [
-            "SendCommand",
-            "SendCommands",
             "AreaCommand",
-            "ConditionCommands"
+            "ConditionCommands",
+            "SendCommand",
+            "SendCommands"
         ],
         "puids": [
             "LayoutObj",
             "app::EntityLayout"
         ],
-        "encountered": 70,
-        "maybeHasArgs": true
+        "encountered": 71,
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 11
+        }
     },
     {
-        "label": "Behavior.setSuspend",
+        "label": "HIT",
         "actions": [
-            "SendCommand",
-            "SendCommands",
+            "ConditionAction",
+            "ConditionBlock",
             "ConditionCommands",
-            "AreaCommand"
+            "EnemySetArea",
+            "MultiConditionBlock"
         ],
         "puids": [
-            "hap::SceneEntities",
-            "hap::Action",
-            "app::EntityLayout"
+            "hap::Action"
         ],
-        "encountered": 69,
+        "encountered": 68,
         "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 32,
+            "0": 21,
+            "1": 15
+        },
         "targetActions": [
-            "SendCommand"
+            "AreaAction",
+            "AreaCommand",
+            "AreaEntityAction"
         ]
     },
     {
@@ -606,66 +754,89 @@
         ]
     },
     {
-        "label": "HIT",
-        "actions": [
-            "ConditionCommands",
-            "ConditionBlock",
-            "EnemySetArea",
-            "MultiConditionBlock",
-            "ConditionAction"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 63,
-        "maybeHasArgs": true,
-        "targetActions": [
-            "AreaAction",
-            "AreaEntityAction",
-            "AreaCommand"
-        ]
-    },
-    {
         "label": "WAIT",
         "actions": [
-            "ConditionCommands",
             "ConditionBlock",
+            "ConditionCommands",
             "EnemyGenerator"
         ],
         "puids": [
             "hap::Action"
         ],
-        "encountered": 61,
+        "encountered": 62,
         "maybeHasArgs": true,
+        "conditionTypes": {
+            "0": 27,
+            "1": 7,
+            "2": 7,
+            "noType": 6
+        },
         "targetActions": [
             "CameraAction",
-            "ScrollMap",
-            "EntityLayoutArea",
-            "PlayerTurnOffAction",
-            "MultiConditionBlock",
             "EnemySetArea",
-            "PathCameraArea"
+            "EntityLayoutArea",
+            "MultiConditionBlock",
+            "PathCameraArea",
+            "PlayerTurnOffAction",
+            "QuestBindArea",
+            "ScrollMap"
         ]
     },
     {
-        "label": "MiscState.callBgm",
+        "label": "Action.reset",
         "actions": [
-            "SendCommand",
+            "AreaCommand",
             "ConditionCommands",
+            "SendCommand",
             "SendCommands"
         ],
         "puids": [
-            "hap::StateObject"
+            "hap::Action"
         ],
         "encountered": 56,
-        "maybeHasArgs": true
+        "maybeHasArgs": false,
+        "targetActions": [
+            "ConditionLayout",
+            "EnemyGenerator",
+            "EntityLayoutAction",
+            "EntityLayoutArea",
+            "MultiConditionBlock",
+            "NoiseAction",
+            "SendCommand",
+            "SoundNovelAction"
+        ],
+        "conditionTypes": {
+            "noType": 1
+        }
     },
     {
         "label": "HITOUT",
         "actions": [
-            "ConditionCommands",
             "ConditionBlock",
+            "ConditionCommands",
             "MultiConditionBlock"
+        ],
+        "puids": [
+            "hap::Action"
+        ],
+        "encountered": 54,
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 31,
+            "0": 18,
+            "noType": 3,
+            "2": 2
+        },
+        "targetActions": [
+            "AreaAction",
+            "PressAreaAction"
+        ]
+    },
+    {
+        "label": "UITimerAction.stop",
+        "actions": [
+            "ConditionCommands",
+            "SendCommand"
         ],
         "puids": [
             "hap::Action"
@@ -673,38 +844,18 @@
         "encountered": 53,
         "maybeHasArgs": true,
         "targetActions": [
-            "AreaAction",
-            "PressAreaAction"
-        ]
-    },
-    {
-        "label": "Action.reset",
-        "actions": [
-            "SendCommand",
-            "AreaCommand",
-            "SendCommands",
-            "ConditionCommands"
+            "UITimerAction"
         ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 50,
-        "maybeHasArgs": false,
-        "targetActions": [
-            "EntityLayoutAction",
-            "EntityLayoutArea",
-            "MultiConditionBlock",
-            "ConditionLayout",
-            "SendCommand",
-            "EnemyGenerator"
-        ]
+        "conditionTypes": {
+            "noType": 2
+        }
     },
     {
         "label": "Ba0210.unlock",
         "actions": [
+            "ConditionCommands",
             "SendCommand",
-            "SendCommands",
-            "ConditionCommands"
+            "SendCommands"
         ],
         "puids": [
             "app::EntityLayout",
@@ -714,29 +865,17 @@
         "maybeHasArgs": true,
         "targetActions": [
             "SendCommand"
-        ]
-    },
-    {
-        "label": "UITimerAction.stop",
-        "actions": [
-            "SendCommand",
-            "ConditionCommands"
         ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 45,
-        "maybeHasArgs": true,
-        "targetActions": [
-            "UITimerAction"
-        ]
+        "conditionTypes": {
+            "noType": 14
+        }
     },
     {
         "label": "PhaseEventAction.play",
         "actions": [
-            "SendCommand",
+            "ConditionAction",
             "ConditionCommands",
-            "ConditionAction"
+            "SendCommand"
         ],
         "puids": [
             "hap::Action"
@@ -745,7 +884,10 @@
         "maybeHasArgs": true,
         "targetActions": [
             "PhaseEventAction"
-        ]
+        ],
+        "conditionTypes": {
+            "noType": 5
+        }
     },
     {
         "label": "LOOP_READ",
@@ -758,6 +900,10 @@
         ],
         "encountered": 42,
         "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 41,
+            "0": 1
+        },
         "targetActions": [
             "ScrollMap"
         ]
@@ -773,9 +919,12 @@
         ],
         "encountered": 41,
         "maybeHasArgs": true,
+        "conditionTypes": {
+            "2": 41
+        },
         "targetActions": [
-            "EnemySetArea",
-            "EnemySetAction"
+            "EnemySetAction",
+            "EnemySetArea"
         ]
     },
     {
@@ -800,9 +949,47 @@
         ],
         "encountered": 39,
         "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 38,
+            "0": 1
+        },
         "targetActions": [
             "ScrollMap"
         ]
+    },
+    {
+        "label": "BehaviorAppBase.getHp",
+        "actions": [
+            "ConditionBlock",
+            "ConditionCommands",
+            "MultiConditionBlock"
+        ],
+        "puids": [
+            "app::EntityLayout",
+            "hap::SceneEntities"
+        ],
+        "encountered": 39,
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "2": 39
+        }
+    },
+    {
+        "label": "HACKED",
+        "actions": [
+            "ConditionBlock",
+            "ConditionCommands",
+            "MultiConditionBlock"
+        ],
+        "puids": [
+            "app::EntityLayout"
+        ],
+        "encountered": 38,
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "0": 25,
+            "noType": 13
+        }
     },
     {
         "label": "DEACTIVATE",
@@ -819,19 +1006,6 @@
         ]
     },
     {
-        "label": "HACKED",
-        "actions": [
-            "MultiConditionBlock",
-            "ConditionCommands",
-            "ConditionBlock"
-        ],
-        "puids": [
-            "app::EntityLayout"
-        ],
-        "encountered": 37,
-        "maybeHasArgs": true
-    },
-    {
         "label": "Pl0000.hasBuddy",
         "actions": [
             "ConditionBlock",
@@ -842,7 +1016,10 @@
             "hap::SceneEntities"
         ],
         "encountered": 37,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "2": 37
+        }
     },
     {
         "label": "HackingEnemy.changeMoveType_Stop",
@@ -853,14 +1030,76 @@
         "puids": [
             "app::EntityLayout"
         ],
-        "encountered": 35,
+        "encountered": 36,
         "maybeHasArgs": true
+    },
+    {
+        "label": "CANCEL",
+        "actions": [
+            "ConditionCommands"
+        ],
+        "puids": [
+            "hap::Action"
+        ],
+        "encountered": 35,
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 35
+        },
+        "targetActions": [
+            "PressAreaAction"
+        ]
+    },
+    {
+        "label": "Et002e.repairCancel",
+        "actions": [
+            "ConditionCommands"
+        ],
+        "puids": [
+            "app::EntityLayout"
+        ],
+        "encountered": 35,
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 35
+        }
+    },
+    {
+        "label": "PRESS",
+        "actions": [
+            "ConditionCommands"
+        ],
+        "puids": [
+            "hap::Action"
+        ],
+        "encountered": 35,
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 35
+        },
+        "targetActions": [
+            "PressAreaAction"
+        ]
+    },
+    {
+        "label": "Et002e.repair",
+        "actions": [
+            "ConditionCommands"
+        ],
+        "puids": [
+            "app::EntityLayout"
+        ],
+        "encountered": 35,
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 35
+        }
     },
     {
         "label": "ScrollMap.setWorldSpd",
         "actions": [
-            "SendCommand",
             "ConditionCommands",
+            "SendCommand",
             "SendCommands"
         ],
         "puids": [
@@ -870,27 +1109,16 @@
         "maybeHasArgs": true,
         "targetActions": [
             "ScrollMap"
-        ]
-    },
-    {
-        "label": "BehaviorAppBase.getHp",
-        "actions": [
-            "ConditionBlock",
-            "ConditionCommands",
-            "MultiConditionBlock"
         ],
-        "puids": [
-            "app::EntityLayout",
-            "hap::SceneEntities"
-        ],
-        "encountered": 34,
-        "maybeHasArgs": true
+        "conditionTypes": {
+            "noType": 9
+        }
     },
     {
         "label": "EnemyGenerator.setDieRtnNoDrop",
         "actions": [
-            "SendCommands",
-            "SendCommand"
+            "SendCommand",
+            "SendCommands"
         ],
         "puids": [
             "hap::Action"
@@ -900,6 +1128,20 @@
         "targetActions": [
             "EnemyGenerator"
         ]
+    },
+    {
+        "label": "Et002e.complete",
+        "actions": [
+            "ConditionCommands"
+        ],
+        "puids": [
+            "app::EntityLayout"
+        ],
+        "encountered": 34,
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 34
+        }
     },
     {
         "label": "Pl0000.setShootingPosResetTimer",
@@ -922,7 +1164,22 @@
             "app::EntityLayout"
         ],
         "encountered": 32,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 32
+        }
+    },
+    {
+        "label": "EmBase.setDieRtn",
+        "actions": [
+            "SendCommand",
+            "SendCommands"
+        ],
+        "puids": [
+            "app::EntityLayout"
+        ],
+        "encountered": 32,
+        "maybeHasArgs": false
     },
     {
         "label": "LOOP",
@@ -935,129 +1192,71 @@
         ],
         "encountered": 31,
         "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 31
+        },
         "targetActions": [
             "ScrollMap"
         ]
     },
     {
-        "label": "EmBase.setDieRtn",
-        "actions": [
-            "SendCommands",
-            "SendCommand"
-        ],
-        "puids": [
-            "app::EntityLayout"
-        ],
-        "encountered": 31,
-        "maybeHasArgs": false
-    },
-    {
-        "label": "CANCEL",
-        "actions": [
-            "ConditionCommands"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 31,
-        "maybeHasArgs": false,
-        "targetActions": [
-            "PressAreaAction"
-        ]
-    },
-    {
-        "label": "Et002e.repairCancel",
-        "actions": [
-            "ConditionCommands"
-        ],
-        "puids": [
-            "app::EntityLayout"
-        ],
-        "encountered": 31,
-        "maybeHasArgs": false
-    },
-    {
-        "label": "PRESS",
-        "actions": [
-            "ConditionCommands"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 31,
-        "maybeHasArgs": false,
-        "targetActions": [
-            "PressAreaAction"
-        ]
-    },
-    {
-        "label": "Et002e.repair",
-        "actions": [
-            "ConditionCommands"
-        ],
-        "puids": [
-            "app::EntityLayout"
-        ],
-        "encountered": 31,
-        "maybeHasArgs": false
-    },
-    {
         "label": "BehaviorAnim.open",
         "actions": [
-            "SendCommand",
             "ConditionCommands",
+            "SendCommand",
             "SendCommands"
         ],
         "puids": [
             "app::EntityLayout"
         ],
         "encountered": 30,
-        "maybeHasArgs": true
-    },
-    {
-        "label": "Et002e.complete",
-        "actions": [
-            "ConditionCommands"
-        ],
-        "puids": [
-            "app::EntityLayout"
-        ],
-        "encountered": 30,
-        "maybeHasArgs": false
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 9
+        }
     },
     {
         "label": "ACTIVE",
         "actions": [
             "ConditionBlock",
-            "MultiConditionBlock",
-            "ConditionCommands"
+            "ConditionCommands",
+            "MultiConditionBlock"
         ],
         "puids": [
             "hap::Action"
         ],
         "encountered": 29,
         "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 15,
+            "0": 12,
+            "2": 1,
+            "1": 1
+        },
         "targetActions": [
-            "HapGoalLocationAction",
-            "PlayerCombatLimitAction",
             "BunkerAction",
-            "PlayerTurnOffAction",
             "CameraTargetAction",
-            "PathCameraArea"
+            "HapGoalLocationAction",
+            "PathCameraArea",
+            "PlayerCombatLimitAction",
+            "PlayerTurnOffAction"
         ]
     },
     {
         "label": "MiscState.setvar",
         "actions": [
-            "SendCommand",
             "ConditionCommands",
+            "SendCommand",
             "SendCommands"
         ],
         "puids": [
             "hap::StateObject"
         ],
         "encountered": 28,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 4
+        }
     },
     {
         "label": "SCROLLING",
@@ -1070,6 +1269,9 @@
         ],
         "encountered": 28,
         "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 28
+        },
         "targetActions": [
             "ScrollMap"
         ]
@@ -1085,20 +1287,28 @@
             "app::EntityLayout"
         ],
         "encountered": 26,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 5
+        }
     },
     {
         "label": "COUNT",
         "actions": [
-            "ConditionCommands",
             "ConditionBlock",
+            "ConditionCommands",
             "MultiConditionBlock"
         ],
         "puids": [
             "hap::Action"
         ],
-        "encountered": 25,
+        "encountered": 26,
         "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 21,
+            "0": 4,
+            "1": 1
+        },
         "targetActions": [
             "tr::BattleCounter"
         ]
@@ -1106,53 +1316,65 @@
     {
         "label": "EmBase.forceSandApeear",
         "actions": [
+            "ConditionCommands",
             "SendCommand",
-            "SendCommands",
-            "ConditionCommands"
+            "SendCommands"
         ],
         "puids": [
             "app::EntityLayout"
         ],
         "encountered": 24,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 3
+        }
     },
     {
         "label": "HackingEnemy.disableDamage",
         "actions": [
+            "ConditionCommands",
             "SendCommand",
-            "SendCommands",
-            "ConditionCommands"
+            "SendCommands"
         ],
         "puids": [
             "app::EntityLayout"
         ],
         "encountered": 24,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 3
+        }
     },
     {
         "label": "QuestState.mount",
         "actions": [
-            "SendCommand",
             "ConditionCommands",
+            "SendCommand",
             "SendCommands"
         ],
         "puids": [
             "hap::StateObject"
         ],
         "encountered": 23,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 9
+        }
     },
     {
         "label": "Ba0210.callEv",
         "actions": [
-            "SendCommand",
-            "ConditionCommands"
+            "ConditionCommands",
+            "SendCommand"
         ],
         "puids": [
             "app::EntityLayout"
         ],
         "encountered": 23,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 9
+        }
     },
     {
         "label": "Et002c.repairCancel",
@@ -1163,7 +1385,10 @@
             "app::EntityLayout"
         ],
         "encountered": 23,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 23
+        }
     },
     {
         "label": "MiscState.unlockAchievement",
@@ -1185,7 +1410,10 @@
             "app::EntityLayout"
         ],
         "encountered": 22,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 22
+        }
     },
     {
         "label": "EmBase.offEffDojoField",
@@ -1197,19 +1425,25 @@
             "app::EntityLayout"
         ],
         "encountered": 22,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 12
+        }
     },
     {
         "label": "EmBase.setDieRtnNoDrop",
         "actions": [
-            "SendCommands",
-            "ConditionCommands"
+            "ConditionCommands",
+            "SendCommands"
         ],
         "puids": [
             "app::EntityLayout"
         ],
         "encountered": 22,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 6
+        }
     },
     {
         "label": "EmBase.addExpDirect",
@@ -1223,30 +1457,58 @@
         "maybeHasArgs": false
     },
     {
+        "label": "RUN",
+        "actions": [
+            "ConditionBlock",
+            "ConditionCommands"
+        ],
+        "puids": [
+            "hap::Action"
+        ],
+        "encountered": 20,
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "0": 13,
+            "noType": 6,
+            "2": 1
+        },
+        "targetActions": [
+            "ScriptAction"
+        ]
+    },
+    {
         "label": "R_OPENED",
         "actions": [
-            "MultiConditionBlock",
+            "ConditionBlock",
             "ConditionCommands",
-            "ConditionBlock"
+            "MultiConditionBlock"
         ],
         "puids": [
             "app::EntityLayout"
         ],
         "encountered": 20,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 11,
+            "0": 7,
+            "noType": 2
+        }
     },
     {
         "label": "BehaviorAppBase.setTalkEnable",
         "actions": [
-            "SendCommands",
+            "ConditionCommands",
             "SendCommand",
-            "ConditionCommands"
+            "SendCommands"
         ],
         "puids": [
             "app::EntityLayout"
         ],
         "encountered": 20,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 8
+        }
     },
     {
         "label": "Pl0000.endTraining",
@@ -1258,33 +1520,42 @@
             "hap::SceneEntities"
         ],
         "encountered": 20,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 11
+        }
     },
     {
         "label": "QuestState.mounted",
         "actions": [
-            "ConditionCommands",
             "ConditionBlock",
+            "ConditionCommands",
             "MultiConditionBlock"
         ],
         "puids": [
             "hap::StateObject"
         ],
         "encountered": 19,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "2": 19
+        }
     },
     {
         "label": "Pl0000.setFlightUnitWhite",
         "actions": [
-            "SendCommand",
-            "ConditionCommands"
+            "ConditionCommands",
+            "SendCommand"
         ],
         "puids": [
-            "hap::SceneEntities",
-            "app::EntityLayout"
+            "app::EntityLayout",
+            "hap::SceneEntities"
         ],
         "encountered": 19,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 4
+        }
     },
     {
         "label": "ON_CHECK",
@@ -1296,7 +1567,10 @@
             "app::EntityLayout"
         ],
         "encountered": 19,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 19
+        }
     },
     {
         "label": "Et002c.repair",
@@ -1307,13 +1581,16 @@
             "app::EntityLayout"
         ],
         "encountered": 19,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 19
+        }
     },
     {
         "label": "PlayerTurnOffAction.startBack",
         "actions": [
-            "SendCommand",
-            "ConditionCommands"
+            "ConditionCommands",
+            "SendCommand"
         ],
         "puids": [
             "hap::Action"
@@ -1323,21 +1600,27 @@
         "targetActions": [
             "PlayerTurnOffAction",
             "SendCommand"
-        ]
+        ],
+        "conditionTypes": {
+            "noType": 1
+        }
     },
     {
         "label": "BehaviorAnim.close",
         "actions": [
-            "SendCommands",
+            "ConditionCommands",
             "SendCommand",
-            "ConditionCommands"
+            "SendCommands"
         ],
         "puids": [
-            "app::EntityLayout",
-            "LayoutObj"
+            "LayoutObj",
+            "app::EntityLayout"
         ],
         "encountered": 18,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 4
+        }
     },
     {
         "label": "EmBase.endTraining",
@@ -1349,7 +1632,10 @@
             "app::EntityLayout"
         ],
         "encountered": 18,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 17
+        }
     },
     {
         "label": "DIE_DOWN",
@@ -1360,7 +1646,10 @@
             "app::EntityLayout"
         ],
         "encountered": 18,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 18
+        }
     },
     {
         "label": "Pl0000.changePlayer",
@@ -1410,14 +1699,17 @@
     {
         "label": "Pl0000.setPosRotResetHap",
         "actions": [
-            "SendCommand",
-            "ConditionCommands"
+            "ConditionCommands",
+            "SendCommand"
         ],
         "puids": [
             "hap::SceneEntities"
         ],
         "encountered": 16,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 2
+        }
     },
     {
         "label": "HackingEnemy.changeMoveType_Repeat",
@@ -1434,21 +1726,24 @@
     {
         "label": "GroupImpl.signal",
         "actions": [
-            "SendCommand",
-            "ConditionCommands"
+            "ConditionCommands",
+            "SendCommand"
         ],
         "puids": [
             "hap::GroupImpl"
         ],
         "encountered": 15,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 8
+        }
     },
     {
         "label": "ScrollMap.offLoop",
         "actions": [
+            "ConditionCommands",
             "SendCommand",
-            "SendCommands",
-            "ConditionCommands"
+            "SendCommands"
         ],
         "puids": [
             "hap::Action"
@@ -1457,34 +1752,43 @@
         "maybeHasArgs": true,
         "targetActions": [
             "ScrollMap"
-        ]
+        ],
+        "conditionTypes": {
+            "noType": 1
+        }
     },
     {
         "label": "Pl0000.onNPCShootingFreePlay",
         "actions": [
+            "ConditionCommands",
             "SendCommand",
-            "SendCommands",
-            "ConditionCommands"
+            "SendCommands"
         ],
         "puids": [
-            "hap::SceneEntities",
-            "app::EntityLayout"
+            "app::EntityLayout",
+            "hap::SceneEntities"
         ],
         "encountered": 15,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 1
+        }
     },
     {
         "label": "END_BATTLE",
         "actions": [
             "ConditionBlock",
-            "MultiConditionBlock",
-            "ConditionCommands"
+            "ConditionCommands",
+            "MultiConditionBlock"
         ],
         "puids": [
             "app::EntityLayout"
         ],
         "encountered": 15,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 15
+        }
     },
     {
         "label": "Pl0000.setYorhaBackFoot",
@@ -1506,7 +1810,10 @@
             "app::EntityLayout"
         ],
         "encountered": 15,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 15
+        }
     },
     {
         "label": "EmBase.setSurpriseA",
@@ -1534,8 +1841,8 @@
     {
         "label": "ScrollMap.setFlightMode_Fighter",
         "actions": [
-            "SendCommand",
             "ConditionCommands",
+            "SendCommand",
             "SendCommands"
         ],
         "puids": [
@@ -1545,7 +1852,10 @@
         "maybeHasArgs": true,
         "targetActions": [
             "ScrollMap"
-        ]
+        ],
+        "conditionTypes": {
+            "noType": 1
+        }
     },
     {
         "label": "ScrollMap.setEnd",
@@ -1558,6 +1868,9 @@
         ],
         "encountered": 14,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 10
+        },
         "targetActions": [
             "ScrollMap"
         ]
@@ -1572,6 +1885,9 @@
         ],
         "encountered": 14,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 14
+        },
         "targetActions": [
             "ScrollMap"
         ]
@@ -1593,30 +1909,62 @@
     {
         "label": "Behavior.setHackingStageLabelByHap",
         "actions": [
-            "SendCommand",
-            "ConditionCommands"
+            "ConditionCommands",
+            "SendCommand"
         ],
         "puids": [
             "app::EntityLayout",
             "hap::SceneEntities"
         ],
         "encountered": 14,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 1
+        }
     },
     {
-        "label": "RUN",
+        "label": "FadeAction.fadeIn",
         "actions": [
             "ConditionCommands",
-            "ConditionBlock"
+            "SendCommand"
         ],
         "puids": [
             "hap::Action"
         ],
         "encountered": 14,
-        "maybeHasArgs": true,
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 1
+        },
         "targetActions": [
-            "ScriptAction"
+            "FadeAction"
         ]
+    },
+    {
+        "label": "Pl0000.setHackingFilterUI",
+        "actions": [
+            "SendCommand"
+        ],
+        "puids": [
+            "hap::SceneEntities"
+        ],
+        "encountered": 14,
+        "maybeHasArgs": false
+    },
+    {
+        "label": "MiscState.STA_CK",
+        "actions": [
+            "ConditionCommands",
+            "MultiConditionBlock"
+        ],
+        "puids": [
+            "hap::StateObject"
+        ],
+        "encountered": 14,
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "2": 14
+        }
     },
     {
         "label": "DEAD",
@@ -1627,7 +1975,11 @@
             "app::EntityLayout"
         ],
         "encountered": 13,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "4": 11,
+            "0": 2
+        }
     },
     {
         "label": "ScrollMap.setCam_Quater",
@@ -1653,7 +2005,10 @@
             "app::EntityLayout"
         ],
         "encountered": 13,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 13
+        }
     },
     {
         "label": "TIMEOVER",
@@ -1666,9 +2021,29 @@
         ],
         "encountered": 13,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "0": 10,
+            "1": 3
+        },
         "targetActions": [
             "CameraTargetAction"
         ]
+    },
+    {
+        "label": "EmBase.endSleep",
+        "actions": [
+            "AreaCommand",
+            "ConditionCommands",
+            "SendCommand"
+        ],
+        "puids": [
+            "app::EntityLayout"
+        ],
+        "encountered": 13,
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 1
+        }
     },
     {
         "label": "HackingEnemy.setMoveSpeedRate",
@@ -1692,6 +2067,9 @@
         ],
         "encountered": 12,
         "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 8
+        },
         "targetActions": [
             "ScrollMap"
         ]
@@ -1709,7 +2087,26 @@
         "maybeHasArgs": true
     },
     {
-        "label": "FadeAction.fadeIn",
+        "label": "FADE_WAIT",
+        "actions": [
+            "ConditionBlock",
+            "ConditionCommands"
+        ],
+        "puids": [
+            "hap::Action"
+        ],
+        "encountered": 11,
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 9,
+            "0": 2
+        },
+        "targetActions": [
+            "FadeAction"
+        ]
+    },
+    {
+        "label": "EnemyGenerator.stopSpawn",
         "actions": [
             "ConditionCommands",
             "SendCommand"
@@ -1717,10 +2114,13 @@
         "puids": [
             "hap::Action"
         ],
-        "encountered": 12,
+        "encountered": 11,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 10
+        },
         "targetActions": [
-            "FadeAction"
+            "EnemyGenerator"
         ]
     },
     {
@@ -1735,19 +2135,6 @@
         ],
         "encountered": 11,
         "maybeHasArgs": true
-    },
-    {
-        "label": "EmBase.endSleep",
-        "actions": [
-            "SendCommand",
-            "AreaCommand",
-            "ConditionCommands"
-        ],
-        "puids": [
-            "app::EntityLayout"
-        ],
-        "encountered": 11,
-        "maybeHasArgs": false
     },
     {
         "label": "PhaseEventAction.releaseData",
@@ -1776,6 +2163,21 @@
         "maybeHasArgs": false
     },
     {
+        "label": "SceneStateSystem.clearGroup",
+        "actions": [
+            "ConditionCommands",
+            "SendCommand"
+        ],
+        "puids": [
+            "hap::StateObject"
+        ],
+        "encountered": 10,
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 1
+        }
+    },
+    {
         "label": "EmBase.setSurpriseB",
         "actions": [
             "SendCommand",
@@ -1797,19 +2199,26 @@
             "app::EntityLayout"
         ],
         "encountered": 10,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "0": 5,
+            "2": 5
+        }
     },
     {
         "label": "FastTravel.transporterIsEnabled",
         "actions": [
-            "ConditionCommands",
-            "ConditionBlock"
+            "ConditionBlock",
+            "ConditionCommands"
         ],
         "puids": [
             "hap::StateObject"
         ],
         "encountered": 10,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "2": 10
+        }
     },
     {
         "label": "Pl0000.onTowerChangeEff",
@@ -1823,21 +2232,6 @@
         "maybeHasArgs": false
     },
     {
-        "label": "EnemyGenerator.stopSpawn",
-        "actions": [
-            "ConditionCommands",
-            "SendCommand"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 10,
-        "maybeHasArgs": false,
-        "targetActions": [
-            "EnemyGenerator"
-        ]
-    },
-    {
         "label": "HackingEnemy.onEscape",
         "actions": [
             "ConditionCommands"
@@ -1846,21 +2240,38 @@
             "app::EntityLayout"
         ],
         "encountered": 10,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 10
+        }
     },
     {
         "label": "Pl0000.setBuddyFromNpc",
         "actions": [
-            "SendCommand",
+            "AreaCommand",
             "ConditionCommands",
-            "AreaCommand"
+            "SendCommand"
         ],
         "puids": [
-            "hap::SceneEntities",
-            "app::EntityLayout"
+            "app::EntityLayout",
+            "hap::SceneEntities"
         ],
         "encountered": 9,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 2
+        }
+    },
+    {
+        "label": "Pl0000.setWalkTarget",
+        "actions": [
+            "SendCommand"
+        ],
+        "puids": [
+            "hap::SceneEntities"
+        ],
+        "encountered": 9,
+        "maybeHasArgs": true
     },
     {
         "label": "BehaviorDoor.open",
@@ -1873,7 +2284,10 @@
             "app::EntityLayout"
         ],
         "encountered": 9,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 3
+        }
     },
     {
         "label": "Action.isEnabled",
@@ -1886,10 +2300,13 @@
         ],
         "encountered": 9,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "2": 9
+        },
         "targetActions": [
+            "EntityLayoutAction",
             "HapGoalLocationAction",
-            "SendCommand",
-            "EntityLayoutAction"
+            "SendCommand"
         ]
     },
     {
@@ -1901,13 +2318,16 @@
             "hap::GroupImpl"
         ],
         "encountered": 9,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 9
+        }
     },
     {
         "label": "ScrollMap.setCam_Behind",
         "actions": [
-            "SendCommands",
-            "SendCommand"
+            "SendCommand",
+            "SendCommands"
         ],
         "puids": [
             "hap::Action"
@@ -1919,41 +2339,35 @@
         ]
     },
     {
-        "label": "SceneStateSystem.clearGroup",
-        "actions": [
-            "SendCommand",
-            "ConditionCommands"
-        ],
-        "puids": [
-            "hap::StateObject"
-        ],
-        "encountered": 9,
-        "maybeHasArgs": true
-    },
-    {
         "label": "EmBase.setHpFromRate",
         "actions": [
-            "SendCommand",
-            "ConditionCommands"
+            "ConditionCommands",
+            "SendCommand"
         ],
         "puids": [
             "app::EntityLayout"
         ],
         "encountered": 9,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 4
+        }
     },
     {
         "label": "NEXT_BATTLE",
         "actions": [
-            "MultiConditionBlock",
+            "ConditionBlock",
             "ConditionCommands",
-            "ConditionBlock"
+            "MultiConditionBlock"
         ],
         "puids": [
             "app::EntityLayout"
         ],
         "encountered": 9,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 9
+        }
     },
     {
         "label": "Pl0000.setGoggleOff",
@@ -1961,8 +2375,8 @@
             "SendCommand"
         ],
         "puids": [
-            "hap::SceneEntities",
-            "app::EntityLayout"
+            "app::EntityLayout",
+            "hap::SceneEntities"
         ],
         "encountered": 9,
         "maybeHasArgs": false
@@ -1970,15 +2384,33 @@
     {
         "label": "Em8000.setSTGHpLimit",
         "actions": [
-            "SendCommand",
             "ConditionCommands",
+            "SendCommand",
             "SendCommands"
         ],
         "puids": [
             "app::EntityLayout"
         ],
         "encountered": 9,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 4
+        }
+    },
+    {
+        "label": "QuestState.unmount",
+        "actions": [
+            "ConditionCommands",
+            "SendCommand"
+        ],
+        "puids": [
+            "hap::StateObject"
+        ],
+        "encountered": 9,
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 8
+        }
     },
     {
         "label": "Pl0000.onLookFlower",
@@ -2005,8 +2437,8 @@
     {
         "label": "HackingEnemy.changeMoveType_Circle",
         "actions": [
-            "SendCommands",
-            "SendCommand"
+            "SendCommand",
+            "SendCommands"
         ],
         "puids": [
             "app::EntityLayout"
@@ -2017,8 +2449,8 @@
     {
         "label": "ScrollMap.setWorldYInter_Norm",
         "actions": [
-            "SendCommand",
-            "ConditionCommands"
+            "ConditionCommands",
+            "SendCommand"
         ],
         "puids": [
             "hap::Action"
@@ -2027,22 +2459,10 @@
         "maybeHasArgs": true,
         "targetActions": [
             "ScrollMap"
-        ]
-    },
-    {
-        "label": "FADE_WAIT",
-        "actions": [
-            "ConditionBlock",
-            "ConditionCommands"
         ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 8,
-        "maybeHasArgs": true,
-        "targetActions": [
-            "FadeAction"
-        ]
+        "conditionTypes": {
+            "noType": 1
+        }
     },
     {
         "label": "EmBase.setGoPoint",
@@ -2069,14 +2489,17 @@
     {
         "label": "Ba0210.lock",
         "actions": [
-            "SendCommand",
-            "ConditionCommands"
+            "ConditionCommands",
+            "SendCommand"
         ],
         "puids": [
             "app::EntityLayout"
         ],
         "encountered": 8,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 1
+        }
     },
     {
         "label": "STG_BATTLE_LIMIT",
@@ -2088,18 +2511,10 @@
             "app::EntityLayout"
         ],
         "encountered": 8,
-        "maybeHasArgs": false
-    },
-    {
-        "label": "QuestState.unmount",
-        "actions": [
-            "ConditionCommands"
-        ],
-        "puids": [
-            "hap::StateObject"
-        ],
-        "encountered": 8,
-        "maybeHasArgs": true
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 8
+        }
     },
     {
         "label": "Baa000.setEscapePos",
@@ -2123,6 +2538,10 @@
         ],
         "encountered": 8,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "0": 4,
+            "1": 4
+        },
         "targetActions": [
             "SendCommands"
         ]
@@ -2130,15 +2549,20 @@
     {
         "label": "AREA_WAIT",
         "actions": [
-            "MultiConditionBlock",
+            "ConditionBlock",
             "ConditionCommands",
-            "ConditionBlock"
+            "MultiConditionBlock"
         ],
         "puids": [
             "hap::Action"
         ],
         "encountered": 8,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 5,
+            "0": 2,
+            "noType": 1
+        },
         "targetActions": [
             "EnemySetArea"
         ]
@@ -2155,17 +2579,6 @@
         "maybeHasArgs": true
     },
     {
-        "label": "Pl0000.setHackingFilterUI",
-        "actions": [
-            "SendCommand"
-        ],
-        "puids": [
-            "hap::SceneEntities"
-        ],
-        "encountered": 8,
-        "maybeHasArgs": false
-    },
-    {
         "label": "MiscState.getSaveData",
         "actions": [
             "ConditionBlock",
@@ -2175,7 +2588,10 @@
             "hap::StateObject"
         ],
         "encountered": 7,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "2": 7
+        }
     },
     {
         "label": "MiscState.STA_ON",
@@ -2198,25 +2614,17 @@
             "app::EntityLayout"
         ],
         "encountered": 7,
-        "maybeHasArgs": false
-    },
-    {
-        "label": "Pl0000.setWalkTarget",
-        "actions": [
-            "SendCommand"
-        ],
-        "puids": [
-            "hap::SceneEntities"
-        ],
-        "encountered": 7,
-        "maybeHasArgs": true
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 4
+        }
     },
     {
         "label": "ScrollMap.setCam_Side",
         "actions": [
-            "SendCommands",
+            "ConditionCommands",
             "SendCommand",
-            "ConditionCommands"
+            "SendCommands"
         ],
         "puids": [
             "hap::Action"
@@ -2225,7 +2633,10 @@
         "maybeHasArgs": true,
         "targetActions": [
             "ScrollMap"
-        ]
+        ],
+        "conditionTypes": {
+            "noType": 1
+        }
     },
     {
         "label": "BehaviorAppBase.pullout",
@@ -2242,14 +2653,17 @@
         "label": "FadeAction.fadeKill",
         "actions": [
             "ConditionCommands",
-            "SendCommands",
-            "SendCommand"
+            "SendCommand",
+            "SendCommands"
         ],
         "puids": [
             "hap::Action"
         ],
         "encountered": 7,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 3
+        },
         "targetActions": [
             "FadeAction"
         ]
@@ -2263,7 +2677,10 @@
             "app::EntityLayout"
         ],
         "encountered": 7,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 7
+        }
     },
     {
         "label": "EmBase.onEffDojoField",
@@ -2279,8 +2696,8 @@
     {
         "label": "EmBase.endSQParade",
         "actions": [
-            "SendCommands",
-            "SendCommand"
+            "SendCommand",
+            "SendCommands"
         ],
         "puids": [
             "app::EntityLayout"
@@ -2291,8 +2708,8 @@
     {
         "label": "HackingEnemy.changeMoveType_Eight",
         "actions": [
-            "SendCommands",
-            "SendCommand"
+            "SendCommand",
+            "SendCommands"
         ],
         "puids": [
             "app::EntityLayout"
@@ -2405,13 +2822,16 @@
             "app::EntityLayout"
         ],
         "encountered": 6,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 1
+        }
     },
     {
         "label": "Em7000.onEm7000Battle",
         "actions": [
-            "SendCommands",
-            "SendCommand"
+            "SendCommand",
+            "SendCommands"
         ],
         "puids": [
             "app::EntityLayout"
@@ -2450,7 +2870,10 @@
             "app::EntityLayout"
         ],
         "encountered": 6,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 6
+        }
     },
     {
         "label": "BACK_CHANGE_ENABLE",
@@ -2461,7 +2884,10 @@
             "app::EntityLayout"
         ],
         "encountered": 6,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 6
+        }
     },
     {
         "label": "RIGHT_CHANGE_ENABLE",
@@ -2472,7 +2898,10 @@
             "app::EntityLayout"
         ],
         "encountered": 6,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 6
+        }
     },
     {
         "label": "LEFT_CHANGE_ENABLE",
@@ -2483,7 +2912,10 @@
             "app::EntityLayout"
         ],
         "encountered": 6,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 6
+        }
     },
     {
         "label": "BehaviorDoor.lock",
@@ -2566,8 +2998,8 @@
     {
         "label": "Ba2018.canHack",
         "actions": [
-            "SendCommand",
-            "AreaCommand"
+            "AreaCommand",
+            "SendCommand"
         ],
         "puids": [
             "app::EntityLayout"
@@ -2584,22 +3016,28 @@
             "app::EntityLayout"
         ],
         "encountered": 6,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "0": 6
+        }
     },
     {
         "label": "Pl0000.setNpcFromBuddy",
         "actions": [
-            "SendCommand",
+            "AreaCommand",
             "ConditionCommands",
-            "SendCommands",
-            "AreaCommand"
+            "SendCommand",
+            "SendCommands"
         ],
         "puids": [
-            "hap::SceneEntities",
-            "app::EntityLayout"
+            "app::EntityLayout",
+            "hap::SceneEntities"
         ],
         "encountered": 5,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 1
+        }
     },
     {
         "label": "Pl0000.initBehindFreeShooting",
@@ -2615,8 +3053,8 @@
     {
         "label": "BehaviorHacking.startLock",
         "actions": [
-            "SendCommands",
-            "SendCommand"
+            "SendCommand",
+            "SendCommands"
         ],
         "puids": [
             "app::EntityLayout"
@@ -2634,7 +3072,10 @@
             "app::EntityLayout"
         ],
         "encountered": 5,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 4
+        }
     },
     {
         "label": "Pl0000.clearWalkTarget",
@@ -2656,13 +3097,16 @@
             "hap::GroupImpl"
         ],
         "encountered": 5,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 5
+        }
     },
     {
         "label": "ScrollMap.setWorldYInter_Ess",
         "actions": [
-            "SendCommand",
-            "ConditionCommands"
+            "ConditionCommands",
+            "SendCommand"
         ],
         "puids": [
             "hap::Action"
@@ -2671,13 +3115,16 @@
         "maybeHasArgs": true,
         "targetActions": [
             "ScrollMap"
-        ]
+        ],
+        "conditionTypes": {
+            "noType": 2
+        }
     },
     {
         "label": "EnemyGenerator.deactivate",
         "actions": [
-            "SendCommands",
-            "SendCommand"
+            "SendCommand",
+            "SendCommands"
         ],
         "puids": [
             "hap::Action"
@@ -2689,10 +3136,25 @@
         ]
     },
     {
+        "label": "Pl0000.onCameraBigShakeEff",
+        "actions": [
+            "ConditionCommands",
+            "SendCommand"
+        ],
+        "puids": [
+            "hap::SceneEntities"
+        ],
+        "encountered": 5,
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 1
+        }
+    },
+    {
         "label": "ScrollMap.changeNextMap",
         "actions": [
-            "SendCommands",
-            "SendCommand"
+            "SendCommand",
+            "SendCommands"
         ],
         "puids": [
             "hap::Action"
@@ -2706,14 +3168,17 @@
     {
         "label": "ON_FLIGHT_UNIT_GETON",
         "actions": [
-            "MultiConditionBlock",
-            "ConditionBlock"
+            "ConditionBlock",
+            "MultiConditionBlock"
         ],
         "puids": [
             "hap::GroupImpl"
         ],
         "encountered": 5,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 5
+        }
     },
     {
         "label": "Pl0000.startLaserKill",
@@ -2809,14 +3274,17 @@
         "label": "Pl0000.setTowerShooting",
         "actions": [
             "ConditionCommands",
-            "SendCommands",
-            "SendCommand"
+            "SendCommand",
+            "SendCommands"
         ],
         "puids": [
             "hap::SceneEntities"
         ],
         "encountered": 5,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 3
+        }
     },
     {
         "label": "Pl0000.onTowerMode",
@@ -2828,7 +3296,10 @@
             "hap::SceneEntities"
         ],
         "encountered": 5,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 2
+        }
     },
     {
         "label": "EmBase.clearDispHpBar",
@@ -2884,7 +3355,10 @@
             "app::EntityLayout"
         ],
         "encountered": 5,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 5
+        }
     },
     {
         "label": "TOWERHACK_1",
@@ -2895,7 +3369,28 @@
             "app::EntityLayout"
         ],
         "encountered": 5,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "0": 3,
+            "1": 2
+        }
+    },
+    {
+        "label": "q095_startTalk_end",
+        "actions": [
+            "ConditionBlock"
+        ],
+        "puids": [
+            "hap::Action"
+        ],
+        "encountered": 5,
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 5
+        },
+        "targetActions": [
+            "ScriptAction"
+        ]
     },
     {
         "label": "HackingEnemy.changeMoveType_Reflect",
@@ -2917,7 +3412,10 @@
             "hap::SceneEntities"
         ],
         "encountered": 4,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "2": 4
+        }
     },
     {
         "label": "BehaviorGate.startClose",
@@ -2952,6 +3450,10 @@
         ],
         "encountered": 4,
         "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 2,
+            "0": 2
+        },
         "targetActions": [
             "PlayerTurnOffAction"
         ]
@@ -2966,7 +3468,28 @@
             "hap::SceneEntities"
         ],
         "encountered": 4,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 3
+        }
+    },
+    {
+        "label": "SoundNovelAction.close",
+        "actions": [
+            "ConditionCommands",
+            "SendCommand"
+        ],
+        "puids": [
+            "hap::Action"
+        ],
+        "encountered": 4,
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 1
+        },
+        "targetActions": [
+            "SoundNovelAction"
+        ]
     },
     {
         "label": "Pl0000.initEm1100FinalFlightBattle",
@@ -3032,15 +3555,19 @@
     {
         "label": "R_OPENING",
         "actions": [
-            "EnemySetArea",
             "ConditionBlock",
-            "ConditionCommands"
+            "ConditionCommands",
+            "EnemySetArea"
         ],
         "puids": [
             "app::EntityLayout"
         ],
         "encountered": 4,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 3,
+            "noType": 1
+        }
     },
     {
         "label": "Pl0000.resetNPCShootingPos",
@@ -3056,21 +3583,24 @@
     {
         "label": "NPC.setPl1000JetComeOut",
         "actions": [
-            "SendCommand",
-            "ConditionAction"
+            "ConditionAction",
+            "SendCommand"
         ],
         "puids": [
             "app::EntityLayout"
         ],
         "encountered": 4,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 1
+        }
     },
     {
         "label": "ElevatorAction.unlock",
         "actions": [
-            "SendCommand",
             "AreaCommand",
-            "ConditionCommands"
+            "ConditionCommands",
+            "SendCommand"
         ],
         "puids": [
             "hap::Action"
@@ -3079,7 +3609,26 @@
         "maybeHasArgs": true,
         "targetActions": [
             "ElevatorAction"
-        ]
+        ],
+        "conditionTypes": {
+            "noType": 1
+        }
+    },
+    {
+        "label": "Pl0000.offCameraShakeEff",
+        "actions": [
+            "ConditionCommands",
+            "SendCommand",
+            "SendCommands"
+        ],
+        "puids": [
+            "hap::SceneEntities"
+        ],
+        "encountered": 4,
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 1
+        }
     },
     {
         "label": "Ba0435.setShake",
@@ -3088,6 +3637,18 @@
         ],
         "puids": [
             "LayoutObj"
+        ],
+        "encountered": 4,
+        "maybeHasArgs": false
+    },
+    {
+        "label": "EmBase.changeEnemy",
+        "actions": [
+            "SendCommand",
+            "SendCommands"
+        ],
+        "puids": [
+            "app::EntityLayout"
         ],
         "encountered": 4,
         "maybeHasArgs": false
@@ -3192,7 +3753,10 @@
             "app::EntityLayout"
         ],
         "encountered": 4,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 3
+        }
     },
     {
         "label": "Pl0000.enableFriendlyFireYorha",
@@ -3225,19 +3789,25 @@
             "app::EntityLayout"
         ],
         "encountered": 4,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 4
+        }
     },
     {
         "label": "EmBase.clearUndead",
         "actions": [
-            "ConditionCommands",
-            "AreaCommand"
+            "AreaCommand",
+            "ConditionCommands"
         ],
         "puids": [
             "app::EntityLayout"
         ],
         "encountered": 4,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 3
+        }
     },
     {
         "label": "ARRIVED_POINT",
@@ -3249,7 +3819,10 @@
             "app::EntityLayout"
         ],
         "encountered": 4,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 4
+        }
     },
     {
         "label": "Behavior.isTrans",
@@ -3260,7 +3833,10 @@
             "LayoutObj"
         ],
         "encountered": 4,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "2": 4
+        }
     },
     {
         "label": "q150_EM_start",
@@ -3272,6 +3848,9 @@
         ],
         "encountered": 4,
         "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 4
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -3279,14 +3858,17 @@
     {
         "label": "EmBase.startRace",
         "actions": [
-            "SendCommand",
-            "ConditionCommands"
+            "ConditionCommands",
+            "SendCommand"
         ],
         "puids": [
             "app::EntityLayout"
         ],
         "encountered": 4,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 1
+        }
     },
     {
         "label": "RACE_DAMAGE",
@@ -3297,13 +3879,69 @@
             "app::EntityLayout"
         ],
         "encountered": 4,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 4
+        }
+    },
+    {
+        "label": "EmBase.enableLoockCtrlPL",
+        "actions": [
+            "SendCommand"
+        ],
+        "puids": [
+            "app::EntityLayout"
+        ],
+        "encountered": 4,
+        "maybeHasArgs": false
+    },
+    {
+        "label": "Em0010.setEm001d_Restart",
+        "actions": [
+            "ConditionCommands"
+        ],
+        "puids": [
+            "app::EntityLayout"
+        ],
+        "encountered": 4,
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 4
+        }
+    },
+    {
+        "label": "RESTART_FADEOUT",
+        "actions": [
+            "ConditionBlock"
+        ],
+        "puids": [
+            "app::EntityLayout"
+        ],
+        "encountered": 4,
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 4
+        }
+    },
+    {
+        "label": "RESTART_FADE_END",
+        "actions": [
+            "ConditionBlock"
+        ],
+        "puids": [
+            "app::EntityLayout"
+        ],
+        "encountered": 4,
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 4
+        }
     },
     {
         "label": "Pl0000.callDialogTutorial",
         "actions": [
-            "SendCommand",
-            "AreaCommand"
+            "AreaCommand",
+            "SendCommand"
         ],
         "puids": [
             "hap::SceneEntities"
@@ -3314,14 +3952,17 @@
     {
         "label": "Pl0000.endPhaseEventFlightUnit",
         "actions": [
-            "SendCommand",
-            "ConditionCommands"
+            "ConditionCommands",
+            "SendCommand"
         ],
         "puids": [
             "hap::SceneEntities"
         ],
         "encountered": 3,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 1
+        }
     },
     {
         "label": "E3_TRIAL_END",
@@ -3332,7 +3973,10 @@
             "hap::SceneEntities"
         ],
         "encountered": 3,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 3
+        }
     },
     {
         "label": "Pl0000.end2BBreak",
@@ -3355,6 +3999,9 @@
         ],
         "encountered": 3,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "2": 3
+        },
         "targetActions": [
             "ScrollMap"
         ]
@@ -3377,19 +4024,7 @@
             "SendCommand"
         ],
         "puids": [
-            "hap::SceneEntities",
-            "app::EntityLayout"
-        ],
-        "encountered": 3,
-        "maybeHasArgs": false
-    },
-    {
-        "label": "Pl0000.onCameraBigShakeEff",
-        "actions": [
-            "SendCommand",
-            "ConditionCommands"
-        ],
-        "puids": [
+            "app::EntityLayout",
             "hap::SceneEntities"
         ],
         "encountered": 3,
@@ -3398,14 +4033,18 @@
     {
         "label": "LOADED",
         "actions": [
-            "ConditionCommands",
-            "ConditionBlock"
+            "ConditionBlock",
+            "ConditionCommands"
         ],
         "puids": [
             "hap::Action"
         ],
         "encountered": 3,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 2,
+            "0": 1
+        },
         "targetActions": [
             "PhaseEventAction"
         ]
@@ -3463,7 +4102,10 @@
             "app::EntityLayout"
         ],
         "encountered": 3,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 3
+        }
     },
     {
         "label": "Pl0000.dispWeaponIn",
@@ -3502,8 +4144,8 @@
     {
         "label": "Pl0000.setNPCShootingHuman",
         "actions": [
-            "SendCommands",
-            "SendCommand"
+            "SendCommand",
+            "SendCommands"
         ],
         "puids": [
             "app::EntityLayout",
@@ -3515,14 +4157,17 @@
     {
         "label": "EmBase.onAlwaysSuerArmor",
         "actions": [
-            "SendCommand",
-            "ConditionCommands"
+            "ConditionCommands",
+            "SendCommand"
         ],
         "puids": [
             "app::EntityLayout"
         ],
         "encountered": 3,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 1
+        }
     },
     {
         "label": "EmBase.setSandDiveEscape",
@@ -3538,14 +4183,17 @@
     {
         "label": "Pl0000.setNPCShootingFighter",
         "actions": [
-            "SendCommand",
-            "ConditionCommands"
+            "ConditionCommands",
+            "SendCommand"
         ],
         "puids": [
             "hap::SceneEntities"
         ],
         "encountered": 3,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 1
+        }
     },
     {
         "label": "Bga201.setBrinkPowerOff",
@@ -3578,7 +4226,10 @@
             "app::EntityLayout"
         ],
         "encountered": 3,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 3
+        }
     },
     {
         "label": "Pl0000.endEm4000FlightBattle",
@@ -3594,8 +4245,8 @@
     {
         "label": "Em5000.em5000Vanish",
         "actions": [
-            "SendCommands",
-            "SendCommand"
+            "SendCommand",
+            "SendCommands"
         ],
         "puids": [
             "app::EntityLayout"
@@ -3617,8 +4268,8 @@
     {
         "label": "Em5000.em5000AtkEnable",
         "actions": [
-            "SendCommands",
-            "SendCommand"
+            "SendCommand",
+            "SendCommands"
         ],
         "puids": [
             "app::EntityLayout"
@@ -3684,8 +4335,8 @@
     {
         "label": "ElevatorAction.lock",
         "actions": [
-            "SendCommand",
-            "AreaCommand"
+            "AreaCommand",
+            "SendCommand"
         ],
         "puids": [
             "hap::Action"
@@ -3699,8 +4350,8 @@
     {
         "label": "EmBase.setDownLoop",
         "actions": [
-            "SendCommand",
-            "AreaCommand"
+            "AreaCommand",
+            "SendCommand"
         ],
         "puids": [
             "app::EntityLayout"
@@ -3730,6 +4381,9 @@
         ],
         "encountered": 3,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 1
+        },
         "targetActions": [
             "PhaseEventAction"
         ]
@@ -3746,10 +4400,10 @@
         "maybeHasArgs": true
     },
     {
-        "label": "Pl0000.onBattleWait",
+        "label": "Pl0000.onCameraShakeEff",
         "actions": [
-            "SendCommands",
-            "SendCommand"
+            "SendCommand",
+            "SendCommands"
         ],
         "puids": [
             "hap::SceneEntities"
@@ -3758,11 +4412,10 @@
         "maybeHasArgs": true
     },
     {
-        "label": "Pl0000.offCameraShakeEff",
+        "label": "Pl0000.onBattleWait",
         "actions": [
-            "SendCommands",
             "SendCommand",
-            "ConditionCommands"
+            "SendCommands"
         ],
         "puids": [
             "hap::SceneEntities"
@@ -3773,8 +4426,8 @@
     {
         "label": "Pl0000.offBattleWait",
         "actions": [
-            "SendCommands",
-            "SendCommand"
+            "SendCommand",
+            "SendCommands"
         ],
         "puids": [
             "hap::SceneEntities"
@@ -3796,17 +4449,39 @@
     {
         "label": "REQUESTED",
         "actions": [
-            "ConditionCommands",
-            "ConditionBlock"
+            "ConditionBlock",
+            "ConditionCommands"
         ],
         "puids": [
             "hap::Action"
         ],
         "encountered": 3,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "0": 2,
+            "noType": 1
+        },
         "targetActions": [
             "PhaseJumpAction",
             "SubPhaseAction"
+        ]
+    },
+    {
+        "label": "FadeAction.fadeOut",
+        "actions": [
+            "ConditionCommands",
+            "SendCommand"
+        ],
+        "puids": [
+            "hap::Action"
+        ],
+        "encountered": 3,
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 1
+        },
+        "targetActions": [
+            "FadeAction"
         ]
     },
     {
@@ -3818,7 +4493,10 @@
             "hap::GroupImpl"
         ],
         "encountered": 3,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 3
+        }
     },
     {
         "label": "ON_DIE",
@@ -3829,7 +4507,10 @@
             "hap::SceneEntities"
         ],
         "encountered": 3,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 3
+        }
     },
     {
         "label": "ON_EM7000_DIE",
@@ -3840,7 +4521,10 @@
             "hap::GroupImpl"
         ],
         "encountered": 3,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 3
+        }
     },
     {
         "label": "Pl0000.disableFriendlyFireYorha",
@@ -3884,7 +4568,10 @@
             "hap::StateObject"
         ],
         "encountered": 3,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "2": 3
+        }
     },
     {
         "label": "EmBase.onNoDieSuperArmor",
@@ -3907,6 +4594,9 @@
         ],
         "encountered": 3,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 3
+        },
         "targetActions": [
             "QuestBindArea"
         ]
@@ -3920,7 +4610,10 @@
             "hap::StateObject"
         ],
         "encountered": 3,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "2": 3
+        }
     },
     {
         "label": "HackingEnemy.setGunSpeed",
@@ -3997,7 +4690,55 @@
             "app::EntityLayout"
         ],
         "encountered": 3,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 3
+        }
+    },
+    {
+        "label": "NoiseAction.startNoise",
+        "actions": [
+            "SendCommand"
+        ],
+        "puids": [
+            "hap::Action"
+        ],
+        "encountered": 3,
+        "maybeHasArgs": false,
+        "targetActions": [
+            "NoiseAction"
+        ]
+    },
+    {
+        "label": "NoiseAction.endNoise",
+        "actions": [
+            "SendCommand"
+        ],
+        "puids": [
+            "hap::Action"
+        ],
+        "encountered": 3,
+        "maybeHasArgs": false,
+        "targetActions": [
+            "NoiseAction"
+        ]
+    },
+    {
+        "label": "ColosseumAction.isInTheBattleGround",
+        "actions": [
+            "ConditionCommands"
+        ],
+        "puids": [
+            "hap::Action"
+        ],
+        "encountered": 3,
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "2": 3
+        },
+        "targetActions": [
+            "ColosseumAction"
+        ]
     },
     {
         "label": "CLEAR",
@@ -4009,6 +4750,9 @@
         ],
         "encountered": 2,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "0": 2
+        },
         "targetActions": [
             "HackingCheckClearAction"
         ]
@@ -4023,6 +4767,9 @@
         ],
         "encountered": 2,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 2
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -4058,7 +4805,10 @@
             "app::EntityLayout"
         ],
         "encountered": 2,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 2
+        }
     },
     {
         "label": "Pl0000.onEm3000TopViewCamera",
@@ -4070,7 +4820,10 @@
             "hap::SceneEntities"
         ],
         "encountered": 2,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 1
+        }
     },
     {
         "label": "Pl0000.offEm3000TopViewCamera",
@@ -4082,7 +4835,10 @@
             "hap::SceneEntities"
         ],
         "encountered": 2,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 1
+        }
     },
     {
         "label": "q100_77_hackingTalk_end",
@@ -4095,6 +4851,9 @@
         ],
         "encountered": 2,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 2
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -4142,7 +4901,10 @@
             "hap::SceneEntities"
         ],
         "encountered": 2,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 2
+        }
     },
     {
         "label": "Behavior.terminate",
@@ -4179,7 +4941,10 @@
             "hap::StateObject"
         ],
         "encountered": 2,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "2": 2
+        }
     },
     {
         "label": "BunkerAction.exitSp",
@@ -4249,7 +5014,10 @@
             "app::EntityLayout"
         ],
         "encountered": 2,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 1
+        }
     },
     {
         "label": "EmBase.setTargetIcon",
@@ -4287,14 +5055,17 @@
     {
         "label": "ON_SIGNAL_MISSILE",
         "actions": [
-            "ConditionBlock",
-            "ConditionAction"
+            "ConditionAction",
+            "ConditionBlock"
         ],
         "puids": [
             "app::EntityLayout"
         ],
         "encountered": 2,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 2
+        }
     },
     {
         "label": "Em1100.offAlphaArmTrans_L",
@@ -4332,14 +5103,18 @@
     {
         "label": "R_DONE",
         "actions": [
-            "ConditionCommands",
-            "ConditionBlock"
+            "ConditionBlock",
+            "ConditionCommands"
         ],
         "puids": [
             "app::EntityLayout"
         ],
         "encountered": 2,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "0": 1,
+            "noType": 1
+        }
     },
     {
         "label": "BehaviorTransporterBa.lock",
@@ -4351,7 +5126,10 @@
             "app::EntityLayout"
         ],
         "encountered": 2,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 1
+        }
     },
     {
         "label": "p200_15_jackasTalk_end",
@@ -4363,6 +5141,9 @@
         ],
         "encountered": 2,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 2
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -4377,6 +5158,9 @@
         ],
         "encountered": 2,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 2
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -4391,6 +5175,9 @@
         ],
         "encountered": 2,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 2
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -4405,6 +5192,9 @@
         ],
         "encountered": 2,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 2
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -4419,6 +5209,9 @@
         ],
         "encountered": 2,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 2
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -4432,7 +5225,10 @@
             "hap::SceneEntities"
         ],
         "encountered": 2,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 2
+        }
     },
     {
         "label": "Pl0000.set9sBreak",
@@ -4466,6 +5262,9 @@
         ],
         "encountered": 2,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 2
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -4527,7 +5326,10 @@
             "app::EntityLayout"
         ],
         "encountered": 2,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 2
+        }
     },
     {
         "label": "Em5000.em5000SideViewWarpA",
@@ -4538,7 +5340,10 @@
             "app::EntityLayout"
         ],
         "encountered": 2,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 2
+        }
     },
     {
         "label": "Em5000.em5000SideViewWarpB",
@@ -4549,7 +5354,10 @@
             "app::EntityLayout"
         ],
         "encountered": 2,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 2
+        }
     },
     {
         "label": "Bunker.onEff_Alert",
@@ -4573,6 +5381,9 @@
         ],
         "encountered": 2,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 2
+        },
         "targetActions": [
             "PhaseEventAction"
         ]
@@ -4609,6 +5420,9 @@
         ],
         "encountered": 2,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 2
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -4616,8 +5430,8 @@
     {
         "label": "LoopElevatorAction.outEvSWFloor1",
         "actions": [
-            "SendCommand",
-            "ConditionCommands"
+            "ConditionCommands",
+            "SendCommand"
         ],
         "puids": [
             "hap::Action"
@@ -4626,18 +5440,10 @@
         "maybeHasArgs": false,
         "targetActions": [
             "LoopElevatorAction"
-        ]
-    },
-    {
-        "label": "Pl0000.onCameraShakeEff",
-        "actions": [
-            "SendCommands"
         ],
-        "puids": [
-            "hap::SceneEntities"
-        ],
-        "encountered": 2,
-        "maybeHasArgs": true
+        "conditionTypes": {
+            "noType": 1
+        }
     },
     {
         "label": "p200_180_pascal_end",
@@ -4649,6 +5455,9 @@
         ],
         "encountered": 2,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 2
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -4665,17 +5474,6 @@
         "maybeHasArgs": false
     },
     {
-        "label": "EmBase.changeEnemy",
-        "actions": [
-            "SendCommands"
-        ],
-        "puids": [
-            "app::EntityLayout"
-        ],
-        "encountered": 2,
-        "maybeHasArgs": false
-    },
-    {
         "label": "p300_91_pascalTalk1_end",
         "actions": [
             "ConditionBlock"
@@ -4685,6 +5483,9 @@
         ],
         "encountered": 2,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 2
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -4721,6 +5522,9 @@
         ],
         "encountered": 2,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 2
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -4775,11 +5579,25 @@
             "SendCommand"
         ],
         "puids": [
-            "hap::SceneEntities",
-            "app::EntityLayout"
+            "app::EntityLayout",
+            "hap::SceneEntities"
         ],
         "encountered": 2,
         "maybeHasArgs": false
+    },
+    {
+        "label": "EM5000_DIE_NEAR_PL",
+        "actions": [
+            "ConditionBlock"
+        ],
+        "puids": [
+            "app::EntityLayout"
+        ],
+        "encountered": 2,
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 2
+        }
     },
     {
         "label": "p300_27_caution_end",
@@ -4791,6 +5609,9 @@
         ],
         "encountered": 2,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 2
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -4893,6 +5714,9 @@
         ],
         "encountered": 2,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 2
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -4907,13 +5731,16 @@
             "app::EntityLayout"
         ],
         "encountered": 2,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 1
+        }
     },
     {
         "label": "Pl0000.offTowerMode",
         "actions": [
-            "SendCommands",
-            "SendCommand"
+            "SendCommand",
+            "SendCommands"
         ],
         "puids": [
             "hap::SceneEntities"
@@ -4935,14 +5762,17 @@
     {
         "label": "p300_82_talk2_end",
         "actions": [
-            "ConditionCommands",
-            "ConditionBlock"
+            "ConditionBlock",
+            "ConditionCommands"
         ],
         "puids": [
             "hap::Action"
         ],
         "encountered": 2,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 2
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -4956,7 +5786,10 @@
             "app::EntityLayout"
         ],
         "encountered": 2,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 2
+        }
     },
     {
         "label": "Em7000.stopEm7000Battle",
@@ -4990,6 +5823,9 @@
         ],
         "encountered": 2,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 2
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -5025,7 +5861,24 @@
             "app::EntityLayout"
         ],
         "encountered": 2,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 2
+        }
+    },
+    {
+        "label": "EnemyGenerator.setDieRtn",
+        "actions": [
+            "SendCommand"
+        ],
+        "puids": [
+            "hap::Action"
+        ],
+        "encountered": 2,
+        "maybeHasArgs": false,
+        "targetActions": [
+            "EnemyGenerator"
+        ]
     },
     {
         "label": "BehaviorAppBase.requestMove",
@@ -5047,7 +5900,10 @@
             "hap::SceneEntities"
         ],
         "encountered": 2,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 2
+        }
     },
     {
         "label": "Pl0000.startNoDmgSubQuest",
@@ -5069,7 +5925,10 @@
             "hap::SceneEntities"
         ],
         "encountered": 2,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 2
+        }
     },
     {
         "label": "EmBase.onHackingNoReaction",
@@ -5093,6 +5952,9 @@
         ],
         "encountered": 2,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "0": 2
+        },
         "targetActions": [
             "HapMultiMarkLocationAction"
         ]
@@ -5106,7 +5968,10 @@
             "app::EntityLayout"
         ],
         "encountered": 2,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 2
+        }
     },
     {
         "label": "Pl1010.onPathMove",
@@ -5167,8 +6032,8 @@
     {
         "label": "HackingEnemy.setBulletBlackShot",
         "actions": [
-            "SendCommands",
-            "SendCommand"
+            "SendCommand",
+            "SendCommands"
         ],
         "puids": [
             "app::EntityLayout"
@@ -5251,19 +6116,25 @@
             "app::EntityLayout"
         ],
         "encountered": 2,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 2
+        }
     },
     {
         "label": "NPC.setBreakPl1100",
         "actions": [
-            "SendCommand",
-            "ConditionCommands"
+            "ConditionCommands",
+            "SendCommand"
         ],
         "puids": [
             "app::EntityLayout"
         ],
         "encountered": 2,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 1
+        }
     },
     {
         "label": "MiscState.getQuestClearRate",
@@ -5274,7 +6145,71 @@
             "hap::StateObject"
         ],
         "encountered": 2,
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "2": 2
+        }
+    },
+    {
+        "label": "Bga010.startTrain",
+        "actions": [
+            "SendCommand"
+        ],
+        "puids": [
+            "app::EntityLayout"
+        ],
+        "encountered": 2,
+        "maybeHasArgs": false
+    },
+    {
+        "label": "EmBase.onBreakArmEnable",
+        "actions": [
+            "SendCommand"
+        ],
+        "puids": [
+            "app::EntityLayout"
+        ],
+        "encountered": 2,
+        "maybeHasArgs": false
+    },
+    {
+        "label": "Pl0000.setTurnTarget",
+        "actions": [
+            "SendCommand"
+        ],
+        "puids": [
+            "hap::SceneEntities"
+        ],
+        "encountered": 2,
         "maybeHasArgs": true
+    },
+    {
+        "label": "Em5000.clearEm5000PresidentAtkWait",
+        "actions": [
+            "SendCommand"
+        ],
+        "puids": [
+            "app::EntityLayout"
+        ],
+        "encountered": 2,
+        "maybeHasArgs": false
+    },
+    {
+        "label": "BATTLE_IN",
+        "actions": [
+            "ConditionCommands"
+        ],
+        "puids": [
+            "hap::Action"
+        ],
+        "encountered": 2,
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "0": 2
+        },
+        "targetActions": [
+            "ColosseumAction"
+        ]
     },
     {
         "label": "ACCESS_BAN_BA2016",
@@ -5285,7 +6220,10 @@
             "hap::GroupImpl"
         ],
         "encountered": 1,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 1
+        }
     },
     {
         "label": "QuestState.request_state",
@@ -5308,6 +6246,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -5322,6 +6263,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -5358,6 +6302,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -5372,6 +6319,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -5386,6 +6336,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -5399,7 +6352,10 @@
             "hap::GroupImpl"
         ],
         "encountered": 1,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        }
     },
     {
         "label": "Pl0000.start9sMoveTo2B",
@@ -5421,7 +6377,10 @@
             "app::EntityLayout"
         ],
         "encountered": 1,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 1
+        }
     },
     {
         "label": "p100_10_9STalk1_end",
@@ -5433,6 +6392,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -5447,6 +6409,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -5472,6 +6437,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -5486,6 +6454,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -5500,6 +6471,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -5524,7 +6498,10 @@
             "app::EntityLayout"
         ],
         "encountered": 1,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "0": 1
+        }
     },
     {
         "label": "ON_SIGNAL_1ST_HALF_END",
@@ -5535,7 +6512,10 @@
             "app::EntityLayout"
         ],
         "encountered": 1,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        }
     },
     {
         "label": "ON_SIGNAL_1ST_HALF_2ND",
@@ -5546,7 +6526,10 @@
             "app::EntityLayout"
         ],
         "encountered": 1,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        }
     },
     {
         "label": "ON_SIGNAL_1ST_END",
@@ -5557,7 +6540,10 @@
             "app::EntityLayout"
         ],
         "encountered": 1,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        }
     },
     {
         "label": "Em1100.enableBridgeBreak",
@@ -5591,6 +6577,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -5626,7 +6615,10 @@
             "app::EntityLayout"
         ],
         "encountered": 1,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        }
     },
     {
         "label": "Pl0000.clearRunTarget",
@@ -5648,7 +6640,10 @@
             "app::EntityLayout"
         ],
         "encountered": 1,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 1
+        }
     },
     {
         "label": "STOP_MOVE",
@@ -5659,7 +6654,10 @@
             "app::EntityLayout"
         ],
         "encountered": 1,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        }
     },
     {
         "label": "Pl0000.setEventMuteki",
@@ -5681,7 +6679,10 @@
             "app::EntityLayout"
         ],
         "encountered": 1,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        }
     },
     {
         "label": "SoundNovelAction.jumpTo",
@@ -5707,22 +6708,11 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "0": 1
+        },
         "targetActions": [
             "FadeAction"
-        ]
-    },
-    {
-        "label": "SoundNovelAction.close",
-        "actions": [
-            "ConditionCommands"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "targetActions": [
-            "SoundNovelAction"
         ]
     },
     {
@@ -5735,6 +6725,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 1
+        },
         "targetActions": [
             "ScrollMap"
         ]
@@ -5792,7 +6785,10 @@
             "hap::GroupImpl"
         ],
         "encountered": 1,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        }
     },
     {
         "label": "OMAKE_COMPLETE",
@@ -5803,7 +6799,10 @@
             "hap::GroupImpl"
         ],
         "encountered": 1,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        }
     },
     {
         "label": "ON_SIGNAL_SHOOTING",
@@ -5814,7 +6813,10 @@
             "app::EntityLayout"
         ],
         "encountered": 1,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        }
     },
     {
         "label": "Em1100.resetPlayerPos",
@@ -5847,7 +6849,10 @@
             "app::EntityLayout"
         ],
         "encountered": 1,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "0": 1
+        }
     },
     {
         "label": "Pl0000.endEm1100FinalFlightBattle",
@@ -5869,7 +6874,10 @@
             "app::EntityLayout"
         ],
         "encountered": 1,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        }
     },
     {
         "label": "battle_start_em0040",
@@ -5880,7 +6888,10 @@
             "hap::GroupImpl"
         ],
         "encountered": 1,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        }
     },
     {
         "label": "EmBase.setSandAppearWaitClear",
@@ -5936,6 +6947,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -5983,6 +6997,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -6007,7 +7024,10 @@
             "app::EntityLayout"
         ],
         "encountered": 1,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 1
+        }
     },
     {
         "label": "p200_15_talk1_end",
@@ -6019,6 +7039,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -6044,6 +7067,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -6058,6 +7084,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -6072,6 +7101,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -6086,6 +7118,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -6100,6 +7135,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -6114,6 +7152,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -6128,6 +7169,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -6163,7 +7207,10 @@
             "app::EntityLayout"
         ],
         "encountered": 1,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        }
     },
     {
         "label": "Em8000.offEm8000Barrier",
@@ -6284,7 +7331,10 @@
             "app::EntityLayout"
         ],
         "encountered": 1,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        }
     },
     {
         "label": "p200_80_00_end",
@@ -6296,6 +7346,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -6310,6 +7363,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -6356,7 +7412,10 @@
             "hap::GroupImpl"
         ],
         "encountered": 1,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        }
     },
     {
         "label": "Pl0000.setNPC2BArtillery",
@@ -6400,7 +7459,10 @@
             "app::EntityLayout"
         ],
         "encountered": 1,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 1
+        }
     },
     {
         "label": "Pl0000.setRobotRescueWakeUp",
@@ -6444,7 +7506,10 @@
             "app::EntityLayout"
         ],
         "encountered": 1,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        }
     },
     {
         "label": "Pl0000.offVSCamera",
@@ -6477,7 +7542,10 @@
             "hap::SceneEntities"
         ],
         "encountered": 1,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        }
     },
     {
         "label": "Pl0000.clearGetOnFlightUnit",
@@ -6510,7 +7578,10 @@
             "app::EntityLayout"
         ],
         "encountered": 1,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 1
+        }
     },
     {
         "label": "Pl0000.setShootingCamSide",
@@ -6631,7 +7702,10 @@
             "hap::SceneEntities"
         ],
         "encountered": 1,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "2": 1
+        }
     },
     {
         "label": "EmBase.offAlwaysSuerArmor",
@@ -6679,6 +7753,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -6703,7 +7780,10 @@
             "hap::GroupImpl"
         ],
         "encountered": 1,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        }
     },
     {
         "label": "p200_200_protect9S2_end",
@@ -6715,6 +7795,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -6728,7 +7811,10 @@
             "app::EntityLayout"
         ],
         "encountered": 1,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        }
     },
     {
         "label": "p200_200_vsEve2_end",
@@ -6740,6 +7826,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -6754,6 +7843,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -6768,6 +7860,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -6782,6 +7877,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -6796,6 +7894,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -6810,6 +7911,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -6824,6 +7928,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -6838,6 +7945,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -6874,6 +7984,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -6888,6 +8001,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -6902,6 +8018,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -6916,6 +8035,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -6930,6 +8052,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -6944,6 +8069,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -7008,6 +8136,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -7021,7 +8152,10 @@
             "hap::GroupImpl"
         ],
         "encountered": 1,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        }
     },
     {
         "label": "Pl0000.set2BDieSe00",
@@ -7076,7 +8210,10 @@
             "hap::SceneEntities"
         ],
         "encountered": 1,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 1
+        }
     },
     {
         "label": "Pl0000.offVirusNoRecovery",
@@ -7087,7 +8224,10 @@
             "hap::SceneEntities"
         ],
         "encountered": 1,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 1
+        }
     },
     {
         "label": "p300_180_emDone_end",
@@ -7099,20 +8239,12 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
-    },
-    {
-        "label": "EM5000_DIE_NEAR_PL",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "app::EntityLayout"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false
     },
     {
         "label": "p300_quake",
@@ -7124,6 +8256,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -7138,6 +8273,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -7152,6 +8290,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -7243,6 +8384,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -7257,6 +8401,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -7271,6 +8418,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -7285,6 +8435,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -7320,7 +8473,10 @@
             "app::EntityLayout"
         ],
         "encountered": 1,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "2": 1
+        }
     },
     {
         "label": "Pl0000.setBedSit",
@@ -7354,6 +8510,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -7368,6 +8527,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -7382,6 +8544,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -7396,6 +8561,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -7409,7 +8577,10 @@
             "hap::SceneEntities"
         ],
         "encountered": 1,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        }
     },
     {
         "label": "Pl0000.setUIPollutionGaugeLv1",
@@ -7453,7 +8624,10 @@
             "hap::SceneEntities"
         ],
         "encountered": 1,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 1
+        }
     },
     {
         "label": "Pl0000.startVirusLv2",
@@ -7464,7 +8638,10 @@
             "hap::SceneEntities"
         ],
         "encountered": 1,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 1
+        }
     },
     {
         "label": "Pl0000.setUIPollutionGaugeLv2",
@@ -7597,6 +8774,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -7655,22 +8835,11 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
-        ]
-    },
-    {
-        "label": "FadeAction.fadeOut",
-        "actions": [
-            "ConditionCommands"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "targetActions": [
-            "FadeAction"
         ]
     },
     {
@@ -7704,7 +8873,10 @@
             "hap::GroupImpl"
         ],
         "encountered": 1,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        }
     },
     {
         "label": "EmBase.setEm1050DieMove",
@@ -7738,6 +8910,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "0": 1
+        },
         "targetActions": [
             "DelayAction"
         ]
@@ -7774,6 +8949,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -7810,6 +8988,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -7824,6 +9005,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -7837,7 +9021,10 @@
             "hap::StateObject"
         ],
         "encountered": 1,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "2": 1
+        }
     },
     {
         "label": "Pl0000.enableFriendlyFire",
@@ -7882,6 +9069,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -7896,6 +9086,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -7909,7 +9102,10 @@
             "app::EntityLayout"
         ],
         "encountered": 1,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 1
+        }
     },
     {
         "label": "Pl0000.setDownVirus",
@@ -7932,6 +9128,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -7946,6 +9145,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -7993,6 +9195,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -8017,7 +9222,10 @@
             "app::EntityLayout"
         ],
         "encountered": 1,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 1
+        }
     },
     {
         "label": "EM1074_VIRUS",
@@ -8028,7 +9236,10 @@
             "app::EntityLayout"
         ],
         "encountered": 1,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 1
+        }
     },
     {
         "label": "p300_180_unit1_end",
@@ -8040,6 +9251,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -8053,7 +9267,10 @@
             "app::EntityLayout"
         ],
         "encountered": 1,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        }
     },
     {
         "label": "kumo_talk2_end",
@@ -8064,7 +9281,10 @@
             "hap::GroupImpl"
         ],
         "encountered": 1,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        }
     },
     {
         "label": "p300_30_doorLock_end",
@@ -8076,6 +9296,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -8090,6 +9313,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -8104,6 +9330,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -8118,6 +9347,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -8132,6 +9364,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -8200,7 +9435,10 @@
             "app::EntityLayout"
         ],
         "encountered": 1,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 1
+        }
     },
     {
         "label": "HP_60",
@@ -8211,7 +9449,10 @@
             "app::EntityLayout"
         ],
         "encountered": 1,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        }
     },
     {
         "label": "HP_40",
@@ -8222,7 +9463,10 @@
             "app::EntityLayout"
         ],
         "encountered": 1,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        }
     },
     {
         "label": "HP_20",
@@ -8233,7 +9477,10 @@
             "app::EntityLayout"
         ],
         "encountered": 1,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        }
     },
     {
         "label": "p300_180_doorLocked_end",
@@ -8245,6 +9492,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -8259,6 +9509,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -8272,7 +9525,10 @@
             "hap::GroupImpl"
         ],
         "encountered": 1,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 1
+        }
     },
     {
         "label": "p300_180_unit4_end",
@@ -8284,6 +9540,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -8298,6 +9557,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -8312,6 +9574,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -8325,7 +9590,10 @@
             "hap::GroupImpl"
         ],
         "encountered": 1,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        }
     },
     {
         "label": "p300_180_unit5_end",
@@ -8337,6 +9605,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -8350,7 +9621,10 @@
             "hap::GroupImpl"
         ],
         "encountered": 1,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        }
     },
     {
         "label": "Ba0630.setStart",
@@ -8373,6 +9647,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -8408,7 +9685,10 @@
             "app::EntityLayout"
         ],
         "encountered": 1,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 1
+        }
     },
     {
         "label": "TOWER_NOTHACKING_60",
@@ -8419,7 +9699,10 @@
             "app::EntityLayout"
         ],
         "encountered": 1,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 1
+        }
     },
     {
         "label": "TOWER_NOTHACKING_120",
@@ -8430,7 +9713,10 @@
             "app::EntityLayout"
         ],
         "encountered": 1,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 1
+        }
     },
     {
         "label": "TOWER_NOTHACKING_180",
@@ -8441,7 +9727,10 @@
             "app::EntityLayout"
         ],
         "encountered": 1,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 1
+        }
     },
     {
         "label": "Pl0000.setHackingFilterCore11",
@@ -8474,7 +9763,10 @@
             "app::EntityLayout"
         ],
         "encountered": 1,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 1
+        }
     },
     {
         "label": "Pl0000.disableFriendlyFire",
@@ -8497,6 +9789,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -8555,6 +9850,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -8569,6 +9867,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -8583,6 +9884,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -8640,7 +9944,10 @@
             "hap::GroupImpl"
         ],
         "encountered": 1,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        }
     },
     {
         "label": "Em8000.endLiftBattle",
@@ -8663,6 +9970,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -8677,6 +9987,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -8691,6 +10004,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -8705,6 +10021,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -8719,6 +10038,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -8733,22 +10055,11 @@
         ],
         "encountered": 1,
         "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
-        ]
-    },
-    {
-        "label": "EnemyGenerator.setDieRtn",
-        "actions": [
-            "SendCommand"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "targetActions": [
-            "EnemyGenerator"
         ]
     },
     {
@@ -8827,6 +10138,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -8852,6 +10166,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -8865,7 +10182,10 @@
             "app::EntityLayout"
         ],
         "encountered": 1,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 1
+        }
     },
     {
         "label": "TARGET_LONG_FAR",
@@ -8876,7 +10196,10 @@
             "app::EntityLayout"
         ],
         "encountered": 1,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 1
+        }
     },
     {
         "label": "EmBase.setDefenseMoveRtn",
@@ -8899,6 +10222,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -8912,7 +10238,10 @@
             "hap::GroupImpl"
         ],
         "encountered": 1,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 1
+        }
     },
     {
         "label": "q140_talk2_end",
@@ -8924,6 +10253,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -8949,6 +10281,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -8963,6 +10298,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -8976,7 +10314,10 @@
             "app::EntityLayout"
         ],
         "encountered": 1,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        }
     },
     {
         "label": "Pl0000.offLookFlower",
@@ -8999,6 +10340,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "0": 1
+        },
         "targetActions": [
             "LoopElevatorAction"
         ]
@@ -9013,6 +10357,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "0": 1
+        },
         "targetActions": [
             "LoopElevatorAction"
         ]
@@ -9027,6 +10374,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -9041,6 +10391,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -9110,6 +10463,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -9146,6 +10502,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -9160,6 +10519,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -9174,6 +10536,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -9188,6 +10553,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -9201,7 +10569,10 @@
             "app::EntityLayout"
         ],
         "encountered": 1,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 1
+        }
     },
     {
         "label": "q900_talk4_end",
@@ -9213,6 +10584,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -9226,7 +10600,10 @@
             "app::EntityLayout"
         ],
         "encountered": 1,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 1
+        }
     },
     {
         "label": "q900_talk5_end",
@@ -9238,6 +10615,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -9251,7 +10631,10 @@
             "app::EntityLayout"
         ],
         "encountered": 1,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 1
+        }
     },
     {
         "label": "FINAL_BOMB",
@@ -9262,7 +10645,10 @@
             "app::EntityLayout"
         ],
         "encountered": 1,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        }
     },
     {
         "label": "STOP_BOMB",
@@ -9273,7 +10659,10 @@
             "app::EntityLayout"
         ],
         "encountered": 1,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        }
     },
     {
         "label": "q900_talk6_end",
@@ -9285,6 +10674,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -9299,6 +10691,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -9357,6 +10752,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "EnemySetArea"
         ]
@@ -9480,7 +10878,10 @@
             "hap::SceneEntities"
         ],
         "encountered": 1,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        }
     },
     {
         "label": "ContinueState.setBadEnd",
@@ -9503,6 +10904,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 1
+        },
         "targetActions": [
             "LoopElevatorAction"
         ]
@@ -9517,6 +10921,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 1
+        },
         "targetActions": [
             "LoopElevatorAction"
         ]
@@ -9542,6 +10949,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -9578,6 +10988,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -9592,6 +11005,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -9605,7 +11021,10 @@
             "hap::GroupImpl"
         ],
         "encountered": 1,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 1
+        }
     },
     {
         "label": "BehaviorDrop.init",
@@ -9616,7 +11035,10 @@
             "app::EntityLayout"
         ],
         "encountered": 1,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 1
+        }
     },
     {
         "label": "Em0110.startParade",
@@ -9627,7 +11049,10 @@
             "app::EntityLayout"
         ],
         "encountered": 1,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 1
+        }
     },
     {
         "label": "Ba0011.setMotStart",
@@ -9649,7 +11074,10 @@
             "hap::StateObject"
         ],
         "encountered": 1,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 1
+        }
     },
     {
         "label": "Ba0011.setMotApeear",
@@ -9705,6 +11133,9 @@
         ],
         "encountered": 1,
         "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 1
+        },
         "targetActions": [
             "ScriptAction"
         ]
@@ -9718,7 +11149,10 @@
             "hap::GroupImpl"
         ],
         "encountered": 1,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 1
+        }
     },
     {
         "label": "ON_HACKING_FAILD_ST_HL",
@@ -9729,7 +11163,10 @@
             "hap::GroupImpl"
         ],
         "encountered": 1,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 1
+        }
     },
     {
         "label": "Bg6000.unrock",
@@ -9740,7 +11177,10 @@
             "app::EntityLayout"
         ],
         "encountered": 1,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "noType": 1
+        }
     },
     {
         "label": "ON_MT_HACKING",
@@ -9751,7 +11191,10 @@
             "hap::GroupImpl"
         ],
         "encountered": 1,
-        "maybeHasArgs": false
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        }
     },
     {
         "label": "START_PL1100_BATTLE",
@@ -9762,7 +11205,10 @@
             "app::EntityLayout"
         ],
         "encountered": 1,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 1
+        }
     },
     {
         "label": "NPC.startPl1100Battle",
@@ -9773,7 +11219,10 @@
             "app::EntityLayout"
         ],
         "encountered": 1,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 1
+        }
     },
     {
         "label": "END_PL1100_BATTLE",
@@ -9784,7 +11233,10 @@
             "app::EntityLayout"
         ],
         "encountered": 1,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 1
+        }
     },
     {
         "label": "NPC.endPl1100Battle",
@@ -9795,7 +11247,10 @@
             "app::EntityLayout"
         ],
         "encountered": 1,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 1
+        }
     },
     {
         "label": "START_TOWERHACK",
@@ -9806,7 +11261,61 @@
             "app::EntityLayout"
         ],
         "encountered": 1,
-        "maybeHasArgs": true
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "1": 1
+        }
+    },
+    {
+        "label": "START_FINAL_BATTLE",
+        "actions": [
+            "ConditionBlock"
+        ],
+        "puids": [
+            "hap::Action"
+        ],
+        "encountered": 1,
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
+        "targetActions": [
+            "ScriptAction"
+        ]
+    },
+    {
+        "label": "START_FINAL_MUSIC",
+        "actions": [
+            "ConditionBlock"
+        ],
+        "puids": [
+            "hap::Action"
+        ],
+        "encountered": 1,
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
+        "targetActions": [
+            "ScriptAction"
+        ]
+    },
+    {
+        "label": "START_FINAL_CUTSCENE",
+        "actions": [
+            "ConditionBlock"
+        ],
+        "puids": [
+            "hap::Action"
+        ],
+        "encountered": 1,
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
+        "targetActions": [
+            "ScriptAction"
+        ]
     },
     {
         "label": "Pl0000.setPosResetHap",
@@ -9829,5 +11338,133 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false
+    },
+    {
+        "label": "EmBase.onEm001dStopEnable",
+        "actions": [
+            "SendCommand"
+        ],
+        "puids": [
+            "app::EntityLayout"
+        ],
+        "encountered": 1,
+        "maybeHasArgs": false
+    },
+    {
+        "label": "EmBase.offEm001dStopEnable",
+        "actions": [
+            "SendCommand"
+        ],
+        "puids": [
+            "app::EntityLayout"
+        ],
+        "encountered": 1,
+        "maybeHasArgs": false
+    },
+    {
+        "label": "Bga010.fadeTrain",
+        "actions": [
+            "SendCommand"
+        ],
+        "puids": [
+            "app::EntityLayout"
+        ],
+        "encountered": 1,
+        "maybeHasArgs": false
+    },
+    {
+        "label": "EmBase.resetEm001dStopTimer",
+        "actions": [
+            "SendCommand"
+        ],
+        "puids": [
+            "app::EntityLayout"
+        ],
+        "encountered": 1,
+        "maybeHasArgs": false
+    },
+    {
+        "label": "EmBase.onEm001dStopAction",
+        "actions": [
+            "SendCommand"
+        ],
+        "puids": [
+            "app::EntityLayout"
+        ],
+        "encountered": 1,
+        "maybeHasArgs": false
+    },
+    {
+        "label": "q095_endTalk_end",
+        "actions": [
+            "ConditionBlock"
+        ],
+        "puids": [
+            "hap::Action"
+        ],
+        "encountered": 1,
+        "maybeHasArgs": false,
+        "conditionTypes": {
+            "1": 1
+        },
+        "targetActions": [
+            "ScriptAction"
+        ]
+    },
+    {
+        "label": "EmBase.setEm0030Spin",
+        "actions": [
+            "SendCommand"
+        ],
+        "puids": [
+            "app::EntityLayout"
+        ],
+        "encountered": 1,
+        "maybeHasArgs": false
+    },
+    {
+        "label": "Em5000.setEm5000NewPresident",
+        "actions": [
+            "SendCommand"
+        ],
+        "puids": [
+            "app::EntityLayout"
+        ],
+        "encountered": 1,
+        "maybeHasArgs": false
+    },
+    {
+        "label": "UITimerAction.getMsec",
+        "actions": [
+            "ConditionCommands"
+        ],
+        "puids": [
+            "hap::Action"
+        ],
+        "encountered": 1,
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "2": 1
+        },
+        "targetActions": [
+            "UITimerAction"
+        ]
+    },
+    {
+        "label": "ColosseumAction.setDarkBattle",
+        "actions": [
+            "ConditionCommands"
+        ],
+        "puids": [
+            "hap::Action"
+        ],
+        "encountered": 1,
+        "maybeHasArgs": true,
+        "conditionTypes": {
+            "noType": 1
+        },
+        "targetActions": [
+            "ColosseumAction"
+        ]
     }
 ]

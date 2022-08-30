@@ -1,0 +1,4668 @@
+<?xml version="1.0" ?>
+<root>
+	<optional probability="14.6%">
+		<count type="int" min="0" max="298"/>
+	</optional>
+	<optional probability="85.4%">
+		<id type="hex" min="0x0001ee0d" max="0xffffa494" hashed="false"/>
+	</optional>
+	<optional probability="85.4%">
+		<name type="string"/>
+	</optional>
+	<optional probability="17.8%">
+		<priority type="int" min="-1000" max="1010"/>
+	</optional>
+	<optional probability="4.1%">
+		<attribute type="hex" min="0x00000002" max="0x00000008" hashed="false"/>
+	</optional>
+	<optional probability="93.7%">
+		<group type="hex" min="0x0f4a9733" max="0xfff3d19c" hashed="sometimes" usage="57.4%">
+			<optional probability="42.6%">
+				<id type="hex" min="0x1006dbc1" max="0xfff3d19c" hashed="false"/>
+			</optional>
+			<optional probability="42.6%">
+				<name type="string"/>
+			</optional>
+			<optional probability="42.6%">
+				<parent type="hex" min="0x00000000" max="0xffeccb6a" hashed="sometimes"/>
+			</optional>
+			<optional probability="11.2%">
+				<priority type="int" min="-10000" max="1000000"/>
+			</optional>
+			<optional probability="25.3%">
+				<tokens>
+					<size type="int" min="1" max="78"/>
+					<value>
+						<code type="hex" min="0x35c92545" max="0xfa6f25a3" hashed="true"/>
+						<id type="hex" min="0x00000001" max="0xfffcf9e1" hashed="sometimes"/>
+					</value>
+				</tokens>
+			</optional>
+			<optional probability="12.9%">
+				<attribute type="hex" min="0x00000002" max="0x00000060" hashed="false"/>
+			</optional>
+		</group>
+	</optional>
+	<optional probability="0.0%">
+		<text>
+			<size type="hex" value="0x0000c5b8" hashed="false"/>
+			<value type="hex" min="0x7fffffffffffffff" max="0xefbca4efbc890a20204b4f5220ec9588eb939ceba19cec9db4eb939c2028eb82" hashed="false"/>
+		</text>
+	</optional>
+	<optional probability="0.5%">
+		<node>
+			<tag type="string"/>
+			<value type="string"/>
+			<count type="int" min="2" max="772"/>
+			<child>
+				<tag type="string"/>
+				<optional probability="46.8%">
+					<value type="string"/>
+				</optional>
+				<optional probability="17.7%">
+					<count type="int" min="1" max="164"/>
+				</optional>
+				<optional probability="17.7%">
+					<child>
+						<tag type="string"/>
+						<optional probability="29.9%">
+							<count type="int" min="1" max="15"/>
+						</optional>
+						<optional probability="29.9%">
+							<child>
+								<tag type="string"/>
+								<value type="string" usage="100.0%"/>
+							</child>
+						</optional>
+						<optional probability="53.1%">
+							<value type="string"/>
+						</optional>
+					</child>
+				</optional>
+			</child>
+		</node>
+	</optional>
+	<optional probability="84.6%">
+		<size type="int" min="1" max="62"/>
+	</optional>
+	<optional probability="17.2%">
+		<action type="EntityLayoutAction">
+			<code type="hex" value="0xda948617" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x0033de30" max="0xffd504f6" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0xff000418" hashed="false"/>
+			<layouts>
+				<normal>
+					<id type="hex" min="0x0010976d" max="0xfff63734" hashed="false"/>
+					<flags type="hex" value="0x00000000" hashed="false"/>
+					<parent>
+						<id>
+							<id>
+								<code type="hex" min="0x00000000" max="0xd8efbb45" hashed="sometimes"/>
+								<id type="hex" min="0x00000000" max="0xddde5715" hashed="false"/>
+							</id>
+						</id>
+						<optional probability="0.6%">
+							<nParts type="int" min="1" max="2"/>
+						</optional>
+					</parent>
+					<optional probability="0.1%">
+						<param>
+							<count type="hex" value="0x00000001" hashed="false"/>
+							<value>
+								<name type="string"/>
+								<code type="hex" value="0x562ef932" hashed="true"/>
+								<body type="hex" value="0x00000067" hashed="false"/>
+							</value>
+						</param>
+					</optional>
+					<layouts>
+						<size type="int" min="0" max="319"/>
+						<optional probability="99.7%">
+							<value>
+								<id type="hex" min="0x00036ec7" max="0xfffdca34" hashed="false"/>
+								<optional probability="3.3%">
+									<flags type="hex" min="0x00000001" max="0x0000000a" hashed="false"/>
+								</optional>
+								<location>
+									<optional probability="98.6%">
+										<position type="vector" items="3"/>
+									</optional>
+									<optional probability="55.2%">
+										<rotation type="vector" items="3"/>
+									</optional>
+								</location>
+								<optional probability="22.5%">
+									<scale type="vector" items="3"/>
+								</optional>
+								<objId type="string"/>
+								<optional probability="4.6%">
+									<setFlag type="hex" min="0x00000001" max="0xc0080000" hashed="false"/>
+								</optional>
+								<optional probability="11.2%">
+									<setType type="int" min="-1" max="23"/>
+								</optional>
+								<optional probability="8.9%">
+									<setRtn type="int" min="-1" max="126"/>
+								</optional>
+								<optional probability="4.6%">
+									<alias type="string"/>
+								</optional>
+								<optional probability="8.5%">
+									<param>
+										<count type="hex" min="0x00000001" max="0x00000004" hashed="false"/>
+										<value>
+											<name type="string"/>
+											<code type="hex" min="0x1451dab1" max="0xfffb77c9" hashed="true"/>
+											<body type_0="hex" min_0="0x00000111" max_0="0x00000112" hashed_0="false" usage_0="0.2%" type_1="string" usage_1="96.7%">
+												<optional probability="3.2%">
+													<id type="hex" value="0xbb2e89ac" hashed="false" usage="2.4%">
+														<optional probability="95.2%">
+															<code type="hex" value="0xa6aaf7a4" hashed="true"/>
+														</optional>
+														<optional probability="97.6%">
+															<id type="hex" min="0x0010bbfb" max="0xeaf4cb38" hashed="false" usage="97.6%">
+																<optional probability="2.4%">
+																	<code type="hex" value="0xa6aaf7a4" hashed="true"/>
+																</optional>
+																<optional probability="2.4%">
+																	<id type="hex" value="0x7131b95f" hashed="false"/>
+																</optional>
+															</id>
+														</optional>
+													</id>
+												</optional>
+												<optional probability="0.1%">
+													<code type="hex" value="0xa6aaf7a4" hashed="true"/>
+												</optional>
+											</body>
+										</value>
+									</param>
+								</optional>
+								<optional probability="0.9%">
+									<delay type="float" min="0.25" max="27.00"/>
+								</optional>
+							</value>
+						</optional>
+					</layouts>
+				</normal>
+				<hard>
+					<id type="hex" min="0x001501dd" max="0xffd8fcdc" hashed="false"/>
+					<flags type="hex" value="0x00000001" hashed="false"/>
+					<parent>
+						<id>
+							<id>
+								<code type="hex" min="0x00000000" max="0xa6aaf7a4" hashed="sometimes"/>
+								<id type="hex" min="0x00000000" max="0x5a094326" hashed="false"/>
+							</id>
+						</id>
+					</parent>
+					<layouts>
+						<size type="int" value="0"/>
+					</layouts>
+				</hard>
+				<extream>
+					<id type="hex" min="0x000c15bf" max="0xff965c8a" hashed="false"/>
+					<flags type="hex" value="0x00000001" hashed="false"/>
+					<parent>
+						<id>
+							<id>
+								<code type="hex" value="0x00000000" hashed="false"/>
+								<id type="hex" value="0x00000000" hashed="false"/>
+							</id>
+						</id>
+					</parent>
+					<layouts>
+						<size type="int" value="0"/>
+					</layouts>
+				</extream>
+			</layouts>
+			<bForwardState type="int" value="0"/>
+		</action>
+	</optional>
+	<optional probability="3.7%">
+		<action type="EntityLayoutArea">
+			<code type="hex" value="0xcf775473" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x00561917" max="0xffce59c4" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0xff000010" hashed="false"/>
+			<layouts>
+				<normal>
+					<id type="hex" min="0x0013a6e4" max="0xffab5992" hashed="false"/>
+					<flags type="hex" value="0x00000000" hashed="false"/>
+					<parent>
+						<id>
+							<id>
+								<code type="hex" min="0x00000000" max="0xd8efbb45" hashed="sometimes"/>
+								<id type="hex" min="0x00000000" max="0x188344c3" hashed="false"/>
+							</id>
+						</id>
+					</parent>
+					<layouts>
+						<size type="int" min="1" max="228"/>
+						<value>
+							<id type="hex" min="0x00019634" max="0xffe10f2c" hashed="false"/>
+							<optional probability="0.9%">
+								<flags type="hex" min="0x00000001" max="0x00000008" hashed="false"/>
+							</optional>
+							<location>
+								<position type="vector" items="3"/>
+								<optional probability="83.2%">
+									<rotation type="vector" items="3"/>
+								</optional>
+							</location>
+							<optional probability="6.6%">
+								<scale type="vector" items="3"/>
+							</optional>
+							<objId type="string"/>
+							<optional probability="23.8%">
+								<setRtn type="int" min="1" max="119"/>
+							</optional>
+							<optional probability="28.6%">
+								<setType type="int" min="1" max="19"/>
+							</optional>
+							<optional probability="10.5%">
+								<setFlag type="hex" min="0x00000001" max="0x40090001" hashed="false"/>
+							</optional>
+							<optional probability="16.4%">
+								<alias type="string"/>
+							</optional>
+							<optional probability="29.4%">
+								<param>
+									<count type="hex" min="0x00000001" max="0x00000003" hashed="false"/>
+									<value>
+										<name type="string"/>
+										<code type="hex" min="0x1451dab1" max="0xfffb77c9" hashed="true"/>
+										<body type="string" usage="79.8%">
+											<optional probability="20.2%">
+												<id>
+													<code type="hex" value="0xa6aaf7a4" hashed="true"/>
+													<id type="hex" min="0x023d7dcb" max="0xffe55af7" hashed="false"/>
+												</id>
+											</optional>
+										</body>
+									</value>
+								</param>
+							</optional>
+							<optional probability="0.3%">
+								<delay type="float" min="0.20" max="0.50"/>
+							</optional>
+						</value>
+					</layouts>
+				</normal>
+				<hard>
+					<id type="hex" min="0x0000e42a" max="0xfe2f069e" hashed="false"/>
+					<flags type="hex" value="0x00000001" hashed="false"/>
+					<parent>
+						<id>
+							<id>
+								<code type="hex" value="0x00000000" hashed="false"/>
+								<id type="hex" value="0x00000000" hashed="false"/>
+							</id>
+						</id>
+					</parent>
+					<layouts>
+						<size type="int" value="0"/>
+					</layouts>
+				</hard>
+				<extream>
+					<id type="hex" min="0x005978f8" max="0xff6c54d6" hashed="false"/>
+					<flags type="hex" value="0x00000001" hashed="false"/>
+					<parent>
+						<id>
+							<id>
+								<code type="hex" min="0x00000000" max="0xa6aaf7a4" hashed="sometimes"/>
+								<id type="hex" min="0x00000000" max="0xb5188543" hashed="false"/>
+							</id>
+						</id>
+					</parent>
+					<layouts>
+						<size type="int" value="0"/>
+					</layouts>
+				</extream>
+			</layouts>
+			<bForwardState type="int" value="0"/>
+			<area>
+				<size type="int" min="0" max="8"/>
+				<optional probability="0.7%">
+					<link>
+						<id>
+							<code type="hex" value="0xa6aaf7a4" hashed="true"/>
+							<id type="hex" value="0x3fcaddcd" hashed="false"/>
+						</id>
+					</link>
+				</optional>
+				<optional probability="98.9%">
+					<value>
+						<code type="hex" min="0x18cffd98" max="0x8face66d" hashed="true"/>
+						<position type="vector" items="3"/>
+						<optional probability="99.4%">
+							<rotation type="vector" items="3"/>
+						</optional>
+						<optional probability="99.4%">
+							<scale type="vector" items="3"/>
+						</optional>
+						<optional probability="4.6%">
+							<parent>
+								<id>
+									<id>
+										<code type="hex" value="0xd8efbb45" hashed="true"/>
+										<id type="hex" value="0x188344c3" hashed="false"/>
+									</id>
+								</id>
+							</parent>
+						</optional>
+						<optional probability="24.0%">
+							<radius type_0="int" value_0="1" usage_0="16.5%" type_1="float" min_1="1.00" max_1="88.74" usage_1="83.5%"/>
+						</optional>
+						<optional probability="76.0%">
+							<points type="vector" items="8"/>
+						</optional>
+						<optional probability="99.4%">
+							<height type="int" value="1"/>
+						</optional>
+					</value>
+				</optional>
+			</area>
+			<resetArea>
+				<size type="int" min="0" max="4"/>
+				<optional probability="29.3%">
+					<value>
+						<code type="hex" min="0x18cffd98" max="0x4238cc7f" hashed="true"/>
+						<position type="vector" items="3"/>
+						<rotation type="vector" items="3"/>
+						<scale type="vector" items="3"/>
+						<optional probability="6.0%">
+							<parent>
+								<id>
+									<id>
+										<code type="hex" value="0xd8efbb45" hashed="true"/>
+										<id type="hex" value="0x188344c3" hashed="false"/>
+									</id>
+								</id>
+							</parent>
+						</optional>
+						<optional probability="21.0%">
+							<radius type="int" value="1"/>
+						</optional>
+						<optional probability="79.0%">
+							<points type="vector" items="8"/>
+						</optional>
+						<height type="int" value="1"/>
+					</value>
+				</optional>
+			</resetArea>
+			<resetType type="int" min="0" max="2"/>
+		</action>
+	</optional>
+	<optional probability="0.2%">
+		<action type="QuestArea">
+			<code type="hex" value="0x6918c907" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x0037ce34" max="0xc68b768d" hashed="false"/>
+			<attribute type="hex" value="0x00000000" hashed="false"/>
+			<area>
+				<size type="int" min="1" max="4"/>
+				<value>
+					<code type="hex" min="0x18cffd98" max="0x4238cc7f" hashed="true"/>
+					<position type="vector" items="3"/>
+					<rotation type="vector" items="3"/>
+					<scale type="vector" items="3"/>
+					<optional probability="6.7%">
+						<radius type="int" value="1"/>
+					</optional>
+					<optional probability="93.3%">
+						<points type="vector" items="8"/>
+					</optional>
+					<height type="int" value="1"/>
+				</value>
+			</area>
+			<optional probability="70.0%">
+				<terminateArea>
+					<size type="int" min="1" max="4"/>
+					<value>
+						<code type="hex" value="0x18cffd98" hashed="true"/>
+						<position type="vector" items="3"/>
+						<rotation type="vector" items="3"/>
+						<scale type="vector" items="3"/>
+						<points type="vector" items="8"/>
+						<height type="int" value="1"/>
+					</value>
+				</terminateArea>
+			</optional>
+			<quest type="hex" min="0x00b00000" max="0x00b95000" hashed="false"/>
+			<type type="int" min="1" max="3"/>
+			<type2 type="int" value="0"/>
+		</action>
+	</optional>
+	<optional probability="6.4%">
+		<action type="ScriptAction">
+			<code type="hex" value="0xbeaf915f" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x002fc5cc" max="0xfd3cfb8d" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000410" hashed="false"/>
+			<script>
+				<id type="hex" min="0x007914bf" max="0xfffadf03" hashed="false"/>
+				<optional probability="3.6%">
+					<UNKNOWN type="string"/>
+				</optional>
+			</script>
+			<variables>
+				<size type="int" min="0" max="98"/>
+				<optional probability="97.4%">
+					<value>
+						<id type="hex" min="0x0025f9e6" max="0xffbe1cd6" hashed="false"/>
+						<name type="string"/>
+						<value>
+							<code type="hex" min="0x46930faa" max="0xd8efbb45" hashed="true"/>
+							<value type="hex" min="0x00000000" max="0xfff25741" hashed="false" usage="100.0%">
+								<optional probability="0.0%">
+									<code type="hex" min="0xcecad9ce" max="0xd8efbb45" hashed="true"/>
+								</optional>
+								<optional probability="0.0%">
+									<id type="hex" min="0x6b06edc6" max="0xe2d4439a" hashed="sometimes"/>
+								</optional>
+							</value>
+						</value>
+					</value>
+				</optional>
+			</variables>
+		</action>
+	</optional>
+	<optional probability="5.1%">
+		<action type="HapMultiMarkLocationAction">
+			<code type="hex" value="0xb0757267" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x00041b6c" max="0xfee1637b" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000013" hashed="false"/>
+			<location>
+				<optional probability="99.4%">
+					<position type="vector" items="3"/>
+				</optional>
+				<optional probability="12.0%">
+					<rotation type="vector" items="3"/>
+				</optional>
+				<optional probability="4.8%">
+					<parent>
+						<id>
+							<id>
+								<code type="hex" value="0xd8efbb45" hashed="true"/>
+								<id type="hex" min="0x0705c436" max="0xeaabf131" hashed="false"/>
+							</id>
+						</id>
+						<optional probability="6.2%">
+							<nParts type="int" value="0"/>
+						</optional>
+					</parent>
+				</optional>
+			</location>
+			<parentID type="hex" min="0x00000000" max="0xffffffff" hashed="false"/>
+			<questId type="hex" min="0x00000000" max="0xffffffff" hashed="false"/>
+			<uiMessID type="int" min="0" max="999"/>
+			<radius type="int" min="0" max="200"/>
+			<ftTag type="string"/>
+			<optional probability="94.6%">
+				<markIdx type="int" min="1" max="9"/>
+			</optional>
+			<optional probability="3.3%">
+				<areaIdx type="int" min="1" max="2"/>
+			</optional>
+		</action>
+	</optional>
+	<optional probability="11.8%">
+		<action type="ConditionCommands">
+			<code type="hex" value="0x7d30118c" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x001347da" max="0xff92c1bf" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x06000010" hashed="false"/>
+			<optional probability="99.5%">
+				<condition>
+					<conditions>
+						<size type="int" min="1" max="42"/>
+						<value>
+							<optional probability="42.0%">
+								<type type="int" min="1" max="4"/>
+							</optional>
+							<puid>
+								<code type="hex" min="0x6a69c84d" max="0xd8efbb45" hashed="true"/>
+								<id type="hex" min="0x00000000" max="0xffce59c4" hashed="sometimes"/>
+							</puid>
+							<condition>
+								<state>
+									<optional probability="99.8%">
+										<label type="string"/>
+									</optional>
+									<optional probability="14.2%">
+										<value type="int" min="1" max="150000"/>
+									</optional>
+								</state>
+								<pred type="int" min="0" max="7"/>
+							</condition>
+							<optional probability="11.3%">
+								<args type="string"/>
+							</optional>
+						</value>
+					</conditions>
+					<type type="int" min="0" max="2"/>
+				</condition>
+			</optional>
+			<optional probability="99.9%">
+				<commands>
+					<items>
+						<size type="int" min="1" max="16"/>
+						<value>
+							<puid>
+								<code type="hex" min="0x16b97f05" max="0xd8efbb45" hashed="true"/>
+								<id type="hex" min="0x00000000" max="0xffc6ce50" hashed="sometimes"/>
+							</puid>
+							<command>
+								<command>
+									<label type="string"/>
+								</command>
+								<optional probability="30.0%">
+									<args type="string"/>
+								</optional>
+							</command>
+						</value>
+					</items>
+				</commands>
+			</optional>
+			<optional probability="1.6%">
+				<else>
+					<items>
+						<size type="int" min="1" max="7"/>
+						<value>
+							<puid>
+								<code type="hex" min="0x66a261b7" max="0xd8efbb45" hashed="true"/>
+								<id type="hex" min="0x0abb4590" max="0xf4d4b672" hashed="sometimes"/>
+							</puid>
+							<command>
+								<command>
+									<label type="string"/>
+								</command>
+								<optional probability="5.3%">
+									<args type="string"/>
+								</optional>
+							</command>
+						</value>
+					</items>
+				</else>
+			</optional>
+			<optional probability="0.1%">
+				<resets>
+					<items>
+						<size type="int" value="1"/>
+						<value>
+							<puid>
+								<code type="hex" value="0xcecad9ce" hashed="true"/>
+								<id type="hex" value="0x35c92545" hashed="true"/>
+							</puid>
+							<command>
+								<command>
+									<label type="string"/>
+								</command>
+								<args type="string"/>
+							</command>
+						</value>
+					</items>
+				</resets>
+			</optional>
+			<optional probability="96.4%">
+				<type_ type="int" min="1" max="3"/>
+			</optional>
+			<delay type_0="int" min_0="0" max_0="3" usage_0="4.5%" type_1="float" min_1="0.00" max_1="20.00" usage_1="95.5%"/>
+		</action>
+	</optional>
+	<optional probability="0.2%">
+		<action type="NoAnimalArea">
+			<code type="hex" value="0x683f6b9b" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x1d6b2230" max="0xf2a8f9ec" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000003" hashed="false"/>
+			<location>
+				<position type="vector" items="3"/>
+				<optional probability="83.3%">
+					<rotation type="vector" items="3"/>
+				</optional>
+			</location>
+			<area>
+				<size type="int" min="1" max="3"/>
+				<value>
+					<code type="hex" min="0x18cffd98" max="0x4238cc7f" hashed="true"/>
+					<position type="vector" items="3"/>
+					<rotation type="vector" items="3"/>
+					<scale type="vector" items="3"/>
+					<optional probability="3.8%">
+						<radius type="int" value="1"/>
+					</optional>
+					<optional probability="96.2%">
+						<points type="vector" items="8"/>
+					</optional>
+					<height type="int" value="1"/>
+				</value>
+			</area>
+			<hintArea>
+				<size type="int" min="0" max="3"/>
+				<optional probability="79.2%">
+					<value>
+						<code type="hex" value="0x18cffd98" hashed="true"/>
+						<position type="vector" items="3"/>
+						<rotation type="vector" items="3"/>
+						<scale type="vector" items="3"/>
+						<points type="vector" items="8"/>
+						<height type="int" value="1"/>
+					</value>
+				</optional>
+			</hintArea>
+		</action>
+	</optional>
+	<optional probability="0.3%">
+		<action type="TravelPointAction">
+			<code type="hex" value="0xfbac492d" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x01b6cba4" max="0xfe215f24" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000010" hashed="false"/>
+			<location>
+				<optional probability="97.8%">
+					<position type="vector" items="3"/>
+				</optional>
+				<optional probability="89.1%">
+					<rotation type="vector" items="3"/>
+				</optional>
+				<optional probability="4.3%">
+					<parent>
+						<id>
+							<id>
+								<code type="hex" value="0xd8efbb45" hashed="true"/>
+								<id type="hex" min="0x188344c3" max="0xe28250ef" hashed="false"/>
+							</id>
+						</id>
+					</parent>
+				</optional>
+			</location>
+			<codeName type="string"/>
+			<transporter>
+				<code type="hex" min="0x00000000" max="0xd8efbb45" hashed="true"/>
+				<id type="hex" min="0x00000000" max="0xf7b603a9" hashed="false"/>
+			</transporter>
+			<area>
+				<size type="int" min="0" max="3"/>
+				<optional probability="50.0%">
+					<value>
+						<code type="hex" min="0x18cffd98" max="0x4238cc7f" hashed="true"/>
+						<position type="vector" items="3"/>
+						<rotation type="vector" items="3"/>
+						<scale type="vector" items="3"/>
+						<optional probability="3.6%">
+							<parent>
+								<id>
+									<id>
+										<code type="hex" value="0xd8efbb45" hashed="true"/>
+										<id type="hex" value="0x188344c3" hashed="false"/>
+									</id>
+								</id>
+							</parent>
+						</optional>
+						<optional probability="32.1%">
+							<points type="vector" items="8"/>
+						</optional>
+						<optional probability="67.9%">
+							<radius type="int" value="1"/>
+						</optional>
+						<height type="int" value="1"/>
+					</value>
+				</optional>
+			</area>
+			<condition>
+				<conditions>
+					<size type="int" min="0" max="1"/>
+					<optional probability="30.4%">
+						<value>
+							<puid>
+								<code type="hex" min="0xa6aaf7a4" max="0xcecad9ce" hashed="true"/>
+								<id type="hex" min="0x158f9b9a" max="0xfcf09a27" hashed="sometimes"/>
+							</puid>
+							<optional probability="7.1%">
+								<type type="int" value="2"/>
+							</optional>
+							<condition>
+								<state>
+									<label type="string"/>
+								</state>
+								<pred type="int" value="0"/>
+							</condition>
+							<optional probability="7.1%">
+								<args type="string"/>
+							</optional>
+						</value>
+					</optional>
+				</conditions>
+				<type type="int" value="0"/>
+			</condition>
+			<optional probability="50.0%">
+				<mapType type="int" min="1" max="2"/>
+			</optional>
+		</action>
+	</optional>
+	<optional probability="2.0%">
+		<action type="PlayerCombatLimitAction">
+			<code type="hex" value="0x676cbe32" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x05467a6a" max="0xfa2191b7" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000013" hashed="false"/>
+			<on type="int" min="0" max="1"/>
+			<attack_ type="int" min="0" max="1"/>
+			<escape_ type="int" min="0" max="1"/>
+			<run_ type="int" min="0" max="1"/>
+			<jump_ type="int" min="0" max="1"/>
+			<gun_ type="int" min="0" max="1"/>
+			<skill_ type="int" min="0" max="1"/>
+			<suicide_ type="int" min="0" max="1"/>
+			<walk_ type="int" min="0" max="1"/>
+			<area_>
+				<size type="int" min="0" max="3"/>
+				<optional probability="26.5%">
+					<value>
+						<code type="hex" min="0x18cffd98" max="0x4238cc7f" hashed="true"/>
+						<position type="vector" items="3"/>
+						<rotation type="vector" items="3"/>
+						<scale type="vector" items="3"/>
+						<optional probability="42.9%">
+							<radius type="int" value="1"/>
+						</optional>
+						<optional probability="21.4%">
+							<parent>
+								<id>
+									<id>
+										<code type="hex" value="0xd8efbb45" hashed="true"/>
+										<id type="hex" min="0x188344c3" max="0x597ee94e" hashed="false"/>
+									</id>
+								</id>
+							</parent>
+						</optional>
+						<optional probability="57.1%">
+							<points type="vector" items="8"/>
+						</optional>
+						<height type="int" value="1"/>
+					</value>
+				</optional>
+			</area_>
+			<forceWalkArea_ type="int" min="0" max="1"/>
+			<noCaption_ type="int" min="0" max="1"/>
+			<actIgnore type="int" min="0" max="1"/>
+		</action>
+	</optional>
+	<optional probability="4.0%">
+		<action type="EnemyGenerator">
+			<code type="hex" value="0x6f0fb5bd" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x00c44c0c" max="0xff98bcc5" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000012" hashed="false"/>
+			<points>
+				<attribute type="hex" min="0x00000000" max="0xffffffff" hashed="false"/>
+				<nodes>
+					<size type="int" min="1" max="30"/>
+					<value>
+						<point type="vector" items="3"/>
+						<radius type="float" min="0.00" max="100.00"/>
+						<rate type_0="int" min_0="0" max_0="10" usage_0="94.2%" type_1="float" min_1="0.00" max_1="4.00" usage_1="5.8%"/>
+						<minDistance type="int" value="0"/>
+						<optional probability="2.0%">
+							<initDirAcquiringMethod type="int" value="1"/>
+						</optional>
+						<optional probability="15.8%">
+							<initDir type="float" min="-11.00" max="4.59"/>
+						</optional>
+					</value>
+				</nodes>
+			</points>
+			<items>
+				<size type="int" min="1" max="23"/>
+				<value>
+					<objId type="string"/>
+					<rate type_0="int" min_0="0" max_0="9" usage_0="18.0%" type_1="float" min_1="0.00" max_1="100.00" usage_1="82.0%"/>
+					<optional probability="12.2%">
+						<levelRange>
+							<min type="int" min="1" max="50"/>
+							<max type="int" min="1" max="53"/>
+						</levelRange>
+					</optional>
+					<optional probability="6.1%">
+						<param>
+							<count type="hex" min="0x00000001" max="0x00000004" hashed="false"/>
+							<value>
+								<name type="string"/>
+								<code type="hex" min="0x1451dab1" max="0xc9a55e95" hashed="true"/>
+								<body type_0="int" min_0="0" max_0="52" usage_0="64.8%" type_1="float" min_1="0.30" max_1="85.00" usage_1="35.2%"/>
+							</value>
+						</param>
+					</optional>
+					<optional probability="29.3%">
+						<setRtn type="int" min="-1" max="98"/>
+					</optional>
+					<optional probability="39.5%">
+						<setType type="int" min="-1" max="19"/>
+					</optional>
+					<optional probability="5.4%">
+						<type2type type="int" value="1"/>
+					</optional>
+					<optional probability="5.4%">
+						<type2>
+							<optional probability="85.1%">
+								<setRtn type="int" value="25"/>
+							</optional>
+							<optional probability="11.9%">
+								<setType type="int" min="2" max="4"/>
+							</optional>
+							<optional probability="83.6%">
+								<setFlag type="hex" min="0x10000000" max="0x20000000" hashed="false"/>
+							</optional>
+						</type2>
+					</optional>
+					<optional probability="39.5%">
+						<setFlag type="hex" min="0x00000002" max="0x20000000" hashed="false"/>
+					</optional>
+				</value>
+			</items>
+			<optional probability="5.2%">
+				<respawnTime>
+					<optional probability="97.2%">
+						<min type="float" min="0.10" max="60.00"/>
+					</optional>
+					<max type="float" min="0.10" max="60.00"/>
+				</respawnTime>
+			</optional>
+			<spawnRange>
+				<optional probability="92.0%">
+					<min type="int" min="1" max="99999"/>
+				</optional>
+				<max type="int" min="1" max="99999"/>
+			</spawnRange>
+			<createRange>
+				<optional probability="99.9%">
+					<min type="int" min="1" max="100"/>
+				</optional>
+				<max type="int" min="1" max="300"/>
+			</createRange>
+			<optional probability="17.2%">
+				<spawnInterval>
+					<optional probability="83.9%">
+						<min type="float" min="0.10" max="20.00"/>
+					</optional>
+					<max type="float" min="0.20" max="20.00"/>
+				</spawnInterval>
+			</optional>
+			<optional probability="13.4%">
+				<amountEachSpawn>
+					<min type="int" min="1" max="15"/>
+					<max type="int" min="1" max="15"/>
+				</amountEachSpawn>
+			</optional>
+			<optional probability="14.6%">
+				<cameraType type="int" min="-1601509980" max="1919249761"/>
+			</optional>
+			<optional probability="83.8%">
+				<levelRange>
+					<min type="int" min="1" max="90"/>
+					<max type="int" min="1" max="90"/>
+				</levelRange>
+			</optional>
+			<relativeLevel type="int" min="0" max="1"/>
+			<area>
+				<size type="int" min="0" max="2"/>
+				<optional probability="11.2%">
+					<value>
+						<code type="hex" min="0x18cffd98" max="0x4238cc7f" hashed="true"/>
+						<position type="vector" items="3"/>
+						<rotation type="vector" items="3"/>
+						<scale type="vector" items="3"/>
+						<optional probability="4.9%">
+							<radius type="int" value="1"/>
+						</optional>
+						<optional probability="95.1%">
+							<points type="vector" items="8"/>
+						</optional>
+						<height type="int" value="1"/>
+					</value>
+				</optional>
+			</area>
+			<resetArea>
+				<size type="int" min="0" max="6"/>
+				<optional probability="6.3%">
+					<value>
+						<code type="hex" value="0x18cffd98" hashed="true"/>
+						<position type="vector" items="3"/>
+						<rotation type="vector" items="3"/>
+						<scale type="vector" items="3"/>
+						<points type="vector" items="8"/>
+						<height type="int" value="1"/>
+					</value>
+				</optional>
+			</resetArea>
+			<resetType type="int" min="0" max="3"/>
+			<searchArea>
+				<size type="int" min="0" max="3"/>
+				<optional probability="10.9%">
+					<value>
+						<code type="hex" min="0x18cffd98" max="0x4238cc7f" hashed="true"/>
+						<position type="vector" items="3"/>
+						<rotation type="vector" items="3"/>
+						<scale type="vector" items="3"/>
+						<optional probability="93.8%">
+							<points type="vector" items="8"/>
+						</optional>
+						<optional probability="6.2%">
+							<radius type="int" value="1"/>
+						</optional>
+						<height type="int" value="1"/>
+					</value>
+				</optional>
+			</searchArea>
+			<optional probability="2.6%">
+				<UNKNOWN>
+					<size type="int" value="0"/>
+				</UNKNOWN>
+			</optional>
+			<optional probability="97.4%">
+				<escapeArea>
+					<size type="int" min="0" max="6"/>
+					<optional probability="4.3%">
+						<value>
+							<code type="hex" min="0x18cffd98" max="0x4238cc7f" hashed="true"/>
+							<position type="vector" items="3"/>
+							<rotation type="vector" items="3"/>
+							<scale type="vector" items="3"/>
+							<optional probability="11.4%">
+								<radius type="int" value="1"/>
+							</optional>
+							<optional probability="88.6%">
+								<points type="vector" items="8"/>
+							</optional>
+							<height type="int" value="1"/>
+						</value>
+					</optional>
+				</escapeArea>
+			</optional>
+			<optional probability="97.4%">
+				<dist>
+					<optional probability="97.3%">
+						<position type="vector" items="3"/>
+					</optional>
+					<optional probability="2.7%">
+						<rotation type="vector" items="3"/>
+					</optional>
+					<optional probability="83.1%">
+						<areaDist type="int" min="0" max="2000"/>
+					</optional>
+					<optional probability="83.4%">
+						<resetDist type="int" min="0" max="2000"/>
+					</optional>
+					<optional probability="30.1%">
+						<searchDist type="int" min="8" max="300"/>
+					</optional>
+					<optional probability="40.4%">
+						<guardSDist type="int" min="15" max="300"/>
+					</optional>
+					<optional probability="40.4%">
+						<guardLDist type="int" min="25" max="400"/>
+					</optional>
+					<optional probability="27.8%">
+						<escapeDist type="int" min="15" max="300"/>
+					</optional>
+				</dist>
+			</optional>
+			<optional probability="9.8%">
+				<fitGround type="int" value="0"/>
+			</optional>
+			<optional probability="4.8%">
+				<stateBeforeDeactivated>
+					<label type="string"/>
+					<optional probability="54.5%">
+						<value type="int" min="1" max="30"/>
+					</optional>
+				</stateBeforeDeactivated>
+			</optional>
+		</action>
+	</optional>
+	<optional probability="0.3%">
+		<action type="TravelPointConditionResetAction">
+			<code type="hex" value="0x5797c250" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x1461e835" max="0xe5dba317" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000001" hashed="false"/>
+			<codeName type="string"/>
+		</action>
+	</optional>
+	<optional probability="6.4%">
+		<action type="CameraAction">
+			<code type="hex" value="0xad895807" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x0025e842" max="0xffc5cf06" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000013" hashed="false"/>
+			<area>
+				<size type="int" min="0" max="27"/>
+				<optional probability="26.3%">
+					<value>
+						<code type="hex" min="0x18cffd98" max="0x4238cc7f" hashed="true"/>
+						<position type="vector" items="3"/>
+						<rotation type="vector" items="3"/>
+						<scale type="vector" items="3"/>
+						<optional probability="0.5%">
+							<parent>
+								<id>
+									<id>
+										<code type="hex" value="0xd8efbb45" hashed="true"/>
+										<id type="hex" value="0x188344c3" hashed="false"/>
+									</id>
+								</id>
+							</parent>
+						</optional>
+						<optional probability="3.4%">
+							<radius type="int" value="1"/>
+						</optional>
+						<optional probability="96.6%">
+							<points type="vector" items="8"/>
+						</optional>
+						<height type="int" value="1"/>
+					</value>
+				</optional>
+			</area>
+			<optional probability="7.4%">
+				<upVec type="int" value="1"/>
+			</optional>
+			<optional probability="81.2%">
+				<upVecForce type="vector" items="3"/>
+			</optional>
+			<Rotation_X type_0="int" min_0="-145" max_0="20" usage_0="79.4%" type_1="float" min_1="-115.00" max_1="2.27" usage_1="20.6%"/>
+			<Rotation_Y type_0="int" min_0="-180" max_0="270" usage_0="54.7%" type_1="float" min_1="-180.00" max_1="270.00" usage_1="45.3%"/>
+			<Fovy type="int" min="10" max="75"/>
+			<Distance type_0="int" min_0="4" max_0="22" usage_0="8.5%" type_1="float" min_1="1.00" max_1="250.00" usage_1="91.5%"/>
+			<pos>
+				<optional probability="56.4%">
+					<position type="vector" items="3"/>
+				</optional>
+				<optional probability="0.6%">
+					<parent>
+						<id>
+							<id>
+								<code type="hex" min="0xb1803262" max="0xd8efbb45" hashed="true"/>
+								<id type="hex" min="0x1b29d366" max="0x98197a65" hashed="sometimes"/>
+							</id>
+						</id>
+					</parent>
+				</optional>
+				<optional probability="20.3%">
+					<rotation type="vector" items="3"/>
+				</optional>
+			</pos>
+			<tar>
+				<optional probability="56.8%">
+					<position type="vector" items="3"/>
+				</optional>
+				<optional probability="2.1%">
+					<parent>
+						<id>
+							<id>
+								<code type="hex" min="0xb1803262" max="0xd8efbb45" hashed="true"/>
+								<id type="hex" min="0x1b29d366" max="0xea9f02a9" hashed="sometimes"/>
+							</id>
+						</id>
+						<optional probability="9.1%">
+							<nParts type="int" value="1"/>
+						</optional>
+					</parent>
+				</optional>
+				<optional probability="19.1%">
+					<rotation type="vector" items="3"/>
+				</optional>
+			</tar>
+			<usePos type="int" min="0" max="1"/>
+			<useTarget type="int" min="0" max="1"/>
+			<interRate type_0="int" min_0="0" max_0="10" usage_0="0.4%" type_1="float" min_1="-1.00" max_1="12000.00" usage_1="99.6%"/>
+			<overwrite type="int" min="0" max="1"/>
+			<offset type="vector" items="3"/>
+			<disableBattle type="int" value="0"/>
+			<useLimit type="int" min="0" max="1"/>
+			<limitTime type_0="int" min_0="0" max_0="10" usage_0="6.8%" type_1="float" min_1="0.00" max_1="23.00" usage_1="93.2%"/>
+			<accType type="int" min="0" max="3"/>
+			<playerStop type="int" min="0" max="1"/>
+			<actionCamStop type="int" min="0" max="1"/>
+			<rotateOnly type="int" min="0" max="1"/>
+			<distanceOnly type="int" min="0" max="1"/>
+			<disableCameraHit type="int" min="0" max="1"/>
+			<newInter type="int" min="0" max="1"/>
+			<endInter type="int" min="-1" max="18500"/>
+			<endAccType type="int" min="0" max="3"/>
+			<Rotation_Z type="int" min="0" max="45"/>
+			<noControlTarget type="int" min="0" max="1"/>
+			<overwriteNormalInterRate type="int" min="0" max="1"/>
+			<normalInterRate type="float" min="0.00" max="11.00"/>
+			<useMoveOffset_ type="int" min="0" max="1"/>
+			<moveOffsetScale_ type="int" min="1" max="30"/>
+			<moveOffsetInterp_ type="float" min="0.01" max="1.00"/>
+			<moveOffsetInterpStop_ type="float" min="0.00" max="1.00"/>
+			<useHold type="int" value="0"/>
+			<holdDistanceX_ type="float" value="9.90"/>
+			<holdDistanceZ_ type="int" value="4"/>
+			<useHandOffInterp_ type="int" value="0"/>
+			<handOffInterpRate_ type="float" min="0.00" max="10.00"/>
+			<optional probability="99.8%">
+				<fixHeightUse_ type="int" min="0" max="1"/>
+			</optional>
+			<optional probability="99.8%">
+				<fixHeight_ type="int" min="0" max="23"/>
+			</optional>
+			<optional probability="83.9%">
+				<playerForceIn_ type="int" value="0"/>
+			</optional>
+			<optional probability="83.9%">
+				<leavePlayer_ type="int" min="0" max="1"/>
+			</optional>
+			<optional probability="65.2%">
+				<playerTargetForceInUp_ type="int" min="0" max="1"/>
+			</optional>
+			<optional probability="65.2%">
+				<playerTargetForceInUpDist_ type="int" min="-1" max="20"/>
+			</optional>
+			<interpTimeDistance_ type_0="int" min_0="-1" max_0="18" usage_0="8.7%" type_1="float" min_1="-1.00" max_1="10.00" usage_1="91.3%"/>
+			<interpTimeAngle_ type_0="int" min_0="-1" max_0="18" usage_0="8.7%" type_1="float" min_1="-1.00" max_1="8.00" usage_1="91.3%"/>
+			<interpTimeFov_ type_0="int" min_0="-1" max_0="18" usage_0="8.7%" type_1="float" min_1="-1.00" max_1="8.00" usage_1="91.3%"/>
+			<interpTimePosition_ type_0="int" min_0="-1" max_0="9999" usage_0="8.7%" type_1="float" min_1="-1.00" max_1="720.00" usage_1="91.3%"/>
+			<interpTimeTarget_ type_0="int" min_0="-1" max_0="9999" usage_0="8.7%" type_1="float" min_1="-1.00" max_1="140.00" usage_1="91.3%"/>
+			<interpTimeAccTypeDistance_ type="int" min="0" max="3"/>
+			<interpTimeAccTypeAngle_ type="int" min="0" max="3"/>
+			<interpTimeAccTypeFov_ type="int" min="0" max="3"/>
+			<interpTimeAccTypePosition_ type="int" min="-1" max="3"/>
+			<interpTimeAccTypeTarget_ type="int" min="-1" max="3"/>
+			<endInterpTimeDistance_ type="int" min="-1" max="5"/>
+			<endInterpTimeAngle_ type="int" min="-1" max="5"/>
+			<endInterpTimeFov_ type="int" min="-1" max="5"/>
+			<endInterpTimePosition_ type="int" min="-1" max="4"/>
+			<endInterpTimeTarget_ type="int" min="-1" max="4"/>
+			<endInterpTimeAccTypeDistance_ type="int" min="0" max="3"/>
+			<endInterpTimeAccTypeAngle_ type="int" min="0" max="3"/>
+			<endInterpTimeAccTypeFov_ type="int" min="0" max="3"/>
+			<endInterpTimeAccTypePosition_ type="int" min="0" max="3"/>
+			<endInterpTimeAccTypeTarget_ type="int" min="0" max="3"/>
+			<optional probability="64.0%">
+				<forceInterTimer type="int" min="0" max="600"/>
+			</optional>
+			<optional probability="64.0%">
+				<forceInterRate type="float" min="0.02" max="0.10"/>
+			</optional>
+			<optional probability="0.4%">
+				<forcePosInter type="int" value="1"/>
+			</optional>
+			<optional probability="0.4%">
+				<forcePosInterRate type="float" value="0.05"/>
+			</optional>
+			<optional probability="0.2%">
+				<forceDisInter type="int" value="1"/>
+			</optional>
+			<optional probability="0.2%">
+				<forceDis type="int" value="50"/>
+			</optional>
+			<optional probability="0.2%">
+				<forceDisInterRate type="float" value="0.00"/>
+			</optional>
+		</action>
+	</optional>
+	<optional probability="0.3%">
+		<action type="Tutorial">
+			<code type="hex" value="0x3f1d9dbf" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x07e9a78c" max="0xfff44ce5" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000012" hashed="false"/>
+			<tutorialLine0 type="int" min="1" max="39"/>
+			<optional probability="30.8%">
+				<tutorialLine1 type="int" min="4" max="36"/>
+			</optional>
+			<optional probability="23.1%">
+				<tutorialLine2 type="int" min="6" max="25"/>
+			</optional>
+			<optional probability="3.8%">
+				<tutorialLine3 type="int" value="7"/>
+			</optional>
+			<optional probability="3.8%">
+				<tutorialLine4 type="int" value="2"/>
+			</optional>
+			<optional probability="3.8%">
+				<tutorialLine5 type="int" value="3"/>
+			</optional>
+		</action>
+	</optional>
+	<optional probability="23.1%">
+		<action type="SendCommand">
+			<code type="hex" value="0xa10e3dbc" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x000159d8" max="0xffbc3f3c" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000418" hashed="false"/>
+			<puid>
+				<code type="hex" min="0x00000000" max="0xd8efbb45" hashed="true"/>
+				<id type="hex" min="0x00000000" max="0xfff1884c" hashed="sometimes"/>
+			</puid>
+			<command>
+				<optional probability="99.9%">
+					<label type="string"/>
+				</optional>
+				<optional probability="0.1%">
+					<value type="int" min="-1" max="12"/>
+				</optional>
+			</command>
+			<optional probability="34.4%">
+				<args type_0="hex" min_0="0x00000037" max_0="0x00562000" hashed_0="false" usage_0="0.3%" type_1="string" usage_1="99.7%"/>
+			</optional>
+		</action>
+	</optional>
+	<optional probability="18.9%">
+		<action type="ConditionBlock">
+			<code type="hex" value="0x606fe5c4" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x00377469" max="0xffdf1715" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000408" hashed="false"/>
+			<condition>
+				<puid>
+					<code type="hex" min="0x00000000" max="0xd8efbb45" hashed="true"/>
+					<id type="hex" min="0x00000000" max="0xff543885" hashed="sometimes"/>
+				</puid>
+				<optional probability="27.1%">
+					<type type="int" min="1" max="4"/>
+				</optional>
+				<condition>
+					<state>
+						<optional probability="99.9%">
+							<label type="string"/>
+						</optional>
+						<optional probability="20.3%">
+							<value type="int" min="1" max="1000"/>
+						</optional>
+					</state>
+					<pred type="int" min="0" max="6"/>
+				</condition>
+				<optional probability="6.0%">
+					<args type="string"/>
+				</optional>
+			</condition>
+			<delay type_0="int" min_0="0" max_0="12" usage_0="12.1%" type_1="float" min_1="0.00" max_1="30.00" usage_1="87.9%"/>
+			<bDisable type="int" value="0"/>
+		</action>
+	</optional>
+	<optional probability="0.6%">
+		<action type="EntityLayoutLottery">
+			<code type="hex" value="0x2754c126" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x0303ac4b" max="0xffd1e656" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000002" hashed="false"/>
+			<puid>
+				<code type="hex" value="0xa6aaf7a4" hashed="true"/>
+				<id type="hex" min="0x0947fe08" max="0xdfee1179" hashed="false"/>
+			</puid>
+			<count type="int" min="2" max="70"/>
+			<near type="int" min="2" max="150"/>
+		</action>
+	</optional>
+	<optional probability="0.0%">
+		<action type="ScriptLibraryAction">
+			<code type="hex" value="0xce830ca9" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x0b9ec091" max="0x9556f4e5" hashed="false"/>
+			<attribute type="hex" value="0x00000000" hashed="false"/>
+			<script>
+				<id type="hex" min="0x5be16b92" max="0xac2e8923" hashed="false"/>
+			</script>
+		</action>
+	</optional>
+	<optional probability="0.1%">
+		<action type="ElevatorAction">
+			<code type="hex" value="0x367aa6d3" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x8f824fb0" max="0xf878c34d" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000010" hashed="false"/>
+			<entity>
+				<code type="hex" min="0x16b97f05" max="0xd8efbb45" hashed="true"/>
+				<id type="hex" min="0x04fbfea0" max="0xffb4a9bf" hashed="false"/>
+			</entity>
+			<nowFloor type="int" min="0" max="1"/>
+			<move3D type="int" min="0" max="1"/>
+		</action>
+	</optional>
+	<optional probability="9.2%">
+		<action type="DelayAction">
+			<code type="hex" value="0x149c7bdf" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x0052711f" max="0xffe18f59" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x0000001b" hashed="false"/>
+			<delay type_0="int" min_0="1" max_0="3" usage_0="1.0%" type_1="float" min_1="0.00" max_1="180.00" usage_1="99.0%"/>
+		</action>
+	</optional>
+	<optional probability="2.8%">
+		<action type="MultiConditionBlock">
+			<code type="hex" value="0xe58b4e99" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x055dd38c" max="0xfbe2af2d" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x0000001a" hashed="false"/>
+			<condition>
+				<conditions>
+					<size type="int" min="1" max="34"/>
+					<value>
+						<optional probability="36.2%">
+							<type type="int" min="1" max="2"/>
+						</optional>
+						<puid>
+							<code type="hex" min="0x6a69c84d" max="0xd8efbb45" hashed="true"/>
+							<id type="hex" min="0x00000000" max="0xff84ad50" hashed="sometimes"/>
+						</puid>
+						<condition>
+							<state>
+								<label type="string"/>
+								<optional probability="23.5%">
+									<value type="int" min="1" max="100"/>
+								</optional>
+							</state>
+							<pred type="int" min="0" max="7"/>
+						</condition>
+						<optional probability="9.6%">
+							<args type="string"/>
+						</optional>
+					</value>
+				</conditions>
+				<type type="int" min="0" max="2"/>
+			</condition>
+			<delay type_0="int" value_0="0" usage_0="0.5%" type_1="float" min_1="0.00" max_1="2.00" usage_1="99.5%"/>
+		</action>
+	</optional>
+	<optional probability="0.4%">
+		<action type="ChangeAreaAction">
+			<code type="hex" value="0x1571c131" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x084233e6" max="0xf8d71216" hashed="false"/>
+			<attribute type="hex" value="0x00000000" hashed="false"/>
+			<area>
+				<size type="int" min="1" max="20"/>
+				<value>
+					<code type="hex" min="0x18cffd98" max="0x4238cc7f" hashed="true"/>
+					<position type="vector" items="3"/>
+					<rotation type="vector" items="3"/>
+					<scale type="vector" items="3"/>
+					<optional probability="1.8%">
+						<radius type="int" value="1"/>
+					</optional>
+					<optional probability="98.2%">
+						<points type="vector" items="8"/>
+					</optional>
+					<height type="int" value="1"/>
+				</value>
+			</area>
+			<StageType type="int" min="0" max="9"/>
+			<AreaType type="int" min="0" max="7"/>
+		</action>
+	</optional>
+	<optional probability="7.8%">
+		<action type="EnemySetAction">
+			<code type="hex" value="0xfb085793" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x008276bf" max="0xffa52daf" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000c18" hashed="false"/>
+			<layouts>
+				<normal>
+					<id type="hex" min="0x00577d18" max="0xfee4d785" hashed="false"/>
+					<flags type="hex" value="0x00000000" hashed="false"/>
+					<parent>
+						<id>
+							<id>
+								<code type="hex" min="0x00000000" max="0xd8efbb45" hashed="sometimes"/>
+								<id type="hex" min="0x00000000" max="0xe139f06b" hashed="false"/>
+							</id>
+						</id>
+						<optional probability="1.3%">
+							<nParts type="int" value="2"/>
+						</optional>
+					</parent>
+					<layouts>
+						<size type="int" min="0" max="138"/>
+						<optional probability="99.4%">
+							<value>
+								<id type="hex" min="0x000be2f9" max="0xfff6812a" hashed="false"/>
+								<optional probability="3.5%">
+									<flags type="hex" min="0x00000001" max="0x00000020" hashed="false"/>
+								</optional>
+								<location>
+									<optional probability="99.2%">
+										<position type="vector" items="3"/>
+									</optional>
+									<optional probability="66.9%">
+										<rotation type="vector" items="3"/>
+									</optional>
+								</location>
+								<optional probability="4.1%">
+									<scale type="vector" items="3"/>
+								</optional>
+								<objId type="string"/>
+								<optional probability="27.5%">
+									<setType type="int" min="1" max="24"/>
+								</optional>
+								<optional probability="23.3%">
+									<setFlag type="hex" min="0x00000001" max="0x80040000" hashed="false"/>
+								</optional>
+								<optional probability="4.4%">
+									<alias type="string"/>
+								</optional>
+								<optional probability="19.0%">
+									<setRtn type="int" min="-1" max="135"/>
+								</optional>
+								<optional probability="51.1%">
+									<param>
+										<count type="hex" min="0x00000001" max="0x0000000f" hashed="false"/>
+										<value>
+											<name type="string"/>
+											<code type="hex" min="0x1451dab1" max="0xfffb77c9" hashed="true"/>
+											<body type_0="int" min_0="1" max_0="999" usage_0="2.4%" type_1="float" min_1="0.00" max_1="1000.00" usage_1="20.1%" type_2="hex" min_2="0x0053ee44" max_2="0xf3e3fa8b" hashed_2="false" usage_2="0.4%" type_3="string" usage_3="32.3%">
+												<optional probability="44.8%">
+													<id>
+														<code type="hex" min="0x00000000" max="0xa6aaf7a4" hashed="true"/>
+														<id type="hex" min="0x00000000" max="0xfeb12f4c" hashed="false"/>
+													</id>
+												</optional>
+											</body>
+										</value>
+									</param>
+								</optional>
+								<optional probability="27.7%">
+									<delay type="float" min="0.10" max="40.00"/>
+								</optional>
+							</value>
+						</optional>
+					</layouts>
+				</normal>
+				<hard>
+					<id type="hex" min="0x00407346" max="0xff962cd1" hashed="false"/>
+					<flags type="hex" value="0x00000001" hashed="false"/>
+					<parent>
+						<id>
+							<id>
+								<code type="hex" value="0x00000000" hashed="false"/>
+								<id type="hex" value="0x00000000" hashed="false"/>
+							</id>
+						</id>
+					</parent>
+					<layouts>
+						<size type="int" value="0"/>
+					</layouts>
+				</hard>
+				<extream>
+					<id type="hex" min="0x000ad520" max="0xffd1b95a" hashed="false"/>
+					<flags type="hex" value="0x00000001" hashed="false"/>
+					<parent>
+						<id>
+							<id>
+								<code type="hex" value="0x00000000" hashed="false"/>
+								<id type="hex" value="0x00000000" hashed="false"/>
+							</id>
+						</id>
+					</parent>
+					<layouts>
+						<size type="int" value="0"/>
+					</layouts>
+				</extream>
+			</layouts>
+			<condition>
+				<puid>
+					<code type="hex" min="0x00000000" max="0xd8efbb45" hashed="sometimes"/>
+					<id type="hex" min="0x00000000" max="0xe4eef975" hashed="false"/>
+				</puid>
+				<optional probability="0.3%">
+					<type type="int" value="2"/>
+				</optional>
+				<condition>
+					<state>
+						<optional probability="4.5%">
+							<label type="string"/>
+						</optional>
+						<optional probability="2.6%">
+							<value type="int" min="2" max="75"/>
+						</optional>
+					</state>
+					<pred type="int" min="0" max="5"/>
+				</condition>
+			</condition>
+			<delay type_0="int" min_0="0" max_0="3" usage_0="57.3%" type_1="float" min_1="0.00" max_1="3.00" usage_1="42.7%"/>
+			<max type="int" min="0" max="8"/>
+			<optional probability="0.1%">
+				<param>
+					<count type="hex" value="0x00000001" hashed="false"/>
+					<value>
+						<name type="string"/>
+						<code type="hex" value="0x1451dab1" hashed="true"/>
+						<body type="int" value="55"/>
+					</value>
+				</param>
+			</optional>
+		</action>
+	</optional>
+	<optional probability="5.2%">
+		<action type="SendCommands">
+			<code type="hex" value="0xd9783e91" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x005b9eec" max="0xffe5fa94" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000018" hashed="false"/>
+			<commands>
+				<items>
+					<size type="int" min="1" max="39"/>
+					<value>
+						<puid>
+							<code type="hex" min="0x66a261b7" max="0xd8efbb45" hashed="true"/>
+							<id type="hex" min="0x0002a506" max="0xff6e2b08" hashed="sometimes"/>
+						</puid>
+						<command>
+							<optional probability="99.6%">
+								<command>
+									<label type="string"/>
+								</command>
+							</optional>
+							<optional probability="15.9%">
+								<args type_0="int" value_0="6" usage_0="1.3%" type_1="string" usage_1="98.7%"/>
+							</optional>
+						</command>
+					</value>
+				</items>
+			</commands>
+			<optional probability="0.6%">
+				<resets>
+					<items>
+						<size type="int" value="1"/>
+						<value>
+							<puid>
+								<code type="hex" value="0x66a261b7" hashed="true"/>
+								<id type="hex" min="0x043d3dc4" max="0xda1dc998" hashed="false"/>
+							</puid>
+							<command>
+								<command>
+									<label type="string"/>
+								</command>
+							</command>
+						</value>
+					</items>
+				</resets>
+			</optional>
+		</action>
+	</optional>
+	<optional probability="2.8%">
+		<action type="HackingRequestEndAction">
+			<code type="hex" value="0x2662e9b7" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x00dceda6" max="0xff944f18" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000002" hashed="false"/>
+			<optional probability="17.5%">
+				<useSelect type="int" value="0"/>
+			</optional>
+			<optional probability="0.6%">
+				<endCamPos type="vector" items="3"/>
+			</optional>
+			<optional probability="0.6%">
+				<endCamTag type="vector" items="3"/>
+			</optional>
+			<optional probability="2.4%">
+				<endSkip type="int" value="1"/>
+			</optional>
+			<optional probability="3.6%">
+				<ForceSkip type="int" value="1"/>
+			</optional>
+			<optional probability="0.6%">
+				<FadeWhite type="int" value="1"/>
+			</optional>
+			<optional probability="54.8%">
+				<endType type="int" value="1"/>
+			</optional>
+		</action>
+	</optional>
+	<optional probability="3.6%">
+		<action type="HapLocationAction">
+			<code type="hex" value="0x43173c6f" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x004ecfa7" max="0xffa67ef3" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000010" hashed="false"/>
+			<location>
+				<optional probability="97.7%">
+					<position type="vector" items="3"/>
+				</optional>
+				<optional probability="11.9%">
+					<rotation type="vector" items="3"/>
+				</optional>
+			</location>
+		</action>
+	</optional>
+	<optional probability="1.8%">
+		<action type="UITimerAction">
+			<code type="hex" value="0xecfcefb4" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x0155e7e2" max="0xfdeea991" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000002" hashed="false"/>
+			<timeLimit type="int" min="6" max="3600"/>
+			<timeWarn type="int" min="0" max="180"/>
+			<countDown type="int" value="1"/>
+			<setStart type="int" value="1"/>
+			<uiType type="hex" min="0x00000000" max="0x00000004" hashed="false"/>
+		</action>
+	</optional>
+	<optional probability="2.1%">
+		<action type="HackingAction">
+			<code type="hex" value="0x312ef487" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x02ce0eb8" max="0xfc9a8902" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000002" hashed="false"/>
+			<type type="int" value="1"/>
+			<ChangeTimer type="int" min="0" max="3"/>
+			<Group type="hex" value="0x00000000" hashed="false"/>
+		</action>
+	</optional>
+	<optional probability="0.9%">
+		<action type="HackingStageDmgAction">
+			<code type="hex" value="0x71cf264b" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x01d8309e" max="0xff8144ca" hashed="false"/>
+			<attribute type="hex" value="0x00000000" hashed="false"/>
+			<SignTime type="float" min="1.50" max="2.00"/>
+			<addLv type="int" min="1" max="99"/>
+		</action>
+	</optional>
+	<optional probability="0.0%">
+		<action type="HackingCheckClearAction">
+			<code type="hex" value="0x53229e21" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" value="0x3e78bcce" hashed="false"/>
+			<attribute type="hex" value="0x00000000" hashed="false"/>
+			<condLimit type="int" value="3"/>
+			<objId type="string"/>
+		</action>
+	</optional>
+	<optional probability="2.2%">
+		<action type="MemorySaveAction">
+			<code type="hex" value="0xbea4fc64" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x02bc62a3" max="0xff1c03c8" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000c10" hashed="false"/>
+			<pointName type="string"/>
+		</action>
+	</optional>
+	<optional probability="4.0%">
+		<action type="PhaseEventAction">
+			<code type="hex" value="0x69108577" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x006031ca" max="0xfe76314a" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00010418" hashed="false"/>
+			<eventNo type="hex" min="0x00000000" max="0x0000ffff" hashed="false"/>
+			<optional probability="31.7%">
+				<eventType type="int" value="1"/>
+			</optional>
+			<optional probability="93.2%">
+				<startType type="int" min="1" max="4"/>
+			</optional>
+			<optional probability="0.8%">
+				<startSpecificSubPhase_ type="int" value="1"/>
+			</optional>
+			<subPhase type="string"/>
+			<optional probability="0.3%">
+				<UNKNOWN type="int" value="0"/>
+			</optional>
+			<optional probability="0.3%">
+				<location/>
+			</optional>
+			<area>
+				<size type="int" min="0" max="7"/>
+				<optional probability="13.6%">
+					<value>
+						<code type="hex" min="0x18cffd98" max="0x4238cc7f" hashed="true"/>
+						<position type="vector" items="3"/>
+						<rotation type="vector" items="3"/>
+						<scale type="vector" items="3"/>
+						<optional probability="7.9%">
+							<parent>
+								<id>
+									<id>
+										<code type="hex" value="0xd8efbb45" hashed="true"/>
+										<id type="hex" value="0x188344c3" hashed="false"/>
+									</id>
+								</id>
+							</parent>
+						</optional>
+						<optional probability="9.5%">
+							<radius type="int" value="1"/>
+						</optional>
+						<optional probability="90.5%">
+							<points type="vector" items="8"/>
+						</optional>
+						<height type="int" value="1"/>
+					</value>
+				</optional>
+			</area>
+			<loadArea>
+				<size type="int" min="0" max="2"/>
+				<optional probability="6.2%">
+					<value>
+						<code type="hex" value="0x18cffd98" hashed="true"/>
+						<position type="vector" items="3"/>
+						<rotation type="vector" items="3"/>
+						<scale type="vector" items="3"/>
+						<points type="vector" items="8"/>
+						<height type="int" value="1"/>
+					</value>
+				</optional>
+			</loadArea>
+			<optional probability="11.0%">
+				<connectType_ type="int" min="1" max="3"/>
+			</optional>
+			<optional probability="99.7%">
+				<connectWalkDist_ type="int" min="0" max="20"/>
+			</optional>
+			<optional probability="99.7%">
+				<connectWalkCaptionWait_ type_0="int" value_0="1" usage_0="1.4%" type_1="float" min_1="0.00" max_1="3.00" usage_1="98.6%"/>
+			</optional>
+			<optional probability="19.0%">
+				<releaseWhenLeaveLoadArea type="int" value="0"/>
+			</optional>
+			<optional probability="99.7%">
+				<bStop type="int" min="0" max="1"/>
+			</optional>
+			<optional probability="0.6%">
+				<blackTime_ type="int" value="2"/>
+			</optional>
+			<optional probability="0.6%">
+				<noizeTime_ type="int" value="1"/>
+			</optional>
+			<optional probability="13.0%">
+				<startFade type="int" value="1"/>
+			</optional>
+			<optional probability="26.1%">
+				<readEventType_00 type="int" min="0" max="2"/>
+			</optional>
+			<optional probability="6.5%">
+				<readEventType_01 type="int" min="-1" max="2"/>
+			</optional>
+			<optional probability="4.2%">
+				<readEventType_02 type="int" min="0" max="2"/>
+			</optional>
+			<optional probability="20.1%">
+				<readEventNo_00 type="int" min="17" max="57653"/>
+			</optional>
+			<optional probability="98.0%">
+				<fadePhase type="hex" min="0x00000000" max="0xffffffff" hashed="false"/>
+			</optional>
+			<optional probability="98.0%">
+				<fadeSubPhase type="string"/>
+			</optional>
+			<optional probability="0.8%">
+				<readEventNo_01 type="int" min="145" max="4214"/>
+			</optional>
+			<optional probability="0.3%">
+				<readEventNo_02 type="int" value="1136"/>
+			</optional>
+		</action>
+	</optional>
+	<optional probability="9.4%">
+		<action type="AreaAction">
+			<code type="hex" value="0x08cf2e32" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x001c7d97" max="0xffba32c4" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00010012" hashed="false"/>
+			<area>
+				<size type="int" min="0" max="16"/>
+				<optional probability="0.1%">
+					<link>
+						<id>
+							<code type="hex" value="0xa6aaf7a4" hashed="true"/>
+							<id type="hex" value="0xf28e6c4b" hashed="false"/>
+						</id>
+					</link>
+				</optional>
+				<optional probability="99.9%">
+					<value>
+						<code type="hex" min="0x18cffd98" max="0x4238cc7f" hashed="true"/>
+						<position type="vector" items="3"/>
+						<rotation type="vector" items="3"/>
+						<scale type="vector" items="3"/>
+						<optional probability="10.5%">
+							<radius type="int" value="1"/>
+						</optional>
+						<optional probability="5.0%">
+							<parent>
+								<id>
+									<id>
+										<code type="hex" min="0xa6aaf7a4" max="0xd8efbb45" hashed="true"/>
+										<id type="hex" min="0x00f443f3" max="0xe7a0b18a" hashed="false"/>
+									</id>
+								</id>
+								<optional probability="8.7%">
+									<nParts type="int" value="2"/>
+								</optional>
+							</parent>
+						</optional>
+						<optional probability="89.5%">
+							<points type="vector" items="8"/>
+						</optional>
+						<height type="int" value="1"/>
+					</value>
+				</optional>
+			</area>
+		</action>
+	</optional>
+	<optional probability="0.9%">
+		<action type="PathCameraArea">
+			<code type="hex" value="0xf0213c66" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x0118dc64" max="0xffc69df4" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000400" hashed="false"/>
+			<route>
+				<attribute type="hex" min="0x00000000" max="0xc123c4f5" hashed="false"/>
+				<optional probability="11.9%">
+					<parent>
+						<id>
+							<id>
+								<code type="hex" value="0xd8efbb45" hashed="true"/>
+								<id type="hex" value="0x188344c3" hashed="false"/>
+							</id>
+						</id>
+					</parent>
+				</optional>
+				<nodes>
+					<size type="int" min="0" max="31"/>
+					<optional probability="13.4%">
+						<value>
+							<point type="vector" items="3"/>
+						</value>
+					</optional>
+				</nodes>
+				<resolution type="int" min="1" max="10"/>
+			</route>
+			<optional probability="93.0%">
+				<playerPath>
+					<attribute type="hex" min="0x00000000" max="0xc3e06910" hashed="false"/>
+					<optional probability="21.9%">
+						<parent>
+							<id>
+								<id>
+									<code type="hex" value="0xd8efbb45" hashed="true"/>
+									<id type="hex" min="0x051a2a67" max="0xed6c530e" hashed="false"/>
+								</id>
+							</id>
+							<optional probability="17.1%">
+								<nParts type="int" value="2"/>
+							</optional>
+						</parent>
+					</optional>
+					<nodes>
+						<size type="int" min="2" max="53"/>
+						<value>
+							<point type="vector" items="3"/>
+						</value>
+					</nodes>
+					<resolution type="int" min="1" max="100"/>
+				</playerPath>
+			</optional>
+			<offset type="vector" items="3"/>
+			<fixHeightUse_ type="int" min="0" max="1"/>
+			<fixHeight_ type_0="int" min_0="0" max_0="10" usage_0="27.9%" type_1="float" min_1="-285.00" max_1="142.25" usage_1="72.1%"/>
+			<playerY type="int" min="0" max="1"/>
+			<branchDist type="int" min="2" max="10"/>
+			<excludeArea>
+				<size type="int" min="0" max="10"/>
+				<optional probability="65.2%">
+					<value>
+						<code type="hex" min="0x18cffd98" max="0x4238cc7f" hashed="true"/>
+						<position type="vector" items="3"/>
+						<rotation type="vector" items="3"/>
+						<scale type="vector" items="3"/>
+						<optional probability="1.2%">
+							<radius type="int" value="1"/>
+						</optional>
+						<optional probability="18.1%">
+							<parent>
+								<id>
+									<id>
+										<code type="hex" value="0xd8efbb45" hashed="true"/>
+										<id type="hex" value="0x188344c3" hashed="false"/>
+									</id>
+								</id>
+							</parent>
+						</optional>
+						<optional probability="98.8%">
+							<points type="vector" items="8"/>
+						</optional>
+						<height type="int" value="1"/>
+					</value>
+				</optional>
+			</excludeArea>
+			<useOffsetPlDir type="int" min="0" max="1"/>
+			<useOffsetPlDirRate_ type="float" min="1.00" max="6.00"/>
+			<sideViewCameraPathDirOffsetEnable_ type="int" min="0" max="1"/>
+			<sideViewCameraPathDirOffsetLengthSlow_ type="float" min="0.00" max="1.80"/>
+			<sideViewCameraPathDirOffsetLengthMiddle_ type="float" min="0.00" max="3.00"/>
+			<sideViewCameraPathDirOffsetLengthHigh_ type="float" min="0.00" max="4.00"/>
+			<sideViewCameraPathDirOffsetInterp_ type="float" min="0.01" max="1.00"/>
+			<sideViewCameraPathDirOffsetInterpStop_ type_0="int" value_0="0" usage_0="4.0%" type_1="float" min_1="0.00" max_1="0.10" usage_1="96.0%"/>
+			<sideViewCameraInterpSeparate_ type="int" min="0" max="1"/>
+			<sideViewCameraInterpSeparateXZ_ type="float" min="0.03" max="0.20"/>
+			<sideViewCameraInterpSeparateY_ type="float" min="0.08" max="0.10"/>
+			<useFovy_ type="int" min="0" max="1"/>
+			<fovy_ type="int" min="10" max="60"/>
+			<viewOffsetInterp_ type="float" min="0.00" max="0.20"/>
+			<viewOffsetGround_ type="vector" items="3"/>
+			<viewOffsetAir_ type="vector" items="3"/>
+			<usePos type="int" min="0" max="1"/>
+			<useTarget type="int" min="0" max="1"/>
+			<pos>
+				<optional probability="91.0%">
+					<position type="vector" items="3"/>
+				</optional>
+				<optional probability="51.7%">
+					<rotation type="vector" items="3"/>
+				</optional>
+				<optional probability="10.0%">
+					<parent>
+						<id>
+							<id>
+								<code type="hex" value="0xd8efbb45" hashed="true"/>
+								<id type="hex" value="0x188344c3" hashed="false"/>
+							</id>
+						</id>
+					</parent>
+				</optional>
+			</pos>
+			<tar>
+				<optional probability="90.0%">
+					<position type="vector" items="3"/>
+				</optional>
+				<optional probability="51.7%">
+					<rotation type="vector" items="3"/>
+				</optional>
+				<optional probability="10.0%">
+					<parent>
+						<id>
+							<id>
+								<code type="hex" value="0xd8efbb45" hashed="true"/>
+								<id type="hex" value="0x188344c3" hashed="false"/>
+							</id>
+						</id>
+					</parent>
+				</optional>
+			</tar>
+			<slideUp_ type="float" min="0.00" max="2.00"/>
+			<slideDown_ type="float" min="0.00" max="7.00"/>
+			<slideX_ type_0="int" min_0="2" max_0="4" usage_0="15.9%" type_1="float" min_1="1.00" max_1="6.00" usage_1="84.1%"/>
+			<optional probability="99.5%">
+				<forceAdjust_ type="int" min="0" max="1"/>
+			</optional>
+			<optional probability="99.5%">
+				<useInterpLimit_ type="int" min="0" max="1"/>
+			</optional>
+			<optional probability="99.5%">
+				<interpLimit_ type="float" min="0.01" max="0.50"/>
+			</optional>
+			<optional probability="99.5%">
+				<bInterpRateRefHackRate_ type="int" min="0" max="1"/>
+			</optional>
+			<optional probability="99.5%">
+				<firstOffset_ type="vector" items="3"/>
+			</optional>
+			<area>
+				<size type="int" min="0" max="23"/>
+				<optional probability="98.0%">
+					<value>
+						<code type="hex" min="0x18cffd98" max="0x4238cc7f" hashed="true"/>
+						<position type="vector" items="3"/>
+						<rotation type="vector" items="3"/>
+						<scale type="vector" items="3"/>
+						<optional probability="1.3%">
+							<radius type="int" value="1"/>
+						</optional>
+						<optional probability="13.9%">
+							<parent>
+								<id>
+									<id>
+										<code type="hex" value="0xd8efbb45" hashed="true"/>
+										<id type="hex" min="0x188344c3" max="0x49f31992" hashed="false"/>
+									</id>
+								</id>
+								<optional probability="50.0%">
+									<nParts type="int" value="2"/>
+								</optional>
+							</parent>
+						</optional>
+						<optional probability="98.7%">
+							<points type="vector" items="8"/>
+						</optional>
+						<height type="int" value="1"/>
+					</value>
+				</optional>
+			</area>
+			<optional probability="23.9%">
+				<enemyPath>
+					<attribute type="hex" min="0x00000000" max="0xbf6f369b" hashed="false"/>
+					<optional probability="10.4%">
+						<parent>
+							<id>
+								<id>
+									<code type="hex" value="0xd8efbb45" hashed="true"/>
+									<id type="hex" value="0x49f31992" hashed="false"/>
+								</id>
+							</id>
+							<nParts type="int" value="2"/>
+						</parent>
+					</optional>
+					<nodes>
+						<size type="int" min="2" max="53"/>
+						<value>
+							<point type="vector" items="3"/>
+						</value>
+					</nodes>
+					<resolution type="int" min="1" max="16"/>
+				</enemyPath>
+			</optional>
+			<cameraInterpEnable type="int" min="0" max="1"/>
+			<useStartEndInter_ type="int" min="0" max="1"/>
+			<interRate type_0="int" min_0="1" max_0="3" usage_0="2.0%" type_1="float" min_1="-1.00" max_1="100.00" usage_1="98.0%"/>
+			<accType type="int" min="0" max="3"/>
+			<endInter type_0="int" min_0="1" max_0="3" usage_0="2.5%" type_1="float" min_1="-1.00" max_1="120.00" usage_1="97.5%"/>
+			<endAccType type="int" min="0" max="3"/>
+			<interpTimeDistance_ type="int" min="-1" max="0"/>
+			<interpTimeAngle_ type="int" value="-1"/>
+			<interpTimeFov_ type="int" value="-1"/>
+			<interpTimePosition_ type="int" value="-1"/>
+			<interpTimeTarget_ type="int" value="-1"/>
+			<interpTimeAccTypeDistance_ type="int" min="0" max="3"/>
+			<interpTimeAccTypeAngle_ type="int" min="0" max="3"/>
+			<interpTimeAccTypeFov_ type="int" min="0" max="3"/>
+			<interpTimeAccTypePosition_ type="int" min="0" max="3"/>
+			<interpTimeAccTypeTarget_ type="int" min="0" max="3"/>
+			<endInterpTimeDistance_ type="int" value="-1"/>
+			<endInterpTimeAngle_ type="int" value="-1"/>
+			<endInterpTimeFov_ type="int" value="-1"/>
+			<endInterpTimePosition_ type="int" value="-1"/>
+			<endInterpTimeTarget_ type="int" value="-1"/>
+			<endInterpTimeAccTypeDistance_ type="int" min="0" max="3"/>
+			<endInterpTimeAccTypeAngle_ type="int" min="0" max="3"/>
+			<endInterpTimeAccTypeFov_ type="int" min="0" max="3"/>
+			<endInterpTimeAccTypePosition_ type="int" min="0" max="3"/>
+			<endInterpTimeAccTypeTarget_ type="int" min="0" max="3"/>
+		</action>
+	</optional>
+	<optional probability="0.2%">
+		<action type="ConditionLayout">
+			<code type="hex" value="0x73b058dd" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x0d5bfb96" max="0xdff215b7" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000010" hashed="false"/>
+			<condition>
+				<conditions>
+					<size type="int" value="0"/>
+				</conditions>
+				<type type="int" value="0"/>
+			</condition>
+			<location>
+				<position type="vector" items="3"/>
+				<rotation type="vector" items="3"/>
+				<optional probability="7.7%">
+					<parent>
+						<id>
+							<id>
+								<code type="hex" value="0xd8efbb45" hashed="true"/>
+								<id type="hex" value="0x188344c3" hashed="false"/>
+							</id>
+						</id>
+					</parent>
+				</optional>
+			</location>
+			<puid>
+				<code type="hex" value="0xd8efbb45" hashed="true"/>
+				<id type="hex" min="0x10452782" max="0xd70dba55" hashed="false"/>
+			</puid>
+		</action>
+	</optional>
+	<optional probability="3.2%">
+		<action type="HapGoalLocationAction">
+			<code type="hex" value="0x7c4724ad" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x0082c382" max="0xffa4e492" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000013" hashed="false"/>
+			<optional probability="99.6%">
+				<parentID type="hex" min="0x00000000" max="0xffffffff" hashed="false"/>
+			</optional>
+			<location>
+				<optional probability="98.1%">
+					<position type="vector" items="3"/>
+				</optional>
+				<optional probability="13.8%">
+					<rotation type="vector" items="3"/>
+				</optional>
+				<optional probability="7.8%">
+					<parent>
+						<id>
+							<id>
+								<code type="hex" min="0x00000000" max="0xd8efbb45" hashed="true"/>
+								<id type="hex" min="0x00000000" max="0xbcf6aa76" hashed="false"/>
+							</id>
+						</id>
+						<optional probability="19.0%">
+							<nParts type="int" min="1" max="2"/>
+						</optional>
+					</parent>
+				</optional>
+			</location>
+			<radius type="int" min="-1" max="100"/>
+			<icon type="int" min="0" max="1"/>
+			<optional probability="90.7%">
+				<purposeIdx type="int" min="-1" max="1300"/>
+			</optional>
+			<optional probability="0.7%">
+				<buddyParent type="int" value="1"/>
+			</optional>
+			<optional probability="0.4%">
+				<InAnimDisp type="int" value="1"/>
+			</optional>
+			<optional probability="5.9%">
+				<bunkerFlag type="int" value="1"/>
+			</optional>
+		</action>
+	</optional>
+	<optional probability="3.8%">
+		<action type="PhaseJumpAction">
+			<code type="hex" value="0x227440da" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x012000c7" max="0xfe2c43cc" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00010010" hashed="false"/>
+			<area>
+				<size type="int" min="0" max="8"/>
+				<optional probability="11.1%">
+					<value>
+						<code type="hex" min="0x18cffd98" max="0x4238cc7f" hashed="true"/>
+						<position type="vector" items="3"/>
+						<rotation type="vector" items="3"/>
+						<scale type="vector" items="3"/>
+						<optional probability="1.9%">
+							<radius type="int" value="1"/>
+						</optional>
+						<optional probability="1.9%">
+							<parent>
+								<id>
+									<id>
+										<code type="hex" value="0xd8efbb45" hashed="true"/>
+										<id type="hex" value="0x188344c3" hashed="false"/>
+									</id>
+								</id>
+							</parent>
+						</optional>
+						<optional probability="98.1%">
+							<points type="vector" items="8"/>
+						</optional>
+						<height type="int" value="1"/>
+					</value>
+				</optional>
+			</area>
+			<phase type="hex" min="0x00000100" max="0x00000f60" hashed="false"/>
+			<subPhase type="string"/>
+			<optional probability="51.9%">
+				<type type="int" value="1"/>
+			</optional>
+			<optional probability="25.9%">
+				<param>
+					<color type="int" min="0" max="1"/>
+					<speed type="int" min="0" max="2"/>
+					<type type="int" min="0" max="8"/>
+					<bNoFade type="int" min="-1887313152" max="1868721920"/>
+				</param>
+			</optional>
+		</action>
+	</optional>
+	<optional probability="0.4%">
+		<action type="PlayerTurnOffAction">
+			<code type="hex" value="0xe14742dd" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x0c8c34ce" max="0xfce81211" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000013" hashed="false"/>
+			<area_>
+				<size type="int" min="0" max="2"/>
+				<optional probability="97.0%">
+					<value>
+						<code type="hex" min="0x18cffd98" max="0x4238cc7f" hashed="true"/>
+						<position type="vector" items="3"/>
+						<rotation type="vector" items="3"/>
+						<scale type="vector" items="3"/>
+						<optional probability="5.9%">
+							<radius type="int" value="1"/>
+						</optional>
+						<optional probability="5.9%">
+							<parent>
+								<id>
+									<id>
+										<code type="hex" value="0xd8efbb45" hashed="true"/>
+										<id type="hex" value="0x188344c3" hashed="false"/>
+									</id>
+								</id>
+							</parent>
+						</optional>
+						<optional probability="94.1%">
+							<points type="vector" items="8"/>
+						</optional>
+						<height type="int" min="1" max="10"/>
+					</value>
+				</optional>
+			</area_>
+		</action>
+	</optional>
+	<optional probability="0.4%">
+		<action type="CameraArea">
+			<code type="hex" value="0xfb252867" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x0b9f7bf7" max="0xfaed86d7" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000010" hashed="false"/>
+			<area>
+				<size type="int" min="0" max="29"/>
+				<optional probability="14.3%">
+					<value>
+						<code type="hex" value="0x18cffd98" hashed="true"/>
+						<position type="vector" items="3"/>
+						<rotation type="vector" items="3"/>
+						<scale type="vector" items="3"/>
+						<points type="vector" items="8"/>
+						<height type="int" value="1"/>
+					</value>
+				</optional>
+			</area>
+			<timer type="int" min="1" max="10"/>
+			<length type_0="int" min_0="-4" max_0="5" usage_0="14.3%" type_1="float" min_1="-6.00" max_1="15.00" usage_1="85.7%"/>
+		</action>
+	</optional>
+	<optional probability="5.4%">
+		<action type="EnemySetArea">
+			<code type="hex" value="0xe8fefe4b" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x00706ba0" max="0xfff25741" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00002812" hashed="false"/>
+			<layouts>
+				<normal>
+					<id type="hex" min="0x000abe5d" max="0xffff5eec" hashed="false"/>
+					<flags type="hex" value="0x00000000" hashed="false"/>
+					<parent>
+						<id>
+							<id>
+								<code type="hex" min="0x00000000" max="0xd8efbb45" hashed="sometimes"/>
+								<id type="hex" min="0x00000000" max="0xf7e8e6bd" hashed="false"/>
+							</id>
+						</id>
+						<optional probability="0.1%">
+							<nParts type="int" value="2"/>
+						</optional>
+					</parent>
+					<layouts>
+						<size type="int" min="0" max="59"/>
+						<optional probability="99.9%">
+							<value>
+								<id type="hex" min="0x00111e40" max="0xffa423bd" hashed="false"/>
+								<optional probability="1.1%">
+									<flags type="hex" min="0x00000001" max="0x00000008" hashed="false"/>
+								</optional>
+								<location>
+									<optional probability="100.0%">
+										<position type="vector" items="3"/>
+									</optional>
+									<optional probability="82.8%">
+										<rotation type="vector" items="3"/>
+									</optional>
+								</location>
+								<optional probability="1.2%">
+									<scale type="vector" items="3"/>
+								</optional>
+								<objId type="string"/>
+								<optional probability="36.7%">
+									<setType type="int" min="1" max="21"/>
+								</optional>
+								<optional probability="65.8%">
+									<setFlag type="hex" min="0x00000001" max="0x90040010" hashed="false"/>
+								</optional>
+								<optional probability="4.0%">
+									<delay type_0="int" min_0="1" max_0="5" usage_0="28.3%" type_1="float" min_1="0.10" max_1="10.00" usage_1="71.7%"/>
+								</optional>
+								<optional probability="43.0%">
+									<setRtn type="int" min="1" max="139"/>
+								</optional>
+								<optional probability="20.5%">
+									<alias type="string"/>
+								</optional>
+								<optional probability="77.1%">
+									<param>
+										<count type="hex" min="0x00000001" max="0x00000006" hashed="false"/>
+										<value>
+											<name type="string"/>
+											<code type="hex" min="0x1451dab1" max="0xfffb77c9" hashed="true"/>
+											<body type_0="int" min_0="1" max_0="37" usage_0="4.2%" type_1="float" min_1="0.00" max_1="60.00" usage_1="20.8%" type_2="hex" min_2="0x00000023" max_2="0x00000026" hashed_2="false" usage_2="0.1%" type_3="string" usage_3="70.8%">
+												<optional probability="4.1%">
+													<id>
+														<code type="hex" value="0xa6aaf7a4" hashed="true"/>
+														<id type="hex" min="0x0063e434" max="0xffa959f8" hashed="false"/>
+													</id>
+												</optional>
+											</body>
+										</value>
+									</param>
+								</optional>
+							</value>
+						</optional>
+					</layouts>
+				</normal>
+				<hard>
+					<id type="hex" min="0x0061d98c" max="0xfe474edd" hashed="false"/>
+					<flags type="hex" value="0x00000001" hashed="false"/>
+					<parent>
+						<id>
+							<id>
+								<code type="hex" min="0x00000000" max="0xd8efbb45" hashed="sometimes"/>
+								<id type="hex" min="0x00000000" max="0xe212d10d" hashed="false"/>
+							</id>
+						</id>
+					</parent>
+					<layouts>
+						<size type="int" value="0"/>
+					</layouts>
+				</hard>
+				<extream>
+					<id type="hex" min="0x00ac1051" max="0xffb18049" hashed="false"/>
+					<flags type="hex" value="0x00000001" hashed="false"/>
+					<parent>
+						<id>
+							<id>
+								<code type="hex" value="0x00000000" hashed="false"/>
+								<id type="hex" value="0x00000000" hashed="false"/>
+							</id>
+						</id>
+					</parent>
+					<layouts>
+						<size type="int" value="0"/>
+					</layouts>
+				</extream>
+			</layouts>
+			<condition>
+				<puid>
+					<code type="hex" min="0x00000000" max="0xd8efbb45" hashed="sometimes"/>
+					<id type="hex" min="0x00000000" max="0xe78458ed" hashed="false"/>
+				</puid>
+				<optional probability="0.4%">
+					<type type="int" value="1"/>
+				</optional>
+				<condition>
+					<state>
+						<optional probability="1.0%">
+							<label type="string"/>
+						</optional>
+						<optional probability="0.1%">
+							<value type="int" value="3"/>
+						</optional>
+					</state>
+					<pred type="int" min="0" max="5"/>
+				</condition>
+			</condition>
+			<delay type="int" min="0" max="2"/>
+			<max type="int" min="0" max="7"/>
+			<area>
+				<size type="int" min="0" max="4"/>
+				<optional probability="0.7%">
+					<link>
+						<id>
+							<code type="hex" value="0xa6aaf7a4" hashed="true"/>
+							<id type="hex" value="0x3fcaddcd" hashed="false"/>
+						</id>
+					</link>
+				</optional>
+				<optional probability="50.6%">
+					<value>
+						<code type="hex" min="0x18cffd98" max="0x4238cc7f" hashed="true"/>
+						<position type="vector" items="3"/>
+						<rotation type="vector" items="3"/>
+						<scale type="vector" items="3"/>
+						<optional probability="0.2%">
+							<parent>
+								<id>
+									<id>
+										<code type="hex" value="0xd8efbb45" hashed="true"/>
+										<id type="hex" value="0x49f31992" hashed="false"/>
+									</id>
+								</id>
+								<nParts type="int" value="2"/>
+							</parent>
+						</optional>
+						<optional probability="4.6%">
+							<radius type="int" value="1"/>
+						</optional>
+						<optional probability="95.4%">
+							<points type="vector" items="8"/>
+						</optional>
+						<height type="int" value="1"/>
+					</value>
+				</optional>
+			</area>
+			<resetArea>
+				<size type="int" min="0" max="5"/>
+				<optional probability="35.7%">
+					<value>
+						<code type="hex" min="0x18cffd98" max="0x4238cc7f" hashed="true"/>
+						<position type="vector" items="3"/>
+						<rotation type="vector" items="3"/>
+						<scale type="vector" items="3"/>
+						<optional probability="2.7%">
+							<radius type="int" value="1"/>
+						</optional>
+						<optional probability="97.3%">
+							<points type="vector" items="8"/>
+						</optional>
+						<height type="int" value="1"/>
+					</value>
+				</optional>
+			</resetArea>
+			<resetType type="int" min="0" max="3"/>
+			<searchArea>
+				<size type="int" min="0" max="6"/>
+				<optional probability="29.5%">
+					<value>
+						<code type="hex" min="0x18cffd98" max="0x4238cc7f" hashed="true"/>
+						<position type="vector" items="3"/>
+						<rotation type="vector" items="3"/>
+						<scale type="vector" items="3"/>
+						<optional probability="81.6%">
+							<points type="vector" items="8"/>
+						</optional>
+						<optional probability="18.4%">
+							<radius type="int" value="1"/>
+						</optional>
+						<height type="int" value="1"/>
+					</value>
+				</optional>
+			</searchArea>
+			<optional probability="0.1%">
+				<UNKNOWN>
+					<size type="int" value="0"/>
+				</UNKNOWN>
+			</optional>
+			<optional probability="99.9%">
+				<escapeArea>
+					<size type="int" min="0" max="11"/>
+					<optional probability="28.7%">
+						<value>
+							<code type="hex" min="0x18cffd98" max="0x4238cc7f" hashed="true"/>
+							<position type="vector" items="3"/>
+							<rotation type="vector" items="3"/>
+							<scale type="vector" items="3"/>
+							<optional probability="10.1%">
+								<radius type="int" value="1"/>
+							</optional>
+							<optional probability="89.9%">
+								<points type="vector" items="8"/>
+							</optional>
+							<height type="int" value="1"/>
+						</value>
+					</optional>
+				</escapeArea>
+			</optional>
+			<dist>
+				<optional probability="53.2%">
+					<resetDist type="int" min="0" max="10000"/>
+				</optional>
+				<optional probability="16.6%">
+					<position type="vector" items="3"/>
+				</optional>
+				<optional probability="0.1%">
+					<rotation type="vector" items="3"/>
+				</optional>
+				<optional probability="51.7%">
+					<areaDist type="int" min="0" max="10000"/>
+				</optional>
+				<optional probability="16.7%">
+					<searchDist type="int" min="15" max="10000"/>
+				</optional>
+				<optional probability="20.5%">
+					<guardSDist type="int" min="15" max="300"/>
+				</optional>
+				<optional probability="20.3%">
+					<guardLDist type="int" min="20" max="400"/>
+				</optional>
+				<optional probability="8.2%">
+					<escapeDist type="int" min="15" max="200"/>
+				</optional>
+			</dist>
+		</action>
+	</optional>
+	<optional probability="0.0%">
+		<action type="RoboOilArea">
+			<code type="hex" value="0x877f1dc5" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" value="0x637a99ae" hashed="false"/>
+			<attribute type="hex" value="0x00000010" hashed="false"/>
+			<location>
+				<position type="vector" items="3"/>
+			</location>
+			<radius type="int" value="3"/>
+		</action>
+	</optional>
+	<optional probability="3.0%">
+		<action type="CameraTargetAction">
+			<code type="hex" value="0x4f925d24" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x0281c9c6" max="0xfff66109" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000413" hashed="false"/>
+			<location>
+				<optional probability="94.6%">
+					<position type="vector" items="3"/>
+				</optional>
+				<optional probability="22.2%">
+					<rotation type="vector" items="3"/>
+				</optional>
+				<optional probability="13.0%">
+					<parent>
+						<id>
+							<id>
+								<code type="hex" min="0x00000000" max="0xd8efbb45" hashed="sometimes"/>
+								<id type="hex" min="0x00000000" max="0xfc9f8db8" hashed="false"/>
+							</id>
+						</id>
+						<optional probability="35.5%">
+							<nParts type="int" min="1" max="2"/>
+						</optional>
+					</parent>
+				</optional>
+			</location>
+			<area>
+				<size type="int" min="0" max="1"/>
+				<optional probability="6.3%">
+					<value>
+						<code type="hex" min="0x18cffd98" max="0x4238cc7f" hashed="true"/>
+						<position type="vector" items="3"/>
+						<rotation type="vector" items="3"/>
+						<scale type="vector" items="3"/>
+						<optional probability="20.0%">
+							<radius type="int" value="1"/>
+						</optional>
+						<optional probability="80.0%">
+							<points type="vector" items="8"/>
+						</optional>
+						<height type="int" value="1"/>
+					</value>
+				</optional>
+			</area>
+			<time_ type_0="int" min_0="-1" max_0="2" usage_0="2.1%" type_1="float" min_1="-1.00" max_1="10.00" usage_1="97.9%"/>
+			<rate_ type="float" min="0.01" max="1.00"/>
+			<optional probability="99.6%">
+				<playerForceIn_ type="int" min="0" max="1"/>
+			</optional>
+		</action>
+	</optional>
+	<optional probability="1.8%">
+		<action type="SubPhaseAction">
+			<code type="hex" value="0x12067bf0" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x01058d45" max="0xffe4a0a4" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00010410" hashed="false"/>
+			<area>
+				<size type="int" min="0" max="6"/>
+				<optional probability="20.8%">
+					<value>
+						<code type="hex" value="0x18cffd98" hashed="true"/>
+						<position type="vector" items="3"/>
+						<rotation type="vector" items="3"/>
+						<scale type="vector" items="3"/>
+						<points type="vector" items="8"/>
+						<height type="int" value="1"/>
+					</value>
+				</optional>
+			</area>
+			<subPhase type="string"/>
+			<optional probability="2.8%">
+				<fadeType type="int" min="1" max="2"/>
+			</optional>
+			<optional probability="7.5%">
+				<fadeSpeed type="int" min="1" max="2"/>
+			</optional>
+		</action>
+	</optional>
+	<optional probability="0.5%">
+		<action type="PositionJump">
+			<code type="hex" value="0xa66d6332" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x02945eb0" max="0xfeb537f0" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00010000" hashed="false"/>
+			<area>
+				<size type="int" min="0" max="3"/>
+				<optional probability="66.7%">
+					<value>
+						<code type="hex" min="0x18cffd98" max="0x4238cc7f" hashed="true"/>
+						<position type="vector" items="3"/>
+						<rotation type="vector" items="3"/>
+						<scale type="vector" items="3"/>
+						<optional probability="7.1%">
+							<radius type="int" value="1"/>
+						</optional>
+						<optional probability="3.6%">
+							<parent>
+								<id>
+									<id>
+										<code type="hex" value="0xd8efbb45" hashed="true"/>
+										<id type="hex" value="0x49f31992" hashed="false"/>
+									</id>
+								</id>
+								<nParts type="int" value="2"/>
+							</parent>
+						</optional>
+						<optional probability="92.9%">
+							<points type="vector" items="8"/>
+						</optional>
+						<height type="int" value="1"/>
+					</value>
+				</optional>
+			</area>
+			<location>
+				<position type="vector" items="3"/>
+				<optional probability="66.7%">
+					<rotation type="vector" items="3"/>
+				</optional>
+				<optional probability="12.1%">
+					<parent>
+						<id>
+							<id>
+								<code type="hex" value="0xd8efbb45" hashed="true"/>
+								<id type="hex" min="0x49f31992" max="0x4ff1eb23" hashed="false"/>
+							</id>
+						</id>
+						<nParts type="int" value="2"/>
+					</parent>
+				</optional>
+			</location>
+			<stopFrame type="int" min="0" max="10"/>
+		</action>
+	</optional>
+	<optional probability="2.5%">
+		<action type="AreaCommand">
+			<code type="hex" value="0x58534a9e" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x0117d9d0" max="0xfb77dda7" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00010000" hashed="false"/>
+			<area>
+				<size type="int" min="0" max="12"/>
+				<optional probability="99.6%">
+					<value>
+						<code type="hex" min="0x18cffd98" max="0x4238cc7f" hashed="true"/>
+						<position type="vector" items="3"/>
+						<rotation type="vector" items="3"/>
+						<scale type="vector" items="3"/>
+						<optional probability="6.1%">
+							<parent>
+								<id>
+									<id>
+										<code type="hex" value="0xd8efbb45" hashed="true"/>
+										<id type="hex" min="0x06d42999" max="0x9febf428" hashed="false"/>
+									</id>
+								</id>
+								<optional probability="40.0%">
+									<nParts type="int" value="2"/>
+								</optional>
+							</parent>
+						</optional>
+						<optional probability="5.5%">
+							<radius type="int" value="1"/>
+						</optional>
+						<optional probability="94.5%">
+							<points type="vector" items="8"/>
+						</optional>
+						<height type="int" value="1"/>
+					</value>
+				</optional>
+			</area>
+			<puid>
+				<code type="hex" min="0x00000000" max="0xd8efbb45" hashed="true"/>
+				<id type="hex" min="0x00000000" max="0xffc5cf06" hashed="sometimes"/>
+			</puid>
+			<optional probability="97.7%">
+				<hit>
+					<command>
+						<label type="string"/>
+					</command>
+					<optional probability="11.2%">
+						<args type_0="int" min_0="3" max_0="11" usage_0="7.1%" type_1="string" usage_1="92.9%"/>
+					</optional>
+				</hit>
+			</optional>
+			<optional probability="15.2%">
+				<hitout>
+					<command>
+						<label type="string"/>
+					</command>
+					<optional probability="7.7%">
+						<args type="string"/>
+					</optional>
+				</hitout>
+			</optional>
+		</action>
+	</optional>
+	<optional probability="1.4%">
+		<action type="FadeAction">
+			<code type="hex" value="0x47bb6f72" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x00ec3de7" max="0xfff386b3" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00001818" hashed="false"/>
+			<optional probability="54.3%">
+				<param>
+					<color type="int" min="0" max="1"/>
+					<speed type="int" min="0" max="2"/>
+					<type type="int" min="0" max="5"/>
+					<bNoFade type="int" min="0" max="1852727552"/>
+				</param>
+			</optional>
+			<optional probability="51.1%">
+				<time type="float" min="0.30" max="5.00"/>
+			</optional>
+			<type type="int" min="0" max="3"/>
+			<optional probability="7.4%">
+				<hack_whiteFade type="int" value="1"/>
+			</optional>
+		</action>
+	</optional>
+	<optional probability="0.1%">
+		<action type="CameraFovy">
+			<code type="hex" value="0x008ff939" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x0cb7cd96" max="0x9656a076" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000001" hashed="false"/>
+			<area>
+				<size type="int" value="0"/>
+			</area>
+			<fovy_ type="int" min="40" max="60"/>
+		</action>
+	</optional>
+	<optional probability="1.2%">
+		<action type="Caption">
+			<code type="hex" value="0x39c170f9" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x00fad31c" max="0xfd999d5d" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000012" hashed="false"/>
+			<weak_ type="int" min="0" max="1"/>
+		</action>
+	</optional>
+	<optional probability="2.2%">
+		<action type="BezierCurveAction">
+			<code type="hex" value="0x5874fcd9" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x0010bbfb" max="0xffe55af7" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000010" hashed="false"/>
+			<curve>
+				<attribute type="hex" min="0x00000000" max="0xc3d8425a" hashed="false"/>
+				<optional probability="3.8%">
+					<parent>
+						<id>
+							<id>
+								<code type="hex" value="0xd8efbb45" hashed="true"/>
+								<id type="hex" min="0x188344c3" max="0x7fe9a224" hashed="false"/>
+							</id>
+						</id>
+						<optional probability="46.7%">
+							<nParts type="int" value="2"/>
+						</optional>
+					</parent>
+				</optional>
+				<controls>
+					<size type="int" min="0" max="74"/>
+					<optional probability="99.7%">
+						<value>
+							<cp type="vector" items="6"/>
+						</value>
+					</optional>
+				</controls>
+				<nodes>
+					<size type="int" min="0" max="74"/>
+					<optional probability="99.7%">
+						<value>
+							<point type="vector" items="3"/>
+							<optional probability="5.3%">
+								<upVec type="vector" items="3"/>
+							</optional>
+						</value>
+					</optional>
+				</nodes>
+			</curve>
+		</action>
+	</optional>
+	<optional probability="0.7%">
+		<action type="AreaEntityAction">
+			<code type="hex" value="0x1c24e8ca" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x02bcb6d6" max="0xf922ad13" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000010" hashed="false"/>
+			<area>
+				<size type="int" min="1" max="3"/>
+				<value>
+					<code type="hex" min="0x18cffd98" max="0x4238cc7f" hashed="true"/>
+					<position type="vector" items="3"/>
+					<rotation type="vector" items="3"/>
+					<scale type="vector" items="3"/>
+					<optional probability="3.3%">
+						<parent>
+							<id>
+								<id>
+									<code type="hex" value="0xd8efbb45" hashed="true"/>
+									<id type="hex" min="0x188344c3" max="0xd9ee4221" hashed="false"/>
+								</id>
+							</id>
+						</parent>
+					</optional>
+					<optional probability="19.7%">
+						<radius type="int" value="1"/>
+					</optional>
+					<optional probability="80.3%">
+						<points type="vector" items="8"/>
+					</optional>
+					<height type="int" value="1"/>
+				</value>
+			</area>
+			<collec>
+				<size type="int" min="1" max="27"/>
+				<value>
+					<code type="hex" value="0xd8efbb45" hashed="true"/>
+					<id type="hex" min="0x0110290d" max="0xfe828402" hashed="false"/>
+				</value>
+			</collec>
+		</action>
+	</optional>
+	<optional probability="0.0%">
+		<action type="BunkerStop">
+			<code type="hex" value="0x6c2ad835" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" value="0x6b1f1cb3" hashed="false"/>
+			<attribute type="hex" value="0x00000000" hashed="false"/>
+			<startArea>
+				<size type="int" value="1"/>
+				<value>
+					<code type="hex" value="0x18cffd98" hashed="true"/>
+					<position type="vector" items="3"/>
+					<rotation type="vector" items="3"/>
+					<scale type="vector" items="3"/>
+					<parent>
+						<id>
+							<id>
+								<code type="hex" value="0xd8efbb45" hashed="true"/>
+								<id type="hex" value="0x188344c3" hashed="false"/>
+							</id>
+						</id>
+					</parent>
+					<points type="vector" items="8"/>
+					<height type="int" value="1"/>
+				</value>
+			</startArea>
+			<endArea>
+				<size type="int" value="1"/>
+				<value>
+					<code type="hex" value="0x18cffd98" hashed="true"/>
+					<position type="vector" items="3"/>
+					<rotation type="vector" items="3"/>
+					<scale type="vector" items="3"/>
+					<parent>
+						<id>
+							<id>
+								<code type="hex" value="0xd8efbb45" hashed="true"/>
+								<id type="hex" value="0x188344c3" hashed="false"/>
+							</id>
+						</id>
+					</parent>
+					<points type="vector" items="8"/>
+					<height type="int" value="1"/>
+				</value>
+			</endArea>
+		</action>
+	</optional>
+	<optional probability="0.4%">
+		<action type="EmListUnlockAction">
+			<code type="hex" value="0xc168700d" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x0046ea3f" max="0xf4ef119e" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000012" hashed="false"/>
+			<ObjId type="string"/>
+			<setType type="int" min="0" max="5"/>
+			<setFlag type="hex" value="0x00000000" hashed="false"/>
+			<optional probability="3.6%">
+				<setRoutine type="int" value="69"/>
+			</optional>
+		</action>
+	</optional>
+	<optional probability="0.6%">
+		<action type="CameraShooting">
+			<code type="hex" value="0x1b1fe1ea" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x01603d34" max="0xff3b9ab6" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000003" hashed="false"/>
+			<optional probability="38.4%">
+				<rotation_ type="vector" items="3"/>
+			</optional>
+			<optional probability="51.4%">
+				<rot_max_ type="int" min="2" max="120"/>
+			</optional>
+			<optional probability="76.0%">
+				<rot_spd_ type="float" min="0.08" max="1.00"/>
+			</optional>
+			<optional probability="8.9%">
+				<roll_ type="int" min="-100" max="60"/>
+			</optional>
+			<optional probability="97.3%">
+				<length_ type="int" min="-66" max="200"/>
+			</optional>
+			<optional probability="70.5%">
+				<rotX_ type="int" min="-25" max="75"/>
+			</optional>
+			<optional probability="0.7%">
+				<camOffset_ type="vector" items="3"/>
+			</optional>
+			<optional probability="65.8%">
+				<addRotSpd_ type_0="int" min_0="-9" max_0="4" usage_0="15.6%" type_1="float" min_1="-9.00" max_1="8.00" usage_1="84.4%"/>
+			</optional>
+			<optional probability="57.5%">
+				<addLenSpd_ type_0="int" min_0="-4" max_0="20" usage_0="67.9%" type_1="float" min_1="-9.00" max_1="10.00" usage_1="32.1%"/>
+			</optional>
+			<optional probability="18.5%">
+				<rollSpd_ type="int" min="-9" max="90"/>
+			</optional>
+			<optional probability="8.2%">
+				<camReset_ type="int" value="1"/>
+			</optional>
+			<optional probability="38.4%">
+				<rotSpd_ type="vector" items="3"/>
+			</optional>
+			<optional probability="0.7%">
+				<heightSpd_ type="int" value="-9"/>
+			</optional>
+			<optional probability="91.1%">
+				<handBlur_ type="int" value="1"/>
+			</optional>
+			<optional probability="94.5%">
+				<handBlurRate_ type="float" min="0.00" max="40.00"/>
+			</optional>
+			<optional probability="78.8%">
+				<handBlurSpdRate_ type_0="int" value_0="80" usage_0="2.6%" type_1="float" min_1="0.00" max_1="80.00" usage_1="97.4%"/>
+			</optional>
+			<optional probability="69.2%">
+				<waveXMax_ type="int" min="1" max="20"/>
+			</optional>
+			<optional probability="82.2%">
+				<waveXSpd_ type_0="int" value_0="1" usage_0="0.8%" type_1="float" min_1="0.10" max_1="1.00" usage_1="99.2%"/>
+			</optional>
+			<optional probability="41.1%">
+				<fovy_ type="int" min="26" max="75"/>
+			</optional>
+			<optional probability="34.9%">
+				<pathRate_ type="float" min="0.10" max="1.85"/>
+			</optional>
+		</action>
+	</optional>
+	<optional probability="0.2%">
+		<action type="ScrollMap">
+			<code type="hex" value="0x08745576" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x0abb4590" max="0xf0adc3d1" hashed="false"/>
+			<attribute type="hex" value="0x00000000" hashed="false"/>
+			<speed type="int" min="-2" max="1"/>
+			<worldType type="int" min="0" max="7"/>
+			<camType type="int" min="0" max="3"/>
+			<phase type="hex" min="0x00000100" max="0xffffffff" hashed="false"/>
+			<subPhase type="string"/>
+			<skipSubPhase_1 type="string"/>
+			<skipIndex_1 type="int" value="0"/>
+			<skipSubPhase_2 type="string"/>
+			<skipIndex_2 type="int" value="0"/>
+			<skipSubPhase_3 type="string"/>
+			<skipIndex_3 type="int" min="0" max="1"/>
+			<skipSubPhase_4 type="string"/>
+			<skipIndex_4 type="int" value="0"/>
+			<skipSubPhase_5 type="string"/>
+			<skipIndex_5 type="int" value="0"/>
+			<startType type="int" min="0" max="1"/>
+			<startObjPos type="int" min="300" max="500"/>
+			<collection>
+				<size type="int" min="0" max="25"/>
+				<optional probability="91.7%">
+					<value>
+						<command type="int" min="0" max="1"/>
+						<optional probability="5.6%">
+							<layoutId type="hex" min="0x177b10b1" max="0x690736c2" hashed="false"/>
+						</optional>
+						<optional probability="94.4%">
+							<bgType type="int" min="0" max="5"/>
+						</optional>
+						<optional probability="94.4%">
+							<bgAssetType type="int" min="-1" max="15"/>
+						</optional>
+						<optional probability="94.4%">
+							<index type="int" min="1" max="35"/>
+						</optional>
+						<optional probability="94.4%">
+							<repeat type="int" min="0" max="1"/>
+						</optional>
+						<optional probability="14.4%">
+							<ckCamOut type="int" min="1" max="1814293216"/>
+						</optional>
+						<optional probability="14.4%">
+							<skipIndex type="int" value="1"/>
+						</optional>
+					</value>
+				</optional>
+			</collection>
+		</action>
+	</optional>
+	<optional probability="2.0%">
+		<action type="ShootingEnemyCurveAction">
+			<code type="hex" value="0x4d5c2719" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x0005abce" max="0xff48947f" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000003" hashed="false"/>
+			<bezier_>
+				<attribute type="hex" min="0x00000000" max="0xc630ad6f" hashed="false"/>
+				<controls>
+					<size type="int" min="0" max="8"/>
+					<optional probability="27.9%">
+						<value>
+							<cp type="vector" items="6"/>
+						</value>
+					</optional>
+				</controls>
+				<nodes>
+					<size type="int" min="0" max="8"/>
+					<optional probability="27.9%">
+						<value>
+							<point type="vector" items="3"/>
+							<startAttack_ type="int" min="0" max="1"/>
+							<endAttack_ type="int" min="0" max="1"/>
+							<stayTime_ type="int" min="0" max="99"/>
+							<rotRate_ type="int" value="0"/>
+							<speed_ type_0="int" value_0="0" usage_0="0.3%" type_1="float" min_1="-1.00" max_1="0.60" usage_1="99.7%"/>
+							<dirType_ type="int" min="-1" max="0"/>
+							<moveType_ type="int" value="-1"/>
+							<moveSpeed_ type_0="int" value_0="-1" usage_0="66.6%" type_1="float" min_1="-1.00" max_1="0.30" usage_1="33.4%"/>
+							<moveRadius_ type="int" value="-1"/>
+							<shotType_ type="int" value="-1"/>
+							<shotTime_ type="int" min="-1" max="5"/>
+							<shotInterval_ type_0="int" value_0="-1" usage_0="18.5%" type_1="float" min_1="-1.00" max_1="0.20" usage_1="81.5%"/>
+							<shotReload_ type="int" min="-1" max="99"/>
+							<shotWait_ type="int" value="-1"/>
+							<shotSpeed_ type="int" value="-1"/>
+							<shotShakeRadius_ type="int" value="-1"/>
+							<shotShakeAngle_ type="int" value="-1"/>
+							<shotStrongRate_ type="int" value="-1"/>
+							<parameter_ type="vector" items="40"/>
+							<resetControls_ type="int" min="0" max="1"/>
+						</value>
+					</optional>
+				</nodes>
+			</bezier_>
+			<bezierCreatedCenter_ type="vector" items="3"/>
+			<bezierCreatedFront_ type="vector" items="3"/>
+			<bezierCreatedUp_ type="vector" items="3"/>
+			<locationStart_>
+				<optional probability="98.5%">
+					<position type="vector" items="3"/>
+				</optional>
+				<optional probability="35.0%">
+					<rotation type="vector" items="3"/>
+				</optional>
+			</locationStart_>
+			<locationLoop_>
+				<optional probability="98.5%">
+					<position type="vector" items="3"/>
+				</optional>
+				<optional probability="34.2%">
+					<rotation type="vector" items="3"/>
+				</optional>
+			</locationLoop_>
+			<locationEnd_>
+				<optional probability="98.5%">
+					<position type="vector" items="3"/>
+				</optional>
+				<optional probability="29.3%">
+					<rotation type="vector" items="3"/>
+				</optional>
+			</locationEnd_>
+			<offsetStart_ type="vector" items="3"/>
+			<offsetLoop_ type="vector" items="3"/>
+			<offsetEnd_ type="vector" items="3"/>
+			<loopNum_ type="int" value="0"/>
+			<reverse_ type="int" min="0" max="1"/>
+			<startAttack_ type="int" min="0" max="1"/>
+			<endAttack_ type="int" value="0"/>
+			<stayTime_ type="int" min="-1" max="99"/>
+			<rotRate_ type_0="int" value_0="0" usage_0="10.8%" type_1="float" min_1="0.00" max_1="1.50" usage_1="89.2%"/>
+			<speed_ type_0="int" value_0="0" usage_0="2.0%" type_1="float" min_1="0.00" max_1="2.00" usage_1="98.0%"/>
+			<dirType_ type="int" min="-1" max="3"/>
+			<moveType_ type="int" min="-1" max="4"/>
+			<moveSpeed_ type="float" min="-1.00" max="0.70"/>
+			<moveRadius_ type_0="int" min_0="-1" max_0="6" usage_0="22.6%" type_1="float" min_1="-1.00" max_1="8.00" usage_1="77.4%"/>
+			<shotType_ type="int" min="-1" max="7"/>
+			<shotTime_ type="float" min="-1.00" max="99.00"/>
+			<shotInterval_ type="float" min="-1.00" max="1.00"/>
+			<shotReload_ type_0="int" value_0="1" usage_0="2.0%" type_1="float" min_1="-1.00" max_1="99.00" usage_1="98.0%"/>
+			<shotWait_ type_0="int" value_0="0" usage_0="2.0%" type_1="float" min_1="-1.00" max_1="1.50" usage_1="98.0%"/>
+			<shotSpeedScale_ type_0="int" value_0="1" usage_0="8.4%" type_1="float" min_1="-1.00" max_1="2.00" usage_1="91.6%"/>
+			<shotShakeRadius_ type_0="int" min_0="-1" max_0="1" usage_0="34.7%" type_1="float" min_1="-1.00" max_1="1.00" usage_1="65.3%"/>
+			<shotShakeAngle_ type="int" min="-1" max="30"/>
+			<shotStrongRate_ type="float" min="-1.00" max="1.00"/>
+			<nodeComeSpeed_ type="float" min="-1.00" max="1.00"/>
+			<nodeLeaveSpeed_ type="float" min="-1.00" max="0.80"/>
+			<parameter_ type="vector" items="40"/>
+			<debug_ type="int" value="0"/>
+		</action>
+	</optional>
+	<optional probability="0.0%">
+		<action type="UISkillDlGaugeAction">
+			<code type="hex" value="0x46382feb" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" value="0x442b092d" hashed="false"/>
+			<attribute type="hex" value="0x00000012" hashed="false"/>
+		</action>
+	</optional>
+	<optional probability="0.6%">
+		<action type="PositionSet">
+			<code type="hex" value="0xe300079d" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x013869fb" max="0xf9b72d06" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000803" hashed="false"/>
+			<location>
+				<position type="vector" items="3"/>
+				<optional probability="88.6%">
+					<rotation type="vector" items="3"/>
+				</optional>
+			</location>
+		</action>
+	</optional>
+	<optional probability="1.6%">
+		<action type="ResetAction">
+			<code type="hex" value="0xc43b97cd" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x0002a506" max="0xffab8cfb" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000400" hashed="false"/>
+		</action>
+	</optional>
+	<optional probability="0.1%">
+		<action type="CameraResetAction">
+			<code type="hex" value="0x20b7caf9" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x08fd7c5e" max="0xde5aab7a" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000003" hashed="false"/>
+			<frame_ type="int" min="15" max="240"/>
+			<offset_ type="int" value="0"/>
+			<rate_ type_0="int" value_0="1" usage_0="83.3%" type_1="float" value_1="0.10" usage_1="16.7%"/>
+			<maxX_ type="int" min="3" max="6"/>
+			<maxY_ type="int" min="6" max="12"/>
+		</action>
+	</optional>
+	<optional probability="0.2%">
+		<action type="ConditionAction">
+			<code type="hex" value="0x0e46bfad" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x366f1139" max="0xf0a46cda" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000010" hashed="false"/>
+			<delay type="int" value="0"/>
+			<cond>
+				<optional probability="53.8%">
+					<type type="int" min="1" max="2"/>
+				</optional>
+				<puid>
+					<code type="hex" min="0xa6aaf7a4" max="0xd8efbb45" hashed="true"/>
+					<id type="hex" min="0x165233bd" max="0xdfeec330" hashed="sometimes"/>
+				</puid>
+				<condition>
+					<state>
+						<label type="string"/>
+						<optional probability="7.7%">
+							<value type="int" value="99"/>
+						</optional>
+					</state>
+					<pred type="int" min="0" max="5"/>
+				</condition>
+			</cond>
+			<puid>
+				<code type="hex" min="0xa6aaf7a4" max="0xd8efbb45" hashed="true"/>
+				<id type="hex" min="0x07680f1d" max="0xf69a67fd" hashed="false"/>
+			</puid>
+			<command>
+				<label type="string"/>
+			</command>
+			<bOnce type="int" min="0" max="1"/>
+			<optional probability="15.4%">
+				<args type="string"/>
+			</optional>
+		</action>
+	</optional>
+	<optional probability="0.1%">
+		<action type="AirBezierAction">
+			<code type="hex" value="0xa2de6cb5" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x45ebb824" max="0xc001343e" hashed="false"/>
+			<attribute type="hex" value="0x00000002" hashed="false"/>
+			<slowly_ type="int" value="0"/>
+			<route>
+				<attribute type="hex" min="0x00000000" max="0x000000e0" hashed="false"/>
+				<controls>
+					<size type="int" value="2"/>
+					<value>
+						<cp type="vector" items="6"/>
+					</value>
+				</controls>
+				<nodes>
+					<size type="int" value="2"/>
+					<value>
+						<point type="vector" items="3"/>
+						<slowly_ type="int" value="0"/>
+						<speed type="int" value="-1"/>
+						<speedInterpTime_ type="int" value="-1"/>
+						<speedInterpType type="int" value="0"/>
+						<radius type="int" value="-1"/>
+						<distanceX type="int" value="-1"/>
+						<distanceFront type="int" value="-1"/>
+						<distanceBack type="int" value="-1"/>
+						<boss_ type="int" value="0"/>
+						<bossCameraAngleY_ type="int" value="-1"/>
+						<bossCameraAngleMaxX_ type="int" value="-1"/>
+						<bossCameraResetWaitX_ type="int" value="-1"/>
+						<bossCameraResetTimeX_ type="int" value="-1"/>
+						<bossCameraResetTypeX_ type="int" value="0"/>
+						<bossCameraAngleMaxY_ type="int" value="-1"/>
+						<bossCameraResetWaitY_ type="int" value="-1"/>
+						<bossCameraResetTimeY_ type="int" value="-1"/>
+						<bossCameraResetTypeY_ type="int" value="0"/>
+						<vertical type="int" value="0"/>
+						<intercept type="int" value="0"/>
+						<fighter type="int" value="0"/>
+						<fighterVertical type="int" value="0"/>
+						<fighterVerticalLimitUp type="int" value="-1"/>
+						<fighterVerticalLimitDown type="int" value="-1"/>
+						<fixCamFront_ type="int" value="0"/>
+						<fixCamFrontOffsetAngle_ type="int" value="-1"/>
+						<fixCamFrontInterpAccel_ type="int" value="-1"/>
+						<fixCamFrontInterpTime_ type="int" value="-1"/>
+						<accType type="int" value="0"/>
+						<bulletScalePlayer_ type="int" value="-1"/>
+						<bulletScaleEnemy_ type="int" value="-1"/>
+						<bulletAttackScale_ type="int" value="0"/>
+						<enemyPathHeightUse_ type="int" value="0"/>
+						<usePathFront_ type="int" value="0"/>
+						<useCameraShake_ type="int" value="0"/>
+						<cameraShakePosRadiusMax_ type="vector" items="3"/>
+						<cameraShakePosRadiusMin_ type="vector" items="3"/>
+						<cameraShakePosSpeedMax_ type="vector" items="3"/>
+						<cameraShakePosSpeedMin_ type="vector" items="3"/>
+						<cameraShakePosAccel_ type="vector" items="3"/>
+						<cameraShakeRotAngleMax_ type="vector" items="3"/>
+						<cameraShakeRotAngleMin_ type="vector" items="3"/>
+						<cameraShakeRotSpeedMax_ type="vector" items="3"/>
+						<cameraShakeRotSpeedMin_ type="vector" items="3"/>
+						<cameraShakeRotAccel_ type="vector" items="3"/>
+						<pathRollType_ type="int" value="0"/>
+						<pathRollAngle_ type="int" value="-1"/>
+						<pathRollTime_ type="int" value="-1"/>
+						<noControl_ type="int" value="0"/>
+						<resetControls_ type="int" value="0"/>
+					</value>
+				</nodes>
+			</route>
+			<upRoute_>
+				<attribute type="hex" min="0x00000000" max="0x000000e0" hashed="false"/>
+				<controls>
+					<size type="int" min="0" max="8"/>
+					<optional probability="66.7%">
+						<value>
+							<cp type="vector" items="6"/>
+						</value>
+					</optional>
+				</controls>
+				<nodes>
+					<size type="int" min="0" max="8"/>
+					<optional probability="66.7%">
+						<value>
+							<point type="vector" items="3"/>
+							<slowly_ type="int" value="0"/>
+							<speed type="int" value="-1"/>
+							<speedInterpTime_ type="int" value="-1"/>
+							<speedInterpType type="int" value="0"/>
+							<radius type="int" value="-1"/>
+							<distanceX type="int" value="-1"/>
+							<distanceFront type="int" value="-1"/>
+							<distanceBack type="int" value="-1"/>
+							<boss_ type="int" value="0"/>
+							<bossCameraAngleY_ type="int" value="-1"/>
+							<bossCameraAngleMaxX_ type="int" value="-1"/>
+							<bossCameraResetWaitX_ type="int" value="-1"/>
+							<bossCameraResetTimeX_ type="int" value="-1"/>
+							<bossCameraResetTypeX_ type="int" value="0"/>
+							<bossCameraAngleMaxY_ type="int" value="-1"/>
+							<bossCameraResetWaitY_ type="int" value="-1"/>
+							<bossCameraResetTimeY_ type="int" value="-1"/>
+							<bossCameraResetTypeY_ type="int" value="0"/>
+							<vertical type="int" value="0"/>
+							<intercept type="int" value="0"/>
+							<fighter type="int" value="0"/>
+							<fighterVertical type="int" value="0"/>
+							<fighterVerticalLimitUp type="int" value="-1"/>
+							<fighterVerticalLimitDown type="int" value="-1"/>
+							<fixCamFront_ type="int" value="0"/>
+							<fixCamFrontOffsetAngle_ type="int" value="-1"/>
+							<fixCamFrontInterpAccel_ type="int" value="-1"/>
+							<fixCamFrontInterpTime_ type="int" value="-1"/>
+							<accType type="int" value="0"/>
+							<bulletScalePlayer_ type="int" value="-1"/>
+							<bulletScaleEnemy_ type="int" value="-1"/>
+							<bulletAttackScale_ type="int" value="0"/>
+							<enemyPathHeightUse_ type="int" value="0"/>
+							<usePathFront_ type="int" value="0"/>
+							<useCameraShake_ type="int" value="0"/>
+							<cameraShakePosRadiusMax_ type="vector" items="3"/>
+							<cameraShakePosRadiusMin_ type="vector" items="3"/>
+							<cameraShakePosSpeedMax_ type="vector" items="3"/>
+							<cameraShakePosSpeedMin_ type="vector" items="3"/>
+							<cameraShakePosAccel_ type="vector" items="3"/>
+							<cameraShakeRotAngleMax_ type="vector" items="3"/>
+							<cameraShakeRotAngleMin_ type="vector" items="3"/>
+							<cameraShakeRotSpeedMax_ type="vector" items="3"/>
+							<cameraShakeRotSpeedMin_ type="vector" items="3"/>
+							<cameraShakeRotAccel_ type="vector" items="3"/>
+							<pathRollType_ type="int" value="0"/>
+							<pathRollAngle_ type="int" value="-1"/>
+							<pathRollTime_ type="int" value="-1"/>
+							<noControl_ type="int" value="0"/>
+							<resetControls_ type="int" value="0"/>
+						</value>
+					</optional>
+				</nodes>
+			</upRoute_>
+			<startArea>
+				<size type="int" min="1" max="2"/>
+				<value>
+					<code type="hex" value="0x18cffd98" hashed="true"/>
+					<position type="vector" items="3"/>
+					<rotation type="vector" items="3"/>
+					<scale type="vector" items="3"/>
+					<points type="vector" items="8"/>
+					<height type="int" value="1"/>
+				</value>
+			</startArea>
+			<endArea>
+				<size type="int" value="0"/>
+			</endArea>
+			<speed type="float" min="1.50" max="3.50"/>
+			<speedInterpTime_ type="int" value="0"/>
+			<speedInterpType type="int" min="0" max="1"/>
+			<radius type="int" value="2"/>
+			<distanceX type="int" min="16" max="24"/>
+			<distanceFront type="int" min="0" max="20"/>
+			<distanceBack type="int" min="0" max="20"/>
+			<boss_ type="int" value="0"/>
+			<bossCameraAngleY_ type="int" value="90"/>
+			<bossCameraAngleMaxX_ type="int" value="45"/>
+			<bossCameraResetWaitX_ type="int" value="2"/>
+			<bossCameraResetTimeX_ type="int" value="1"/>
+			<bossCameraResetTypeX_ type="int" value="0"/>
+			<bossCameraAngleMaxY_ type="int" value="45"/>
+			<bossCameraResetWaitY_ type="int" value="2"/>
+			<bossCameraResetTimeY_ type="int" value="1"/>
+			<bossCameraResetTypeY_ type="int" value="0"/>
+			<vertical type="int" value="0"/>
+			<intercept type="int" value="0"/>
+			<fighter type="int" value="1"/>
+			<fighterVertical type="int" min="0" max="1"/>
+			<fighterVerticalLimitUp type="int" min="8" max="13"/>
+			<fighterVerticalLimitDown type="int" min="9" max="10"/>
+			<fixCamFront_ type="int" value="1"/>
+			<fixCamFrontOffsetAngle_ type="int" min="0" max="90"/>
+			<fixCamFrontInterpAccel_ type="int" value="10"/>
+			<fixCamFrontInterpTime_ type="int" value="0"/>
+			<accType type="int" value="0"/>
+			<bulletScalePlayer_ type="float" value="2.50"/>
+			<bulletScaleEnemy_ type="float" value="2.50"/>
+			<bulletAttackScale_ type="int" min="0" max="1"/>
+			<enemyPathHeightUse_ type="int" value="1"/>
+			<usePathFront_ type="int" value="0"/>
+			<useCameraShake_ type="int" value="0"/>
+			<cameraShakePosRadiusMax_ type="vector" items="3"/>
+			<cameraShakePosRadiusMin_ type="vector" items="3"/>
+			<cameraShakePosSpeedMax_ type="vector" items="3"/>
+			<cameraShakePosSpeedMin_ type="vector" items="3"/>
+			<cameraShakePosAccel_ type="vector" items="3"/>
+			<cameraShakeRotAngleMax_ type="vector" items="3"/>
+			<cameraShakeRotAngleMin_ type="vector" items="3"/>
+			<cameraShakeRotSpeedMax_ type="vector" items="3"/>
+			<cameraShakeRotSpeedMin_ type="vector" items="3"/>
+			<cameraShakeRotAccel_ type="vector" items="3"/>
+			<pathRollType_ type="int" value="0"/>
+			<pathRollAngle_ type="int" value="0"/>
+			<pathRollTime_ type="int" value="0"/>
+			<noControl_ type="int" value="0"/>
+			<frustumLimited_ type="int" value="0"/>
+			<debug_ type="int" value="0"/>
+		</action>
+	</optional>
+	<optional probability="0.0%">
+		<action type="SubphaseChangeAction">
+			<code type="hex" value="0x74842aaa" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" value="0x69cf24f1" hashed="false"/>
+			<attribute type="hex" value="0x00000000" hashed="false"/>
+			<subPhaseName type="string"/>
+		</action>
+	</optional>
+	<optional probability="0.2%">
+		<action type="SeamlessMapStopArea">
+			<code type="hex" value="0xfd74c4a9" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x2b41490a" max="0xf573b7d3" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000001" hashed="false"/>
+			<area>
+				<size type="int" min="1" max="2"/>
+				<value>
+					<code type="hex" min="0x18cffd98" max="0x4238cc7f" hashed="true"/>
+					<position type="vector" items="3"/>
+					<rotation type="vector" items="3"/>
+					<scale type="vector" items="3"/>
+					<optional probability="6.2%">
+						<radius type="int" value="1"/>
+					</optional>
+					<optional probability="93.8%">
+						<points type="vector" items="8"/>
+					</optional>
+					<height type="int" value="1"/>
+				</value>
+			</area>
+			<optional probability="14.3%">
+				<dispMap type="int" value="0"/>
+			</optional>
+			<optional probability="21.4%">
+				<fall type="int" value="1"/>
+			</optional>
+		</action>
+	</optional>
+	<optional probability="0.2%">
+		<action type="PositionSetBunker">
+			<code type="hex" value="0x43e6f90c" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x07060c99" max="0xd8bed99e" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000813" hashed="false"/>
+			<location>
+				<position type="vector" items="3"/>
+				<rotation type="vector" items="3"/>
+				<optional probability="83.3%">
+					<parent>
+						<id>
+							<id>
+								<code type="hex" value="0xd8efbb45" hashed="true"/>
+								<id type="hex" value="0x188344c3" hashed="false"/>
+							</id>
+						</id>
+					</parent>
+				</optional>
+			</location>
+			<optional probability="33.3%">
+				<jumpTo_ type="int" min="1" max="3"/>
+			</optional>
+		</action>
+	</optional>
+	<optional probability="0.1%">
+		<action type="AirCurveAction">
+			<code type="hex" value="0x8f96a9ae" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x11772121" max="0xfd6f07eb" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000003" hashed="false"/>
+			<slowly_ type="int" min="0" max="1"/>
+			<route>
+				<attribute type="hex" min="0x000000e0" max="0x04032f41" hashed="false"/>
+				<optional probability="25.0%">
+					<parent>
+						<id>
+							<id>
+								<code type="hex" value="0xd8efbb45" hashed="true"/>
+								<id type="hex" value="0x83b95293" hashed="false"/>
+							</id>
+						</id>
+					</parent>
+				</optional>
+				<nodes>
+					<size type="int" min="2" max="17"/>
+					<value>
+						<point type="vector" items="3"/>
+					</value>
+				</nodes>
+				<resolution type="int" min="16" max="100"/>
+			</route>
+			<upRoute_>
+				<attribute type="hex" value="0x00000000" hashed="false"/>
+				<nodes>
+					<size type="int" min="0" max="4"/>
+					<optional probability="50.0%">
+						<value>
+							<point type="vector" items="3"/>
+						</value>
+					</optional>
+				</nodes>
+				<resolution type="int" value="8"/>
+			</upRoute_>
+			<startArea>
+				<size type="int" min="1" max="3"/>
+				<value>
+					<code type="hex" value="0x18cffd98" hashed="true"/>
+					<position type="vector" items="3"/>
+					<rotation type="vector" items="3"/>
+					<scale type="vector" items="3"/>
+					<optional probability="18.2%">
+						<parent>
+							<id>
+								<id>
+									<code type="hex" value="0xd8efbb45" hashed="true"/>
+									<id type="hex" value="0x83b95293" hashed="false"/>
+								</id>
+							</id>
+						</parent>
+					</optional>
+					<points type="vector" items="8"/>
+					<height type="int" value="1"/>
+				</value>
+			</startArea>
+			<endArea>
+				<size type="int" value="0"/>
+			</endArea>
+			<speed type="int" min="0" max="6"/>
+			<speedInterpTime_ type="int" min="0" max="3"/>
+			<speedInterpType type="int" min="0" max="2"/>
+			<radius type="int" min="2" max="5"/>
+			<distanceX type="int" min="0" max="30"/>
+			<distanceFront type="int" min="10" max="25"/>
+			<distanceBack type="int" min="6" max="20"/>
+			<boss_ type="int" min="0" max="1"/>
+			<bossCameraAngleY_ type="int" min="90" max="260"/>
+			<bossCameraAngleMaxX_ type="int" min="45" max="50"/>
+			<bossCameraResetWaitX_ type="int" value="2"/>
+			<bossCameraResetTimeX_ type="int" value="1"/>
+			<bossCameraResetTypeX_ type="int" value="0"/>
+			<bossCameraAngleMaxY_ type="int" min="45" max="60"/>
+			<bossCameraResetWaitY_ type="int" value="2"/>
+			<bossCameraResetTimeY_ type="int" value="1"/>
+			<bossCameraResetTypeY_ type="int" value="0"/>
+			<vertical type="int" min="0" max="1"/>
+			<intercept type="int" value="0"/>
+			<fighter type="int" min="0" max="1"/>
+			<fighterVertical type="int" min="0" max="1"/>
+			<fighterVerticalLimitUp type="float" min="7.50" max="25.00"/>
+			<fighterVerticalLimitDown type="int" min="3" max="35"/>
+			<fixCamFront_ type="int" value="0"/>
+			<fixCamFrontOffsetAngle_ type="int" value="0"/>
+			<fixCamFrontInterpAccel_ type="int" min="5" max="10"/>
+			<fixCamFrontInterpTime_ type="int" value="0"/>
+			<accType type="int" value="0"/>
+			<bulletScalePlayer_ type="float" value="2.50"/>
+			<bulletScaleEnemy_ type="float" value="2.50"/>
+			<bulletAttackScale_ type="int" value="0"/>
+			<enemyPathHeightUse_ type="int" min="0" max="1"/>
+			<debug_ type="int" value="0"/>
+		</action>
+	</optional>
+	<optional probability="0.2%">
+		<action type="HackingRequestStartAction">
+			<code type="hex" value="0x72d78995" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x0125b3d2" max="0xf3a7c2c6" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000002" hashed="false"/>
+			<hackingLabel type="string"/>
+			<hackingLabelNo type="int" value="0"/>
+			<questNo type="string"/>
+			<ActiveHackFlag type="int" value="1"/>
+			<Direct type="int" min="0" max="1"/>
+			<RotY type="int" value="0"/>
+			<optional probability="20.0%">
+				<ForceStart type="int" value="1"/>
+			</optional>
+			<optional probability="26.7%">
+				<startFadeType type="int" min="1" max="3"/>
+			</optional>
+		</action>
+	</optional>
+	<optional probability="0.2%">
+		<action type="SoundNovelAction">
+			<code type="hex" value="0xa8c59a0e" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x0c2be04a" max="0xf4128e4b" hashed="false"/>
+			<attribute type="hex" min="0x00000818" max="0x00001c08" hashed="false"/>
+			<filename type="string"/>
+			<type type="int" min="0" max="1"/>
+		</action>
+	</optional>
+	<optional probability="0.1%">
+		<action type="MessageWalkAction">
+			<code type="hex" value="0x058b709d" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x6984669f" max="0xc682e458" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000010" hashed="false"/>
+			<area_>
+				<size type="int" value="1"/>
+				<value>
+					<code type="hex" min="0x18cffd98" max="0x4238cc7f" hashed="true"/>
+					<position type="vector" items="3"/>
+					<rotation type="vector" items="3"/>
+					<scale type="vector" items="3"/>
+					<optional probability="50.0%">
+						<radius type="int" value="1"/>
+					</optional>
+					<optional probability="50.0%">
+						<points type="vector" items="8"/>
+					</optional>
+					<height type="int" value="1"/>
+				</value>
+			</area_>
+			<on type="int" value="1"/>
+		</action>
+	</optional>
+	<optional probability="0.3%">
+		<action type="RecoveryArea">
+			<code type="hex" value="0x646751eb" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x1e9df2c2" max="0xfc9a7e91" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000003" hashed="false"/>
+			<area>
+				<size type="int" min="1" max="22"/>
+				<value>
+					<code type="hex" min="0x18cffd98" max="0x4238cc7f" hashed="true"/>
+					<position type="vector" items="3"/>
+					<rotation type="vector" items="3"/>
+					<scale type="vector" items="3"/>
+					<optional probability="1.5%">
+						<radius type="int" value="1"/>
+					</optional>
+					<optional probability="1.5%">
+						<parent>
+							<id>
+								<id>
+									<code type="hex" value="0xd8efbb45" hashed="true"/>
+									<id type="hex" value="0x49f31992" hashed="false"/>
+								</id>
+							</id>
+							<nParts type="int" value="2"/>
+						</parent>
+					</optional>
+					<optional probability="98.5%">
+						<points type="vector" items="8"/>
+					</optional>
+					<height type="int" value="1"/>
+				</value>
+			</area>
+		</action>
+	</optional>
+	<optional probability="0.3%">
+		<action type="RecoveryPointArea">
+			<code type="hex" value="0x96ddbb3e" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x04aa4b4d" max="0xfcbf9fb6" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000001" hashed="false"/>
+			<area>
+				<size type="int" min="0" max="3"/>
+				<optional probability="98.4%">
+					<value>
+						<code type="hex" value="0x18cffd98" hashed="true"/>
+						<position type="vector" items="3"/>
+						<rotation type="vector" items="3"/>
+						<scale type="vector" items="3"/>
+						<optional probability="1.2%">
+							<parent>
+								<id>
+									<id>
+										<code type="hex" value="0xd8efbb45" hashed="true"/>
+										<id type="hex" value="0x49f31992" hashed="false"/>
+									</id>
+								</id>
+								<nParts type="int" value="2"/>
+							</parent>
+						</optional>
+						<points type="vector" items="8"/>
+						<height type="int" value="1"/>
+					</value>
+				</optional>
+			</area>
+			<location>
+				<position type="vector" items="3"/>
+				<optional probability="88.9%">
+					<rotation type="vector" items="3"/>
+				</optional>
+				<optional probability="1.6%">
+					<parent>
+						<id>
+							<id>
+								<code type="hex" value="0xd8efbb45" hashed="true"/>
+								<id type="hex" value="0x49f31992" hashed="false"/>
+							</id>
+						</id>
+						<nParts type="int" value="2"/>
+					</parent>
+				</optional>
+			</location>
+		</action>
+	</optional>
+	<optional probability="0.0%">
+		<action type="KillArea">
+			<code type="hex" value="0x7aed10c3" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" value="0xc7bd76e9" hashed="false"/>
+			<attribute type="hex" value="0x00000001" hashed="false"/>
+			<area>
+				<size type="int" value="1"/>
+				<value>
+					<code type="hex" value="0x18cffd98" hashed="true"/>
+					<position type="vector" items="3"/>
+					<rotation type="vector" items="3"/>
+					<scale type="vector" items="3"/>
+					<points type="vector" items="8"/>
+					<height type="int" value="1"/>
+				</value>
+			</area>
+			<location>
+				<position type="vector" items="3"/>
+				<rotation type="vector" items="3"/>
+			</location>
+		</action>
+	</optional>
+	<optional probability="0.0%">
+		<action type="UINameTagAction">
+			<code type="hex" value="0x517c12ab" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x5282b6cf" max="0xf7a9318f" hashed="false"/>
+			<attribute type="hex" value="0x00000002" hashed="false"/>
+			<entityPuid>
+				<code type="hex" min="0xb1803262" max="0xd8efbb45" hashed="true"/>
+				<id type="hex" min="0x21355f0d" max="0xf8ba821d" hashed="sometimes"/>
+			</entityPuid>
+			<nameType type="int" min="1" max="6"/>
+		</action>
+	</optional>
+	<optional probability="0.1%">
+		<action type="NoticeAction">
+			<code type="hex" value="0x18813e7f" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x1ee0378c" max="0xb7b95a7a" hashed="false"/>
+			<attribute type="hex" min="0x00010000" max="0x00010002" hashed="false"/>
+			<optional probability="16.7%">
+				<point type="vector" items="2"/>
+			</optional>
+			<UNKNOWN type="vector" items="2"/>
+			<optional probability="83.3%">
+				<time type="int" value="5"/>
+			</optional>
+		</action>
+	</optional>
+	<optional probability="0.1%">
+		<action type="LadderPointAction">
+			<code type="hex" value="0x94706d0a" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x2e26b0b0" max="0xf27058d8" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x06000012" hashed="false"/>
+			<topLocation>
+				<position type="vector" items="3"/>
+				<optional probability="90.0%">
+					<rotation type="vector" items="3"/>
+				</optional>
+				<optional probability="20.0%">
+					<parent>
+						<id>
+							<id>
+								<code type="hex" value="0xd8efbb45" hashed="true"/>
+								<id type="hex" value="0x49f31992" hashed="false"/>
+							</id>
+						</id>
+						<nParts type="int" value="2"/>
+					</parent>
+				</optional>
+			</topLocation>
+			<bottomLocation>
+				<position type="vector" items="3"/>
+				<rotation type="vector" items="3"/>
+				<optional probability="20.0%">
+					<parent>
+						<id>
+							<id>
+								<code type="hex" value="0xd8efbb45" hashed="true"/>
+								<id type="hex" value="0x49f31992" hashed="false"/>
+							</id>
+						</id>
+						<nParts type="int" value="2"/>
+					</parent>
+				</optional>
+			</bottomLocation>
+			<radius_ type_0="int" value_0="2" usage_0="10.0%" type_1="float" min_1="1.00" max_1="1.50" usage_1="90.0%"/>
+			<angle_ type="float" min="0.00" max="543.39"/>
+			<groundCheckHeight_ type="int" min="0" max="1"/>
+		</action>
+	</optional>
+	<optional probability="0.0%">
+		<action type="ShootingLaserAction">
+			<code type="hex" value="0xea31b0bd" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" value="0x2727bdbb" hashed="false"/>
+			<attribute type="hex" value="0x00000003" hashed="false"/>
+			<position>
+				<position type="vector" items="3"/>
+				<rotation type="vector" items="3"/>
+			</position>
+			<radiusMax type="int" value="10"/>
+			<radiusMin type="int" value="0"/>
+			<interval type="int" value="180"/>
+			<ammo type="int" value="99"/>
+			<readyTime type="int" value="30"/>
+			<loopTime type="int" value="60"/>
+			<speed type="int" value="10"/>
+			<thin type="int" value="0"/>
+		</action>
+	</optional>
+	<optional probability="0.2%">
+		<action type="RouteMove">
+			<code type="hex" value="0xa21fc075" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x0219eaa4" max="0xfaf967dc" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000c02" hashed="false"/>
+			<route>
+				<attribute type="hex" min="0x028c4750" max="0xc6243d98" hashed="false"/>
+				<nodes>
+					<size type="int" min="2" max="26"/>
+					<value>
+						<point type="vector" items="3"/>
+					</value>
+				</nodes>
+			</route>
+			<entity>
+				<code type="hex" min="0x00000000" max="0xd8efbb45" hashed="true"/>
+				<id type="hex" min="0x00000000" max="0xf5f74e4a" hashed="false"/>
+			</entity>
+			<speed type="float" min="0.05" max="1.00"/>
+		</action>
+	</optional>
+	<optional probability="0.2%">
+		<action type="LoopElevatorAction">
+			<code type="hex" value="0x223e4df9" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x059ffa5c" max="0xfc827506" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000010" hashed="false"/>
+			<entity>
+				<code type="hex" value="0xd8efbb45" hashed="true"/>
+				<id type="hex" min="0x03852696" max="0xfffd4e6e" hashed="false"/>
+			</entity>
+		</action>
+	</optional>
+	<optional probability="0.0%">
+		<action type="PathCameraAction">
+			<code type="hex" value="0xae48b63f" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x2eb8b9c4" max="0xb7c0b5b6" hashed="false"/>
+			<attribute type="hex" min="0x00000002" max="0x00000003" hashed="false"/>
+			<route>
+				<attribute type="hex" min="0x00000000" max="0x062503c0" hashed="false"/>
+				<nodes>
+					<size type="int" value="2"/>
+					<value>
+						<point type="vector" items="3"/>
+					</value>
+				</nodes>
+				<resolution type="int" min="1" max="8"/>
+			</route>
+			<offset type="vector" items="3"/>
+			<fixHeightUse_ type="int" value="0"/>
+			<fixHeight_ type="int" value="0"/>
+			<playerY type="int" value="0"/>
+			<branchDist type="int" value="2"/>
+			<excludeArea>
+				<size type="int" min="0" max="2"/>
+				<optional probability="66.7%">
+					<value>
+						<code type="hex" value="0x18cffd98" hashed="true"/>
+						<position type="vector" items="3"/>
+						<rotation type="vector" items="3"/>
+						<scale type="vector" items="3"/>
+						<points type="vector" items="8"/>
+						<height type="int" value="1"/>
+					</value>
+				</optional>
+			</excludeArea>
+			<useOffsetPlDir type="int" value="0"/>
+			<useOffsetPlDirRate_ type_0="int" value_0="6" usage_0="66.7%" type_1="float" value_1="4.50" usage_1="33.3%"/>
+			<sideViewCameraPathDirOffsetEnable_ type="int" value="0"/>
+			<sideViewCameraPathDirOffsetLengthSlow_ type="int" value="0"/>
+			<sideViewCameraPathDirOffsetLengthMiddle_ type="int" value="0"/>
+			<sideViewCameraPathDirOffsetLengthHigh_ type="int" value="0"/>
+			<sideViewCameraPathDirOffsetInterp_ type="float" value="0.10"/>
+			<sideViewCameraPathDirOffsetInterpStop_ type="float" value="0.10"/>
+			<sideViewCameraInterpSeparate_ type="int" value="0"/>
+			<sideViewCameraInterpSeparateXZ_ type="float" value="0.10"/>
+			<sideViewCameraInterpSeparateY_ type="float" value="0.10"/>
+			<useFovy_ type="int" value="0"/>
+			<fovy_ type="int" value="50"/>
+			<viewOffsetInterp_ type="float" value="0.10"/>
+			<viewOffsetGround_ type="vector" items="3"/>
+			<viewOffsetAir_ type="vector" items="3"/>
+			<usePos type="int" value="0"/>
+			<useTarget type="int" value="0"/>
+			<pos>
+				<position type="vector" items="3"/>
+			</pos>
+			<tar>
+				<position type="vector" items="3"/>
+			</tar>
+			<slideUp_ type="float" value="0.50"/>
+			<slideDown_ type="float" value="0.25"/>
+			<slideX_ type="int" value="2"/>
+			<forceAdjust_ type="int" value="0"/>
+			<useInterpLimit_ type="int" value="0"/>
+			<interpLimit_ type="float" value="0.01"/>
+			<bInterpRateRefHackRate_ type="int" value="0"/>
+			<firstOffset_ type="vector" items="3"/>
+		</action>
+	</optional>
+	<optional probability="0.0%">
+		<action type="OffsetCameraAction">
+			<code type="hex" value="0x26a6c6cb" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x05ab5c31" max="0x65373c3a" hashed="false"/>
+			<attribute type="hex" value="0x00000003" hashed="false"/>
+			<offset type="vector" items="3"/>
+		</action>
+	</optional>
+	<optional probability="0.0%">
+		<action type="TravelPointChanger">
+			<code type="hex" value="0x0c454673" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x17607ce4" max="0x7103135a" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000010" hashed="false"/>
+			<codeName type="string"/>
+			<type type="int" min="1" max="2"/>
+			<phase type="hex" value="0x00000200" hashed="false"/>
+			<subPhase type="string"/>
+		</action>
+	</optional>
+	<optional probability="0.0%">
+		<action type="PodWait">
+			<code type="hex" value="0xd731a90c" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x5e9be413" max="0x96d80cd3" hashed="false"/>
+			<attribute type="hex" value="0x00000010" hashed="false"/>
+			<location>
+				<position type="vector" items="3"/>
+			</location>
+		</action>
+	</optional>
+	<optional probability="0.3%">
+		<action type="CommentAction">
+			<code type="hex" value="0xd0bcb63c" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x01c1eff2" max="0xfa9c271f" hashed="false"/>
+			<attribute type="hex" min="0x00010000" max="0x00010012" hashed="false"/>
+			<location>
+				<optional probability="91.4%">
+					<position type="vector" items="3"/>
+				</optional>
+				<optional probability="5.7%">
+					<rotation type="vector" items="3"/>
+				</optional>
+				<optional probability="11.4%">
+					<parent>
+						<id>
+							<id>
+								<code type="hex" value="0xd8efbb45" hashed="true"/>
+								<id type="hex" min="0x188344c3" max="0xe8bb0553" hashed="false"/>
+							</id>
+						</id>
+					</parent>
+				</optional>
+			</location>
+			<UNKNOWN type="vector" min_items="1" max_items="2"/>
+			<optional probability="5.7%">
+				<color type="hex" value="0xff00ffff" hashed="false"/>
+			</optional>
+		</action>
+	</optional>
+	<optional probability="0.2%">
+		<action type="BattleBgmAction">
+			<code type="hex" value="0xa5f44707" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x1f6a5781" max="0xf391adbe" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000012" hashed="false"/>
+			<actions>
+				<size type="int" min="1" max="3"/>
+				<value>
+					<code type="hex" value="0xa6aaf7a4" hashed="true"/>
+					<id type="hex" min="0x0c1a4a8f" max="0xff42b133" hashed="false"/>
+				</value>
+			</actions>
+			<start type="string"/>
+			<countDown type="string"/>
+			<end type="string"/>
+		</action>
+	</optional>
+	<optional probability="0.1%">
+		<action type="RouteAction">
+			<code type="hex" value="0xd1bbd841" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x320e30d3" max="0xba88d782" hashed="false"/>
+			<attribute type="hex" value="0x00000000" hashed="false"/>
+			<route>
+				<attribute type="hex" min="0x00000000" max="0x431d1fd0" hashed="false"/>
+				<nodes>
+					<size type="int" min="4" max="25"/>
+					<value>
+						<point type="vector" items="3"/>
+					</value>
+				</nodes>
+			</route>
+		</action>
+	</optional>
+	<optional probability="0.3%">
+		<action type="tr::BattleCounter">
+			<code type="hex" value="0x3a0c6272" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x008cd663" max="0xbac416ab" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000010" hashed="false"/>
+			<optional probability="66.7%">
+				<resetType type="int" value="1"/>
+			</optional>
+		</action>
+	</optional>
+	<optional probability="0.2%">
+		<action type="ArchiveAction">
+			<code type="hex" value="0x1ecb41d7" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x4fe1b81d" max="0xe4e5479c" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000012" hashed="false"/>
+			<dispNo type="int" min="0" max="48"/>
+			<dispType type="int" min="0" max="3"/>
+		</action>
+	</optional>
+	<optional probability="0.0%">
+		<action type="UIHudAction">
+			<code type="hex" value="0x0f6092fa" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" value="0xa6658b39" hashed="false"/>
+			<attribute type="hex" value="0x00000012" hashed="false"/>
+			<uiType type="int" value="1"/>
+		</action>
+	</optional>
+	<optional probability="0.1%">
+		<action type="HapSOSLocationAction">
+			<code type="hex" value="0x54d6fa81" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x42fb8095" max="0xbd049991" hashed="false"/>
+			<attribute type="hex" value="0x00000012" hashed="false"/>
+			<location>
+				<position type="vector" items="3"/>
+			</location>
+			<index type="int" min="3" max="6"/>
+			<radius type="int" value="60"/>
+			<sos type="int" value="1"/>
+		</action>
+	</optional>
+	<optional probability="0.2%">
+		<action type="QuestBindArea">
+			<code type="hex" value="0x8b0bf6e1" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x0606ad06" max="0xed2af194" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00001000" hashed="false"/>
+			<area>
+				<size type="int" min="1" max="5"/>
+				<value>
+					<code type="hex" min="0x18cffd98" max="0x8face66d" hashed="true"/>
+					<position type="vector" items="3"/>
+					<optional probability="87.0%">
+						<rotation type="vector" items="3"/>
+					</optional>
+					<optional probability="87.0%">
+						<scale type="vector" items="3"/>
+					</optional>
+					<optional probability="43.5%">
+						<radius type_0="int" value_0="1" usage_0="10.0%" type_1="float" min_1="1.00" max_1="125.31" usage_1="90.0%"/>
+					</optional>
+					<optional probability="56.5%">
+						<points type="vector" items="8"/>
+					</optional>
+					<optional probability="87.0%">
+						<height type="int" value="1"/>
+					</optional>
+				</value>
+			</area>
+			<optional probability="6.7%">
+				<terminateArea>
+					<size type="int" value="1"/>
+					<value>
+						<code type="hex" value="0x18cffd98" hashed="true"/>
+						<position type="vector" items="3"/>
+						<rotation type="vector" items="3"/>
+						<scale type="vector" items="3"/>
+						<points type="vector" items="8"/>
+						<height type="int" value="1"/>
+					</value>
+				</terminateArea>
+			</optional>
+			<quest type="hex" min="0x00090000" max="0x00550000" hashed="false"/>
+			<bind>
+				<code type="hex" value="0x6a69c84d" hashed="true"/>
+				<id type="hex" min="0x117ce562" max="0xff7e37ac" hashed="false"/>
+			</bind>
+			<type type="int" min="1" max="3"/>
+			<type2 type="int" min="0" max="3"/>
+		</action>
+	</optional>
+	<optional probability="0.3%">
+		<action type="RandomCommandsArea">
+			<code type="hex" value="0xf16c2de1" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x059a07e9" max="0xfb836475" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000400" hashed="false"/>
+			<items>
+				<size type="int" min="0" max="3"/>
+				<optional probability="94.7%">
+					<value>
+						<puid>
+							<code type="hex" min="0x6a69c84d" max="0xa6aaf7a4" hashed="true"/>
+							<id type="hex" min="0x1870524d" max="0xf907c5ab" hashed="false"/>
+						</puid>
+						<command>
+							<command>
+								<label type="string"/>
+							</command>
+						</command>
+						<rate type="int" min="1" max="20"/>
+					</value>
+				</optional>
+			</items>
+			<chooseRange>
+				<min type="int" value="1"/>
+				<max type="int" value="1"/>
+			</chooseRange>
+			<optional probability="63.2%">
+				<resets>
+					<items>
+						<size type="int" value="1"/>
+						<value>
+							<puid>
+								<code type="hex" value="0xa6aaf7a4" hashed="true"/>
+								<id type="hex" value="0xa2c39a2d" hashed="false"/>
+							</puid>
+							<command/>
+						</value>
+					</items>
+				</resets>
+			</optional>
+			<area>
+				<size type="int" min="0" max="5"/>
+				<optional probability="94.7%">
+					<value>
+						<code type="hex" value="0x18cffd98" hashed="true"/>
+						<position type="vector" items="3"/>
+						<rotation type="vector" items="3"/>
+						<scale type="vector" items="3"/>
+						<points type="vector" items="8"/>
+						<height type="int" value="1"/>
+					</value>
+				</optional>
+			</area>
+			<repeatType type="int" min="1" max="103222832"/>
+		</action>
+	</optional>
+	<optional probability="0.6%">
+		<action type="PressAreaAction">
+			<code type="hex" value="0x9ec6d8c2" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x007f93a0" max="0xe0ddc226" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00010008" hashed="false"/>
+			<area>
+				<size type="int" value="1"/>
+				<value>
+					<code type="hex" value="0x18cffd98" hashed="true"/>
+					<position type="vector" items="3"/>
+					<rotation type="vector" items="3"/>
+					<scale type="vector" items="3"/>
+					<points type="vector" items="8"/>
+					<height type="int" value="1"/>
+				</value>
+			</area>
+			<timer type="int" value="1"/>
+		</action>
+	</optional>
+	<optional probability="0.3%">
+		<action type="HackingCollectiveSetAction">
+			<code type="hex" value="0x21239c6e" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x04b31c2a" max="0xfcf95542" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000002" hashed="false"/>
+			<BulletSpeedRate type_0="int" value_0="1" usage_0="91.1%" type_1="float" min_1="0.50" max_1="1.00" usage_1="8.9%"/>
+			<BulletIntervalRate type="float" min="0.05" max="1.50"/>
+			<BulletDuration type_0="int" value_0="1" usage_0="98.9%" type_1="float" value_1="1.50" usage_1="1.1%"/>
+		</action>
+	</optional>
+	<optional probability="0.2%">
+		<action type="BgmAction">
+			<code type="hex" value="0xd78093af" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x11047a61" max="0xcff6659b" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000002" hashed="false"/>
+			<event type="string"/>
+		</action>
+	</optional>
+	<optional probability="0.2%">
+		<action type="UIMessageBlock">
+			<code type="hex" value="0x9d850907" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x1663a5c3" max="0xfac7bddb" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x0000000a" hashed="false"/>
+			<blockType type="int" value="1"/>
+			<delay type_0="int" value_0="3" usage_0="18.5%" type_1="float" min_1="0.00" max_1="3.00" usage_1="81.5%"/>
+			<messageId type="int" min="1" max="35"/>
+		</action>
+	</optional>
+	<optional probability="0.1%">
+		<action type="PositionLoadJump">
+			<code type="hex" value="0x1fb7c472" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x175ef7f2" max="0xff318dd7" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000008" hashed="false"/>
+			<area>
+				<size type="int" value="0"/>
+			</area>
+			<location>
+				<position type="vector" items="3"/>
+			</location>
+			<fadeType type="int" value="1"/>
+			<optional probability="50.0%">
+				<fadeSpeed type="int" value="2"/>
+			</optional>
+			<hack_whiteFade type="int" value="1"/>
+		</action>
+	</optional>
+	<optional probability="0.2%">
+		<action type="HackingRetryAction">
+			<code type="hex" value="0xe4e7661e" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x244bf064" max="0xfb6698c0" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000002" hashed="false"/>
+			<location>
+				<position type="vector" items="3"/>
+				<optional probability="6.2%">
+					<rotation type="vector" items="3"/>
+				</optional>
+			</location>
+		</action>
+	</optional>
+	<optional probability="0.0%">
+		<action type="ElevatorWayPoint">
+			<code type="hex" value="0x40c4b1a1" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x37bdded4" max="0xfb146f49" hashed="false"/>
+			<attribute type="hex" value="0x00000000" hashed="false"/>
+			<area>
+				<size type="int" value="1"/>
+				<value>
+					<code type="hex" value="0x18cffd98" hashed="true"/>
+					<position type="vector" items="3"/>
+					<rotation type="vector" items="3"/>
+					<scale type="vector" items="3"/>
+					<parent>
+						<id>
+							<id>
+								<code type="hex" value="0xd8efbb45" hashed="true"/>
+								<id type="hex" value="0x188344c3" hashed="false"/>
+							</id>
+						</id>
+					</parent>
+					<points type="vector" items="8"/>
+					<height type="int" value="1"/>
+				</value>
+			</area>
+			<location>
+				<position type="vector" items="3"/>
+				<rotation type="vector" items="3"/>
+				<parent>
+					<id>
+						<id>
+							<code type="hex" value="0xd8efbb45" hashed="true"/>
+							<id type="hex" value="0x188344c3" hashed="false"/>
+						</id>
+					</id>
+				</parent>
+			</location>
+		</action>
+	</optional>
+	<optional probability="0.0%">
+		<action type="BunkerAction">
+			<code type="hex" value="0x2bbe7dd1" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" value="0xbb2e89ac" hashed="false"/>
+			<attribute type="hex" value="0x00000000" hashed="false"/>
+			<questId type="hex" value="0x00b40000" hashed="false"/>
+			<location>
+				<position type="vector" items="3"/>
+				<rotation type="vector" items="3"/>
+				<parent>
+					<id>
+						<id>
+							<code type="hex" value="0xd8efbb45" hashed="true"/>
+							<id type="hex" value="0x188344c3" hashed="false"/>
+						</id>
+					</id>
+				</parent>
+			</location>
+		</action>
+	</optional>
+	<optional probability="0.0%">
+		<action type="ActionKeyArea">
+			<code type="hex" value="0xa90432fd" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x051ee279" max="0x630b4ace" hashed="false"/>
+			<attribute type="hex" min="0x00010000" max="0x00010002" hashed="false"/>
+			<area>
+				<size type="int" value="1"/>
+				<value>
+					<code type="hex" value="0x18cffd98" hashed="true"/>
+					<position type="vector" items="3"/>
+					<rotation type="vector" items="3"/>
+					<scale type="vector" items="3"/>
+					<points type="vector" items="8"/>
+					<height type="int" value="1"/>
+				</value>
+			</area>
+			<puid>
+				<code type="hex" value="0x00000000" hashed="false"/>
+				<id type="hex" value="0x00000000" hashed="false"/>
+			</puid>
+			<command>
+				<command>
+					<label type="string"/>
+				</command>
+			</command>
+		</action>
+	</optional>
+	<optional probability="0.0%">
+		<action type="SacredArea">
+			<code type="hex" value="0xbd4ba4ae" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x72814dae" max="0xafcad2b8" hashed="false"/>
+			<attribute type="hex" value="0x00000000" hashed="false"/>
+			<area>
+				<size type="int" min="1" max="2"/>
+				<value>
+					<code type="hex" value="0x18cffd98" hashed="true"/>
+					<position type="vector" items="3"/>
+					<rotation type="vector" items="3"/>
+					<scale type="vector" items="3"/>
+					<points type="vector" items="8"/>
+					<height type="int" value="1"/>
+				</value>
+			</area>
+		</action>
+	</optional>
+	<optional probability="0.0%">
+		<action type="ConditionBgm">
+			<code type="hex" value="0x63e7ed47" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x56291b62" max="0x7b5ee733" hashed="false"/>
+			<attribute type="hex" value="0x00000000" hashed="false"/>
+			<event type="string"/>
+			<delay type="int" value="0"/>
+			<cond>
+				<puid>
+					<code type="hex" value="0xd8efbb45" hashed="true"/>
+					<id type="hex" min="0x3924fa1e" max="0x5649158b" hashed="false"/>
+				</puid>
+				<condition>
+					<state>
+						<label type="string"/>
+					</state>
+					<pred type="int" value="0"/>
+				</condition>
+			</cond>
+		</action>
+	</optional>
+	<optional probability="0.1%">
+		<action type="MinimapAreaAction">
+			<code type="hex" value="0x00a4170d" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x03b68e58" max="0xfd5d84e0" hashed="false"/>
+			<attribute type="hex" value="0x00000000" hashed="false"/>
+			<area>
+				<size type="int" min="0" max="11"/>
+				<optional probability="95.8%">
+					<value>
+						<code type="hex" value="0x18cffd98" hashed="true"/>
+						<position type="vector" items="3"/>
+						<rotation type="vector" items="3"/>
+						<scale type="vector" items="3"/>
+						<points type="vector" items="8"/>
+						<height type="int" value="1"/>
+					</value>
+				</optional>
+			</area>
+			<StageType type="int" min="0" max="1"/>
+			<MinimapId type="hex" min="0x00000000" max="0x00000060" hashed="false"/>
+			<StateName type="string"/>
+			<SubStageType type="int" value="0"/>
+			<SubMinimapId type="hex" value="0xffffffff" hashed="false"/>
+		</action>
+	</optional>
+	<optional probability="0.0%">
+		<action type="MinimapReadStopAreaAction">
+			<code type="hex" value="0x73120530" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x388e2039" max="0xf10f2b7a" hashed="false"/>
+			<attribute type="hex" value="0x00000000" hashed="false"/>
+			<area>
+				<size type="int" min="1" max="2"/>
+				<value>
+					<code type="hex" min="0x18cffd98" max="0x4238cc7f" hashed="true"/>
+					<position type="vector" items="3"/>
+					<rotation type="vector" items="3"/>
+					<scale type="vector" items="3"/>
+					<optional probability="40.0%">
+						<radius type="int" value="1"/>
+					</optional>
+					<optional probability="60.0%">
+						<points type="vector" items="8"/>
+					</optional>
+					<height type="int" value="1"/>
+				</value>
+			</area>
+			<bIgnoreHeight type="int" min="0" max="1"/>
+		</action>
+	</optional>
+	<optional probability="0.0%">
+		<action type="HapSandStormAreaAction">
+			<code type="hex" value="0x3ff17a64" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" value="0x0d75a7fe" hashed="false"/>
+			<attribute type="hex" value="0x00000000" hashed="false"/>
+			<hitArea>
+				<size type="int" value="7"/>
+				<value>
+					<code type="hex" value="0x18cffd98" hashed="true"/>
+					<position type="vector" items="3"/>
+					<rotation type="vector" items="3"/>
+					<scale type="vector" items="3"/>
+					<points type="vector" items="8"/>
+					<height type="int" value="1"/>
+				</value>
+			</hitArea>
+		</action>
+	</optional>
+	<optional probability="0.0%">
+		<action type="GlaringArea">
+			<code type="hex" value="0xab62db7f" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" value="0xe74e670e" hashed="false"/>
+			<attribute type="hex" value="0x00000000" hashed="false"/>
+			<area>
+				<size type="int" value="4"/>
+				<value>
+					<code type="hex" value="0x18cffd98" hashed="true"/>
+					<position type="vector" items="3"/>
+					<rotation type="vector" items="3"/>
+					<scale type="vector" items="3"/>
+					<points type="vector" items="8"/>
+					<height type="int" value="1"/>
+				</value>
+			</area>
+		</action>
+	</optional>
+	<optional probability="0.1%">
+		<action type="MultiRouteMove">
+			<code type="hex" value="0x8a64ca63" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x4beb3d53" max="0xd5102c57" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000c00" hashed="false"/>
+			<route>
+				<attribute type="hex" min="0x00000090" max="0x41ea6c40" hashed="false"/>
+				<nodes>
+					<size type="int" value="2"/>
+					<value>
+						<point type="vector" items="3"/>
+					</value>
+				</nodes>
+			</route>
+			<entity>
+				<code type="hex" min="0x00000000" max="0xd8efbb45" hashed="sometimes"/>
+				<id type="hex" min="0x00000000" max="0x28b82d1f" hashed="false"/>
+			</entity>
+			<speed type_0="int" min_0="3" max_0="4" usage_0="37.5%" type_1="float" min_1="2.00" max_1="3.00" usage_1="62.5%"/>
+			<collec>
+				<size type="int" min="11" max="20"/>
+				<value>
+					<code type="hex" value="0xd8efbb45" hashed="true"/>
+					<id type="hex" min="0x00862599" max="0xfedff7ae" hashed="false"/>
+				</value>
+			</collec>
+		</action>
+	</optional>
+	<optional probability="0.1%">
+		<action type="PressConveyorAction">
+			<code type="hex" value="0x05c5f675" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x5e77a9c1" max="0xbe15c80c" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000001" hashed="false"/>
+			<route>
+				<attribute type="hex" min="0x00000300" max="0x417e3fac" hashed="false"/>
+				<nodes>
+					<size type="int" value="0"/>
+				</nodes>
+			</route>
+			<entity>
+				<code type="hex" value="0x00000000" hashed="false"/>
+				<id type="hex" value="0x00000000" hashed="false"/>
+			</entity>
+			<speed type="int" min="3" max="4"/>
+			<collec>
+				<size type="int" min="10" max="11"/>
+				<value>
+					<code type="hex" value="0xd8efbb45" hashed="true"/>
+					<id type="hex" min="0x1c3b68ac" max="0xfc0346b0" hashed="false"/>
+				</value>
+			</collec>
+			<objReset type="int" value="1"/>
+			<hitArea>
+				<size type="int" value="1"/>
+				<value>
+					<code type="hex" value="0x18cffd98" hashed="true"/>
+					<position type="vector" items="3"/>
+					<rotation type="vector" items="3"/>
+					<scale type="vector" items="3"/>
+					<points type="vector" items="8"/>
+					<height type="int" value="1"/>
+				</value>
+			</hitArea>
+			<pressCollec>
+				<size type="int" value="6"/>
+				<value>
+					<code type="hex" value="0xd8efbb45" hashed="true"/>
+					<id type="hex" min="0x03ea8409" max="0xfc68a416" hashed="false"/>
+				</value>
+			</pressCollec>
+			<through type="int" value="1"/>
+			<conveyorCollec>
+				<size type="int" value="1"/>
+				<value>
+					<code type="hex" value="0xd8efbb45" hashed="true"/>
+					<id type="hex" min="0x02b2cfad" max="0xde7e28f9" hashed="false"/>
+				</value>
+			</conveyorCollec>
+		</action>
+	</optional>
+	<optional probability="0.0%">
+		<action type="NoiseAction">
+			<code type="hex" value="0x35663631" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" value="0x05bb32ba" hashed="false"/>
+			<attribute type="hex" value="0x00000000" hashed="false"/>
+		</action>
+	</optional>
+	<optional probability="0.0%">
+		<action type="SQ090_Layout">
+			<code type="hex" value="0xbf65bd92" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" value="0xcd808d18" hashed="false"/>
+			<attribute type="hex" value="0x00000408" hashed="false"/>
+			<layouts>
+				<id type="hex" value="0x5714be4f" hashed="false"/>
+				<flags type="hex" value="0x00000000" hashed="false"/>
+				<parent>
+					<id>
+						<id>
+							<code type="hex" value="0x00000000" hashed="false"/>
+							<id type="hex" value="0x00000000" hashed="false"/>
+						</id>
+					</id>
+				</parent>
+				<layouts>
+					<size type="int" value="12"/>
+					<value>
+						<id type="hex" min="0x053ea94e" max="0xfa0d7e3a" hashed="false"/>
+						<location>
+							<position type="vector" items="3"/>
+							<rotation type="vector" items="3"/>
+						</location>
+						<objId type="string"/>
+						<optional probability="16.7%">
+							<setType type="int" min="6" max="16"/>
+						</optional>
+						<optional probability="41.7%">
+							<setRtn type="int" value="104"/>
+						</optional>
+						<setFlag type="hex" value="0x00080000" hashed="false"/>
+						<param>
+							<count type="hex" value="0x00000001" hashed="false"/>
+							<value>
+								<name type="string"/>
+								<code type="hex" value="0xfffb77c9" hashed="true"/>
+								<body type="string"/>
+							</value>
+						</param>
+					</value>
+				</layouts>
+			</layouts>
+		</action>
+	</optional>
+	<optional probability="0.1%">
+		<action type="ColosseumAction">
+			<code type="hex" value="0x8baaedb4" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x09d0c7fe" max="0xb878db19" hashed="false"/>
+			<attribute type="hex" min="0x00000000" max="0x00000002" hashed="false"/>
+			<move>
+				<position type="vector" items="3"/>
+				<rotation type="vector" items="3"/>
+			</move>
+			<moveEnd>
+				<position type="vector" items="3"/>
+				<rotation type="vector" items="3"/>
+			</moveEnd>
+		</action>
+	</optional>
+	<optional probability="0.0%">
+		<action type="DlcAreaMoveAction">
+			<code type="hex" value="0xa7b95ecc" hashed="true"/>
+			<name type="string"/>
+			<id type="hex" min="0x3848355c" max="0xe30b3791" hashed="false"/>
+			<attribute type="hex" value="0x00000002" hashed="false"/>
+			<type type="int" min="0" max="1"/>
+		</action>
+	</optional>
+</root>
