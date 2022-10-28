@@ -1,0 +1,9 @@
+
+struct Entry {
+	wchar_t left;
+	wchar_t right;
+	uint16 kerning<format=hex>;
+};
+
+uint16 count;
+Entry entries[count];

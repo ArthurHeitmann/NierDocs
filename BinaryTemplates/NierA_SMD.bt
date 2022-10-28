@@ -1,0 +1,9 @@
+
+struct Entry {
+	wchar_t id[0x40];
+	uint64 indexX10;
+	wchar_t text[0x400];
+};
+
+uint32 count;
+Entry entry[count];

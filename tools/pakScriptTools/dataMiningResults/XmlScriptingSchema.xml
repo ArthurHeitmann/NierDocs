@@ -837,11 +837,11 @@
 							</value>
 						</param>
 					</optional>
-					<optional probability="29.3%">
-						<setRtn type="int" min="-1" max="98"/>
-					</optional>
 					<optional probability="39.5%">
 						<setType type="int" min="-1" max="19"/>
+					</optional>
+					<optional probability="29.3%">
+						<setRtn type="int" min="-1" max="98"/>
 					</optional>
 					<optional probability="5.4%">
 						<type2type type="int" value="1"/>

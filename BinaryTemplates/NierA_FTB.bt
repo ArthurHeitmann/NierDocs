@@ -1,0 +1,38 @@
+struct Header
+{
+	char magic[118];
+	uint16 textures_count;
+	uint16 unknown<format=hex>;
+	uint16 chars_count;
+	uint32 textures_offset<format=hex>;
+	uint32 chars_offset<format=hex>;
+	uint32 chars_offset2<format=hex>;
+};
+
+struct Texture
+{
+	uint16 index;
+	uint16 width;
+	uint16 height;
+	uint16 u_0;
+	uint32 u_2<format=hex>;
+	uint32 u_22<format=hex>;
+};
+
+struct Char
+{
+	wchar_t c;
+	uint16 texId;
+	uint16 width;
+	uint16 height;
+	uint16 u;
+	uint16 v;
+};
+
+Header header;
+
+FSeek(header.textures_offset);
+Texture textures[header.textures_count];
+
+FSeek(header.chars_offset);
+Char chars[header.chars_count];
