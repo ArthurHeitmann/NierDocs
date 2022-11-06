@@ -1,6 +1,12 @@
 struct Header
 {
-	char magic[118];
+	char magic[4];
+	uint32 two;
+	char uuid[36];
+	ubyte null;
+	char fileName[32];
+	char fontName[32]<comment="SHIFT-JIS">;
+	ubyte unknown[9];
 	uint16 textures_count;
 	uint16 unknown<format=hex>;
 	uint16 chars_count;

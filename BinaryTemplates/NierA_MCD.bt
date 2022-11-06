@@ -4,7 +4,7 @@
 // Order of tables (not all in header) (no byte alignment):
 //    <name>,     <zero terminator>
 // 0. Header
-// 1. Letters,    [0x0000]
+// 1. Letters,    [0x0000] or [0x00000000] (4 byte alignment)
 // 2. Messages,   [0x00000000]
 // 3. Paragraphs, [0x00000000]
 // 4. Lines,      [0x00000000]
@@ -32,9 +32,6 @@ struct Line;
 struct Letter {
     uint16 code;
     short idx;
-
-    if (code >= 0x8000 && code != 0x8001 && !(code == 0x8020 && (idx == 9 || idx == 121)))
-        Printf("Letter: code = %04X, idx = %d\n", code, idx);
 };
 struct Message {
     uint32 paragraphsOffset<format=hex>;
@@ -76,7 +73,7 @@ struct Line {
     
     local int letCount = (lettersCount - 1) / 2;
     if (letCount > 0)
-        Letter letters[letCount]<read=readLetter, optimize=false>;
+        Letter letters[letCount]<read=readLetter2>;
     uint16 terminator<format=hex>;
 
     FSeek(pos);
@@ -128,7 +125,7 @@ struct {
             uint16 terminator<format=hex>;
             continue;
         }
-        Letter letter<read=readLetter>;
+        Letter letter<read=readLetter2>;
     }
 } letters;
 
@@ -210,6 +207,12 @@ wstring readLetter(Letter &let) {
         s += s2;
     }
     return s;
+}
+string readLetter2(Letter &let) {
+    string s = L"";
+    SPrintf(s, "%s (%d)", readLetter(let), let.idx);
+    wstring s2 = s;
+    return s2;
 }
 wstring readLine(Line &str) {
     wstring s = L"";

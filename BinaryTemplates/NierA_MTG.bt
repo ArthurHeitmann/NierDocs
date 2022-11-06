@@ -1,0 +1,15 @@
+
+struct Header
+{
+	uint32 count;
+	uint32 u1;
+} header;
+
+struct Entry
+{
+	uint32 index;
+	uint32 typeHash; // example: core_pc_key
+	uint32 nameHash; // examples: btn_000, key_036
+};
+
+Entry entries[header.count];
