@@ -1,0 +1,35 @@
+
+struct Header
+{
+	uint32 size1;
+	uint32 size2;
+	uint32 size3;
+	uint32 offset1;
+	uint32 offset2;
+	uint32 offset3;
+	uint32 floatInverse;
+	uint32 size4;
+	uint32 null0;
+	uint32 null1;
+	uint32 null2;
+	uint32 null3;
+};
+
+Header header;
+
+struct Entry1
+{
+	// uint32 bytes[109];
+	float f_u_0;
+	float f_u_1;
+	uint32 null0;
+	uint32 null1;
+	uint32 null2;
+	uint32 null3;
+	float moreFloats[11];
+	uint32 bytes[109 - 2 - 4 - 11];
+};
+
+FSeek(header.offset1);
+Entry1 entries[header.size1];
+

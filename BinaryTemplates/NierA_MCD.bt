@@ -242,5 +242,7 @@ string readMessage(Message &msg) {
     return s;
 }
 string readEvent(Event &evt) {
-    return readMessage(evt.m);
+    string s = "";
+    SPrintf(s, "%s: %s", evt.name, readMessage(evt.m));
+    return s;
 }

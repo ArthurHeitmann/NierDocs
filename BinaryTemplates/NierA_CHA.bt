@@ -1,0 +1,32 @@
+
+struct Header
+{
+	char magic[4]; // "CHA\0"
+	uint32 u1;
+	uint32 u2;
+	uint32 u3;
+	uint32 count;
+};
+
+struct Entry
+{
+	uint32 u1;
+	uint32 zeroOrOne;
+	uint32 oneOrTwo;
+	uint16 u4;
+	char name[34];
+	uint32 u5;
+	uint32 u6;
+	uint32 u7;
+	uint32 u8;
+	uint32 Ox800;
+	uint32 u10;
+	uint32 null;
+	uint32 u12;
+};
+
+Header header;
+
+Entry entries[header.count];
+
+

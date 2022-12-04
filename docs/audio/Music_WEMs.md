@@ -1,0 +1,219 @@
+- BGM_0_000.wsp
+	- 0 Song of the Ancients - Popola
+	- 1 Song of the Ancients - Popola w/o vocals
+	- 2 Keine - Salvation
+	- 3 ?
+	- 13 End of the Unknown
+	- 14 Birth of a Wish - This cannot continue
+	- 15 Birth of a Wish - This cannot continue (JAP)
+- BGM_0_001.wsp
+	- 27 Rebirth & Hope
+	- 28 Crumbling Lies P1
+	- 29 Crumbling Lies P2
+	- 32 Possessed by Disease
+- BGM_0_002.wsp
+	- 0 Possessed by Disease (Hacking)
+	- 1 Possessed by Disease w/o vocals
+	- 2 Possessed by Disease w/o vocals
+	- 3 Possessed by Disease (Become as Gods)
+	- 4 Possessed by Disease (Become as Gods JAP)
+	- 5 Birth of a Wish
+	- 6 Birth of a Wish - Become as Gods (Hacking)
+	- 7 Birth of a Wish - Become as Gods
+- BGM_0_003.wsp
+	- 0 Birth of a Wish - Become as Gods (JAP)
+	- 1 Birth of a Wish - Become as Gods w/o vocals
+	- 2 Birth of a Wish - This cannot continue
+	- 3 Birth of a Wish - This cannot continue (JAP)
+	- 4 Emil Despair
+	- 5 Emil Despair w/o vocals
+	- 6 Grandma - Destruction
+	- 7 Grandma - Destruction w/o vocals
+	- 8 Grandma - Destruction w/o vocals
+	- 9 Dependant Weakling
+	- 10 Dependant Weakling (Hacking)
+- BGM_0_004.wsp
+	- 0 Dependant Weakling w/o vocals
+	- 1 The Sound of the End (Hacking)
+	- 2 A Beautiful Song
+	- 3 A Beautiful Song (Hacking)
+	- 4 A Beautiful Song w/o vocals
+	- 5 A Beautiful Song w/o vocals
+	- 6 Peaceful Sleep
+	- 7 Peaceful Sleep w/o vocals
+	- 8 Peaceful Sleep alt
+	- 9 Pascal
+	- 10 Pascal w/o vocals
+	- 11 Song of the Ancients Atonement (Hacking)
+- BGM_0_005.wsp
+	- 0 Emil's Shop P1
+	- 1 Emil's Shop (Fast) P1
+	- 2 Emil's Shop (ENG) P1
+	- 3 Emil's Shop (Fast) (ENG) P1
+	- 4 Emil's Shop
+	- 5 Emil's Shop (Earrape)
+	- 6 Emil's Shop (Fast) P2
+	- 7 Emil's Shop (ENG) P2
+	- 8 Emil's Shop (Earrape)
+	- 9 Emil's Shop (Fast) (ENG) P2
+	- 10 Emil's Shop P3
+	- 11 Emil's Shop P3 (Fast)
+	- 12 Emil's Shop P3 (ENG)
+	- 13 Emil's Shop P3 (ENG) (Fast)
+	- 14 Emil's Shop P3 w/o vocals
+	- 15 Emil's Shop P3 w/o vocals (Fast)
+- BGM_0_006.wsp
+	- 0 Weight of the World (ENG)
+	- 1 Weight of the World w/o vocals
+	- 2 Weight of the World (violins?)
+	- 3 Weight of the World (JAP)
+	- 4 Weight of the World w/o vocals
+	- 5 Weight of the World (FR)
+- BGM_0_007.wsp
+	- 0 Weight of the World - End of YoRHa (Retro)
+	- 1 Weight of the World - End Of YoRHa
+	- 2 Weight of the World (Ending A)
+	- 3 Weight of the World (Ending B)
+	- 4 Weight of the World (Ending C)
+	- 5 Weight of the World vocals choir
+	- 6 Weight of the World vocals choir (Ending A)
+	- 7 Weight of the World vocals choir (Ending B)
+	- 8 Weight of the World vocals choir (Ending C)
+- BGM_0_008.wsp
+	- 0 Weight of the World vocals (ENG) (long)
+	- 1 Weight of the World vocals (ENG)
+	- 2 Weight of the World vocals (ENG)
+	- 3 Weight of the World vocals (FR)
+	- 4 The Color of depression
+	- 5 The Color of depression w/o vocals
+	- 6 Blissful Death
+	- 7 Blissful Death vocals
+	- 8 Blissful Death w/o vocals & piano
+	- 9 Blissful Death w/o vocals
+	- 10 Blissful Death w/o vocals
+	- 10 Broken Heart
+	- 11 Broken Heart w/o vocals
+	- 12 Broken Heart strings
+	- 13 Vague Hope
+	- 14 Vague Hope w/o vocals
+- BGM_0_009.wsp
+	- 0 Voice of No Return
+	- 1 Voice of No Return
+	- 2 Voice of No Return strings
+	- 3 Voice of No Return strings
+	- 4 Voice of No Return vocals
+	- 5 Mourning
+	- 6 Mourning
+	- 7 Mourning organ
+	- 8 Mourning strings/violins
+	- 9 Mourning strings/violins
+	- 10 Faltering Prayer - Dawn Breeze
+	- 11 Faltering Prayer - Starry Sky
+- BGM_0_010.wsp
+	- 0 Faltering Prayer (low)
+	- 1 Faltering Prayer (high)
+	- 2 Treasured Times
+	- 3 Treasured Times w/o vocals
+	- 4 Treasured Times w/o vocals
+	- 5 End of the Unknown
+	- 6 End of the Unknown
+	- 7 End of the Unknown (hacking)
+	- 8 End of the Unknown w/o vocals
+	- 9 End of the Unknown w/o vocals
+	- 10 Copied City
+	- 11 Copied City
+	- 12 Copied City w/o vocals
+	- 13 Copied City w/o vocals
+- BGM_0_011.wsp
+	- 0 Memories of Dust (Hacking)
+	- 1 Memories of Dust w/o vocals
+	- 2 Memories of Dust w/o vocals (chill)
+	- 3 Memories of Dust w/o vocals (even more chill)
+	- 4 Memories of Dust vocals
+	- 5 Forest Kingdom (Hacking)
+	- 6 Forest Kingdom w/o vocals
+	- 7 Forest Kingdom w/o vocals
+	- 8 Forest Kingdom w/o vocals (chill)
+	- 9 Forest Kingdom vocals
+	- 10 Wretched Weaponry (Hacking)
+	- 11 Wretched Weaponry w/o vocals
+- BGM_0_012.wsp
+	- 0 Wretched Weaponry w/o vocals
+	- 1 Wretched Weaponry quit
+	- 2 Wretched Weaponry vocals
+	- 3 City Ruins (Hacking)
+	- 4 City Ruins w/o vocals P1
+	- 5 City Ruins w/o vocals P2
+	- 6 City Ruins w/o vocals quiet
+	- 7 City Ruins vocals
+	- 8 City Ruins - Shade
+	- 9 City Ruins - Shade w/o vocals
+	- 10 City Ruins w/o vocals quiet
+	- 11 City Ruins vocals
+	- 12 War & War
+- BGM_0_013.wsp
+	- 0 War & War (Hacking)
+	- 1 War & War w/o vocals
+	- 2 Dark Colossus w/o vocals V1 (Hacking)
+	- 3 Dark Colossus w/o vocals V1
+	- 4 Dark Colossus w/o vocals V1.2
+	- 5 Dark Colossus w/o vocals V2 organ
+	- 6 Dark Colossus vocals
+	- 7 Amusement Park (Hacking)
+	- 8 Amusement Park w/o vocals P1
+	- 9 Amusement Park w/o vocals P2
+	- 10 Amusement Park w/o vocals quiet
+	- 11 Amusement Park vocals
+	- 12 The Tower (Hacking)
+- BGM_0_014.wsp
+	- 0 The Tower w/o vocals
+	- 1 The Tower w/o vocals
+	- 2 The Tower w/o vocals
+	- 3 The Tower vocals
+	- 4 Significance
+	- 5 Significance
+	- 6 Significance
+	- 7 A Beautiful Song (beginning)
+	- 8 Forest Kingdom w/o vocals (chill) (beginning)
+- BGM_1_000.wsp
+	- 4 Fortress of Lies
+	- 5 Fortress of Lies w/o vocals
+- BGM_2_000.wsp
+	- 0 Crumbling Lies (intermission)
+	- 9 Bipolar Nightmare
+	- 10 Bipolar Nightmare
+	- 11 Bipolar Nightmare w/o vocals
+	- 12 Bipolar Nightmare w/o vocals
+	- 13 The Sound of the End
+	- 14 The Sound of the End
+	- 15 Crumbling Lies (intermission)
+	- 16 Crumbling Lies vocals
+- BGM_2_001.wsp
+	- 0 Alien Manifestation P1
+	- 1 Alien Manifestation P2
+	- 2 Alien Manifestation P1 w/o vocals
+	- 3 Alien Manifestation P2 w/o vocals
+	- 4 Song of the Ancients - Atonement
+	- 5 Song of the Ancients - Atonement w/o vocals
+	- 6 Widespread Illness
+	- 7 Widespread Illness w/o vocals
+	- 8 Widespread Illness (low)
+	- 9 Widespread Illness vocals
+	- 10 Significance
+- BGM_3_000.wsp
+	- 1 Deserving of Life
+	- 2 Deserving of Life (long)
+	- 3 Deserving of Life (beginning)
+	- 4 Birth of a Wish - CEO w/o vocals
+	- 5 Birth of a Wish - CEO
+	- 6 Birth of a Wish - CEO 2x
+	- 7 
+	- 8 Vague Hope
+	- 9 Vague Hope w/o vocals
+- BGM_3_001.wsp
+	- 0 Forest Colosseum
+	- 1 Desert Colosseum
+	- 2 ?
+	- 3 Forest Colosseum
+	- 4 Dark Colossus
+	- 5 Dark Colossus Drums
