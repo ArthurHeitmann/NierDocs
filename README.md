@@ -6,6 +6,7 @@ A collection tools & resources for modding Nier Automata.
 	- [Majority here](./docs/cpkAndDttContents/cpkAndDttContents.md)
 	- [cpk015](./docs/cpkAndDttContents/cpk015DttContents.md)
 	- [Map](./mapMap/fullMap.md)
+	- [Music](./docs/audio/Music_WEMs.md)
 - Scripting
   - [XML Scripting](./docs/scripting/xmlScripting.md)
   - [Ruby Scripting](./docs/scripting/rubyScripting.md)
