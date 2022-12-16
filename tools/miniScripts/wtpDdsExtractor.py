@@ -6,7 +6,7 @@ def extractDds(wtpPath: str):
 	with open(wtpPath, "rb") as f:
 		bytes = f.read()
 
-	start = 0
+	start = bytes.find(b"DDS ")
 	i = 0
 	while True:
 		nextDds = bytes.find(b"DDS ", start + 1)

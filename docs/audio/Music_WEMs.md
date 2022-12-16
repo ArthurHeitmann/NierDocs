@@ -2,11 +2,12 @@
 	- 0 Song of the Ancients - Popola
 	- 1 Song of the Ancients - Popola w/o vocals
 	- 2 Keine - Salvation
-	- 3 ?
+	- 3 Emil - Sacrifice
 	- 13 End of the Unknown
-	- 14 Birth of a Wish - This cannot continue
+	- 14 Birth of a Wish - This cannot continue (ENG)
 	- 15 Birth of a Wish - This cannot continue (JAP)
 - BGM_0_001.wsp
+	- 26 A Beautiful Song (first screams)
 	- 27 Rebirth & Hope
 	- 28 Crumbling Lies P1
 	- 29 Crumbling Lies P2
@@ -19,21 +20,21 @@
 	- 4 Possessed by Disease (Become as Gods JAP)
 	- 5 Birth of a Wish
 	- 6 Birth of a Wish - Become as Gods (Hacking)
-	- 7 Birth of a Wish - Become as Gods
+	- 7 Birth of a Wish - Become as Gods (ENG)
 - BGM_0_003.wsp
 	- 0 Birth of a Wish - Become as Gods (JAP)
 	- 1 Birth of a Wish - Become as Gods w/o vocals
-	- 2 Birth of a Wish - This cannot continue
+	- 2 Birth of a Wish - This cannot continue (ENG)
 	- 3 Birth of a Wish - This cannot continue (JAP)
 	- 4 Emil Despair
 	- 5 Emil Despair w/o vocals
 	- 6 Grandma - Destruction
 	- 7 Grandma - Destruction w/o vocals
 	- 8 Grandma - Destruction w/o vocals
-	- 9 Dependant Weakling
-	- 10 Dependant Weakling (Hacking)
+	- 9 Dependent Weakling
+	- 10 Dependent Weakling (Hacking)
 - BGM_0_004.wsp
-	- 0 Dependant Weakling w/o vocals
+	- 0 Dependent Weakling w/o vocals
 	- 1 The Sound of the End (Hacking)
 	- 2 A Beautiful Song
 	- 3 A Beautiful Song (Hacking)
@@ -139,7 +140,7 @@
 	- 11 Wretched Weaponry w/o vocals
 - BGM_0_012.wsp
 	- 0 Wretched Weaponry w/o vocals
-	- 1 Wretched Weaponry quit
+	- 1 Wretched Weaponry quiet
 	- 2 Wretched Weaponry vocals
 	- 3 City Ruins (Hacking)
 	- 4 City Ruins w/o vocals P1
