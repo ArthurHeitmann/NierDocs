@@ -147,8 +147,8 @@
 	- 5 City Ruins w/o vocals P2
 	- 6 City Ruins w/o vocals quiet
 	- 7 City Ruins vocals
-	- 8 City Ruins - Shade
-	- 9 City Ruins - Shade w/o vocals
+	- 8 City Ruins - Shade w/o vocals P1
+	- 9 City Ruins - Shade w/o vocals P2
 	- 10 City Ruins w/o vocals quiet
 	- 11 City Ruins vocals
 	- 12 War & War
