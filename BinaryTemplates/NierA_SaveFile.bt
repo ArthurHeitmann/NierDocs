@@ -61,7 +61,7 @@ struct {
 
 struct PodProgram {
 	int32 one;
-	int32 id<comment="Index = id - 0xD1">;
+	int32 id;
 };
 PodProgram podPrograms[32]<bgcolor=color1>;
 
