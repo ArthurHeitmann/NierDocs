@@ -1,0 +1,217 @@
+/*
+For SlotData_X.dat
+*/
+
+
+const int color1 = 0xEBA434;
+const int color2 = 0xEB6434;
+
+int32 null;
+uint64 steamID64<bgcolor=color1>;
+FSeek(0x10);
+int32 counter;
+FSeek(0x24);
+int32 playedTime<bgcolor=color1>;
+uint32 u0<bgcolor=color1>;
+int32 chapter<bgcolor=color1>;
+uint32 u1;
+wchar_t name[35]<bgcolor=color1>;
+uint16 u2;
+char dynamicText[196608]<bgcolor=color2>;
+Printf("%s\n", dynamicText);
+
+
+FSeek(0x3056C);
+int32 money<bgcolor=color1>;
+FSeek(0x3871C);
+int32 experience<bgcolor=color1>;
+
+
+FSeek(0x30570);
+enum ItemStatus {
+	active = 0x00070000,
+	inactive = -1
+};
+struct InventoryItem {
+	int32 id;
+	ItemStatus status<comment="0x00070000 = active, -1 = inactive">;
+	int32 quantity;
+};
+
+local int i = 0;
+InventoryItem inventory[256]<bgcolor=color1>;
+
+FSeek(0x31170);
+InventoryItem corpseInventory[256]<bgcolor=color1>;
+
+FSeek(0x31D70);
+struct Weapon (int index) {
+	local int i = index;
+	int32 id;
+	int32 level;
+	int32 newItem;
+	int32 newStory;
+	int32 enemiesDefeated;
+};
+struct {
+	for (i = 0; i < 80; i++) {
+		Weapon weapon(i)<read=weaponPretty, bgcolor=color1>;
+	}
+} Weapons;
+
+struct PodProgram {
+	int32 one;
+	int32 id<comment="Index = id - 0xD1">;
+};
+PodProgram podPrograms[32]<bgcolor=color1>;
+
+
+FSeek(0x324BC);
+struct Chip {
+	int32 baseCode;
+	int32 baseId;
+	int32 type;
+	int32 level;
+	int32 weight;
+	int32 slotA;
+	int32 slotB;
+	int32 slotC;
+	ubyte u0[16];
+};
+Chip chips[256]<bgcolor=color1>;
+
+FSeek(0x386F4);
+struct WeaponSlot {
+	int32 weaponId_lightAttack;
+	int32 weaponId_heavyAttack;
+};
+WeaponSlot weaponSet1<bgcolor=color1>;
+WeaponSlot weaponSet2<bgcolor=color1>;
+
+
+FSeek(0x38734);
+int32 pod1PodProgram<bgcolor=color1>;
+int32 pod2PodProgram<bgcolor=color1>;
+int32 pod3PodProgram<bgcolor=color1>;
+
+FSeek(0x395f4);
+struct Vector {
+	float x;
+	float y;
+	float z;
+	float w;
+};
+
+char phase[32]<bgcolor=color1>;
+char transporter[28]<bgcolor=color1>;
+uint32 u4[3];
+Vector position<bgcolor=color1>;
+Vector rotation<bgcolor=color1>;
+
+// SETTINGS
+FSeek(0x3974c);
+enum Difficulty {
+	easy = 0,
+	normal = 1,
+	hard = 2,
+	very_hard = 3
+};
+struct Settings {
+	// > Game
+	FSeek(0x3974c);
+	Difficulty difficulty;
+	int32 partnerNpcCombatStyle<comment="0 = Balanced, ..., 5 = Passive">;
+	FSeek(0x39754);
+	int32 bMiniMapRotation;
+	// > Other
+	int32 bSelfDestruct;
+	FSeek(0x39760);
+	// > Camera
+	FSeek(0x39760);
+	int32 verticalOrientation;
+	int32 horizontalOrientation;
+	// > Game
+	int32 bVibration;
+	// > Sound
+	int32 musicVolume;
+	int32 soundEffectVolume;
+	int32 voiceVolume;
+	int32 audioOutput;
+	// > Camera
+	FSeek(0x39788);
+	int32 screenBrightness;
+	int32 verticalMapControls;
+	int32 horizontalMapControls;
+	int32 leftStickMapControls;
+	int32 distanceStandard;
+	int32 distanceCombat;
+	int32 verticalRotationSpeed;
+	int32 horizontalRotationSpeed;
+	int32 verticalAutoAdjust;
+	int32 horizontalAutoAdjust;
+	int32 freeEnemyTracking;
+	int32 zoomSpeed;
+	int32 u3;
+	int32 pursuitSpeed;
+	int32 lockedEnemyTracking;
+	// > Game
+	FSeek(0x397c8);
+	int32 bInactivePlay;
+	int32 bInactiveSound;
+} settings<bgcolor=color1>;
+
+string weaponPretty(Weapon& weapon) {
+	string status = weapon.id == -1
+		? "Not owned"
+		: "Owned";
+	string weaponName = getWeaponName(weapon.i);
+	string out;
+	SPrintf(out, "%s (%s) (Level %d, %d enemies defeated)", weaponName, status, weapon.level, weapon.enemiesDefeated);
+	return out;
+}
+
+string getWeaponName(int i) {
+	switch (i) {
+		// arrays? maps??? what are those?
+		case 0: return "Faith";
+		case 1: return "Iron Pipe";
+		case 2: return "Beastbane";
+		case 3: return "Phoenix Dagger";
+		case 4: return "Ancient Overlord";
+		case 5: return "Type-40 Sword";
+		case 6: return "Type-3 Sword";
+		case 7: return "Virtuous Contract";
+		case 8: return "Cruel Oath";
+		case 9: return "YoRHa-issue Blade";
+		case 10: return "Machine Sword";
+		case 11: return "Iron Will";
+		case 12: return "Fang of the Twins";
+		case 13: return "Beastlord";
+		case 14: return "Phoenix Sword";
+		case 15: return "Type-40 Blade";
+		case 16: return "Type-3 Blade";
+		case 17: return "Virtuous Treaty";
+		case 18: return "Cruel Blood Oath";
+		case 19: return "Machine Axe";
+		case 20: return "Phoenix Lance";
+		case 21: return "Beastcurse";
+		case 22: return "Dragoon Lance";
+		case 23: return "Spear of the Usurper";
+		case 24: return "Type-40 Lance";
+		case 25: return "Type-3 Lance";
+		case 26: return "Virtuous Dignity";
+		case 27: return "Cruel Arrogance";
+		case 28: return "Machine Spear";
+		case 29: return "Angel's Folly";
+		case 30: return "Demon's Cry";
+		case 31: return "Type-40 Fists";
+		case 32: return "Type-3 Fists";
+		case 33: return "Virtuous Grief";
+		case 34: return "Cruel Lament";
+		case 35: return "Machine Heads";
+		case 36: return "Engine Blade";
+		case 37: return "Cypress Stick";
+		case 38: return "Emil Heads";
+		default: return "???";
+	}
+}
