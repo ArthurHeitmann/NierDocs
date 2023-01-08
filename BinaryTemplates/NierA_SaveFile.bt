@@ -9,9 +9,17 @@ const int color2 = 0xEB6434;
 int32 null;
 uint64 steamID64<bgcolor=color1>;
 FSeek(0x10);
-int32 counter;
-FSeek(0x24);
-int32 playedTime<bgcolor=color1>;
+int16 counter;
+int16 pad0[5];
+struct LastPlayedAt
+{
+	ubyte day;
+	ubyte month;
+	ushort year;
+} lastPlayedAt<bgcolor=color1>;
+
+int32 pad1;
+int32 playedTime_seconds<bgcolor=color1>;
 uint32 u0<bgcolor=color1>;
 int32 chapter<bgcolor=color1>;
 uint32 u1;
@@ -76,9 +84,25 @@ struct Chip {
 	int32 slotA;
 	int32 slotB;
 	int32 slotC;
-	ubyte u0[16];
+	int32 corpseSlotA;
+	int32 corpseSlotB;
+	int32 corpseSlotC;
+	int32 destroyOnCorpseLost_maybe;
 };
 Chip chips[256]<bgcolor=color1>;
+
+FSeek(0x38558);
+struct PlayRecords
+{
+	int32 itemsUsed;
+	int32 itemsHarvested;
+	int32 u5;
+	int32 deaths;
+	int32 u0;
+	int32 u1;
+	int32 enemiesKilled;
+} playRecords<bgcolor=color1>;
+
 
 FSeek(0x386F4);
 struct WeaponSlot {
@@ -94,7 +118,6 @@ int32 pod1PodProgram<bgcolor=color1>;
 int32 pod2PodProgram<bgcolor=color1>;
 int32 pod3PodProgram<bgcolor=color1>;
 
-FSeek(0x395f4);
 struct Vector {
 	float x;
 	float y;
@@ -102,9 +125,25 @@ struct Vector {
 	float w;
 };
 
+FSeek(0x3882C);
+struct CorpseInfo
+{
+	int32 bHasCorpse_maybe<bgcolor=color1>;
+	FSeek(0x3884C);
+	char onlineName[128]<bgcolor=color1>;
+	FSeek(0x388CC);
+	wchar_t name[22]<bgcolor=color1>;
+	FSeek(0x388F8);
+	int32 unknown[13];
+	Vector position<bgcolor=color1>;
+	int32 unknown2[13];
+} corpse;
+
+
+FSeek(0x395f4);
 char phase[32]<bgcolor=color1>;
-char transporter[28]<bgcolor=color1>;
-uint32 u4[3];
+char transporter[32]<bgcolor=color1>;
+uint32 u4[2];
 Vector position<bgcolor=color1>;
 Vector rotation<bgcolor=color1>;
 

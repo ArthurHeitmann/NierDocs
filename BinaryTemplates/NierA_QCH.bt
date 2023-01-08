@@ -1,0 +1,28 @@
+
+struct QchHeader
+{
+	char magic[4];
+	float f0;
+	int32 beginOffset;
+	int32 structSize;
+	int32 count;
+};
+
+struct QchEntry
+{
+	int32 questId;
+	byte flags[126];
+	local int i = 0;
+	for (i = 0; i < 126; i++) {
+		if (flags[i] != 0)
+			Printf("flags[%d]: %d\n", i, flags[i]);
+	}
+};
+
+QchHeader header;
+FSeek(header.beginOffset);
+local int j = 0;
+for (j = 0; j < header.count; j++) {
+	Printf("Quest q%d:\n", ReadInt());
+	QchEntry entry;
+}

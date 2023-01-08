@@ -2,31 +2,30 @@
 struct Header
 {
 	char magic[4]; // "CHA\0"
-	uint32 u1;
-	uint32 u2;
-	uint32 u3;
+	float f1;
+	uint32 beginOffset;
+	uint32 structSize;
 	uint32 count;
 };
 
 struct Entry
 {
-	uint32 u1;
-	uint32 zeroOrOne;
-	uint32 oneOrTwo;
-	uint16 u4;
-	char name[34];
-	uint32 u5;
-	uint32 u6;
-	uint32 u7;
-	uint32 u8;
-	uint32 Ox800;
-	uint32 u10;
-	uint32 null;
-	uint32 u12;
+	uint32 id_maybe;
+	uint32 u2;			// between 0 and 3
+	uint32 u3;			// between 0 and 6
+	uint16 globalPhase<format=hex>;	// like p100, p200, p300, pf31
+	char phaseName[34];
+	uint32 const5;		// always 0x20e57c
+	uint32 const6;		// always 0xfd46184
+	uint32 const7;		// always 0xfd456f1
+	uint32 const8;		// always 0x20f5f8
+	uint32 const9;		// always 0x800
+	uint32 const10;		// always 0x35419c
+	uint32 const11;		// always 0x0
+	uint32 const12;		// always 0x20e5ac
+	Printf("%d\n", id_maybe);
 };
 
 Header header;
 
-Entry entries[header.count];
-
-
+Entry entries[header.count]<optimize=false>;

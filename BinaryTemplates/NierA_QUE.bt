@@ -1,0 +1,24 @@
+
+struct QueHeader
+{
+	char magic[4];
+	float f0;
+	int32 beginOffset;
+	int32 structSize;
+	int32 count;
+};
+
+struct QueEntry
+{
+	int32 u0;	// going up; has duplicates; big nums like 1677787167, 1677787168, 1677852772, 1677852832
+	int32 one;
+	int32 u2;	// one of 0x350001, 0x350002, 0x350003, 0x350004, 0x350005
+	int32 u3;	// -1 or between 515 and 841
+	int32 u4;	// one of 1, 2, 3, 4, 5, 10
+	int32 u5;	// 0 or 1
+	Printf("%d\n", u0);
+};
+
+QueHeader header;
+FSeek(header.beginOffset);
+QueEntry entries[header.count]<optimize=false>;
