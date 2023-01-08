@@ -806,7 +806,7 @@ based on: https://pastebin.com/2qDrUheP
     - plf00d - face (many bones)
     - plf10d - face (many bones)
     - plf20d - face (many bones)
-  - st5:
+  - quest:
     - q085 - Mysterious Letter
     - q090 - Underground Colosseum
     - q091 - Gambler's Colosseum
