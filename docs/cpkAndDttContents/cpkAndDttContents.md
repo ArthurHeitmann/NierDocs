@@ -806,6 +806,12 @@ based on: https://pastebin.com/2qDrUheP
     - plf00d - face (many bones)
     - plf10d - face (many bones)
     - plf20d - face (many bones)
+  - st5:
+    - q085 - Mysterious Letter
+    - q090 - Underground Colosseum
+    - q091 - Gambler's Colosseum
+    - q092 - Trial of Sand
+    - q095 - Mysterious Invitation
   - wd5:
     - g5a800:colosseum (underground)
     - g5a900:colosseum (flooded city)
