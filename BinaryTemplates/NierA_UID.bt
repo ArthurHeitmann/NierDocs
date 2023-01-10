@@ -41,8 +41,8 @@ struct Data3Entry;
 struct Entry1
 {
 	// uint32 bytes[109];
-	float f_u_0;
-	float f_u_1;
+	float x;
+	float y;
 	uint32 null0;
 	uint32 null1;
 	uint32 null2;
@@ -81,8 +81,8 @@ struct Data1
 {
 	// variable length; what length? lol
 	// sometimes this
-	float f_0;
-	float f_1;
+	float x;
+	float y;
 	uint32 u_2[17];		// [6]: 0 or ID from .uvd
 	// other times a char[24]
 	// and sometimes a float & a string :D
@@ -117,21 +117,23 @@ struct Data3
 	}
 };
 
+// potentially animation data
 struct Data3Header
 {
 	uint32 beginOffset;
 	uint32 size1;
-	uint32 size2;
 	uint32 u_0;
 	uint32 u_1;
-	float f_2;
-	float f_3;
-	uint32 u_4;
+	uint32 u_2;
+	float startTime;
+	float endTime;
+	uint32 u_3;
 };
 struct Data3Entry
 {
-	float f_0;
-	uint32 u_1;
+	float time;
+	uint16 val;
+	uint16 u_0;
 };
 
 
