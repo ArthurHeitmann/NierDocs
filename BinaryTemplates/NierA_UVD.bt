@@ -7,16 +7,16 @@ struct Header {
 };
 
 struct Entry {
-	char name[32];
-	ubyte null[32];
-	uint32 idMaybe<format=hex>;
+	char name[64];
+	uint32 id<format=hex>;
+	Printf("0x%08X\n", id);
 	uint32 textureId<format=hex>;
 	float x;
 	float y;
 	float width;
 	float height;
-	uint32 u1;
-	uint32 u2;
+	float widthInverse<comment="w = 1 / x">;
+	float heightInverse<comment="h = 1 / x">;
 };
 
 struct Texture
@@ -29,7 +29,7 @@ struct Texture
 Header header;
 
 FSeek(header.entriesOffset);
-Entry entries[header.entriesCount];
+Entry entries[header.entriesCount]<optimize=false>;
 
 FSeek(header.texturesOffset);
 struct {

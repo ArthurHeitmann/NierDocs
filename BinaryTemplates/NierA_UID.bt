@@ -1,4 +1,20 @@
 
+const int color1 = 0xEBA434;
+const int color2 = 0xEBA454;
+const int color3 = 0xEB6434;
+const int color4 = 0x64EB34;
+const int color5 = 0x64EB54;
+const int color6 = 0x64AB14;
+
+string inverseToStr(float f) {
+	if (f == 0)
+		return "0.0";
+	string s = "";
+	float inv = 1.f / f;
+	SPrintf(s, "%f", inv);
+	return s;
+}
+
 struct Header
 {
 	uint32 size1;
@@ -7,8 +23,8 @@ struct Header
 	uint32 offset1;
 	uint32 offset2;
 	uint32 offset3;
-	uint32 floatInverse;
-	uint32 size4;
+	float floatInverse<read=inverseToStr>;
+	uint32 u_0;
 	uint32 null0;
 	uint32 null1;
 	uint32 null2;
@@ -17,6 +33,11 @@ struct Header
 
 Header header;
 
+struct Data1;
+struct Data2;
+struct Data3;
+struct Data3Header;
+struct Data3Entry;
 struct Entry1
 {
 	// uint32 bytes[109];
@@ -27,9 +48,119 @@ struct Entry1
 	uint32 null2;
 	uint32 null3;
 	float moreFloats[11];
-	uint32 bytes[109 - 2 - 4 - 11];
+	uint32 bytes_1[88];
+	uint32 dataOffset1;
+	if (dataOffset1 != 0)
+		Printf("dataOffset1 = %d\n", dataOffset1);
+	uint32 dataOffset2;
+	if (dataOffset2 != 0)
+		Printf("dataOffset2 = %d\n", dataOffset2);
+	uint32 dataOffset3;
+	if (dataOffset3 != 0)
+		Printf("dataOffset3 = %d\n", dataOffset3);
+	uint32 u_4;
+	if (u_4 != 0)
+		Printf("u_4 = %d\n", u_4);
+
+	local int pos = FTell();
+	if (dataOffset1 != 0) {
+		FSeek(dataOffset1);
+		Data1 data1<bgcolor=color4>;
+	}
+	if (dataOffset2 != 0) {
+		FSeek(dataOffset2);
+		Data2 data2<bgcolor=color5>;
+	}
+	if (dataOffset3 != 0) {
+		FSeek(dataOffset3);
+		Data3 data3<bgcolor=color6>;
+	}
+	FSeek(pos);
+};
+struct Data1
+{
+	// variable length; what length? lol
+	// sometimes this
+	float f_0;
+	float f_1;
+	uint32 u_2[17];		// [6]: 0 or ID from .uvd
+	// other times a char[24]
+	// and sometimes a float & a string :D
+};
+struct Data2
+{
+	uint32 u_0;
+	uint32 u_1;
+	uint32 u_2;
+	uint32 u_3[3];
+	float f_4;
+	float f_5;
+	float f_6;
+	float f_7;
+	float f_8;
+	float f_9;
+	float f_10;
+	uint32 u_11;
 };
 
-FSeek(header.offset1);
-Entry1 entries[header.size1];
+struct Data3
+{
+	local int firstOffset = ReadInt();
+	local int entriesCount = (firstOffset - FTell()) / 32;
+	Data3Header headers[entriesCount];
+	local int i = 0;
+	for (i = 0; i < entriesCount; i++) {
+		struct {
+			FSeek(headers[i].beginOffset);
+			Data3Entry subEntries[headers[i].size1];
+		} entries;
+	}
+};
 
+struct Data3Header
+{
+	uint32 beginOffset;
+	uint32 size1;
+	uint32 size2;
+	uint32 u_0;
+	uint32 u_1;
+	float f_2;
+	float f_3;
+	uint32 u_4;
+};
+struct Data3Entry
+{
+	float f_0;
+	uint32 u_1;
+};
+
+
+// maybe stack order? idk
+struct Entry2
+{
+	uint32 maybe_index_or_priority;
+	uint32 entry1_index_maybe;
+	// Printf("%d %d\n", maybe_index_or_priority, entry2_id_maybe);
+};
+
+struct Entry3
+{
+	uint32 entry2_index_maybe;
+	float f_0;
+	float f_1;
+	float f_2;
+	uint32 u_1[12];
+};
+
+
+
+FSeek(header.offset1);
+struct {
+	Entry1 entries[header.size1]<bgcolor=color1, optimize=false>;
+} entries1;
+
+FSeek(header.offset2);
+Entry2 entries2[header.size2]<bgcolor=color2>;
+
+FSeek(header.offset3);
+Entry3 entries3[header.size3]<bgcolor=color3>;
