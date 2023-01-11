@@ -47,7 +47,13 @@ struct Entry1
 	uint32 null1;
 	uint32 null2;
 	uint32 null3;
-	float moreFloats[11];
+	float scaleX;
+	float scaleY;
+	float f_u_2;
+	float R;
+	float G;
+	float B;
+	float moreFloats[5];
 	uint32 bytes_1[88];
 	uint32 dataOffset1;
 	if (dataOffset1 != 0)
@@ -81,8 +87,8 @@ struct Data1
 {
 	// variable length; what length? lol
 	// sometimes this
-	float f_0;
-	float f_1;
+	float spriteWidth;
+	float spriteHeight;
 	uint32 u_2[17];		// [6]: 0 or ID from .uvd
 	// other times a char[24]
 	// and sometimes a float & a string :D
