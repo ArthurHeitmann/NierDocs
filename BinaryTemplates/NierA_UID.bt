@@ -23,7 +23,7 @@ struct Header
 	uint32 offset1;
 	uint32 offset2;
 	uint32 offset3;
-	float floatInverse<read=inverseToStr>;
+	float frameDuration_maybe<comment="1 / 60 FPS">;
 	uint32 u_0;
 	uint32 null0;
 	uint32 null1;
@@ -40,15 +40,22 @@ struct Data3Header;
 struct Data3Entry;
 struct Entry1
 {
-	// uint32 bytes[109];
 	float x;
 	float y;
 	uint32 null0;
 	uint32 null1;
 	uint32 null2;
 	uint32 null3;
-	float moreFloats[11];
-	uint32 bytes_1[88];
+	float scaleX;
+	float scaleY;
+	float f_u_2;
+	float R;
+	float G;
+	float B;
+	float moreFloats[5];
+	uint32 u_0;
+	uint32 entry2_layerId;
+	uint32 bytes_1[86];
 	uint32 dataOffset1;
 	if (dataOffset1 != 0)
 		Printf("dataOffset1 = %d\n", dataOffset1);
@@ -81,8 +88,8 @@ struct Data1
 {
 	// variable length; what length? lol
 	// sometimes this
-	float x;
-	float y;
+	float spriteWidth;
+	float spriteHeight;
 	uint32 u_2[17];		// [6]: 0 or ID from .uvd
 	// other times a char[24]
 	// and sometimes a float & a string :D
@@ -137,12 +144,11 @@ struct Data3Entry
 };
 
 
-// maybe stack order? idk
+// maybe stack order?
 struct Entry2
 {
-	uint32 maybe_index_or_priority;
-	uint32 entry1_index_maybe;
-	// Printf("%d %d\n", maybe_index_or_priority, entry2_id_maybe);
+	uint32 layerId;
+	uint32 entry1_index;
 };
 
 struct Entry3
@@ -150,10 +156,8 @@ struct Entry3
 	uint32 entry2_index_maybe;
 	float f_0;
 	float f_1;
-	float f_2;
-	uint32 u_1[12];
+	uint32 u_1[13];
 };
-
 
 
 FSeek(header.offset1);
