@@ -1,3 +1,6 @@
+/*
+UiData
+*/
 
 const int color1 = 0xEBA434;
 const int color2 = 0xEBA454;

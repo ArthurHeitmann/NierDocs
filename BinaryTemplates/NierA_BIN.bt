@@ -1,5 +1,10 @@
-// for https://github.com/mruby/mruby.git
-// for commit 065966dae4d9052215300afa2517b6b09bf68e6d (2015)
+/*
+BT for compiled MRuby scripts. Ruby scripts control quests, dialogue and more.
+
+for https://github.com/mruby/mruby.git
+for commit 065966dae4d9052215300afa2517b6b09bf68e6d (2015)
+*/
+
 
 BigEndian();
 

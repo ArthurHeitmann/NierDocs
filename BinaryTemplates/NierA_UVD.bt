@@ -1,3 +1,6 @@
+/*
+UVs for textures/icon of the UI
+*/
 
 struct Header {
 	uint32 ui_1;

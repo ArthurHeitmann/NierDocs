@@ -1,3 +1,6 @@
+/*
+Localized subtitles for pre-rendered cut scenes.
+*/
 
 struct Entry {
 	wchar_t id[0x40];

@@ -1,3 +1,7 @@
+/*
+Information about fonts
+*/
+
 struct Header
 {
 	char magic[4];

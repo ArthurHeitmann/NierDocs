@@ -1,3 +1,6 @@
+/*
+Localized text for all sorts of things.
+*/
 
 struct Entry {
 	uint32 idSize;

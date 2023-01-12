@@ -1,3 +1,7 @@
+/*
+BT for effect files. Mostly just copied from here https://github.com/Kerilk/bayonetta_tools
+*/
+
 LittleEndian();
 
 struct {

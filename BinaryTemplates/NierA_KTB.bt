@@ -1,3 +1,6 @@
+/*
+Information about kerning between letters.
+*/
 
 struct Entry {
 	wchar_t left;

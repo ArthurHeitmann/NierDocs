@@ -1,3 +1,7 @@
+/*
+For QuestChapterData.qch in corgm.dat
+Purpose? idk lol
+*/
 
 struct QchHeader
 {

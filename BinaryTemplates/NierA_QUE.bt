@@ -1,3 +1,7 @@
+/*
+For QuestProgressInfo.que in corgm.dat
+Purpose? idk lol
+*/
 
 struct QueHeader
 {

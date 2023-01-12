@@ -1,3 +1,7 @@
+/*
+Container for HAP/XML scripts. HAP scripts control most of the quests.
+*/
+
 // everything is 4 byte aligned
 LittleEndian();
 

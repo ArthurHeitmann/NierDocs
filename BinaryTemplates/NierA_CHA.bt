@@ -1,3 +1,7 @@
+/*
+For ChapterData.cha in coregm.dat
+What does it do? idk lol
+*/
 
 struct Header
 {
