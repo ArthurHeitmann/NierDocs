@@ -89,7 +89,7 @@ struct Chip {
 	int32 corpseSlotC;
 	int32 destroyOnCorpseLost_maybe;
 };
-Chip chips[256]<bgcolor=color1>;
+Chip chips[300]<bgcolor=color1>;
 
 FSeek(0x38558);
 struct PlayRecords
