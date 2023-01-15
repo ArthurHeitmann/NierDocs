@@ -3376,23 +3376,6 @@
         }
     },
     {
-        "label": "q095_startTalk_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 5,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 5
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
         "label": "HackingEnemy.changeMoveType_Reflect",
         "actions": [
             "SendCommand"
@@ -3837,23 +3820,6 @@
         "conditionTypes": {
             "2": 4
         }
-    },
-    {
-        "label": "q150_EM_start",
-        "actions": [
-            "MultiConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 4,
-        "maybeHasArgs": true,
-        "conditionTypes": {
-            "1": 4
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
     },
     {
         "label": "EmBase.startRace",
@@ -4758,23 +4724,6 @@
         ]
     },
     {
-        "label": "p100_16_talk_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 2,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 2
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
         "label": "Pl0000.startPhaseEventFlightUnit",
         "actions": [
             "SendCommand"
@@ -4839,24 +4788,6 @@
         "conditionTypes": {
             "noType": 1
         }
-    },
-    {
-        "label": "q100_77_hackingTalk_end",
-        "actions": [
-            "ConditionBlock",
-            "ConditionCommands"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 2,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 2
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
     },
     {
         "label": "Pl0000.setRunTarget",
@@ -5132,91 +5063,6 @@
         }
     },
     {
-        "label": "p200_15_jackasTalk_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 2,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 2
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "p200_20_start_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 2,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 2
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "p200_130_talk1_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 2,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 2
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "p200_130_talk2_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 2,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 2
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "p200_200_vsEve3_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 2,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 2
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
         "label": "ON_BREAKMODE",
         "actions": [
             "ConditionAction"
@@ -5251,23 +5097,6 @@
         ],
         "encountered": 2,
         "maybeHasArgs": false
-    },
-    {
-        "label": "p200_190_snakeDone_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 2,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 2
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
     },
     {
         "label": "Pl0000.set2BBreakEvent",
@@ -5411,23 +5240,6 @@
         "maybeHasArgs": false
     },
     {
-        "label": "p200_200_9SDestroy_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 2,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 2
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
         "label": "LoopElevatorAction.outEvSWFloor1",
         "actions": [
             "ConditionCommands",
@@ -5446,23 +5258,6 @@
         }
     },
     {
-        "label": "p200_180_pascal_end",
-        "actions": [
-            "ConditionAction"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 2,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 2
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
         "label": "Pl0000.setShootingSideOver",
         "actions": [
             "SendCommand"
@@ -5472,23 +5267,6 @@
         ],
         "encountered": 2,
         "maybeHasArgs": false
-    },
-    {
-        "label": "p300_91_pascalTalk1_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 2,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 2
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
     },
     {
         "label": "Pl0000.setDownWait",
@@ -5511,23 +5289,6 @@
         ],
         "encountered": 2,
         "maybeHasArgs": false
-    },
-    {
-        "label": "p300_50_caution1_end",
-        "actions": [
-            "ConditionCommands"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 2,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 2
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
     },
     {
         "label": "Pl0000.set2BBlackOut",
@@ -5598,23 +5359,6 @@
         "conditionTypes": {
             "1": 2
         }
-    },
-    {
-        "label": "p300_27_caution_end",
-        "actions": [
-            "ConditionCommands"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 2,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 2
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
     },
     {
         "label": "Ba3100.setSpeedFloor0",
@@ -5705,23 +5449,6 @@
         "maybeHasArgs": false
     },
     {
-        "label": "BadEndEnable",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 2,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 2
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
         "label": "NPC.dieDevola",
         "actions": [
             "ConditionCommands",
@@ -5760,24 +5487,6 @@
         "maybeHasArgs": true
     },
     {
-        "label": "p300_82_talk2_end",
-        "actions": [
-            "ConditionBlock",
-            "ConditionCommands"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 2,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 2
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
         "label": "PlParts.headArmorOff",
         "actions": [
             "ConditionCommands"
@@ -5812,23 +5521,6 @@
         ],
         "encountered": 2,
         "maybeHasArgs": false
-    },
-    {
-        "label": "event_promotion",
-        "actions": [
-            "ConditionCommands"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 2,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "noType": 2
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
     },
     {
         "label": "BehaviorDoor.closed",
@@ -6237,40 +5929,6 @@
         "maybeHasArgs": true
     },
     {
-        "label": "auto_0_talk1_end",
-        "actions": [
-            "ConditionCommands"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "p100_16_start_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
         "label": "Pl0000.setControlHackReturnPos",
         "actions": [
             "SendCommand"
@@ -6291,57 +5949,6 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false
-    },
-    {
-        "label": "p100_80_start_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "pascal_talk1_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "pascal_talk2_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
     },
     {
         "label": "ON_NET_DIALOG_END",
@@ -6383,40 +5990,6 @@
         }
     },
     {
-        "label": "p100_10_9STalk1_end",
-        "actions": [
-            "ConditionCommands"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": true,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "p100_10_9STalk2_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
         "label": "Pl0000.startPhaseEventFlightUnitNoWep",
         "actions": [
             "SendCommand"
@@ -6426,57 +5999,6 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false
-    },
-    {
-        "label": "ane_talk1_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "ane_talk2_end",
-        "actions": [
-            "ConditionCommands"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "pascal_talk3_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
     },
     {
         "label": "Em1000.setEm1000DieEnable",
@@ -6566,23 +6088,6 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false
-    },
-    {
-        "label": "p100_78_doorUnlock",
-        "actions": [
-            "ConditionCommands"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
     },
     {
         "label": "MiscState.debugPhaseJump",
@@ -6938,23 +6443,6 @@
         "maybeHasArgs": false
     },
     {
-        "label": "p100_79_startTalk_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
         "label": "Em1100.offAlphaArmTrans_R",
         "actions": [
             "SendCommand"
@@ -6988,23 +6476,6 @@
         "maybeHasArgs": false
     },
     {
-        "label": "q100_77_bossStart_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
         "label": "cPf30.startStaffroll",
         "actions": [
             "SendCommand"
@@ -7030,23 +6501,6 @@
         }
     },
     {
-        "label": "p200_15_talk1_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
         "label": "BehaviorTransporterBa.unlock",
         "actions": [
             "SendCommands"
@@ -7056,125 +6510,6 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false
-    },
-    {
-        "label": "p200_20_toCamp1_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "p200_130_start_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "p200_130_pascalTalk_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "p200_30_startCaution",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "p200_30_talk_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "p200_140_start_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "p200_140_shireiTalk_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
     },
     {
         "label": "NPC.setPl1020Close9s",
@@ -7335,40 +6670,6 @@
         "conditionTypes": {
             "1": 1
         }
-    },
-    {
-        "label": "p200_80_00_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "p200_170_talk1_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
     },
     {
         "label": "Em4000.setActionA",
@@ -7744,23 +7045,6 @@
         ]
     },
     {
-        "label": "p200_140_goToHacking_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
         "label": "Pl0000.start9SEveHacking",
         "actions": [
             "SendCommand"
@@ -7786,23 +7070,6 @@
         }
     },
     {
-        "label": "p200_200_protect9S2_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
         "label": "BALL_HEALING",
         "actions": [
             "ConditionBlock"
@@ -7815,142 +7082,6 @@
         "conditionTypes": {
             "1": 1
         }
-    },
-    {
-        "label": "p200_200_vsEve2_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "leader_talk_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "p200_190_bye_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "p200_160_pascal_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "p200_160_talk2_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "p200_160_rcHelp_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "p200_170_leaderTalk_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "p200_170_leaderMove_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
     },
     {
         "label": "EmBase.setFlagWave",
@@ -7973,108 +7104,6 @@
         ],
         "encountered": 1,
         "maybeHasArgs": true
-    },
-    {
-        "label": "p200_80_10_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "p300_91_pascalTalk2_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "q910_startTalk_end",
-        "actions": [
-            "ConditionCommands"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "q910_pascal_notKill_end",
-        "actions": [
-            "ConditionCommands"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "p300_90_aneTalk_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "p300_90_talk3_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
     },
     {
         "label": "Pl0000.setHackingFilterCore12",
@@ -8124,23 +7153,6 @@
         "maybeHasArgs": false,
         "targetActions": [
             "LoopElevatorAction"
-        ]
-    },
-    {
-        "label": "p300_25_caution_end",
-        "actions": [
-            "ConditionCommands"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
         ]
     },
     {
@@ -8230,74 +7242,6 @@
         }
     },
     {
-        "label": "p300_180_emDone_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "p300_quake",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "p300_80_talk_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "p300_26_caution_end",
-        "actions": [
-            "ConditionCommands"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
         "label": "Pl0000.setFlightUnitEff2Bto9S",
         "actions": [
             "SendCommand"
@@ -8375,74 +7319,6 @@
         "maybeHasArgs": false
     },
     {
-        "label": "m3010s0020_talk00_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "m3010s0020_talk01_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "m3010s0020_talk02_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "m3010s0020_talk03_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
         "label": "Pl0000.setSelfHackingDamage",
         "actions": [
             "SendCommand"
@@ -8499,74 +7375,6 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false
-    },
-    {
-        "label": "markOn",
-        "actions": [
-            "ConditionCommands"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "p300_20_start_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "p300_20_talk2_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "p300_31_shireiBye_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
     },
     {
         "label": "ON_BUNKER_EVENT_END",
@@ -8765,23 +7573,6 @@
         "maybeHasArgs": true
     },
     {
-        "label": "p300_91_aneTalk_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
         "label": "Pl0000.endA2Break",
         "actions": [
             "SendCommand"
@@ -8824,23 +7615,6 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false
-    },
-    {
-        "label": "m3010s0010_talk00_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
     },
     {
         "label": "Pl0000.startWeakMode",
@@ -8940,23 +7714,6 @@
         "maybeHasArgs": true
     },
     {
-        "label": "p300_82_talk4_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
         "label": "MiscState.seamless_off",
         "actions": [
             "SendCommand"
@@ -8977,40 +7734,6 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false
-    },
-    {
-        "label": "setBlackout",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "p300_50_virus6_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
     },
     {
         "label": "MiscState.var",
@@ -9060,40 +7783,6 @@
         "maybeHasArgs": false
     },
     {
-        "label": "endUpload",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "p300_82_btlStart_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
         "label": "START_FLOAT",
         "actions": [
             "ConditionCommands"
@@ -9117,40 +7806,6 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false
-    },
-    {
-        "label": "p300_26_talk2_end",
-        "actions": [
-            "ConditionCommands"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": true,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "p300_25_talk5_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
     },
     {
         "label": "NPC.killPl1000Playable",
@@ -9184,23 +7839,6 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false
-    },
-    {
-        "label": "p300_30_shireiTalk_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
     },
     {
         "label": "Em1050.startEm1050Attack",
@@ -9242,23 +7880,6 @@
         }
     },
     {
-        "label": "p300_180_unit1_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
         "label": "HP_80",
         "actions": [
             "ConditionBlock"
@@ -9285,91 +7906,6 @@
         "conditionTypes": {
             "1": 1
         }
-    },
-    {
-        "label": "p300_30_doorLock_end",
-        "actions": [
-            "MultiConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "p300_31_doorUnLock_end",
-        "actions": [
-            "ConditionCommands"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": true,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "p300_31_talk1_end",
-        "actions": [
-            "ConditionCommands"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": true,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "p300_31_talk2_end",
-        "actions": [
-            "ConditionCommands"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": true,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "p300_31_talk3_end",
-        "actions": [
-            "ConditionCommands"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": true,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
     },
     {
         "label": "Pl0000.setInputIgnore",
@@ -9483,40 +8019,6 @@
         }
     },
     {
-        "label": "p300_180_doorLocked_end",
-        "actions": [
-            "ConditionCommands"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": true,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "p300_180_unit3_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
         "label": "ON_HACKING_RATE_60_OVER",
         "actions": [
             "ConditionCommands"
@@ -9531,57 +8033,6 @@
         }
     },
     {
-        "label": "p300_180_unit4_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "p300_30_btl2Start",
-        "actions": [
-            "ConditionCommands"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "p300_30_btl3Start",
-        "actions": [
-            "ConditionCommands"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
         "label": "kumo_talk4_end",
         "actions": [
             "MultiConditionBlock"
@@ -9594,23 +8045,6 @@
         "conditionTypes": {
             "1": 1
         }
-    },
-    {
-        "label": "p300_180_unit5_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
     },
     {
         "label": "kumo_talk3_end",
@@ -9636,23 +8070,6 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false
-    },
-    {
-        "label": "p300_300_talk2_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
     },
     {
         "label": "NPC.setPl1000DieDown",
@@ -9780,23 +8197,6 @@
         "maybeHasArgs": false
     },
     {
-        "label": "p300_26_talk3_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
         "label": "Pl0000.enableHackingFriendlyFire",
         "actions": [
             "SendCommand"
@@ -9839,57 +8239,6 @@
         ],
         "encountered": 1,
         "maybeHasArgs": true
-    },
-    {
-        "label": "p300_20_caution1_end",
-        "actions": [
-            "ConditionCommands"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "p300_10_caution1_end",
-        "actions": [
-            "ConditionCommands"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "p300_26_talk1_end",
-        "actions": [
-            "ConditionCommands"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": true,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
     },
     {
         "label": "NPC.setPl1001ComeOut",
@@ -9961,108 +8310,6 @@
         "maybeHasArgs": false
     },
     {
-        "label": "p300_20_sos1_CLR_end",
-        "actions": [
-            "ConditionCommands"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": true,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "p300_20_sos2_CLR_end",
-        "actions": [
-            "ConditionCommands"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": true,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "p300_20_sos3_CLR_end",
-        "actions": [
-            "ConditionCommands"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": true,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "p300_20_FAIL_end",
-        "actions": [
-            "ConditionCommands"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": true,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "q031_talk1_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": true,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "q032_talk1_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": true,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
         "label": "Baa000.setProwl",
         "actions": [
             "SendCommand"
@@ -10129,23 +8376,6 @@
         "maybeHasArgs": true
     },
     {
-        "label": "q104_btl2_end_talkEnd",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
         "label": "EmBase.endTrainingB",
         "actions": [
             "SendCommands"
@@ -10155,23 +8385,6 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false
-    },
-    {
-        "label": "q104_DONE_talk_end",
-        "actions": [
-            "ConditionCommands"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": true,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
     },
     {
         "label": "TARGET_FAR",
@@ -10213,23 +8426,6 @@
         "maybeHasArgs": true
     },
     {
-        "label": "q123_talk2_end",
-        "actions": [
-            "ConditionCommands"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": true,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
         "label": "ACCESS_BAN_BA1600",
         "actions": [
             "ConditionCommands"
@@ -10244,23 +8440,6 @@
         }
     },
     {
-        "label": "q140_talk2_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
         "label": "FastTravel.travel",
         "actions": [
             "SendCommand"
@@ -10270,40 +8449,6 @@
         ],
         "encountered": 1,
         "maybeHasArgs": true
-    },
-    {
-        "label": "q221_talk3_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "q221_talk4_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
     },
     {
         "label": "START_HACKING",
@@ -10365,40 +8510,6 @@
         ]
     },
     {
-        "label": "q500_talk3_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "q500_talk5_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
         "label": "Ba0014.closeCurtainForce",
         "actions": [
             "SendCommand"
@@ -10454,23 +8565,6 @@
         "maybeHasArgs": true
     },
     {
-        "label": "q720_talk12_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
         "label": "NPC.startPl2040Photograph",
         "actions": [
             "SendCommand"
@@ -10493,74 +8587,6 @@
         "maybeHasArgs": false
     },
     {
-        "label": "q770_talk1_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "q770_talk2_end",
-        "actions": [
-            "ConditionCommands"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "q900_emilTalk_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "q900_talk3_end",
-        "actions": [
-            "ConditionCommands"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": true,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
         "label": "Em8800.start2ndBattle",
         "actions": [
             "ConditionCommands"
@@ -10575,23 +8601,6 @@
         }
     },
     {
-        "label": "q900_talk4_end",
-        "actions": [
-            "ConditionCommands"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": true,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
         "label": "Em8800.start3rdBattle",
         "actions": [
             "ConditionCommands"
@@ -10604,23 +8613,6 @@
         "conditionTypes": {
             "noType": 1
         }
-    },
-    {
-        "label": "q900_talk5_end",
-        "actions": [
-            "ConditionCommands"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
     },
     {
         "label": "Em8800.startFinalBattle",
@@ -10663,40 +8655,6 @@
         "conditionTypes": {
             "1": 1
         }
-    },
-    {
-        "label": "q900_talk6_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "q910_selePascalKill",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
     },
     {
         "label": "BehaviorSetItem.pick",
@@ -10940,23 +8898,6 @@
         "maybeHasArgs": false
     },
     {
-        "label": "q290_bugFind1_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
         "label": "HackingEnemy.setGunRot",
         "actions": [
             "SendCommands"
@@ -10977,40 +8918,6 @@
         ],
         "encountered": 1,
         "maybeHasArgs": true
-    },
-    {
-        "label": "q290_bugFind2_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "q290_bugFind3_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
     },
     {
         "label": "ACCESS_BAN_BA1610",
@@ -11122,23 +9029,6 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false
-    },
-    {
-        "label": "pascal_bgm",
-        "actions": [
-            "ConditionCommands"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": true,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
     },
     {
         "label": "ON_HACKING_FAILD_MT_HL",
@@ -11267,57 +9157,6 @@
         }
     },
     {
-        "label": "START_FINAL_BATTLE",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "START_FINAL_MUSIC",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
-        "label": "START_FINAL_CUTSCENE",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
-    },
-    {
         "label": "Pl0000.setPosResetHap",
         "actions": [
             "SendCommand"
@@ -11393,23 +9232,6 @@
         ],
         "encountered": 1,
         "maybeHasArgs": false
-    },
-    {
-        "label": "q095_endTalk_end",
-        "actions": [
-            "ConditionBlock"
-        ],
-        "puids": [
-            "hap::Action"
-        ],
-        "encountered": 1,
-        "maybeHasArgs": false,
-        "conditionTypes": {
-            "1": 1
-        },
-        "targetActions": [
-            "ScriptAction"
-        ]
     },
     {
         "label": "EmBase.setEm0030Spin",
