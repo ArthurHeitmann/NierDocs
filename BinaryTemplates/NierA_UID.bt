@@ -56,9 +56,96 @@ struct Entry1
 	float G;
 	float B;
 	float moreFloats[5];
-	uint32 u_0;
-	uint32 entry2_layerId;
-	uint32 bytes_1[86];
+	struct {
+		uint32 entry2_layerId1;		// 0
+		uint32 entry2_layerId2;		// 1
+		uint32 const0_1;			// 2
+		uint32 range1_0_to_9;		// 3
+		uint32 null2;				// 4
+		uint32 range3_0_to_2;		// 5
+		uint32 u4;					// 6
+		uint32 u6;					// 7
+		float float7;				// 8
+		uint32 bool8;				// 9
+		uint32 bool9;				// 10
+		uint32 bool10;				// 11
+		uint32 bool11;				// 12
+		uint32 const12_1;			// 13
+		uint32 bool13;				// 14
+		uint32 bool14;				// 15
+		uint32 const15_6;			// 16
+		uint32 bool16;				// 17
+		uint32 bool17;				// 18
+		uint32 bool18;				// 19
+		uint32 bool19;				// 20
+		float float20;				// 21
+		uint32 bool21;				// 22
+		float float22;				// 23
+		uint32 bool23;				// 24
+		float float24;				// 25
+		uint32 u25;					// 26
+		float float26;				// 27
+		uint32 u27;					// 28
+		float float28;				// 29
+		uint32 u29;					// 30
+		float float30;				// 31
+		uint32 bool31;				// 32
+		float float32;				// 33
+		uint32 bool33;				// 34
+		float float34;				// 35
+		uint32 bool35;				// 36
+		float float36;				// 37
+		uint32 bool37;				// 38
+		float float38;				// 39
+		uint32 bool39;				// 40
+		uint32 null40;				// 41
+		uint32 null41;				// 42
+		uint32 null42;				// 43
+		uint32 null43;				// 44
+		float float44;				// 45
+		uint32 u45;					// 46
+		float float46;				// 47
+		uint32 u47;					// 48
+		float float48;				// 49
+		uint32 u49;					// 50
+		float float50;				// 51
+		uint32 u51;					// 52
+		float float52;				// 53
+		uint32 u53;					// 54
+		float float54;				// 55
+		uint32 u55;					// 56
+		float float56;				// 57
+		uint32 u57;					// 58
+		float float58;				// 59
+		uint32 u59;					// 60
+		float float60;				// 61
+		uint32 u61;					// 62
+		float float62;				// 63
+		uint32 u63;					// 64
+		float float64;				// 65
+		uint32 u65;					// 66
+		float float66;				// 67
+		uint32 u67;					// 68
+		float float68;				// 69
+		uint32 u69;					// 70
+		float float70;				// 71
+		uint32 u71;					// 72
+		float float72;				// 73
+		uint32 u73;					// 74
+		float float74;				// 75
+		uint32 u75;					// 76
+		float float76;				// 77
+		uint32 u77;					// 78
+		float float78;				// 79
+		uint32 u79;					// 80
+		uint32 null80;				// 81
+		uint32 null81;				// 82
+		uint32 null82;				// 83
+		uint32 null83;				// 84
+		uint32 range84_0_to_6;		// 85
+		uint32 u86;					// 86
+		uint32 range87_0_to_8;		// 87
+	} bunchOfStuff;
 	uint32 dataOffset1;
 	if (dataOffset1 != 0)
 		Printf("dataOffset1 = %d\n", dataOffset1);
