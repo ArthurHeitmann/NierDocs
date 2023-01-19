@@ -1,0 +1,183 @@
+//------------------------------------------------
+//--- 010 Editor v11.0.1 Binary Template
+//
+//      File: 
+//   Authors: 
+//   Version: 
+//   Purpose: 
+//  Category: 
+// File Mask: 
+//  ID Bytes: 
+//   History: 
+//------------------------------------------------
+typedef enum<ushort>{
+    WWPCM = 1,
+    IMA = 2,
+    IMANew = 0x0069,
+    XWMA1 = 0x0161,
+    XWMA2 = 0x0162,
+    XMA2 = 0x0165,
+    FXMA2 = 0x0166,
+    AAC = 0xAAC0,
+    DSP = 0xFFF0,
+    HEVAG = 0xFFFB,
+    ATRAC9 = 0xFFFC,
+    PCM = 0xFFFE,
+    VORBIS = 0xFFFF,
+    OPUSNX = 0x3039,
+    OPUS = 0x3040,
+    OPUSWW = 0x3041,
+    PTADPCM = 0x8311
+}WWFormat;
+
+typedef enum<uint>{
+    AK_ChannelConfigType_Anonymous,
+    AK_ChannelConfigType_Standard,
+    AK_ChannelConfigType_Ambisonic,
+    AK_ChannelConfigType_Objects,
+    AK_ChannelConfigType_UseDeviceMain,
+    AK_ChannelConfigType_UseDevicePassthrough
+}AkChannelConfigType;
+
+typedef struct{
+    uint uNumChannels : 8;
+    AkChannelConfigType eConfigType : 4;
+    uint uChannelMask : 20;
+}ChannelLayout;
+
+typedef struct{
+    uint dwLoopStartPacketOffset;
+    uint dwLoopEndPacketOffset;//some form of ending information, changes with fileSize
+    ushort uLoopBeginExtra;
+    ushort uLoopEndExtra;
+}LoopInfo;
+
+typedef struct{
+    uint dwTotalPCMFrames;
+    LoopInfo loopInfo;//despite what it is called, this is not true loop information generally
+    uint dwSeekTableSize;//within data block
+    uint dwVorbisDataOffset;//within data block
+    ushort uMaxPacketSize;//not including header
+    ushort uLastGranuleExtra;//should be small
+    uint dwDecodeAllocSize;
+    uint dwDecodeX64AllocSize;
+    uint uCommonHash;//potentially referred to by vgmstream as uHashCodebook
+    ubyte uBlockSizes[2];//only the last two are used by vgmstream, first 4 may be something else entirely
+}AK_Header;
+        
+
+typedef struct{
+    WWFormat Format;
+    short channels; 
+    int sampleRate;
+    int averageBps;
+    short blockAlign;
+    short bitsPerSample;
+    short extraSize;
+    if(extraSize == 0x30){
+        short unknChannelInfo;//some form of channel layout, becomes 0x10 when 6 channels are present, but 0x00 with only 2
+        ChannelLayout  channelLayout;
+        AK_Header wemHeader;
+    }
+    else{
+        byte extraData[extraSize];
+    };
+}FMT;
+
+typedef struct{
+    float unkn1;
+    float unkn2;//only confirmed one out of the four
+    float unkn3;
+    float unkn4;
+}AKD;
+
+typedef struct(int length){
+    byte junk[length];//a pure filler struct for alignment
+}JUNK;
+
+typedef struct{
+    uint CueId;
+    int PlayPosition;
+    char chunkId[4];
+    uint chunkStart;
+    uint blockStart;
+    uint sampleStart;
+}CuePoint;
+
+typedef struct{
+    int NumCuePoints;
+    CuePoint cues[NumCuePoints];
+}CUE;
+
+typedef struct{
+    char labl[4];
+    int length;
+    uint CuePointId;
+    local int stringLength = length-4;
+    if(stringLength%2 != 0){
+        stringLength++;
+    };
+    char Label[stringLength];
+}LABL;
+
+typedef struct(int length){
+    local int EndOff = FTell()+length;
+    char adtl[4];//typeId, always adtl
+    while(FTell() < EndOff){
+        LABL labl<optimize=false>;
+    };
+}LIST;
+
+typedef struct{
+    char fmt[4];
+    int length;
+    switch(fmt){
+        case "fmt ": //may need to read as uint
+            FMT FormatHeader;
+            break;
+        case "akd ":
+            AKD AudioKinecticsData;//the AK is almost definitely Audiokinetics, dunno what the d stands for
+            break;
+        case "JUNK":
+            JUNK JunkAlignment(length)<optimize=false>;
+            break;
+        case "cue ":
+            CUE CuePointList;
+            break;
+        case "LIST":
+            LIST AssociatedDataList(length)<optimize=false>;
+            break;
+            
+        //not putting data in this, as data itself is just raw bytes
+        default:
+            byte chunkData[length];
+            break;
+    };
+}WavChunk;
+
+typedef struct(int RIFFSize){
+    local uint startOffset = FTell();
+    while(FTell() < startOffset+RIFFSize){
+        //Printf("%i %i\n",FTell(), startOffset+RIFFSize+8);
+        WavChunk chunk<optimize=false>;
+    };
+}WAVE;
+    
+
+typedef struct{
+    /* RIFF is a chunk-based recursive format that utilizes many different smaller types of formats
+       WWise uses an edited version of the WAVE variation of RIFF, which in itself contains several chunks*/
+    char RIFF[4];
+    int RIFFSize;
+    char RIFFFormat[4];
+    if(RIFFFormat == "WAVE"){
+        WAVE WavHeader(RIFFSize-4);
+    };
+}RIFF;
+
+if(ReadUInt(0x00) == 1179011410||ReadUInt(0x00) == 1481001298){//RIFF/RIFX
+    if (ReadUInt(0x00) == 1481001298){
+        BigEndian();
+    };
+    RIFF riff;//protection allowing it to be used in BNK and PCK templates
+};
