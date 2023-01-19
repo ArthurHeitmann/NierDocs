@@ -124,14 +124,8 @@ typedef struct{
         byte pID;
     };
     for(i=0;i<cProps;i++){
-        if(pID[i] == 2||pID[i] == 0){
-            float min;
-            float max;
-        }
-        else{
-         uint pValue;
-        Printf("%i\n", pValue);
-        };
+        float min;
+        float max;
     };
 }AkPropRangedValue;
 
@@ -400,9 +394,45 @@ typedef struct(uint16 ulActionType){
     if(ulActionType==0x1402)GameParameterParams SpecificParams;
     if(ulActionType==0x1403)GameParameterParams SpecificParams;
     if(ulActionType==0x0A02)PropActionParams SpecificParams;
+    if(ulActionType==0x0A03)PropActionParams SpecificParams;
+    if(ulActionType==0x0A04)PropActionParams SpecificParams;
+    if(ulActionType==0x0A05)PropActionParams SpecificParams;
     if(ulActionType==0x0B02)PropActionParams SpecificParams;
+    if(ulActionType==0x0B03)PropActionParams SpecificParams;
+    if(ulActionType==0x0B04)PropActionParams SpecificParams;
+    if(ulActionType==0x0B05)PropActionParams SpecificParams;
     if(ulActionType==0x0C02)PropActionParams SpecificParams;
+    if(ulActionType==0x0C03)PropActionParams SpecificParams;
+    if(ulActionType==0x0C04)PropActionParams SpecificParams;
+    if(ulActionType==0x0C05)PropActionParams SpecificParams;
     if(ulActionType==0x0D02)PropActionParams SpecificParams;
+    if(ulActionType==0x0D03)PropActionParams SpecificParams;
+    if(ulActionType==0x0D04)PropActionParams SpecificParams;
+    if(ulActionType==0x0D05)PropActionParams SpecificParams;
+    if(ulActionType == 0x0802)PropActionParams SpecificParams;
+    if(ulActionType == 0x0803)PropActionParams SpecificParams;
+    if(ulActionType == 0x0804)PropActionParams SpecificParams;
+    if(ulActionType == 0x0805)PropActionParams SpecificParams;
+    if(ulActionType == 0x0902)PropActionParams SpecificParams;
+    if(ulActionType == 0x0903)PropActionParams SpecificParams;
+    if(ulActionType == 0x0904)PropActionParams SpecificParams;
+    if(ulActionType == 0x0905)PropActionParams SpecificParams;
+    if(ulActionType == 0x0F02)PropActionParams SpecificParams;
+    if(ulActionType == 0x0F03)PropActionParams SpecificParams;
+    if(ulActionType == 0x0F04)PropActionParams SpecificParams;
+    if(ulActionType == 0x0F05)PropActionParams SpecificParams;
+    if(ulActionType == 0x0E02)PropActionParams SpecificParams;
+    if(ulActionType == 0x0E03)PropActionParams SpecificParams;
+    if(ulActionType == 0x0E04)PropActionParams SpecificParams;
+    if(ulActionType == 0x0E05)PropActionParams SpecificParams;
+    if(ulActionType == 0x2002)PropActionParams SpecificParams;
+    if(ulActionType == 0x2003)PropActionParams SpecificParams;
+    if(ulActionType == 0x2004)PropActionParams SpecificParams;
+    if(ulActionType == 0x2005)PropActionParams SpecificParams;
+    if(ulActionType == 0x3002)PropActionParams SpecificParams;
+    if(ulActionType == 0x3003)PropActionParams SpecificParams;
+    if(ulActionType == 0x3004)PropActionParams SpecificParams;
+    if(ulActionType == 0x3005)PropActionParams SpecificParams;
     uint ulExceptionListSize;
 }ValueActionParams;
 
@@ -451,14 +481,50 @@ typedef struct{
     if(ulActionType == 0x0603)ValueActionParams ValueAction(ulActionType);
     if(ulActionType == 0x0604)ValueActionParams ValueAction(ulActionType);
     if(ulActionType == 0x0605)ValueActionParams ValueAction(ulActionType);
+    if(ulActionType == 0x0F02)ValueActionParams ValueAction(ulActionType);
+    if(ulActionType == 0x0F03)ValueActionParams ValueAction(ulActionType);
+    if(ulActionType == 0x0F04)ValueActionParams ValueAction(ulActionType);
+    if(ulActionType == 0x0F05)ValueActionParams ValueAction(ulActionType);
+    if(ulActionType == 0x0E02)ValueActionParams ValueAction(ulActionType);
+    if(ulActionType == 0x0E03)ValueActionParams ValueAction(ulActionType);
+    if(ulActionType == 0x0E04)ValueActionParams ValueAction(ulActionType);
+    if(ulActionType == 0x0E05)ValueActionParams ValueAction(ulActionType);
     if(ulActionType == 0x0702)ValueActionParams ValueAction(ulActionType);
     if(ulActionType == 0x0703)ValueActionParams ValueAction(ulActionType);
     if(ulActionType == 0x0704)ValueActionParams ValueAction(ulActionType);
     if(ulActionType == 0x0705)ValueActionParams ValueAction(ulActionType);
+    if(ulActionType == 0x0802)ValueActionParams ValueAction(ulActionType);
+    if(ulActionType == 0x0803)ValueActionParams ValueAction(ulActionType);
+    if(ulActionType == 0x0804)ValueActionParams ValueAction(ulActionType);
+    if(ulActionType == 0x0805)ValueActionParams ValueAction(ulActionType);
+    if(ulActionType == 0x0902)ValueActionParams ValueAction(ulActionType);
+    if(ulActionType == 0x0903)ValueActionParams ValueAction(ulActionType);
+    if(ulActionType == 0x0904)ValueActionParams ValueAction(ulActionType);
+    if(ulActionType == 0x0905)ValueActionParams ValueAction(ulActionType);
     if(ulActionType == 0x0A02)ValueActionParams ValueAction(ulActionType);
+    if(ulActionType == 0x0A03)ValueActionParams ValueAction(ulActionType);
+    if(ulActionType == 0x0A04)ValueActionParams ValueAction(ulActionType);
+    if(ulActionType == 0x0A05)ValueActionParams ValueAction(ulActionType);
     if(ulActionType == 0x0B02)ValueActionParams ValueAction(ulActionType);
+    if(ulActionType == 0x0B03)ValueActionParams ValueAction(ulActionType);
+    if(ulActionType == 0x0B04)ValueActionParams ValueAction(ulActionType);
+    if(ulActionType == 0x0B05)ValueActionParams ValueAction(ulActionType);
     if(ulActionType == 0x0C02)ValueActionParams ValueAction(ulActionType);
+    if(ulActionType == 0x0C03)ValueActionParams ValueAction(ulActionType);
+    if(ulActionType == 0x0C04)ValueActionParams ValueAction(ulActionType);
+    if(ulActionType == 0x0C05)ValueActionParams ValueAction(ulActionType);
     if(ulActionType == 0x0D02)ValueActionParams ValueAction(ulActionType);
+    if(ulActionType == 0x0D03)ValueActionParams ValueAction(ulActionType);
+    if(ulActionType == 0x0D04)ValueActionParams ValueAction(ulActionType);
+    if(ulActionType == 0x0D05)ValueActionParams ValueAction(ulActionType);
+    if(ulActionType == 0x2002)ValueActionParams ValueAction(ulActionType);
+    if(ulActionType == 0x2003)ValueActionParams ValueAction(ulActionType);
+    if(ulActionType == 0x2004)ValueActionParams ValueAction(ulActionType);
+    if(ulActionType == 0x2005)ValueActionParams ValueAction(ulActionType);
+    if(ulActionType == 0x3002)ValueActionParams ValueAction(ulActionType);
+    if(ulActionType == 0x3003)ValueActionParams ValueAction(ulActionType);
+    if(ulActionType == 0x3004)ValueActionParams ValueAction(ulActionType);
+    if(ulActionType == 0x3005)ValueActionParams ValueAction(ulActionType);
 }Action;
 
 //HIRC 4
@@ -603,7 +669,6 @@ typedef struct{
     for(j=0;j<ulNumLayers;j++){
         Layer Layers;
     }
-    byte bIsContinuousValidation;
 }LayerContain;
 
 //HIRC 10
