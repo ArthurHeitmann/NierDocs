@@ -1,69 +1,64 @@
-from typing import Dict, Set
-from .animationData import PropertyAnimation
 import bpy
+
+from .animationData import PropertyAnimation
 from .mot import *
 from .motUtils import *
+from .rotationWrapperObj import objRotationWrapper
+from .tPoseFixer import fixTPose
 
 def importMot(file: str) -> None:
+	# import mot file
 	with open(file, "rb") as f:
 		header = MotHeader()
 		header.fromFile(f)
 
-		# new animation action
-		if header.animationName in bpy.data.actions:
-			bpy.data.actions.remove(bpy.data.actions[header.animationName])
-		action = bpy.data.actions.new(header.animationName)
-		armatureObj = getArmatureObject()
-		if not armatureObj.animation_data:
-			armatureObj.animation_data_create()
-		armatureObj.animation_data.action = action
-		
-		# clear pose data
-		for bone in armatureObj.pose.bones:
-			bone.location = (0, 0, 0)
-			bone.rotation_mode = "XYZ"
-			bone.rotation_euler = (0, 0, 0)
-			bone.scale = (1, 1, 1)
-
-		boneRotOffsets = makeBoneRotOffsetMap(armatureObj)
-
-		# import
 		f.seek(header.recordsOffset)
 		records = []
 		for i in range(header.recordsCount):
 			record = MotRecord()
 			record.fromFile(f)
 			records.append(record)
-		
-		# create keyframes
-		channelGroups: Dict[str, List[MotRecord]] = {}
-		record: MotRecord
-		for record in records:
-			if not record.getBone():
-				continue
-			key = f"{record.getBone().name}:{record.getPropertyPath()}"
-			if key not in channelGroups:
-				channelGroups[key] = [None, None, None]
-			
-			channelGroups[key][record.getPropertyIndex()] = record
+	
+	# ensure that armature is in correct T-Pose
+	armatureObj = getArmatureObject()
+	fixTPose(armatureObj)
+	for obj in [*armatureObj.pose.bones, armatureObj]:
+		obj.location = (0, 0, 0)
+		obj.rotation_mode = "XYZ"
+		obj.rotation_euler = (0, 0, 0)
+		obj.scale = (1, 1, 1)
+	
+	# 90 degree rotation wrapper, to adjust for Y-up
+	objRotationWrapper(armatureObj)
 
-		# uniqueKeyframes: Set[int] = set()
-		# for record in records:
-		# 	for keyframe in record.interpolation.getKeyframeIndices():
-		# 		uniqueKeyframes.add(keyframe)
-		# uniqueKeyframes: List[int] = sorted(uniqueKeyframes)
+	# new animation action
+	if header.animationName in bpy.data.actions:
+		bpy.data.actions.remove(bpy.data.actions[header.animationName])
+	action = bpy.data.actions.new(header.animationName)
+	if not armatureObj.animation_data:
+		armatureObj.animation_data_create()
+	armatureObj.animation_data.action = action
+	
+	# create keyframes
+	motRecords: List[MotRecord] = []
+	record: MotRecord
+	for record in records:
+		if not record.getBone() and record.boneIndex != -1:
+			print(f"WARNING: Bone {record.boneIndex} not found in armature")
+			continue
+		motRecords.append(record)
 
-		animations: List[PropertyAnimation] = []
-		for group in channelGroups.values():
-			animation = PropertyAnimation()
-			animation.fromRecords(group)
-			# animation.fromRecords(group, uniqueKeyframes)
-			animations.append(animation)
-		
-		# sort by hierarchy, since translation is relative to parent
-		animations.sort(key=lambda a: f"{len(a.bone.parent_recursive)}:{int(a.bone.name[4:])}")
-
-		# apply to blender
-		for animation in animations:
-			animation.applyToBlender(boneRotOffsets)
-
+	animations: List[PropertyAnimation] = []
+	for record in motRecords:
+		animations.append(PropertyAnimation.fromRecord(record))
+	
+	# apply to blender
+	for i, animation in enumerate(animations):
+		print(f"Importing {i+1}/{len(animations)}")
+		animation.applyToBlender()
+	
+	# updated frame range
+	bpy.context.scene.frame_start = 0
+	bpy.context.scene.frame_end = header.frameCount - 1
+	
+	print(f"Imported {header.animationName} from {file}")

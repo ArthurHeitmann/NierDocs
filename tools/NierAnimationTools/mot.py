@@ -49,47 +49,55 @@ class MotRecord:
 
 		self.interpolation = MotInterpolation.fromRecordAndFile(self, file)
 	
-	def getBone(self) -> bpy.types.PoseBone:
+	def getBone(self) -> bpy.types.PoseBone|None:
 		rig = getArmatureObject()
 		boneName: str = ""
 		if self.boneIndex == -1:
-			boneName = "bone0"
+			return None
 		else:
 			for bone in rig.data.bones:
 				if bone["ID"] == self.boneIndex:
 					boneName = bone.name
 					break
 		if not boneName:
-			raise Exception(f"Bone with ID {self.boneIndex} not found")
-		return rig.pose.bones[boneName]
+			return None
+		return rig.pose.bones.get(boneName)
 	
 	def getPropertyPath(self) -> str:
-		if self.propertyIndex in [0, 1, 2]:
+		if self.propertyIndex in {0, 1, 2}:
 			return "location"
-		elif self.propertyIndex in [3, 4, 5]:
+		elif self.propertyIndex in {3, 4, 5}:
 			return "rotation_euler"
-		elif self.propertyIndex in [7, 8, 9]:
+		elif self.propertyIndex in {7, 8, 9}:
 			return "scale"
 		else:
 			raise Exception(f"Unknown property index: {self.propertyIndex}")
 	
 	def getPropertyIndex(self) -> int:
-		return self.propertyIndex % 3
+		if self.propertyIndex in {0, 3, 7}:
+			return 0
+		elif self.propertyIndex in {1, 4, 8}:
+			return 1
+		elif self.propertyIndex in {2, 5, 9}:
+			return 2
+		else:
+			raise Exception(f"Unknown property index: {self.propertyIndex}")
 
 class MotInterpolation:
 	record: MotRecord
 	
 	def fromFile(self, file: BufferedReader):
-		raise NotImplementedError
-	
-	# def applyToBlender(self):
-	# 	raise NotImplementedError
+		raise NotImplementedError()
 
 	def toKeyFrames(self) -> List[KeyFrame]:
-		raise NotImplementedError
+		raise NotImplementedError()
 	
 	def getKeyframeIndices(self) -> List[int]:
-		raise NotImplementedError
+		raise NotImplementedError()
+	
+	@staticmethod
+	def applyInterpolationToKeyFrame(prev: KeyFrameCombo|None, cur: KeyFrameCombo):
+		raise NotImplementedError()
 
 	@classmethod
 	def fromRecordAndFile(self, record: MotRecord, file: BufferedReader) -> MotInterpolation:
@@ -127,35 +135,20 @@ class MotInterpolConst(MotInterpolation):
 	def fromFile(self, file: BufferedReader):
 		self.value = self.record.value
 	
-	# def applyToBlender(self):
-	# 	bone = self.record.getBone()
-		
-	# 	propertyPath = self.record.getPropertyPath()
-	# 	propertyIndex = self.record.getPropertyIndex()
-	# 	initialValue = bone.path_resolve(propertyPath)[propertyIndex]
-	# 	if propertyPath == "rotation_euler":
-	# 		bone.rotation_mode = "XYZ"
-	# 	if propertyPath == "location":
-	# 		parentLoc = bone.parent.head[propertyIndex] if bone.parent else 0
-	# 		parentDiff = parentLoc - bone.head[propertyIndex]
-	# 		self.value += parentDiff
-		
-	# 	bone.path_resolve(propertyPath)[propertyIndex] = self.value
-	# 	bone.keyframe_insert(data_path=propertyPath, index=propertyIndex, frame=0)
-	# 	fcurve = getFCurve(getArmatureObject(), bone, propertyPath, propertyIndex)
-	# 	fcurve.keyframe_points[-1].interpolation = "CONSTANT"
-
-	# 	bone.path_resolve(propertyPath)[propertyIndex] = initialValue
-
 	def toKeyFrames(self) -> List[KeyFrame]:
 		keyframe = KeyFrame()
 		keyframe.interpolationType = "CONSTANT"
 		keyframe.frame = 0
 		keyframe.value = self.value
+		keyframe.applyInterpolation = MotInterpolConst.applyInterpolationToKeyFrame
 		return [keyframe]
 	
 	def getKeyframeIndices(self) -> List[int]:
 		return [0]
+	
+	@staticmethod
+	def applyInterpolationToKeyFrame(prev: KeyFrameCombo|None, cur: KeyFrameCombo):
+		cur.blend.interpolation = "CONSTANT"
 
 class MotInterpolValues(MotInterpolation):
 	values: List[float]
@@ -170,26 +163,6 @@ class MotInterpolValues(MotInterpolation):
 		
 		file.seek(pos)
 		
-	# def applyToBlender(self):
-	# 	bone = self.record.getBone()
-		
-	# 	propertyPath = self.record.getPropertyPath()
-	# 	propertyIndex = self.record.getPropertyIndex()
-	# 	initialValue = bone.path_resolve(propertyPath)[propertyIndex]
-	# 	if propertyPath == "rotation_euler":
-	# 		bone.rotation_mode = "XYZ"
-	# 	if propertyPath == "location":
-	# 		parentLoc = bone.parent.head[propertyIndex] if bone.parent else 0
-	# 		parentDiff = parentLoc - bone.head[propertyIndex]
-	# 		for i in range(len(self.values)):
-	# 			self.values[i] += parentDiff
-		
-	# 	for i, value in enumerate(self.values):
-	# 		bone.path_resolve(propertyPath)[propertyIndex] = value
-	# 		bone.keyframe_insert(data_path=propertyPath, index=propertyIndex, frame=i)
-
-	# 	bone.path_resolve(propertyPath)[propertyIndex] = initialValue
-
 	def toKeyFrames(self) -> List[KeyFrame]:
 		keyframes = []
 		for i, value in enumerate(self.values):
@@ -198,12 +171,16 @@ class MotInterpolValues(MotInterpolation):
 			keyframe.frame = i
 			keyframe.value = value
 			keyframes.append(keyframe)
+			keyframe.applyInterpolation = MotInterpolValues.applyInterpolationToKeyFrame
 		return keyframes
 	
 	def getKeyframeIndices(self) -> List[int]:
 		return list(range(len(self.values)))
+	
+	@staticmethod
+	def applyInterpolationToKeyFrame(prev: KeyFrameCombo|None, cur: KeyFrameCombo):
+		cur.blend.interpolation = "LINEAR"
 		
-
 class MotInterpol2(MotInterpolValues):
 	def fromFile(self, file: BufferedReader):
 		pos = file.tell()
@@ -231,7 +208,6 @@ class MotInterpol3(MotInterpolValues):
 		file.seek(pos)
 		
 class MotInterpolSplines(MotInterpolation):
-	
 	splines: List[Spline]
 
 	def fromFile(self, file: BufferedReader):
@@ -242,7 +218,7 @@ class MotInterpolSplines(MotInterpolation):
 		for _ in range(self.record.interpolationsCount):
 			spline = Spline()
 			spline.frame = read_uint16(file)
-			read_uint16()	# dummy
+			read_uint16(file)	# dummy
 			spline.value = read_float(file)
 			spline.m0 = read_float(file)
 			spline.m1 = read_float(file)
@@ -250,27 +226,6 @@ class MotInterpolSplines(MotInterpolation):
 
 		file.seek(pos)
 		
-	# def applyToBlender(self):
-	# 	bone = self.record.getBone()
-		
-	# 	propertyPath = self.record.getPropertyPath()
-	# 	propertyIndex = self.record.getPropertyIndex()
-	# 	initialValue = bone.path_resolve(propertyPath)[propertyIndex]
-	# 	if propertyPath == "rotation_euler":
-	# 		bone.rotation_mode = "XYZ"
-	# 	if propertyPath == "location":
-	# 		# parentLoc = bone.parent.head[propertyIndex] if bone.parent else 0
-	# 		# parentDiff = parentLoc - bone.head[propertyIndex]
-	# 		# for spline in self.splines:
-	# 		# 	spline.value += parentDiff
-	# 		...
-		
-	# 	for spline in self.splines:
-	# 		bone.path_resolve(propertyPath)[propertyIndex] = spline.value
-	# 		bone.keyframe_insert(data_path=propertyPath, index=propertyIndex, frame=spline.frame)
-
-	# 	bone.path_resolve(propertyPath)[propertyIndex] = initialValue
-
 	def toKeyFrames(self) -> List[KeyFrame]:
 		keyframes = []
 		for spline in self.splines:
@@ -281,11 +236,37 @@ class MotInterpolSplines(MotInterpolation):
 			keyframe.m0 = spline.m0
 			keyframe.m1 = spline.m1
 			keyframes.append(keyframe)
+			keyframe.applyInterpolation = MotInterpolSplines.applyInterpolationToKeyFrame
 		return keyframes
 
 	def getKeyframeIndices(self) -> List[int]:
 		return [spline.frame for spline in self.splines]
-
+	
+	@staticmethod
+	def applyInterpolationToKeyFrame(prev: KeyFrameCombo|None, cur: KeyFrameCombo):
+		if prev is None:
+			return
+		# hermit spline out/in slopes --> hermit spline out/in tangents
+		m_prev = prev.mot.m1
+		m_cur = cur.mot.m0
+		hermit_prev = slopeToVec2D(m_prev)
+		hermit_cur = slopeToVec2D(m_cur)
+		# hermit spline out/in tangents --> bezier spline out/in tangents
+		bezier_prev = hermitVecToBezierVec(hermit_prev)
+		bezier_cur = hermitVecToBezierVec(hermit_cur) * -1
+		# scale to frame distance
+		xDist = cur.blend.co.x - prev.blend.co.x
+		bezier_prev.x *= xDist
+		bezier_cur.x *= xDist
+		# offset point positions based on keyframe
+		handle_prev_out = prev.blend.co + bezier_prev
+		handle_cur_in = cur.blend.co + bezier_cur
+		# set bezier handles
+		cur.blend.interpolation = "BEZIER"
+		prev.blend.handle_right_type = "FREE"
+		cur.blend.handle_left_type = "FREE"
+		prev.blend.handle_right = handle_prev_out
+		cur.blend.handle_left = handle_cur_in
 
 class MotInterpol5(MotInterpolSplines):
 	def fromFile(self, file: BufferedReader):

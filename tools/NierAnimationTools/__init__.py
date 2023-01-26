@@ -1,9 +1,5 @@
-from math import degrees
-import os
 import bpy
-import bpy_extras
 from bpy_extras.io_utils import ImportHelper, ExportHelper
-from mathutils import Vector
 
 bl_info = {
     "name" : "NierAnimationTools",
@@ -33,7 +29,7 @@ class ImportMotFile(bpy.types.Operator, ImportHelper):
         return {'FINISHED'}
 
 def importMenuAdditions(self, context):
-    self.layout.operator(ImportMotFile.bl_idname, text="Mot for Nier:Automata (.mot")
+    self.layout.operator(ImportMotFile.bl_idname, text="Mot for Nier:Automata (.mot)")
 
 def register():
     bpy.utils.register_class(ImportMotFile)
