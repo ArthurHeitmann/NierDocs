@@ -392,19 +392,19 @@ class MotInterpolSplines(MotInterpolation):
 			return
 		# hermit spline out/in slopes --> hermit spline out/in tangents
 		m_prev = prev.mot.m1
-		m_cur = cur.mot.m0		# 0.889
+		m_cur = cur.mot.m0
 		hermit_prev = slopeToVec2D(m_prev)
-		hermit_cur = slopeToVec2D(m_cur)	# (0.747, 0.664)
+		hermit_cur = slopeToVec2D(m_cur)
 		# hermit spline out/in tangents --> bezier spline out/in tangents
 		bezier_prev = hermitVecToBezierVec(hermit_prev)
-		bezier_cur = hermitVecToBezierVec(hermit_cur) * -1 # (-0.249, -0.221)
+		bezier_cur = hermitVecToBezierVec(hermit_cur) * -1
 		# scale to frame distance
-		xDist = cur.blend.co.x - prev.blend.co.x	# 50
+		xDist = cur.blend.co.x - prev.blend.co.x
 		bezier_prev.x *= xDist
-		bezier_cur.x *= xDist	# -12.455
+		bezier_cur.x *= xDist
 		# offset point positions based on keyframe
 		handle_prev_out = prev.blend.co + bezier_prev
-		handle_cur_in = cur.blend.co + bezier_cur		# (136.544,  0.237)
+		handle_cur_in = cur.blend.co + bezier_cur
 		# set bezier handles
 		cur.blend.interpolation = "BEZIER"
 		prev.blend.handle_right_type = "FREE"

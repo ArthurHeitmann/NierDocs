@@ -48,8 +48,6 @@ def getAllAnimationObjects(arm: bpy.types.Object) -> List[AnimationObject]:
 		animObj.keyFrames = []
 		animObjs.append(animObj)
 
-	animObjs.sort(key=lambda animObj: animObj.bone.bone["ID"] if animObj.bone else 0)
-
 	return animObjs
 
 def getInterpolationType(curve: bpy.types.FCurve) -> int:
@@ -70,7 +68,13 @@ def getInterpolationType(curve: bpy.types.FCurve) -> int:
 	):
 		return 4
 	else:
-		raise Exception(f"Unsupported interpolation type for curve {curve.data_path} {curve.array_index}")
+		raise Exception(
+			f"Unsupported interpolation type for curve {curve.data_path} {curve.array_index}\n" +
+			"There are 3 supported interpolation types:\n" +
+			"1. Single constant keyframe\n" +
+			"2. Baked animation; all keyframe 1 frame apart (linear interpolation)\n" +
+			"3. Bezier interpolation"
+		)
 
 def makeConstInterpolation(animObj: AnimationObject, record: MotRecord):
 	value = animObj.curve.keyframe_points[0].co[1]
@@ -163,6 +167,29 @@ def makeRecords(animObjs: List[AnimationObject]) -> List[MotRecord]:
 
 	return records
 
+def addAdditionPatchRecords(path: str, currentRecords: List[MotRecord]):
+	with open(path, "rb") as f:
+		mot = MotFile()
+		mot.fromFile(f)
+	
+	allCurrentBoneIds = set([
+		record.boneIndex
+		for record in currentRecords
+	])
+	allFileBoneIds = set([
+		record.boneIndex
+		for record in mot.records
+	])
+	allMissingBoneIds = allFileBoneIds - allCurrentBoneIds
+	missingRecords = [
+		record
+		for record in mot.records
+		if record.boneIndex in allMissingBoneIds
+	]
+	print(f"Adding {len(missingRecords)} missing records")
+	currentRecords.extend(missingRecords)
+	currentRecords.sort(key=lambda record: record.boneIndex * 10 + record.propertyIndex)
+
 
 def exportMot(path: str, patchExisting: bool):
 	arm = getArmatureObject()
@@ -172,6 +199,10 @@ def exportMot(path: str, patchExisting: bool):
 	# get animation data
 	animObjs = getAllAnimationObjects(arm)
 	records = makeRecords(animObjs)
+
+	# if patching, inject records of missing bones
+	if patchExisting:
+		addAdditionPatchRecords(path, records)
 	
 	# make header
 	header = MotHeader()

@@ -27,6 +27,8 @@ class ImportMotFile(bpy.types.Operator, ImportHelper):
 
         importMot(self.filepath)
 
+        self.report({'INFO'}, "Imported mot file")
+
         return {'FINISHED'}
 
 class ExportMotFile(bpy.types.Operator, ExportHelper):
@@ -51,6 +53,8 @@ class ExportMotFile(bpy.types.Operator, ExportHelper):
             return {'CANCELLED'}
         
         exportMot(self.filepath, self.patchExisting)
+
+        self.report({'INFO'}, "Exported mot file")
 
         return {'FINISHED'}
 

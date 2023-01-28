@@ -51,7 +51,8 @@ def importMot(file: str) -> None:
 	
 	# apply to blender
 	for i, animation in enumerate(animations):
-		print(f"Importing {i+1}/{len(animations)}")
+		if i % 10 == 0:
+			print(f"Importing {i+1}/{len(animations)}")
 		animation.applyToBlender()
 	
 	# updated frame range
