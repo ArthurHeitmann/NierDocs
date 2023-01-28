@@ -7,7 +7,7 @@ Steps:
 	- Searchable: armature & its bones / all armature FCurves
 2. Sort by Bone ID?
 3. For each FCurve make a Record with interpolation data
-	- get bone index, property index, flag || DEFAULT_FLAG TODO
+	- get bone index, property index
 	- Determine interpolation type
 		- 1 Keyframe
 			- `0x0`
@@ -25,11 +25,12 @@ Steps:
 					- Check whether X-normalized tangents have length 1/3
 					- bezier points --> hermit tangents
 					- hermit tangents --> slopes
-3. (if in patch mode) Inject all other existing records
-4. Determine all interpolation offsets based relative to record
+3. (if in patch mode) Inject all other records, with bone IDs that aren't in the scene
+4. Determine all interpolation offsets based on position relative to record
 5. Make header
-	- hash | DEFAULT_HASH TODO
-	- flag | DEFAULT_FLAG TODO
+	- hash=538051589
+	- flag | DEFAULT_FLAG=0
+	- unknown | DEFAULT_UNKNOWN=0
 	- max frame
 	- file name or scene name? TODO
 	- records offset based on animName (24 + animName.length + 9 OR 44)

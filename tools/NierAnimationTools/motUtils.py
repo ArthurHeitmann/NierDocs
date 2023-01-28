@@ -33,6 +33,12 @@ class Spline:
 	m0: float
 	m1: float
 
+	def __init__(self, frame: int = None, value: float = None, m0: float = None, m1: float = None):
+		self.frame = frame
+		self.value = value
+		self.m0 = m0
+		self.m1 = m1
+
 def getArmatureObject() -> bpy.types.Object:
 	for obj in bpy.data.objects:
 		if obj.type == "ARMATURE":
@@ -76,3 +82,6 @@ def slopeToVec2D(slope: float) -> Vector:
 
 def hermitVecToBezierVec(vec: Vector) -> Vector:
 	return vec / 3
+
+def alignTo4(num: int) -> int:
+	return (num + 3) & ~3

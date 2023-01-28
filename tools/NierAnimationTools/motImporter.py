@@ -8,16 +8,11 @@ from .tPoseFixer import fixTPose
 
 def importMot(file: str) -> None:
 	# import mot file
+	mot = MotFile()
 	with open(file, "rb") as f:
-		header = MotHeader()
-		header.fromFile(f)
-
-		f.seek(header.recordsOffset)
-		records = []
-		for i in range(header.recordsCount):
-			record = MotRecord()
-			record.fromFile(f)
-			records.append(record)
+		mot.fromFile(f)
+	header = mot.header
+	records = mot.records
 	
 	# ensure that armature is in correct T-Pose
 	armatureObj = getArmatureObject()
@@ -38,6 +33,8 @@ def importMot(file: str) -> None:
 	if not armatureObj.animation_data:
 		armatureObj.animation_data_create()
 	armatureObj.animation_data.action = action
+	action["headerFlag"] = header.flag
+	action["headerUnknown"] = header.unknown
 	
 	# create keyframes
 	motRecords: List[MotRecord] = []

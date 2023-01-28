@@ -26,7 +26,7 @@ class PropertyAnimation:
 		anim.propertyNameIndex = PropertyAnimation._propertyNameToIndex[anim.propertyName]
 		anim.channelIndex = record.getPropertyIndex()
 		anim.armatureObj = getArmatureObject()
-		anim.flag = record.flag
+		anim.flag = record.interpolationType
 		if record.boneIndex != -1:
 			anim.bone = record.getBone()
 			anim.object = None
@@ -73,7 +73,3 @@ class PropertyAnimation:
 			if i > 0:
 				prevKf = KeyFrameCombo(self.keyFrames[i-1], fCurve.keyframe_points[i-1])
 			curKf.mot.applyInterpolation(prevKf, curKf)
-		
-		# save flag to object
-		key = f"FLAG_{self.propertyName}_{self.channelIndex}"
-		animObj[key] = self.flag
