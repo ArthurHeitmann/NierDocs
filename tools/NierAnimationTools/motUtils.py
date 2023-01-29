@@ -40,10 +40,19 @@ class Spline:
 		self.m1 = m1
 
 def getArmatureObject() -> bpy.types.Object:
-	for obj in bpy.data.objects:
-		if obj.type == "ARMATURE":
-			return obj
-	return None
+	activeObj = bpy.context.active_object
+	if activeObj is not None and activeObj.type == "ARMATURE":
+		return activeObj
+	allArmatures = [obj for obj in bpy.data.objects if obj.type == "ARMATURE"]
+	if len(allArmatures) == 0:
+		return None
+	wmbColl = bpy.data.collections.get("WMB")
+	if wmbColl is None:
+		return allArmatures[0]
+	armaturesInWmbColl = [obj for obj in wmbColl.all_objects if obj.type == "ARMATURE"]
+	if len(armaturesInWmbColl) == 0:
+		return allArmatures[0]
+	return armaturesInWmbColl[0]
 
 def getBoneFCurve(armatureObj: bpy.types.Object, bone: bpy.types.PoseBone, property: str, index: int) -> bpy.types.FCurve:
 	for fCurve in armatureObj.animation_data.action.fcurves:
