@@ -58,5 +58,6 @@ def importMot(file: str) -> None:
 	# updated frame range
 	bpy.context.scene.frame_start = 0
 	bpy.context.scene.frame_end = header.frameCount - 1
+	bpy.context.scene.render.fps = 60
 	
 	print(f"Imported {header.animationName} from {file}")

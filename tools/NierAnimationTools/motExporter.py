@@ -172,10 +172,13 @@ def addAdditionPatchRecords(path: str, currentRecords: List[MotRecord]):
 		mot = MotFile()
 		mot.fromFile(f)
 	
+	arm = getArmatureObject()
 	allCurrentBoneIds = set([
-		record.boneIndex
-		for record in currentRecords
+		bone.bone["ID"]
+		for bone in arm.pose.bones
 	])
+	for record in currentRecords:
+		allCurrentBoneIds.add(record.boneIndex)
 	allFileBoneIds = set([
 		record.boneIndex
 		for record in mot.records
@@ -186,7 +189,7 @@ def addAdditionPatchRecords(path: str, currentRecords: List[MotRecord]):
 		for record in mot.records
 		if record.boneIndex in allMissingBoneIds
 	]
-	print(f"Adding {len(missingRecords)} missing records")
+	print(f"Adding {len(missingRecords)} missing records for {len(allMissingBoneIds)} bones")
 	currentRecords.extend(missingRecords)
 	currentRecords.sort(key=lambda record: record.boneIndex * 10 + record.propertyIndex)
 
