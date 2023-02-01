@@ -1,6 +1,7 @@
 import bpy
 from bpy_extras.io_utils import ImportHelper, ExportHelper
 import os
+from .pl000fChecks import HidePl000fIrrelevantBones, RemovePl000fIrrelevantAnimations
 
 bl_info = {
     "name" : "NierAnimationTools",
@@ -67,6 +68,8 @@ def exportMenuAdditions(self, context):
 def register():
     bpy.utils.register_class(ImportMotFile)
     bpy.utils.register_class(ExportMotFile)
+    bpy.utils.register_class(HidePl000fIrrelevantBones)
+    bpy.utils.register_class(RemovePl000fIrrelevantAnimations)
 
     bpy.types.TOPBAR_MT_file_import.append(importMenuAdditions)
     bpy.types.TOPBAR_MT_file_export.append(exportMenuAdditions)
@@ -74,6 +77,8 @@ def register():
 def unregister():
     bpy.utils.unregister_class(ImportMotFile)
     bpy.utils.unregister_class(ExportMotFile)
+    bpy.utils.unregister_class(HidePl000fIrrelevantBones)
+    bpy.utils.unregister_class(RemovePl000fIrrelevantAnimations)
 
     bpy.types.TOPBAR_MT_file_import.remove(importMenuAdditions)
     bpy.types.TOPBAR_MT_file_export.remove(exportMenuAdditions)
