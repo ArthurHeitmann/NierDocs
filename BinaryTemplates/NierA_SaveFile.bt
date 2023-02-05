@@ -25,7 +25,7 @@ int32 chapter<bgcolor=color1>;
 uint32 u1;
 wchar_t name[35]<bgcolor=color1>;
 uint16 u2;
-char dynamicText[196608]<bgcolor=color2>;
+char dynamicText[0x30000]<bgcolor=color2>;
 Printf("%s\n", dynamicText);
 
 
@@ -113,7 +113,10 @@ WeaponSlot weaponSet1<bgcolor=color1>;
 WeaponSlot weaponSet2<bgcolor=color1>;
 
 
-FSeek(0x38734);
+FSeek(0x38728);
+int32 pod1Level<bgcolor=color1>;
+int32 pod2Level<bgcolor=color1>;
+int32 pod3Level<bgcolor=color1>;
 int32 pod1PodProgram<bgcolor=color1>;
 int32 pod2PodProgram<bgcolor=color1>;
 int32 pod3PodProgram<bgcolor=color1>;
