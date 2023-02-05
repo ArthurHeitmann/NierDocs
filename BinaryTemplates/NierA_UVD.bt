@@ -3,7 +3,7 @@ UVs for textures/icon of the UI
 */
 
 struct Header {
-	uint32 ui_1;
+	uint32 unknown;
 	uint32 entriesCount;
 	uint32 entriesOffset;
 	uint32 texturesOffset;
@@ -12,7 +12,6 @@ struct Header {
 struct Entry {
 	char name[64];
 	uint32 id<format=hex>;
-	Printf("0x%08X\n", id);
 	uint32 textureId<format=hex>;
 	float x;
 	float y;
@@ -32,10 +31,12 @@ struct Texture
 Header header;
 
 FSeek(header.entriesOffset);
-Entry entries[header.entriesCount]<optimize=false>;
+Entry entries[header.entriesCount];
 
 FSeek(header.texturesOffset);
-struct {
-	while (FTell() < FileSize())
-		Texture t;
-} textures;
+local int texturesCount = 0;
+if (header.texturesOffset > header.entriesOffset)
+	texturesCount = (FileSize() - header.texturesOffset) / sizeof(Texture);
+else
+	texturesCount = (header.entriesOffset - header.texturesOffset) / sizeof(Texture);
+Texture textures[texturesCount];
