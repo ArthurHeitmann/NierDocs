@@ -1,0 +1,91 @@
+//------------------------------------------------
+//--- 010 Editor v10.0.1 Binary Template
+//
+//      File: .WAI
+//   Authors: NSA Cloud
+//   Version: V1
+//   Purpose: Nier Automata WWise Audio Info
+//  Category: 
+// File Mask: *.wai
+//  ID Bytes: 
+//   History: 
+//------------------------------------------------
+
+/*
+Wem 0 - wem 5 in core_0_001.wsp 
+id 669479
+entry size 1040597
+offset 5613568
+unkn3 1
+unkn4 1
+
+
+*/
+typedef struct
+{
+    uint fileType;
+    uint WSPDirectoryCount;
+    uint WSPNameCount;
+    uint structCount;
+
+}Header<bgcolor = 0x00FF00>;
+typedef struct
+{
+    char name[16];
+    uint unkn0;
+    uint unkn1;
+    uint startStructIndex;
+    uint endStructIndex;
+}WSPDirectory<bgcolor = 0x008800>;
+
+typedef struct
+{
+    char name[16];
+    uint unkn0;
+    uint unkn1;
+    uint unkn2;
+    uint unkn3;
+}WSPName<bgcolor = 0x008800>;
+typedef struct
+{
+    uint wemID;
+    uint wemEntrySize;
+    uint wemOffset;
+    short wspNameIndex;
+    short wspIndex;
+
+}WEMStruct<read=ReadWemStructEntry,optimize=false>;
+typedef struct
+{
+    uint32 eventId<bgcolor=0x004400>;
+    float unkn1;
+    uint32 unkn2;
+    uint16 unkn3_0;
+    uint16 unkn3_1;
+    uint32 unkn4;
+}EventInfoStruct<bgcolor=0x008800>;
+
+Header header;
+string ReadWemStructEntry(WEMStruct& input){
+    string s;
+    local int index1;
+    local int index2;
+    index1 = input.wspIndex / 1000;
+    index2 = input.wspIndex % 1000;
+    
+    SPrintf(s, "%s_%i_%i", wspname[input.wspNameIndex].name,index1,index2);
+    return s;
+};
+if (header.structCount == 12524)
+{
+WSPDirectory wspdirectory[header.WSPDirectoryCount];
+WSPName wspname[header.WSPNameCount];
+
+WEMStruct sfx_wemstruct[wspdirectory[0].endStructIndex - wspdirectory[0].startStructIndex]<bgcolor=0x990000>;
+WEMStruct jp_wemstruct[wspdirectory[1].endStructIndex - wspdirectory[1].startStructIndex]<bgcolor=0x990000>;
+WEMStruct en_wemstruct[wspdirectory[2].endStructIndex - wspdirectory[2].startStructIndex]<bgcolor=0x990000>;
+}
+else
+{
+ EventInfoStruct unkndata[header.structCount];
+}
