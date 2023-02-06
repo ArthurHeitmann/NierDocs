@@ -18,6 +18,20 @@ string inverseToStr(float f) {
 	return s;
 }
 
+struct Vector;
+string vectorToStr(const Vector& v) {
+	string s = "";
+	SPrintf(s, "(%.02f, %.02f, %.02f)", v.x, v.y, v.z);
+	return s;
+}
+
+struct Vector
+{
+	float x;
+	float y;
+	float z;
+};
+
 struct Header
 {
 	uint32 size1;
@@ -43,28 +57,31 @@ struct Data3Header;
 struct Data3Entry;
 struct Entry1
 {
-	float x;
-	float y;
-	uint32 null0;
-	uint32 null1;
-	uint32 null2;
-	uint32 null3;
-	float scaleX;
-	float scaleY;
-	float f_u_2;
-	float R;
-	float G;
-	float B;
-	float moreFloats[5];
+	Vector translation<read=vectorToStr>;
+	Vector rotation<read=vectorToStr>;
+	Vector scale<read=vectorToStr>;
+	Vector RGB<read=vectorToStr>;
+	float alpha;
+	float moreFloats[4];
 	struct {
-		uint32 entry2_layerId1;		// 0
+		int32 entry2_layerId1;		// 0
 		uint32 entry2_layerId2;		// 1
 		uint32 const0_1;			// 2
 		uint32 range1_0_to_9;		// 3
 		uint32 null2;				// 4
 		uint32 range3_0_to_2;		// 5
 		uint32 u4;					// 6
-		uint32 u6;					// 7
+		/*
+		_____0__	top edge centered
+		_____1__	Y centered
+		____1___	bottom edge centered
+		___0____	left edge centered
+		___1____	X centered
+		__1_____	right edge centered
+		_1______	Row
+		1_______	Column
+		*/
+		uint32 layoutType<comment="See BT source code for layout types">;	// 7
 		float float7;				// 8
 		uint32 bool8;				// 9
 		uint32 bool9;				// 10
@@ -73,7 +90,7 @@ struct Entry1
 		uint32 const12_1;			// 13
 		uint32 bool13;				// 14
 		uint32 bool14;				// 15
-		uint32 const15_6;			// 16
+		uint32 const15_1;			// 16
 		uint32 bool16;				// 17
 		uint32 bool17;				// 18
 		uint32 bool18;				// 19
@@ -214,14 +231,25 @@ struct Data3
 	}
 };
 
+enum Data3PropertyIndex {
+	Translation_X = 0,
+	Translation_Y = 1,
+	Translation_Z = 2,
+	Rotation_X = 3,
+	Rotation_Y = 4,
+	Rotation_Z = 5,
+	Scale_X = 6,
+	Scale_Y = 7,
+	Scale_Z = 8
+};
 // potentially animation data
 struct Data3Header
 {
 	uint32 beginOffset;
 	uint32 size1;
-	uint32 u_0;
-	uint32 u_1;
-	uint32 u_2;
+	Data3PropertyIndex propertyIndex;
+	float minValue;
+	float maxValue;
 	float startTime;
 	float endTime;
 	uint32 u_3;
