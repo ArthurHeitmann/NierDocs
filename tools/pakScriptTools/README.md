@@ -1,3 +1,9 @@
+# This is now deprecated. Use [F-SERVO](https://github.com/ArthurHeitmann/F-SERVO) instead.
+
+&nbsp;
+
+&nbsp;
+
 # PAK, YAX & XML Tools
 
 XML scripting files for Nier:Automata.
