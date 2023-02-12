@@ -12,8 +12,10 @@ A collection tools & resources for modding Nier Automata.
   - [Ruby Scripting](./docs/scripting/rubyScripting.md)
 - [Binary Templates](./BinaryTemplates/)
 - Tools
-	- [All in one "Nier CLI" tool](https://github.com/ArthurHeitmann/nier_cli)  
+	- [All in one Nier CLI tool](https://github.com/ArthurHeitmann/nier_cli)  
 	  Most of the tools below are included in the Nier CLI tool
+	- [ALl in one GUI tool](https://github.com/ArthurHeitmann/F-SERVO)  
+	  Easier to use user interface and support for more file types
 	- [BXM conversion](./tools/bxmScriptTools/)
 	- [XML Scripting](./tools/pakScriptTools/)
 	- [Ruby Scripting](https://github.com/ArthurHeitmann/MrubyDecompiler)
