@@ -7,6 +7,8 @@ const int color1 = 0xEBA434;
 const int color2 = 0xEB6434;
 
 int32 null;
+
+// Start of "common" header in GameData.dat
 uint64 steamID64<bgcolor=color1>;
 FSeek(0x10);
 int16 counter;
@@ -19,12 +21,17 @@ struct LastPlayedAt
 } lastPlayedAt<bgcolor=color1>;
 
 int32 pad1;
+// end
+// start of peak header in GameData.dat
 int32 playedTime_seconds<bgcolor=color1>;
 uint32 u0<bgcolor=color1>;
 int32 chapter<bgcolor=color1>;
 uint32 u1;
 wchar_t name[35]<bgcolor=color1>;
 uint16 u2;
+// end
+
+
 char dynamicText[0x30000]<bgcolor=color2>;
 Printf("%s\n", dynamicText);
 

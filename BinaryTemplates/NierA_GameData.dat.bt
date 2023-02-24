@@ -1,0 +1,42 @@
+//------------------------------------------------
+//--- 010 Editor v13.0 Binary Template
+//
+//      File: GameData.dat
+//   Authors: EM4V & RaiderB
+//   Version: 
+//   Purpose: 
+//  Category: 
+// File Mask: 
+//  ID Bytes: 
+//   History: 
+//------------------------------------------------
+struct CommonAndMostRecentHeader {
+	ubyte data[0x18];
+};
+
+
+struct SlotDataPeak {
+    ubyte data[0x60];
+};
+
+CommonAndMostRecentHeader header <bgcolor = 0xFFFF0000, comment = "First 24 bytes from most recent SlotData_X.dat">;
+const string slotDataComment = "First 24 bytes from most recent SlotData_X.dat";
+SlotDataPeak SlotData_0 <bgcolor = 0x2A9F1C, comment = slotDataComment>;
+SlotDataPeak SlotData_1 <bgcolor = 0xAB0071, comment = slotDataComment>;
+SlotDataPeak SlotData_2 <bgcolor = 0xFFEEE0, comment = slotDataComment>;
+
+FSeek(418);
+ubyte dlc1Flag <bgcolor = 0x2A9F1C>;
+ubyte dlc2Flag <bgcolor = 0x2A9F1C>;
+
+FSeek(508);
+enum <ubyte> Language {
+    japanese = 0,
+    english = 1,
+    english2 = 2,
+    german = 3,
+    french = 4,
+    spanish = 5,
+    italian = 6
+};
+Language language <bgcolor = 0x2A9F1C>;
