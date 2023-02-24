@@ -1,0 +1,23 @@
+LittleEndian();
+struct {
+    char id[4];
+    int32 u_a;
+    int32 u_b;
+    int32 u_c;
+} header;
+
+typedef struct {
+    float   vert_x;
+    float   vert_y;
+    float   vert_z;
+    float   vert_w;
+} Room_Coordinate <bgcolor = 0x00CFD1FF>;
+
+
+const int num_coords = 1007;
+
+
+local int i;
+for (i = 0; i < num_coords; i++) {
+    Room_Coordinate coord;
+}
