@@ -3,30 +3,116 @@ based on: https://pastebin.com/2qDrUheP
 # Quick links
 
 - [Quick links](#quick-links)
-    - [cpk000](#cpk000)
-    - [cpk002](#cpk002)
-    - [cpk003](#cpk003)
-    - [cpk004](#cpk004)
-    - [cpk003](#cpk003-1)
-    - [cpk005](#cpk005)
-    - [cpk006](#cpk006)
-    - [cpk008](#cpk008)
-    - [cpk009](#cpk009)
-    - [cpk010](#cpk010)
-    - [cpk012](#cpk012)
-    - [cpk013](#cpk013)
-    - [cpk014](#cpk014)
-    - [cpk015](#cpk015)
-    - [cpk016](#cpk016)
-    - [cpk100](#cpk100)
-    - [cpk101](#cpk101)
-    - [cpk102](#cpk102)
-    - [cpk103](#cpk103)
-    - [cpk105](#cpk105)
-    - [cpk107](#cpk107)
-    - [cpk108](#cpk108)
+  * [Folder name explanations](#folder-name-explanations)
+    + [3D](#3d)
+    + [Scripting (+ more)](#scripting-(+-more))
+    + [Localization](#localization)
+    + [Other](#other)
+  * [CPK summary](#cpk-summary)
+  * [CPK files in detail](#cpk-files-in-detail)
+    + [data000.cpk](#data000cpk)
+    + [data002.cpk](#data002cpk)
+    + [data003.cpk](#data003cpk)
+    + [data004.cpk](#data004cpk)
+    + [data003.cpk](#data003cpk-1)
+    + [data005.cpk](#data005cpk)
+    + [data006.cpk](#data006cpk)
+    + [data008.cpk](#data008cpk)
+    + [data009.cpk](#data009cpk)
+    + [data010.cpk](#data010cpk)
+    + [data012.cpk](#data012cpk)
+    + [data013.cpk](#data013cpk)
+    + [data014.cpk](#data014cpk)
+    + [data015.cpk](#data015cpk)
+    + [data016.cpk](#data016cpk)
+    + [data100.cpk](#data100cpk)
+    + [data101.cpk](#data101cpk)
+    + [data102.cpk](#data102cpk)
+    + [data103.cpk](#data103cpk)
+    + [data105.cpk](#data105cpk)
+    + [data107.cpk](#data107cpk)
+    + [data108.cpk](#data108cpk)
 
-### cpk000
+## Folder name explanations
+
+### 3D
+
+- bg - static world props
+- ba - world props with bones
+- bh - destructible props ?
+- em - enemies
+- et - item & hacking related models
+- it - some random models
+- wd1 - map files high LOD
+- wd2 - map files low LOD
+- wd3 - city ruins after big bang map files high LOD
+- wd4 - city ruins after big bang map files low LOD
+- wd5 - underground area map files
+- wda - shared textures
+- um - duplicate and special variations of same models ?
+- wp - Weapons (+ PODs)
+- pl - humanoid characters
+
+### Scripting (+ more)
+
+- core - files that are needed throughout the entire game
+- quest - side quests and hacking games
+- ph1/2/3/f - scripts & more for global game phases (ph1: before the big bang, ph2: after big bang route A+B, ph3: route C)
+- st1/2/5 - scripting, sound, visual & more data general areas (like the entire desert, factory, forest, copied city etc,)
+
+### Localization
+
+- novel - localized text only passages of the game
+- subtitle - localized subtitles for video cut scenes
+- txtmess - localized UI text
+- ui - localized UI text + UI layout
+
+### Other
+
+- effect - visual effects (3D & 2D)
+- font - font textures & kernings
+- misctex - all sorts of random textures
+- Enlighten - global illumination data
+- movie - pre rendered cut scenes
+- sound - music & sound effects
+
+## CPK summary
+
+**Numbering system**:  
+- data000.cpk - data009.cpk: Core files and approximately everything that is needed to play through the prologue
+- data010.cpk - data019.cpk: Almost everything else
+- data100.cpk: DLC content and a bit of everything
+- data101.cpk - data108.cpk: DLC cosmetics
+
+**CPKs:**  
+- data000.cpk: shaders & effects
+- data001.cpk: banned words list
+- data002.cpk: core & misc scripts
+- data003.cpk: factory map, high LOD
+- data004.cpk: factory map, low LOD
+- data005.cpk: mostly factory related props
+- data006.cpk: factory related enemies, hacking entities, player characters, weapons
+- data008.cpk: some more characters
+- data009.cpk: UI & localization data
+- data010.cpk: some random things
+- data012.cpk: Most of the main & side quests, game area sound & visual definitions
+- data013.cpk: map, high LOD
+- data014.cpk: map, low LOD
+- data015.cpk: world props
+- data016.cpk: lots of enemies, humanoid characters, weapons & more
+- data018.cpk: all sorts of random models
+- data019.cpk: text novels
+- data100.cpk: DLC props, enemies, player characters (for modding), scripts, maps & much more
+- data101.cpk: Grimoire Weiss (POD cosmetic)
+- data102.cpk: machine head (cosmetic)
+- data103.cpk: valve (cosmetic)
+- data105.cpk: cardboard POD (POD cosmetic)
+- data107.cpk: retro POD red (POD cosmetic)
+- data108.cpk: retro pod grey (POD cosmetic)
+
+## CPK files in detail
+
+### data000.cpk
   - effect:
     - model:
       - ef0308 - stone debris
@@ -39,25 +125,25 @@ based on: https://pastebin.com/2qDrUheP
   - it:
     - it0020 - android
   
-### cpk002
+### data002.cpk
   - ph1:
     - p100 - Most scripting logic before the big bang (?)
   - st1:
     - r100 - City Ruins before big bang
     - r120 - Factory
 
-### cpk003
-  - textures for cpk004
+### data003.cpk
+  - textures for data004.cpk
 
-### cpk004
+### data004.cpk
   - Most just the factory
   - [Full Map](../../mapMap/fullMap.md)
   - Also documented [here](https://niermodding.com/res/automata/wd)
 
-### cpk003
+### data003.cpk
   - early game map files
 
-### cpk005
+### data005.cpk
   - ba: (factory things and more)
     - ba0000 - elevator door
     - ba010c - container conveyer belt
@@ -139,7 +225,7 @@ based on: https://pastebin.com/2qDrUheP
     - bh0100 - low poly small stubby
 
 
-### cpk006
+### data006.cpk
   - em:
     - em0000 - small stubby
     - em0010 - medium biped
@@ -277,13 +363,13 @@ based on: https://pastebin.com/2qDrUheP
     - wp4020 - curtain when changing clothes (i think)
     - wp4030 - hammer (pod program)
     - wpe000 - (?)
-    - (higher quality weapon textures compared to cpk016)
+    - (higher quality weapon textures compared to data016.cpk)
     - wpf000 - Animation & combo data for all small weapons (+ HD faith)
     - wpf200 - Animation & combo data for all long swords (+ HD iron will)
     - wpf400 - Animation & combo data for all spears (+ HD phoenix lance)
     - wpf600 - Animation & combo data for all knuckles (+ HD type-3 fists)
 
-### cpk008
+### data008.cpk
   - um:
     - um0000 - 2B (blurry)
     - um00a0 - eve (top) (blurry)
@@ -297,17 +383,17 @@ based on: https://pastebin.com/2qDrUheP
     - ... and some machines
     - um8000 - World Map (in system menu)
 
-### cpk009
+### data009.cpk
   - UI stuff
 
-### cpk010
+### data010.cpk
   - model:
     - lot's of broken/destroyed things 
   - it:
     - it0040 - POD 042 broken
     - it0041 - other POD broken
 
-### cpk012
+### data012.cpk
   - ph2:
     - p200 - Most scripting logic after big bang and route C (?)
     - p300 - Most scripting for route C (?)
@@ -400,18 +486,18 @@ based on: https://pastebin.com/2qDrUheP
     - r550 - Bunker
     - r551 - waves?
 
-### cpk013
-  - textures for cpk014
+### data013.cpk
+  - textures for data014.cpk
 
-### cpk014
+### data014.cpk
   - [Full Map](../../mapMap/fullMap.md)
   - [Desert Map](../../mapMap/desertMap.md)
   - Also documented [here](https://niermodding.com/res/automata/wd)
 
-### cpk015
-  - [Partial documentation](./cpk015DttContents.md)
+### data015.cpk
+  - [Partial documentation](./data015.cpkDttContents.md)
 
-### cpk016
+### data016.cpk
   - em:
     - em000a - immanuel (baby machine from forest kingdom)
     - em000b - village small stubby
@@ -752,7 +838,7 @@ based on: https://pastebin.com/2qDrUheP
     - wp3020 - (?)
     - wp5000 - missile (large, flooded city)
     
-### cpk100
+### data100.cpk
   - ba:
     - bab000 - contains all machine weapons and some extra textures
     - bab001 - contains various world objects (gas tanks, barrels)
@@ -818,26 +904,26 @@ based on: https://pastebin.com/2qDrUheP
     - g5aa00:colosseum (desert)
     - g5ac00:factory (underground part)
 
-### cpk101
+### data101.cpk
   - wp:
     - wp3011 - Grimoire Weiss
 
-### cpk102
+### data102.cpk
   - et:
     - ete003 - machine head
 
-### cpk103
+### data103.cpk
   - et:
     - ete007 - valve (cosmetic for eyes & head)
 
-### cpk105
+### data105.cpk
   - wp:
     - wp3012 - Cardboard Pod
 
-### cpk107
+### data107.cpk
   - wp:
     - wp3014 - Retro Red Pod
 
-### cpk108
+### data108.cpk
   - wp:
     - wp3017 - Retro Grey Pod
