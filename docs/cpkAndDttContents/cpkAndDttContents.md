@@ -5,7 +5,7 @@ based on: https://pastebin.com/2qDrUheP
 - [Quick links](#quick-links)
   * [Folder name explanations](#folder-name-explanations)
     + [3D](#3d)
-    + [Scripting (+ more)](#scripting-(+-more))
+    + [Scripting (+ more)](#scripting--more)
     + [Localization](#localization)
     + [Other](#other)
   * [CPK summary](#cpk-summary)
