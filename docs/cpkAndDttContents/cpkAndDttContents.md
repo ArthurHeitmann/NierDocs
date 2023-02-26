@@ -37,43 +37,43 @@ based on: https://pastebin.com/2qDrUheP
 
 ### 3D
 
-- bg - static world props
 - ba - world props with bones
+- bg - static world props
 - bh - destructible props ?
 - em - enemies
 - et - item & hacking related models
 - it - some random models
+- pl - humanoid characters
+- um - duplicate and special variations of same models ?
 - wd1 - map files high LOD
 - wd2 - map files low LOD
 - wd3 - city ruins after big bang map files high LOD
 - wd4 - city ruins after big bang map files low LOD
 - wd5 - underground area map files
 - wda - shared textures
-- um - duplicate and special variations of same models ?
 - wp - Weapons (+ PODs)
-- pl - humanoid characters
 
 ### Scripting (+ more)
 
 - core - files that are needed throughout the entire game
+- ph1/2/3/f - scripts & more for global game phases (ph1: before the big bang, ph2: after big bang on route A+B, ph3: route C)
 - quest - side quests and hacking games
-- ph1/2/3/f - scripts & more for global game phases (ph1: before the big bang, ph2: after big bang route A+B, ph3: route C)
 - st1/2/5 - scripting, sound, visual & more data general areas (like the entire desert, factory, forest, copied city etc,)
 
 ### Localization
 
 - novel - localized text only passages of the game
-- subtitle - localized subtitles for video cut scenes
+- subtitle - localized subtitles for video cutscenes
 - txtmess - localized UI text
 - ui - localized UI text + UI layout
 
 ### Other
 
 - effect - visual effects (3D & 2D)
+- Enlighten - global illumination data
 - font - font textures & kernings
 - misctex - all sorts of random textures
-- Enlighten - global illumination data
-- movie - pre rendered cut scenes
+- movie - pre rendered cutscenes
 - sound - music & sound effects
 
 ## CPK summary
