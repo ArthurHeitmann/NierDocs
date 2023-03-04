@@ -1,3 +1,5 @@
+(This list does not contain voice lines from cutscenes, because those can involve multiple speakers and have different naming conventions)
+
 | Audio event name                            | Speaker                    | Line                                               |
 |---------------------------------------------|----------------------------|----------------------------------------------------|
 | M0010_S0720_H0011_101_pod042                | Pod 042                    | Alert: Incoming enemy attack from below.           |
