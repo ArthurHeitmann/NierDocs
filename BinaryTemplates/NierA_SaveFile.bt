@@ -98,6 +98,88 @@ struct Chip {
 };
 Chip chips[300]<bgcolor=color1>;
 
+enum DressModule {
+	usingDressModule = 0,
+	default_ = 1
+};
+
+enum Outfit2B {
+	default2B = 0,
+	revealing = 1,
+	armor = 2,
+	armorNoHelmet = 3,
+};
+enum Outfit9S {
+	default9S = 0,
+	youngBoy = 1,
+};
+
+enum HeadAccessory {
+	noAccessory = 0x00,
+	lunarTear = 0x01,
+	sandMask = 0x02,
+	machineMask = 0x04,
+	alienMask = 0x07,
+	valveLeftEye = 0x08,
+	valveRightEye = 0x09,
+	valveBothEyes = 0x0A,
+	valveHead = 0x0B,
+	pinkRibbon = 0x0C,
+	blueRibbon = 0x0D,
+	camouflageGoggles = 0x0E
+};
+
+enum <ubyte> HairColor {
+	white = 0,
+	black = 1,
+	brown = 2,
+	red = 3,
+	blue = 4,
+	green = 5,
+	purple = 6,
+	ash = 7,
+	golden = 8,
+	pastelPink = 9,
+	lightBlue = 10,
+	limeGreen = 11,
+	lightPurple = 12
+};
+
+enum PodCosmetic {
+	defaultPod = -1,
+	grimoire = 1,
+	cardboard = 2,
+	retroRed = 4,
+	retroGrey = 7
+};
+
+FSeek(0x383DC);
+struct OutfitConfig
+{
+	FSeek(0x383DC);
+	DressModule dressModule2B<bgcolor=color1>;
+	DressModule dressModule9S<bgcolor=color1>;
+	DressModule dressModuleA2<bgcolor=color1>;
+	uint32 bHasHeadAccessoryEquipped2B<bgcolor=color1>;
+	uint32 bHasHeadAccessoryEquipped9S<bgcolor=color1>;
+	uint32 bHasHeadAccessoryEquippedA2<bgcolor=color1>;
+	HeadAccessory headAccessory2B<bgcolor=color1>;
+	HeadAccessory headAccessory9S<bgcolor=color1>;
+	HeadAccessory headAccessoryA2<bgcolor=color1>;
+	Outfit2B outfit2B<bgcolor=color1>;
+	Outfit9S outfit9S<bgcolor=color1>;
+	uint32 outfitA2<bgcolor=color1>;
+	FSeek(0x385F0);
+	PodCosmetic podCosmetic2B<bgcolor=color1>;
+	PodCosmetic podCosmetic9S<bgcolor=color1>;
+	PodCosmetic podCosmeticA2<bgcolor=color1>;
+	FSeek(0x3867C);
+	HairColor hairColor<bgcolor=color1>;
+	FSeek(0x3867F);
+	ubyte bHasEmilBulletsEquipped<bgcolor=color1>;
+} cosmetics;
+
+
 FSeek(0x38558);
 struct PlayRecords
 {
