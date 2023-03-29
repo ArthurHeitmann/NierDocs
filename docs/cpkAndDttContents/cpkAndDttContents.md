@@ -495,7 +495,7 @@ based on: https://pastebin.com/2qDrUheP
   - Also documented [here](https://niermodding.com/res/automata/wd)
 
 ### data015.cpk
-  - [Partial documentation](./data015.cpkDttContents.md)
+  - [Partial documentation](./cpk015DttContents.md)
 
 ### data016.cpk
   - em:
