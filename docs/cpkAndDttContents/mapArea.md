@@ -28,7 +28,7 @@ The folder name is based on this pattern:
 - r150 - Desert
 - r160 - Forest
 - r170 - Flooded City
-- 200 - City Ruins (before the big bang)
+- 200 - City Ruins (after the big bang)
 
 ## Separate Areas
 - r5a0 - Ressource Recovery Unit (Forest)
