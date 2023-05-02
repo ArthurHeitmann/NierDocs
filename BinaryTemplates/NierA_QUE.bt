@@ -14,14 +14,18 @@ struct QueHeader
 
 struct QueEntry
 {
-	int32 u0;	// going up; has duplicates; big nums like 1677787167, 1677787168, 1677852772, 1677852832
-	int32 one;
-	int32 u2;	// one of 0x350001, 0x350002, 0x350003, 0x350004, 0x350005
-	int32 u3;	// -1 or between 515 and 841
-	int32 u4;	// one of 1, 2, 3, 4, 5, 10
-	int32 u5;	// 0 or 1
-	Printf("%d\n", u0);
+	uint16 questId;	// per questId 5 or 10 entries
+	ubyte u00;
+	ubyte u01;
+	uint32 one;
+	uint16 subIndex;	// 0 - 4
+	uint16 u21;	// 0x35
+	uint32 u3;	// -1 or between 515 and 841
+	uint32 u4;	// one of 1, 2, 3, 4, 5, 10
+	uint32 u5;	// 0 or 1
+	Printf("%d\t0x%x\t0x%x\t%d\t0x%x\t%d\t%d\t%d\n", questId, u00, u01, subIndex, u21, u3, u4, u5);
 };
+Printf("id\tu00\tu01\tsubIndex\tu21\tu3\tu4\tu5\n");
 
 QueHeader header;
 FSeek(header.beginOffset);

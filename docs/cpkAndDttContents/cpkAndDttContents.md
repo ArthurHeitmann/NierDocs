@@ -427,7 +427,7 @@ based on: https://pastebin.com/2qDrUheP
     - q210 - Side quest Lord of the Valley
     - q220 - Side quest Vanquish the Bad Bot
     - q221 - Side quest Play with Us!
-    - qUs! - Side quest Storage Element
+    - q222 - Side quest Storage Element
     - q240 - Side quest Half-wit Inventor
     - q250 - Side quest Idiot Savant
     - q290 - Side quest Game Dev Machine Lv.1
