@@ -34,7 +34,7 @@ struct Line;
 
 struct Letter {
     uint16 code;
-    short idx;
+    short kerning;
 };
 struct Message {
     uint32 paragraphsOffset<format=hex>;
@@ -191,7 +191,7 @@ wstring readLetter(Letter &let) {
     } else if (let.code == 0x8001) {
         s += L' ';
     } else if (let.code == 0x8020) {
-        switch (let.idx) {
+        switch (let.kerning) {
         case 9:
             s += "≡"; // controller menu button
             break;
@@ -200,20 +200,20 @@ wstring readLetter(Letter &let) {
             break;
         default:
             string s2 = L"";
-            SPrintf(s2, L"<Special_0x%x_%d>", let.code, let.idx);
+            SPrintf(s2, L"<Special_0x%x_%d>", let.code, let.kerning);
             s += s2;
             break;
         }
     } else {
         string s2 = L"";
-        SPrintf(s2, L"<Special_0x%x_%d>", let.code, let.idx);
+        SPrintf(s2, L"<Special_0x%x_%d>", let.code, let.kerning);
         s += s2;
     }
     return s;
 }
 string readLetter2(Letter &let) {
     string s = L"";
-    SPrintf(s, "%s (%d)", readLetter(let), let.idx);
+    SPrintf(s, "%s (%d)", readLetter(let), let.kerning);
     wstring s2 = s;
     return s2;
 }
