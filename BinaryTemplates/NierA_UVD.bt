@@ -2,6 +2,8 @@
 UVs for textures/icon of the UI
 */
 
+LittleEndian();
+
 struct Header {
 	uint32 unknown;
 	uint32 entriesCount;

@@ -2,6 +2,8 @@
 UiData
 */
 
+LittleEndian();
+
 const int color1 = 0xEBA434;
 const int color2 = 0xEBA454;
 const int color3 = 0xEB6434;
