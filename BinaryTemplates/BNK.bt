@@ -1,7 +1,5 @@
-// BT for Wwise BNK files (version 113)
+// BT for Wwise BNK files (version 70+)
 // based on https://github.com/Silvris/MHW-Audio-Research/blob/master/NBNK-Reconstructed.bt
-// specialized for Nier Automata
-#include "bnkMisc/Audiokinetics RIFF.bt"
 
 local int32 bnkVersion;
 
