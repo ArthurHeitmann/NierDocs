@@ -232,7 +232,8 @@ struct CorpseInfo
 } corpse;
 
 
-FSeek(0x395f4);
+FSeek(0x395f0);
+uint32 globalPhase<bgcolor=color1, format=hex>;
 char phase[32]<bgcolor=color1>;
 char transporter[32]<bgcolor=color1>;
 uint32 u4[2];

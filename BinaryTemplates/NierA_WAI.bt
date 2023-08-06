@@ -76,7 +76,7 @@ string ReadWemStructEntry(WEMStruct& input){
     SPrintf(s, "%s_%i_%i", wspname[input.wspNameIndex].name,index1,index2);
     return s;
 };
-if (header.structCount == 12524)
+if (header.structCount == 12524 || header.structCount == 13176)
 {
 WSPDirectory wspdirectory[header.WSPDirectoryCount];
 WSPName wspname[header.WSPNameCount];

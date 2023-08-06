@@ -1,0 +1,1524 @@
+// BT for Wwise BNK files (version 113)
+// based on https://github.com/Silvris/MHW-Audio-Research/blob/master/NBNK-Reconstructed.bt
+// specialized for Nier Automata
+#include "bnkMisc/Audiokinetics RIFF.bt"
+
+local int32 bnkVersion;
+
+local int32 i;
+local int32 j;
+local int32 k;
+local int32 m;
+typedef struct{
+	char dwTag[4];
+	uint32 dwChunkSize;
+}ChunkHeader;
+
+//BKHD
+typedef struct(uint32 chunkSize){
+	uint32 dwBankGeneratorVersion; //should be 120 on a MHW nbnk
+	bnkVersion = dwBankGeneratorVersion;
+	uint32 dwSoundbankID; //fnv hash, normally of the file name
+	uint32 dwLanguageID; //00 is SFX
+	if (bnkVersion <= 126)
+		uint32 bFeedbackInBank;
+	else
+		uint32 uAltValues;
+	
+	if (bnkVersion <= 76) {}
+	else
+		uint32 dwProjectID; // MHW = 1114
+	if (bnkVersion > 141) {
+		uint32 dwSoundBankType;
+		byte abyBankHash[0x10];
+	}
+	local int gapSize = 0;
+	if (bnkVersion <= 26)
+		gapSize = chunkSize - 0x18;
+	else if (bnkVersion <= 76)
+		gapSize = chunkSize - 0x10;
+	else if (bnkVersion <= 141)
+		gapSize = chunkSize - 0x14;
+	else
+		gapSize = chunkSize - 0x14 - 0x04 - 0x10;
+	if (gapSize > 0)
+		byte gap[gapSize];
+}BankHeader;
+
+typedef struct{
+	uint32 id;
+	uint32 uOffset;
+	uint32 uSize;
+}LoadedMedia;
+
+//DIDX
+typedef struct(uint32 dwChunkSize){
+	local uint32 pLoadedMedia = (dwChunkSize/12);
+	for(i=0;i<pLoadedMedia;i++){
+		LoadedMedia loadedMedia;
+	};
+}MediaIndex;
+
+//DATA
+typedef struct(uint32 dwChunkSize) {
+	local int32 start = FTell();
+	for(i=0; i < Block[1].DIDX.pLoadedMedia; i++) {
+		FSeek(start + Block[1].DIDX.loadedMedia[i].uOffset);
+		struct Media {
+			byte data[Block[1].DIDX.loadedMedia[i].uSize];
+		} media;
+	}
+}DataChunk;
+
+//INIT
+typedef struct{
+	uint32 ulPluginID;
+	uint32 uStringSize;
+	char pDLLName[uStringSize];
+}IAkPlugin;
+
+typedef struct{
+	uint32 pluginCount;
+	for(i=0;i<pluginCount;i++){
+		IAkPlugin Plugin;
+	};
+}PluginChunk;
+
+//HIRC Common
+typedef struct{
+	byte eHircType;
+	uint32 dwSectionSize;
+	uint32 ulID;
+}HircHeader;
+
+typedef struct(uint32 length){
+	byte datum[length];
+}UnknData;
+
+typedef struct{
+	if (bnkVersion > 26)
+		byte uFXIndex;
+	uint32 fxID;
+	if (bnkVersion <= 26) {
+		ubyte bitsFXBypass;
+		ubyte bIsRendered;
+	} else if (bnkVersion <= 48) {
+		ubyte bIsRendered;
+	} else {
+		ubyte bitsFXBypass;
+		ubyte bIsRendered;
+	}
+}FXChunk;
+
+typedef struct{
+	byte bIsOverrideParentFX;
+	if (bnkVersion <= 26)
+		uint32 uNumFX;
+	else
+		byte uNumFX;
+	if (uNumFX && bnkVersion > 26)
+		byte bitsFXBypass;
+	for(j=0;j<uNumFX;j++){
+		FXChunk Effect;
+	};
+}NodeInitialFXParams;
+
+typedef struct{
+	byte cProps;
+	for(i=0;i<cProps;i++){
+		byte pID;
+	};
+	for(i=0;i<cProps;i++){
+		if(pID[i]==0)uint32 pValue;
+		else float pValue;
+	};
+}AkPropValue;
+
+typedef struct{
+	byte cProps;
+	for(i=0;i<cProps;i++){
+		byte pID;
+	};
+	for(i=0;i<cProps;i++){
+		float min;
+		float max;
+	};
+}AkPropRangedValue;
+
+typedef struct{
+	AkPropValue PropValues;
+	AkPropRangedValue RangedPropValues;
+}NodeInitialParams;
+
+typedef struct{
+	byte uByVector;
+	local byte has_positioning = (uByVector >> 0 ) & 1;
+	local ubyte has_3d = false;
+	if (has_positioning) {
+		if (bnkVersion <= 56) {
+			int32 uCenterPct;
+			float fPAN_RL;
+			float fPAN_FR;
+		}
+		if (bnkVersion <= 72) {
+			ubyte cbIs3DPositioningAvailable;
+			has_3d = cbIs3DPositioningAvailable;
+			if (!has_3d)
+				byte bIsPannerEnabled;
+		} else if (bnkVersion <= 89) {
+			ubyte cbIs2DPositioningAvailable;
+			ubyte cbIs3DPositioningAvailable;
+			has_3d = cbIs3DPositioningAvailable;
+			if (cbIs2DPositioningAvailable)
+				byte bPositioningEnablePanner;
+		} else if (bnkVersion <= 122) {
+			has_3d = (uByVector >> 3) & 1;
+		} else if (bnkVersion <= 129) {
+			has_3d = (uByVector >> 4) & 1;
+		} else {
+			has_3d = (uByVector >> 1) & 1;
+		}
+	}
+	if(has_3d) {
+		local byte eType = 0;
+		if (bnkVersion <= 89) {
+			uint32 eType_;
+			eType = eType_;
+		}
+		else
+			byte uBits3D;
+		if (bnkVersion <= 89) {
+			uint32 attenuationID;
+			ubyte bIsSpatialized;
+		} else if (bnkVersion <= 129) {
+			uint32 attenuationID;
+		}
+
+		local byte has_automation = false;
+		local byte has_dynamic = false;
+		local byte e3DPositionType = 0;
+		if (bnkVersion <= 72) {
+			has_automation = eType == 2;
+			has_dynamic = eType == 3;
+		} else if (bnkVersion <= 89) {
+			eType = (eType >> 0) & 3;
+			has_automation = eType != 1;
+			has_dynamic = !has_automation;
+		} else if (bnkVersion <= 122) {
+			e3DPositionType = (uBits3D >> 0) & 3;
+			has_automation = e3DPositionType != 1;
+			has_dynamic = false;
+		} else if (bnkVersion <= 126) {
+			e3DPositionType = (uBits3D >> 4) & 1;
+			has_automation = e3DPositionType != 1;
+			has_dynamic = false;
+		} else if (bnkVersion <= 129) {
+			e3DPositionType = (uBits3D >> 6) & 1;
+			has_automation = e3DPositionType != 1;
+			has_dynamic = false;
+		} else {
+			e3DPositionType = (uBits3D >> 5) & 3;
+			has_automation = e3DPositionType != 0;
+			has_dynamic = false;
+		}
+
+		if (has_dynamic)
+			ubyte bIsDynamic;
+		
+		if (has_automation) {
+			if (bnkVersion <= 89) {
+				uint32 ePathMode;
+				ubyte bIsLooping;
+				int32 transitionTime;
+				if (bnkVersion > 36)
+					ubyte bFollowOrientation;
+			} else {
+				ubyte ePathMode;
+				uint32 TransitionTime;
+			}
+
+			uint32 ulNumVertices;
+			struct AkPathVertex {
+				float x;
+				float y;
+				float z;
+				uint32 duration;
+			} pVertices [ulNumVertices];
+
+			uint32 ulNumPlayListItem;
+			struct AkPathListItemOffset {
+				uint32 ulVerticesOffset;
+				uint32 iNumVertices;
+			} pPlayListItems [ulNumPlayListItem];
+			if (bnkVersion > 36) {
+				struct Ak3DAutomationParams {
+					float fXRange;
+					float fYRange;
+					if (bnkVersion > 89)
+						float fZRange;
+				} Params[ulNumPlayListItem]<optimize=false>;
+			} 
+		};
+	};
+}PositioningParams;
+
+typedef struct{
+	/*
+		if cls.version <= 89:
+		obj.U8x('bOverrideGameAuxSends')
+		obj.U8x('bUseGameAuxSends')
+		obj.U8x('bOverrideUserAuxSends')
+		obj.U8x('bHasAux')
+		has_aux = obj.lastval != 0
+	else:
+		obj.U8x('byBitVector') \
+		   .bit('bOverrideUserAuxSends', obj.lastval, 2) \
+		   .bit('bHasAux', obj.lastval, 3) \
+		   .bit('bOverrideReflectionsAuxBus', obj.lastval, 4) # bHasAux in v122, > 135
+		has_aux = (obj.lastval >> 3) & 1
+	*/
+	local byte has_aux = false;
+	if (bnkVersion <= 89) {
+		ubyte bOverrideGameAuxSends;
+		ubyte bUseGameAuxSends;
+		ubyte bOverrideUserAuxSends;
+		ubyte bHasAux;
+		has_aux = bHasAux;
+	} else {
+		byte byBitVector;
+		has_aux = (byBitVector >> 3) & 1;
+	}
+	if(has_aux == 1){
+		uint32 auxID1;
+		uint32 auxID2;
+		uint32 auxID3;
+		uint32 auxID4;
+	};
+}AuxParams;
+
+typedef struct{
+	if (bnkVersion <= 36) {
+		uint32 eVirtualQueueBehavior;
+		ubyte bKillNewest;
+		uint16 u16MaxNumInstance;
+		uint32 eBelowThresholdBehavior;
+		ubyte bIsMaxNumInstOverrideParent;
+		ubyte bIsVVoicesOptOverrideParent;
+	} else if (bnkVersion <= 53) {
+		ubyte eVirtualQueueBehavior;
+		ubyte bKillNewest;
+		uint16 u16MaxNumInstance;
+		ubyte eBelowThresholdBehavior;
+		ubyte bIsMaxNumInstOverrideParent;
+		ubyte bIsVVoicesOptOverrideParent;
+	} else if (bnkVersion <= 89) {
+		ubyte eVirtualQueueBehavior;
+		ubyte bKillNewest;
+		ubyte bUseVirtualBehavior;
+		uint16 u16MaxNumInstance;
+		ubyte bIsGlobalLimit;
+		ubyte eBelowThresholdBehavior;
+		ubyte bIsMaxNumInstOverrideParent;
+		ubyte bIsVVoicesOptOverrideParent;
+		if (bnkVersion > 72) {
+			ubyte bOverrideHdrEnvelope;
+			ubyte bOverrideAnalysis;
+			ubyte bNormalizeLoudness;
+			ubyte bEnableEnvelope;
+		}
+	} else {
+		ubyte byBitVector1;
+		ubyte eVirtualQueueBehavior;
+		uint16 u16MaxNumInstance;
+		ubyte eBelowThresholdBehavior;
+		ubyte byBitVector2;
+	}
+}AdvSettingsParams;
+
+typedef struct{
+	uint32 StateFrom;
+	uint32 StateTo;
+	uint32 TranisitonTime;
+}StateTransition;
+
+typedef struct{
+	uint32 ulStateGroupID;
+	uint32 DefaultTransitionTime;
+	uint32 ulNumTransitions;
+	for(i=0;i<ulNumTransitions;i++){
+		StateTransition Transition;
+	};
+}StateGroup;
+
+typedef struct{
+	// variable size int
+	// https://github.com/bnnm/wwiser/blob/7e43e33c8586d32ff86314f4e431cd85cf16fc4c/wwiser/parser/wmodel.py#L428
+	if (bnkVersion <= 120)
+		uint32 ulNumStateGroups;
+	else
+		uint16 ulNumStateGroups;
+	// Printf("WARNING: StateChunk uses unsupported variable size int\n");
+	if (ulNumStateGroups != 0)
+		Printf("(probably) ERROR: StateChunk uses unsupported variable size int\n");
+	for(i=0;i<ulNumStateGroups;i++){
+		uint32 ulStateGroupID;
+		byte eStateSyncType;
+		uint16 ulNumStates;
+		for(j=0;j<ulNumStates;j++){
+			uint32 ulStateID;
+			uint32 ulStateInstanceID;
+		};
+	};
+}StateChunk;
+
+typedef struct{
+	float From;
+	float To;
+	uint32 Interpolation;
+}AkRTPCGraphPoint;
+
+typedef struct{
+	uint32 uClipIndex;
+	uint32 eAutoType;
+	uint32 uNumPoints;
+	for(i=0;i<uNumPoints;i++){
+		AkRTPCGraphPoint RTPCGraphPoint;
+	};
+}AkClipAutomation;
+
+typedef struct{
+	uint32 RTPCID;
+	if (bnkVersion > 89) {
+		byte rtpcType;
+		byte rtpcAccum;
+	}
+	if (bnkVersion <= 89)
+		uint32 ParamID;
+	else
+		byte ParamID;
+	uint32 rtpcCurveID;
+	byte eScaling;
+	uint16 ulSize;
+	for(i=0;i<ulSize;i++){
+		AkRTPCGraphPoint RTPCGraphPoint;
+	};
+}RTPC;
+
+typedef struct{
+	uint16 ulInitialRTPC;
+	for(j=0;j<ulInitialRTPC;j++){
+		RTPC rtpc;
+	};
+}InitialRTPC;
+
+typedef struct{
+	NodeInitialFXParams FXParams;
+	if (bnkVersion > 136) {
+		// InitialMetadataParams not handled
+	}
+	if (bnkVersion > 89)
+		byte bOverrideAttachmentParams;
+	uint32 OverrideBusID;
+	uint32 DirectParentID;
+	if (bnkVersion <= 56) {
+		ubyte ucPriority;
+		ubyte bPriorityOverrideParent;
+		ubyte bPriorityApplyDistFactor;
+		ubyte iDistOffset;
+	} else if (bnkVersion <= 89) {
+		ubyte bPriorityOverrideParent;
+		ubyte bPriorityApplyDistFactor;
+	} else {
+		byte byBitVector;
+	}
+	NodeInitialParams IniParams;
+	PositioningParams Positioning;
+	if (bnkVersion > 65)
+		AuxParams AuxParam;
+	AdvSettingsParams AdvSettings;
+	StateChunk States;
+	InitialRTPC RTPCs;
+}NodeBaseParams;
+
+typedef struct{
+	uint32 uNumChildren;
+	for(i=0;i<uNumChildren;i++){
+		uint32 ulChildID;
+	};
+}Children;
+
+//Decision Tree Attempt
+struct hollowNode(uint32 currentDepth, uint32 MaxDepth){
+	local int32 ChildCount = 0;
+	uint32 key;
+	if(currentDepth == MaxDepth)
+	{
+		uint32 audioNodeId;
+		int16 Weight;
+		int16 Probability;
+	}
+	else{
+		uint16 childrenIdx;
+		uint16 childrenCount;
+		int16 Weight;
+		int16 Probability;
+		ChildCount = childrenCount;
+	}
+};
+struct Tree;
+struct Tree(uint32 currentDepth, uint32 MaxDepth, hollowNode &node){
+	local int32 childMarker;
+	for(childMarker = 0; childMarker < node.ChildCount; childMarker++){
+		hollowNode hollow(currentDepth+1, MaxDepth);
+	};
+	if(node.ChildCount > 0){
+		for(childMarker = 0; childMarker < node.ChildCount; childMarker++){
+			Tree tn(currentDepth+1, MaxDepth,hollow[childMarker]);
+		}; 
+	};
+};
+struct DecisionTree(uint32 Depth){
+	hollowNode firstHollow(0,Depth);
+	Tree firstNode(0, Depth, firstHollow);
+};
+
+//HIRC 1
+typedef struct{
+	if (bnkVersion <= 126)
+		byte cProps;
+	else
+		uint16 cProps;
+	for(i=0;i<cProps;i++){
+		if (bnkVersion <= 126)
+			byte pID;
+		else
+			uint16 pID;
+	};
+	for(i=0;i<cProps;i++){
+		float pValue;
+	};
+}State;
+
+typedef struct{
+	if (bnkVersion <= 26) {
+		uint32 dataIndex;
+		uint32 uSampleRate;
+		uint32 uFormatBits;
+	} else {
+		uint32 uSampleRate;
+		uint32 uFormatBits;
+	}
+} AkAudioFormat;
+
+
+typedef struct{
+	uint32 ulPluginID;
+	if (bnkVersion <= 89)
+		uint32 StreamType;
+	else
+		byte StreamType;
+	if (bnkVersion <= 46)
+		AkAudioFormat AudioFormat;
+	struct {
+		uint32 sourceID;
+		if (bnkVersion <= 26) {
+		} else if (bnkVersion <= 88) {
+			uint32 uFileID;
+			if (StreamType != 1) {
+				uint32 fileOffset;
+				uint32 inMemoryMediaSize;
+			}
+		} else if (bnkVersion <= 89) {
+			uint32 uFileID;
+			if (StreamType != 1)
+				uint32 fileOffset;
+			uint32 inMemoryMediaSize;
+		} else if (bnkVersion <= 112) {
+			uint32 uFileID;
+			if (StreamType != 2)
+				uint32 fileOffset;
+			uint32 inMemoryMediaSize;
+		} else {
+			uint32 inMemoryMediaSize;
+		}
+		if (bnkVersion <= 26) {
+		} else {
+			ubyte uSourceBits;
+		}
+	} AkMediaInformation;
+
+	local uint32 pluginType = ulPluginID & 0x0F;
+	local byte hasParam;
+	local byte alwaysHasParam;
+	if (bnkVersion <= 26) {
+		hasParam = true;
+		alwaysHasParam = true;
+	} else if (bnkVersion <= 126) {
+		hasParam = pluginType == 2 || pluginType == 5;
+		alwaysHasParam = false;
+	} else {
+		hasParam = pluginType == 2;
+		alwaysHasParam = false;
+	}
+
+	if (hasParam && ulPluginID && (ulPluginID >= 0 || alwaysHasParam)) {
+		uint32 uSize;
+		if (uSize > 0) {
+			Printf("Plugin param size > 0 is not supported");
+		}
+	};
+}BankSourceData;
+
+typedef struct{
+	BankSourceData BankData;
+	NodeBaseParams BaseParams;
+}Sound;
+
+//HIRC 3
+typedef struct{
+	local int32 u;
+	uint32 ulExceptionListSize;
+	for(u=0;u<ulExceptionListSize;u++){
+		uint32 ulID;
+		byte bIsBus;
+	};
+}ExceptParams;
+typedef struct{
+	uint32 ulStateGroupID;
+	uint32 ulTargetStateID;
+}StateActionParams;
+
+typedef struct{
+	uint32 ulSwitchGroupID;
+	uint32 ulSwitchStateID;
+}SwitchActionParams;
+
+typedef struct (uint32 ulActionType) {
+	byte byBitVector;
+	// play, pause, stop, resume
+	// 0x0403, 0x0503, 0x0202, 0x0203, 0x0204, 0x0205, 0x0208, 0x0209, 0x0302, 0x0303, 0x0304, 0x0305, 0x0308, 0x0309
+	if (ulActionType == 0x403 || ulActionType == 0x503 || ulActionType == 0x202 || ulActionType == 0x203 || ulActionType == 0x204 || ulActionType == 0x205 || ulActionType == 0x208 || ulActionType == 0x209 || ulActionType == 0x302 || ulActionType == 0x303 || ulActionType == 0x304 || ulActionType == 0x305 || ulActionType == 0x308 || ulActionType == 0x309)
+		ubyte byBitVector2;
+	ExceptParams exceptions;
+}ActiveActionParams;
+
+typedef struct{
+	if (bnkVersion > 89) {
+		byte bBypassTransition;
+	}
+	byte eValueMeaning;
+	float base;
+	float min;
+	float max;
+}GameParameterParams;
+
+typedef struct{
+	byte eValueMeaning;
+	float base;
+	float min;
+	float max;
+}PropActionParams;
+
+typedef struct(uint16 actionType){
+	byte byBitVector;
+	if(actionType==0x1300)GameParameterParams SpecificParams;
+	if(actionType==0x1400)GameParameterParams SpecificParams;
+	if(actionType==0x0A00)PropActionParams SpecificParams;
+	if(actionType==0x0B00)PropActionParams SpecificParams;
+	if(actionType==0x0C00)PropActionParams SpecificParams;
+	if(actionType==0x0D00)PropActionParams SpecificParams;
+	if(actionType==0x0800)PropActionParams SpecificParams;
+	if(actionType==0x0900)PropActionParams SpecificParams;
+	if(actionType==0x0F00)PropActionParams SpecificParams;
+	if(actionType==0x0E00)PropActionParams SpecificParams;
+	if(actionType==0x2000)PropActionParams SpecificParams;
+	if(actionType==0x3000)PropActionParams SpecificParams;
+	uint32 ulExceptionListSize;
+}ValueActionParams;
+
+typedef struct{
+	byte eFadeCurve;
+	uint32 fileID;
+}PlayActionParams;
+
+typedef struct{
+	byte bIsBypass;
+	byte uTargetMask;
+	ExceptParams exceptions;
+}BypassFXActionParams;
+
+typedef struct{
+	uint32 idExt;
+	byte idExt_4;
+	AkPropValue PropValues;
+	AkPropRangedValue RangedPropValues;
+}ActionInitialParams;
+
+typedef struct{
+	uint16 ulActionType;
+	ActionInitialParams InitialParams;
+	local uint16 actionType = ulActionType & 0xFF00;
+	if(actionType == 0x0100)ActiveActionParams ActiveAction(ulActionType);
+	if(actionType == 0x0200)ActiveActionParams ActiveAction(ulActionType);
+	if(actionType == 0x0300)ActiveActionParams ActiveAction(ulActionType);
+	if(actionType == 0x0400)PlayActionParams PlayAction;
+	if(actionType == 0x0600)ValueActionParams ValueAction(actionType);
+	if(actionType == 0x0700)ValueActionParams ValueAction(actionType);
+	if(actionType == 0x0800)ValueActionParams ValueAction(actionType);
+	if(actionType == 0x0900)ValueActionParams ValueAction(actionType);
+	if(actionType == 0x0A00)ValueActionParams ValueAction(actionType);
+	if(actionType == 0x0B00)ValueActionParams ValueAction(actionType);
+	if(actionType == 0x0C00)ValueActionParams ValueAction(actionType);
+	if(actionType == 0x0D00)ValueActionParams ValueAction(actionType);
+	if(actionType == 0x0E00)ValueActionParams ValueAction(actionType);
+	if(actionType == 0x0F00)ValueActionParams ValueAction(actionType);
+	if(actionType == 0x1300)ValueActionParams ValueAction(actionType);
+	if(actionType == 0x1400)ValueActionParams ValueAction(actionType);
+	if(actionType == 0x2000)ValueActionParams ValueAction(actionType);
+	if(actionType == 0x3000)ValueActionParams ValueAction(actionType);
+	if(actionType == 0x1900)SwitchActionParams SwitchAction;
+	if(actionType == 0x1200)StateActionParams StateAction;
+	if(actionType == 0x1A00)BypassFXActionParams BypassFXAction;
+	if(actionType == 0x1B00)BypassFXActionParams BypassFXAction;
+}Action;
+
+//HIRC 4
+typedef struct{
+	uint32 ulActionListSize;
+	for(i=0;i<ulActionListSize;i++){
+		uint32 ulActionID;
+	};
+}Event;
+
+//HIRC 5
+typedef struct{
+	NodeBaseParams BaseParams;
+	uint16 sLoopCount;
+	if (bnkVersion > 72) {
+		uint16 sLoopModMin;
+		uint16 sLoopModMax;
+	}
+	float fTransitionTime;
+	float fTransitionTimeModMin;
+	float fTransitionTimeModMax;
+	uint16 wAvoidRepeatCount;
+	byte eTransitionMode;
+	byte eRandomMode;
+	byte eMode;
+	if (bnkVersion <= 89)  {
+		ubyte _bIsUsingWeight;
+		ubyte bResetPlayListAtEachPlay;
+		ubyte bIsRestartBackward;
+		ubyte bIsContinuous;
+		ubyte bIsGlobal;
+	} else {
+		byte BitVector;
+	}
+	Children ChildrenList;
+	uint16 ulNumPlaylistItem;
+	for(j=0;j<ulNumPlaylistItem;j++){
+		uint32 ulPlayID;
+		int32 Weight;
+	};
+
+}RandomSequence;
+
+//HIRC 6
+typedef struct{
+	uint32 ulSwitchID;
+	uint32 ulNumItems;
+	for(j=0;j<ulNumItems;j++){
+		uint32 NodeID;
+	};
+}SwitchPackage;
+
+typedef struct{
+	uint32 ulNodeID;
+	if (bnkVersion <= 89) {
+		ubyte bIsFirstOnly;
+		ubyte bContinuePlayback;
+		uint32 eOnSwitchMod;
+	} else {
+		byte BitVector1;
+		byte BitVector2;
+	}
+	int32 FadeOutTime;
+	int32 FadeInTime;
+}SwitchNodeParam;
+
+typedef struct{
+	NodeBaseParams BaseParams;
+	if (bnkVersion <= 89)
+		uint32 eGroupType;
+	else
+		byte eGroupType;
+	uint32 ulGroupID;
+	uint32 ulDefaultSwitch;//~!~!~!~!~!~!~!
+	byte bIsContinuousValidation;
+	Children ChildList;
+	uint32 ulNumSwitchGroups;
+	for(m=0;m<ulNumSwitchGroups;m++){
+		SwitchPackage Switches;
+	};
+	uint32 ulNumSwitchParams;
+	for(m=0;m<ulNumSwitchParams;m++){
+		SwitchNodeParam SwitchParam;
+	};
+}Switch;
+
+//HIRC 7
+typedef struct{
+	NodeBaseParams BaseParams;
+	Children ChildList;
+}ActorMixer;//somehow that's it?
+
+//HIRC 8
+typedef struct{
+	AkPropValue PropValues;
+	if (bnkVersion > 122) {
+		PositioningParams Positioning;
+		AuxParams auxParams;
+	}
+	if (bnkVersion <= 65) {
+		ubyte bKillNewest;
+		ubyte bUseVirtualBehavior;
+		uint16 u16MaxNumInstance;
+		ubyte bIsMaxNumInstOverrideParent;
+		uint16 uChannelConfig;
+		ubyte _unused;
+		ubyte _unused2;
+		ubyte bIsEnvBus;
+	}
+	else if (bnkVersion <= 77) {
+		ubyte bKillNewest;
+		ubyte bUseVirtualBehavior;
+		uint16 u16MaxNumInstance;
+		ubyte bIsMaxNumInstOverrideParent;
+		uint16 uChannelConfig;
+		ubyte _unused;
+		ubyte _unused2;
+	}
+	else if (bnkVersion <= 89) {
+		ubyte bPositioningEnabled;
+		ubyte bPositioningEnablePanner;
+		ubyte bKillNewest;
+		ubyte bUseVirtualBehavior;
+		uint16 u16MaxNumInstance;
+		ubyte bIsMaxNumInstOverrideParent;
+		uint16 uChannelConfig;
+		ubyte _unused;
+		ubyte _unused2;
+		ubyte bIsHdrBus;
+		ubyte bHdrReleaseModeExponential;
+	}
+	else if (bnkVersion <= 122) {
+		ubyte byBitVector;
+		ubyte byBitVector2;
+		uint16 u16MaxNumInstance;
+		uint32 uChannelConfig;
+		ubyte byBitVector3;
+	}
+	else {
+		ubyte byBitVector;
+		uint16 u16MaxNumInstance;
+		uint32 uChannelConfig;
+		ubyte byBitVector;
+	}
+}BusInitialParams;
+
+typedef struct{
+	local int count = 0;
+	if (bnkVersion <= 135) {
+		byte uNumFX;
+		count = uNumFX;
+	}
+	if (count > 0) {
+		byte bitsFXBypass;
+		for(j=0;j<uNumFX;j++){
+			FXChunk pFXChunk;
+		};
+	}
+	if (bnkVersion > 135) {
+		ubyte uNumFx2;
+		if (uNumFx2 > 0) {
+			ubyte bitsFXBypass;
+			FXChunk pFXChunk[uNumFx2]<optimize=false>;
+		}
+	}
+	if (bnkVersion > 89) {
+		uint32 fxID_0;
+		byte bIsShareSet_0;
+	}
+}BusInitialFXParams;
+
+typedef struct{
+	uint32 BusID;
+	float DuckVolume;
+	int32 FadeOutTime;
+	int32 FadeInTime;
+	byte eFadeCurve;
+	if (bnkVersion > 65)
+		byte TargetProp;
+}DuckInfo;
+
+typedef struct{
+	uint32 OverrideBusID;
+	if (bnkVersion > 126) {
+		if (OverrideBusID == 0)
+			uint32 idDeviceShareset;
+	}
+	if (bnkVersion > 122) {
+		PositioningParams Positioning;
+		AuxParams auxParams;
+	}
+	BusInitialParams InitialParams;
+	int32 RecoveryTime;
+	float fMaxDuckVolume;
+	uint32 ulDucks;
+	for(j=0;j<ulDucks;j++){
+		DuckInfo Duck;
+	};
+	BusInitialFXParams FXParams;
+	if (bnkVersion > 89)
+		byte bOverrideAttachmentParams;
+	InitialRTPC RTPCs;
+	StateChunk States;
+}AudioBus;
+
+//HIRC 9
+typedef struct{
+	uint32 ulAssociatedChildID;
+	uint32 ulCurveSize;
+	for(m=0;m<ulCurveSize;m++){
+		AkRTPCGraphPoint GraphPoint;
+	};
+}CAssociatedChildData;
+
+typedef struct{
+	uint32 ulLayerID;
+	InitialRTPC RTPCs;
+	uint32 RTPCId;
+	byte RTPCType;
+	uint32 ulNumAssoc;
+	for(j=0;j<ulNumAssoc;j++){
+		CAssociatedChildData ChildData;
+	};
+}Layer;
+
+typedef struct{
+	NodeBaseParams BaseParams;
+	Children ChildList;
+	uint32 ulNumLayers;
+	for(j=0;j<ulNumLayers;j++){
+		Layer Layers;
+	}
+}LayerContain;
+
+//HIRC 10
+
+typedef struct{
+	double fGridPeriod;
+	double fGridOffset;
+	float fTempo;
+	byte uNumBeatsPerBar;//top number of time signature
+	byte uBeatValue;//bottom number of time signature
+}AkMeterInfo;
+
+typedef struct{
+	uint32 TriggerID;
+	uint32 SegmentID;
+	uint32 SyncPlayAt;
+	uint32 uCueFilterHash;
+	int32 DontRepeatTime;
+	uint32 numSegmentLookAhead;
+}AkStinger;
+
+typedef struct{
+	if (bnkVersion > 89) {
+		byte uFlags;
+	}
+	NodeBaseParams BaseParams;
+	Children ChildrenList;
+	AkMeterInfo MeterInfo;
+	byte bMeterInfoFlag;
+	uint32 uNumStingers;
+	for(i=0;i<uNumStingers;i++){
+		AkStinger Stinger;
+	};
+}MusicNodeParams;
+
+typedef struct{
+	uint32 id;
+	double fPosition;
+	uint32 uStringSize;
+	if(uStringSize > 0)
+		char pMarkerName[uStringSize];
+}MusicMarker;
+
+typedef struct{
+	MusicNodeParams MusicParams;
+	double fDuration;
+	uint32 ulNumMarkers;
+	for(i=0;i<ulNumMarkers;i++){
+		MusicMarker WWiseMarker;
+	};
+}MusicSegment;
+
+//HIRC 11
+typedef struct{
+	uint32 ulPluginID;
+	// if (ulPluginID != -1) {
+	// 	uint16 type;
+	// 	uint16 company;
+	// }
+	if (bnkVersion <= 89) {
+		uint32 StreamType;
+	} else {
+		byte StreamType;
+	}
+	uint32 sourceID;
+	if (bnkVersion <= 88) {
+		uint32 uFileID;
+		if (StreamType != 1) {
+			uint32 uFileOffset;
+			uint32 uInMemoryMediaSize;
+		}
+	} else if (bnkVersion <= 89) {
+		uint32 uFileID;
+		if (StreamType != 1) {
+			uint32 uFileOffset;
+		}
+		uint32 uInMemoryMediaSize;
+	} else if (bnkVersion <= 112) {
+		uint32 uFileID;
+		if (StreamType != 2) {
+			uint32 uFileOffset;
+		}
+		uint32 uInMemoryMediaSize;
+	} else {
+		uint32 uInMemoryMediaSize;
+	}
+
+	ubyte uSourceBits;
+	
+	local int PluginType = ulPluginID & 0x0F;
+	local int hasParam;
+	if (bnkVersion <= 126) {
+		hasParam = PluginType == 2 || PluginType == 5;
+	} else {
+		hasParam = PluginType == 2;
+	}
+	if (hasParam) {
+		if (PluginType && PluginType > 0) {
+			uint32 uSize;
+			byte gap[uSize];
+		}
+	}
+}pSource;
+
+typedef struct{
+	uint32 trackID;
+	uint32 sourceID;
+	if (bnkVersion > 132) {
+		uint32 eventID;
+	} 
+	double fPlayAt;
+	double fBeginTrimOffset;
+	double fEndTrimOffset;
+	double fSrcDuration;
+}pPlaylist;
+
+typedef struct{
+	byte eGroupType;
+	uint32 uGroupID;
+	uint32 uDefaultSwitch;
+	uint32 numSwitchAssoc;
+	for(i=0;i<numSwitchAssoc;i++){
+		uint32 ulSwitchAssoc;
+	};
+}SwitchParams;
+
+typedef struct{
+	int32 transitionTime;
+	uint32 eFadeCurve;
+	int32 iFadeOffset;
+}FadeParams;
+
+typedef struct{
+	FadeParams srcFadeParams;
+	uint32 eSyncType;
+	uint32 uCueHashFilter;
+	FadeParams destFadeParams;
+}TransParams;
+
+typedef struct{
+	if (bnkVersion <= 89) {
+	} else if (bnkVersion <= 112) {
+		ubyte uOverrides;
+	} else {
+		ubyte uFlags;
+	}
+	uint32 numSources; //this seems promising to play with
+	for(i=0;i<numSources;i++){
+		pSource Source;
+	};
+	uint32 numPlaylistItem;
+	for(i=0;i<numPlaylistItem;i++){
+		pPlaylist Playlist;
+	};
+	if(numPlaylistItem>0) uint32 numSubTrack;//doesn't seem to have children?
+	if (bnkVersion > 62) {
+		uint32 numClipAutomationItem;
+		if (numClipAutomationItem > 0)
+			AkClipAutomation ClipAutomation[numClipAutomationItem]<optimize=false>;
+	}
+	NodeBaseParams BaseParams;
+	if (bnkVersion <= 89) {
+		uint32 eRSType;
+	} else {
+		byte eTrackType;
+		if(eTrackType == 3){
+			SwitchParams SwitchParam;
+			TransParams TransParam;
+		}
+	}
+	int32 iLookAheadTime;
+}MusicTrack;
+
+//HIRC 12
+typedef struct{
+	FadeParams FadeParam;
+	uint32 eSyncType;
+	uint32 uCueFilterHash;
+	ubyte bPlayPostExit;
+}AkMusicTransSrcRule;
+
+typedef struct{
+	FadeParams FadeParam;
+	uint32 uCueFilterHash;
+	uint32 uJumpToID;
+	if (bnkVersion > 132) {
+		uint16 eJumpToType;
+	}
+	uint16 eEntryType;
+	ubyte bPlayPreEntry;
+	ubyte bDestMatchSourceCueName;
+}AkMusicTransDstRule;
+
+typedef struct{
+	uint32 segmentID;
+	FadeParams fadeInParams;
+	FadeParams fadeOutParams;
+	byte PlayPreEntry;
+	byte PlayPostExit;
+}AkMusicTransitionObject;
+
+typedef struct{
+	local uint32 numSrc = 1;
+	if (bnkVersion > 72) {
+		uint32 uNumSrc;
+		numSrc = uNumSrc;
+	}
+	int32 srcNumID[numSrc];
+	local uint32 numDst = 1;
+	if (bnkVersion > 72) {
+		uint32 uNumDst;
+		numDst = uNumDst;
+	}
+	int32 dstNumID[numDst];
+	AkMusicTransSrcRule SrcRule;
+	AkMusicTransDstRule DstRule;
+	local int hasTransObj;
+	if (bnkVersion <= 72) {
+		ubyte bIsTransObjectEnabled;
+		hasTransObj = true;
+	} else {
+		ubyte AllocTransObjectFlag;
+		hasTransObj = AllocTransObjectFlag != 0;
+	}
+	if(hasTransObj){
+		AkMusicTransitionObject MusicTransition;
+	};
+}MusicTransitionRule;
+
+typedef struct{
+	MusicNodeParams MusicParams;
+	uint32 numRules;
+	for(j=0;j<numRules;j++){
+		MusicTransitionRule Rule;
+	};
+}MusicTransNodeParams;
+
+typedef struct{
+	uint32 ulGroup;
+	byte eGroupType;
+}AkGameSync;
+
+typedef struct{
+	MusicTransNodeParams MusicTransParams;
+	if (bnkVersion <= 72) {
+		uint32 eGroupType;
+		uint32 ulGroupID;
+		uint32 ulDefaultSwitch;
+		ubyte bIsContinuousValidation;
+		uint32 numSwitchAssocs;
+		struct AkMusicSwitchAssoc {
+			uint32 switchID;
+			uint32 nodeID;
+		} pAssocs[numSwitchAssocs];
+	} else {
+		byte bIsContinuePlayback;
+		uint32 uTreeDepth;
+		for(i=0;i<uTreeDepth;i++){
+			AkGameSync Arguments;
+		};
+		uint32 uTreeSize;
+		byte bMode;
+	//	byte decisionTree[uTreeSize];//it's a bit intricate, hard to do in 010 C
+		DecisionTree decisionTree(uTreeDepth);
+	}
+}MusicSwitch;
+
+//HIRC 13
+struct pPlaylistItem{
+	uint32 SegmentID;
+	uint32 playlistItemID;
+	uint32 NumChildren;
+	uint32 eRSType;
+	int16 Loop;
+	if (bnkVersion > 89) {
+		int16 LoopMin;
+		int16 LoopMax;
+	}
+	uint32 Weight;
+	uint16 wAvoidRepeatCount;
+	byte bIsUsingWeight;
+	byte bIsShuffle;
+	//these technically have children, but NumPlaylistItems actually takes them into account
+};
+
+typedef struct{
+	MusicTransNodeParams MusicTransParams;
+	uint32 numPlaylistItems;
+	for(i=0;i<numPlaylistItems;i++){
+		pPlaylistItem playlistItem;
+	};
+}MusicPlaylist;
+
+//HIRC 14
+typedef struct{
+	float fInsideDegrees;
+	float fOUtsideDegrees;
+	float fOutsideVolume;
+	float fLoPass;
+	if (bnkVersion > 89)
+		float fHiPass;
+}ConeParams;
+
+typedef struct{
+	if (bnkVersion <= 36) {
+		uint32 eScaling;
+		uint32 ulSize;
+	} else {
+		byte eScaling;
+		uint16 ulSize;
+	}
+	for(i=0;i<ulSize;i++){
+		AkRTPCGraphPoint RTPCGraphPoint;
+	};
+}CAkConversionTable;
+
+typedef struct{
+	ubyte bIsConeEnabled;
+	if(bIsConeEnabled){
+		ConeParams coneParams;
+	};
+	local int32 curvesCount;
+	if (bnkVersion <= 62)
+		curvesCount = 5;
+	else if (bnkVersion <= 72)
+		curvesCount = 4;
+	else if (bnkVersion <= 89)
+		curvesCount = 5;
+	else if (bnkVersion <= 141)
+		curvesCount = 7;
+	else
+		curvesCount = 19;
+	byte curveToUse[curvesCount];
+	if (bnkVersion <= 36)
+		uint32 NumCurves;
+	else
+		ubyte NumCurves;
+	for(j=0;j<NumCurves;j++){
+		CAkConversionTable Curve;
+	};
+	uint16 ulNumRTPC;
+	if (ulNumRTPC > 0)
+		RTPC RTPCs[ulNumRTPC]<optimize=false>;
+}Attenuation;
+
+//HIRC 18
+typedef struct{
+	uint32 fxID;//determined by type and company
+	uint32 uSize;
+	byte pParamBlock[uSize];//WWiser doesn't even try to read this, I suppose it's different for each fx
+	byte uNumBankData;
+	InitialRTPC RTPCs;
+	uint16 ulNumInit;
+	//inits go here
+}FxShareSet;
+
+//HIRC 19
+typedef struct{
+	uint32 fxID;//determined by type and company
+	uint32 uSize;
+	byte pParamBlock[uSize];//WWiser doesn't even try to read this, I suppose it's different for each fx
+	byte uNumBankData;
+	struct AkMediaMap {
+		ubyte index;
+		uint32 sourceId;
+	} media[uNumBankData];
+	InitialRTPC RTPCs;
+	if (bnkVersion <= 89) {
+	} else if (bnkVersion <= 126) {
+		if (bnkVersion > 122) {
+			ubyte unused1;
+			ubyte unused2;
+		}
+		uint16 ulNumInit;
+		struct RTPCInit {
+			if (bnkVersion <= 113) {
+				ubyte ParamID;
+			} else {
+				uint16 ParamID;
+				Printf("WARNING: ParamID uses unsupported variable length int\n");
+			}
+			float fInitValue;
+		} rtpcinit[ulNumInit];
+	} else {
+		StateChunk stateChunk;
+		uint16 numValues;
+		if (numValues > 0)
+			Printf("WARNING: propertyId uses unsupported variable length int\n");
+		struct PluginPropertyValue {
+			ubyte propertyId;
+			ubyte rtpcAccum;
+			float fValue;
+		} propertyValues[numValues];
+	}
+}FxCustom;
+
+//HIRC 20
+// typedef struct{
+// 	//It's literally just an Audio Bus, but *technically* different
+// 	uint32 OverrideBusID;
+// 	BusInitialParams InitialParams;
+// 	int32 RecoveryTime;
+// 	float fMaxDuckVolume;
+// 	uint32 ulDucks;
+// 	for(j=0;j<ulDucks;j++){
+// 		DuckInfo Duck;
+// 	};
+// 	BusInitialFXParams FXParams;
+// 	byte bOverrideAttachmentParams;
+// 	InitialRTPC RTPCs;
+// 	StateChunk States;
+// }AuxiliaryBus;
+
+//HIRC 22
+typedef struct{
+	AkPropValue PropValues;
+	AkPropRangedValue RangedPropValues;
+	InitialRTPC RTPCs;
+}EnvelopeModulator;
+
+//HIRC Main
+typedef struct{
+	HircHeader Header<bgcolor=0xFF00FF>;
+	switch(Header.eHircType){
+		case 1:
+			State Object<name="State",bgcolor=0xFF0000>;//honestly a little closer to being settings
+			break;
+		case 2:
+			Sound Object<name="Sound",bgcolor=0x0000FF>;
+			break;
+		case 3:
+			Action Object<name="Action",bgcolor=0xCFB3FF>;
+			break;
+		case 4:
+			Event Object<name="Event",bgcolor=0xD3FFB3>;
+			break;
+		case 5:
+			RandomSequence Object<name="Random/Sequence",bgcolor=0xB3D8FF>;
+			break;
+		case 6:
+			Switch Object<name="Switch",bgcolor=0xEAFFB3>;
+			break;
+		case 7:
+			ActorMixer Object<name="Actor-Mixer",bgcolor=0xFFCAB3>;
+			break;
+		case 8:
+			AudioBus Object<name="Audio Bus",bgcolor=0xFFBAB3>;
+			break;
+		case 9:
+			LayerContain Object<name="Layer Container",bgcolor=0xFFB3DA>;
+			break;
+		case 10:
+			MusicSegment Object<name="Music Segment",bgcolor=0x33FFBD>;
+			break;
+		case 11:
+			MusicTrack Object<name="Music Track",bgcolor=0xB3FFD0>;
+			break;
+		case 12:
+			MusicSwitch Object<name="Music Switch",bgcolor=0xB3FFB3>;
+			break;
+		case 13:
+			MusicPlaylist Object<name="Music Playlist",bgcolor=0xFF4040>;
+			break;
+		case 14:
+			Attenuation Object<name="Attenuation",bgcolor=0x40C2FF>;
+			break;
+		case 17:
+			FxCustom Object<name="FX Custom",bgcolor=0x40FF9A>;
+			break;
+		case 18:
+			// FxShareSet Object<name="FX Share Set",bgcolor=0x7440FF>;
+			FxCustom Object<name="FX Share Set",bgcolor=0x7440FF>;
+			break;
+		case 19:
+			FxCustom Object<name="FX Custom",bgcolor=0x40FF9A>;
+			break;
+		case 20:
+			// AuxiliaryBus Object<name="Auxiliary Bus",bgcolor=0x407AFF>;
+			AudioBus Object<name="Auxiliary Bus",bgcolor=0x407AFF>;
+			break;
+		case 22:
+			EnvelopeModulator Object<name="Envelope Modulator",bgcolor=0x9900CC>;
+			break;
+		default:
+			UnknData Object(Header.dwSectionSize-4)<name="Unknown Data",bgcolor=0x000000>;
+			break;
+	};
+}HircObject;
+
+typedef struct{
+	uint32 NumReleasableHircItem;
+	for(k=0;k<NumReleasableHircItem;k++){
+		HircObject Object<name="Hirc Object">;
+	};
+}ObjectHierarchy;
+
+//STMG
+typedef struct{
+	uint32 SwitchGroupID;
+	uint32 RTPCID;
+	if (bnkVersion > 89)
+		byte RTPCType;
+	uint32 ulSize;//actually a count;
+	for(i=0;i<ulSize;i++){
+		AkRTPCGraphPoint GraphPoint;
+	};
+}SwitchGroup;
+
+typedef struct{
+	uint32 RTPC_ID;
+	float fValue;
+	if (bnkVersion > 89) {
+		uint32 rampType;
+		float fRampUp;
+		float fRampDown;
+		byte eBindToBuiltInParam;
+	}
+}RTPCRamping;
+
+typedef struct{
+	if (bnkVersion > 140)
+		uint16 uFilterBehavior;
+	float fVolumeThreshold;
+	if (bnkVersion > 126)
+		uint16 maxNumDangerousVirtVoicesLimitInternal;
+	uint16 maxNumVoicesLimitInternal;
+	uint32 ulNumStateGroups;
+	for(j=0;j<ulNumStateGroups;j++){
+		StateGroup StateGroups;
+	};
+	uint32 ulNumSwitchGroup;
+	for(j=0;j<ulNumSwitchGroup;j++){
+		SwitchGroup SwitchGroups;
+	};
+	uint32 ulNumParams;
+	for(j=0;j<ulNumParams;j++){
+		RTPCRamping RTPCs;
+	};
+}StateManager;
+	
+//ENVS
+typedef struct{
+	byte bCurveEnabled;
+	byte eCurveScaling;
+	uint16 ulCurveSize;
+	for(i=0;i<ulCurveSize;i++){
+		AkRTPCGraphPoint GraphPoint;
+	};
+}ObsOccCurve;
+
+typedef struct{
+	local int maxX = 2;
+	local int maxY;
+	if (bnkVersion <= 89) {
+		maxY = 2;
+	} else {
+		maxY = 3;
+	}
+	local int x;
+	local int y;
+	for (x = 0; x < maxX; x++) {
+		for (y = 0; y < maxY; y++) {
+			ObsOccCurve obsOccCurve;
+		}
+	}
+}EnvironmentSettings;
+
+//PLAT
+typedef struct{
+	uint32 uStringSize;
+	char pCustomPlatformName[uStringSize];
+}CustomPlatform;
+
+//File Main
+
+struct FileBlock{
+	ChunkHeader Header<bgcolor=0xFFFF00>;
+	switch(Header.dwTag){
+		case "BKHD":
+			BankHeader BKHD(Header.dwChunkSize)<name="Bank Header",bgcolor=0x0000FF>;
+			break;
+		case "INIT":
+			PluginChunk INIT<name="Plugins",bgcolor=0x567890>;
+			break;
+		case "DIDX":
+			MediaIndex DIDX(Header.dwChunkSize)<name="Media Index",bgcolor=0xFF0000>;
+			break;
+		case "DATA":
+			DataChunk DATA(Header.dwChunkSize)<name="Data Chunk",bgcolor=0x00FF00>;
+			break;
+		case "HIRC":
+			ObjectHierarchy HIRC<name="Object Hierarchy",bgcolor=0x123456>;
+			break;
+		case "STMG":
+			StateManager STMG<name="State Manager",bgcolor=0x987654>;
+			break;
+		case "ENVS":
+			EnvironmentSettings ENVS<name="Environment Settings",bgcolor=0x489863>;
+			break;
+		case "PLAT":
+			CustomPlatform PLAT<name="Custom Platform Name",bgcolor=0xF0F0F0>;
+			break;
+		default:
+			UnknData Object(Header.dwChunkSize)<name="Unknown Data",bgcolor=0x000000>;
+			break;
+	};
+};
+while(FTell()<FileSize()){
+	FileBlock Block;
+};
