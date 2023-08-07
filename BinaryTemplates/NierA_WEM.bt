@@ -202,6 +202,14 @@ struct DataChunk
 	}
 };
 
+struct SmplStruct
+{
+	char chunkID[4];
+	uint32 chunkSize <format=hex>;
+	byte data[chunkSize];
+};
+
+
 
 RiffHeader header <bgcolor=0xb03b17>;
 
@@ -219,6 +227,9 @@ while(!FEof() && FileSize() - FTell() > 4)
 			break;
 		case "JUNK":
 			RiffChunk junk <bgcolor=0x595959>;
+			break;
+		case "smpl":
+			SmplStruct smpl <bgcolor=0x2b2b2b>;
 			break;
 		case "akd ":
 			AkdChunk akd <bgcolor=0x2b2b2b>;
