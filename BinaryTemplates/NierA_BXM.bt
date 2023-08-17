@@ -31,14 +31,14 @@ string dataOffToStr(const struct DataOffsets& off) {
 }
 
 struct DataOffsets {
-	int16 nameOffset;
-	int16 dataOffset;
+	uint16 nameOffset;
+	uint16 dataOffset;
 	local int pos = FTell();
-	if (nameOffset != -1) {
+	if (nameOffset != 0xFFFF) {
 		FSeek(stringsOffset + nameOffset);
 		string name;
 	}
-	if (dataOffset != -1) {
+	if (dataOffset != 0xFFFF) {
 		FSeek(stringsOffset + dataOffset);
 		string value;
 	}
@@ -61,12 +61,31 @@ struct {
 	}
 } Strings;
 
+struct NodeInfo;
+string readNodeInfo(const NodeInfo& info) {
+	string str = "";
+	string text = "";
+	if (exists(info.tagValue))
+		text = info.tagValue;
+	SPrintf(str, "NodeInfo <%s>%s", info.tagName, text);
+	return str;
+}
+struct Attribute;
+string readAttribute(const Attribute& attr) {
+	string str = "";
+	string text = "";
+	if (exists(attr.value))
+		text = attr.value;
+	SPrintf(str, "%s=\"%s\"", attr.name, text);
+	return str;
+}
+
 FSeek(infosOffset);
 local int i, j;
 local int pos = FTell();
 struct {
 	for (i = 0; i < header.nodeNumber; i++) {
-		struct {
+		struct NodeInfo {
 			FSeek(pos);
 			int16   childNumber;
 			int16   firstChildIndex;
@@ -77,17 +96,28 @@ struct {
 			// tag name
 			FSeek(stringsOffset + dataOffsets.o[dataIndex].nameOffset);
 			string tagName;
+			if (dataOffsets.o[dataIndex].dataOffset != 0xFFFF) {
+				FSeek(stringsOffset + dataOffsets.o[dataIndex].dataOffset);
+				string tagValue;
+			}
 			for (j = 0; j < attributeNumber; j++) {
 				FSeek(pos);
-				struct {
+				struct Attribute {
 					FSeek(stringsOffset + dataOffsets.o[dataIndex + 1 + j].nameOffset);
 					string name;
-					FSeek(stringsOffset + dataOffsets.o[dataIndex + 1 + j].dataOffset);
-					string value;
-				} Attribute <name=Str("%s=\"%s\"", this.name, this.value)>;
+					if (dataOffsets.o[dataIndex + 1 + j].dataOffset != 0xFFFF) {
+						FSeek(stringsOffset + dataOffsets.o[dataIndex + 1 + j].dataOffset);
+						string value;
+						if (dataOffsets.o[dataIndex + 1 + j].nameOffset > dataOffsets.o[dataIndex + 1 + j].dataOffset) {
+							FSeek(stringsOffset + dataOffsets.o[dataIndex + 1 + j].nameOffset);
+						}
+					}
+				// } Attribute <name=Str("%s=\"%s\"", this.name, this.value)>;
+				} attribute <name=readAttribute>;
 			}
 			FSeek(pos);
-		} NodeInfo <name=Str("NodeInfo <%s>", this.tagName)>;
+		// } NodeInfo <name=Str("NodeInfo <%s>", this.tagName)>;
+		} nodeInfo<name=readNodeInfo>;
 	}
 } NodeInfos;
 
