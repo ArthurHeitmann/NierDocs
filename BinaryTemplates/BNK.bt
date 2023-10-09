@@ -66,6 +66,10 @@ typedef struct(uint32 dwChunkSize) {
 			byte data[Block[1].DIDX.loadedMedia[i].uSize];
 		} media;
 	}
+	local int32 remaining = dwChunkSize - (FTell() - start);
+	if (remaining > 0) {
+		byte gap[remaining];
+	}
 }DataChunk;
 
 //INIT
@@ -261,20 +265,6 @@ typedef struct{
 }PositioningParams;
 
 typedef struct{
-	/*
-		if cls.version <= 89:
-		obj.U8x('bOverrideGameAuxSends')
-		obj.U8x('bUseGameAuxSends')
-		obj.U8x('bOverrideUserAuxSends')
-		obj.U8x('bHasAux')
-		has_aux = obj.lastval != 0
-	else:
-		obj.U8x('byBitVector') \
-		   .bit('bOverrideUserAuxSends', obj.lastval, 2) \
-		   .bit('bHasAux', obj.lastval, 3) \
-		   .bit('bOverrideReflectionsAuxBus', obj.lastval, 4) # bHasAux in v122, > 135
-		has_aux = (obj.lastval >> 3) & 1
-	*/
 	local byte has_aux = false;
 	if (bnkVersion <= 89) {
 		ubyte bOverrideGameAuxSends;
@@ -621,14 +611,14 @@ typedef struct(uint16 actionType){
 	byte byBitVector;
 	if(actionType==0x1300)GameParameterParams SpecificParams;
 	if(actionType==0x1400)GameParameterParams SpecificParams;
+	if(actionType==0x0800)PropActionParams SpecificParams;
+	if(actionType==0x0900)PropActionParams SpecificParams;
 	if(actionType==0x0A00)PropActionParams SpecificParams;
 	if(actionType==0x0B00)PropActionParams SpecificParams;
 	if(actionType==0x0C00)PropActionParams SpecificParams;
 	if(actionType==0x0D00)PropActionParams SpecificParams;
-	if(actionType==0x0800)PropActionParams SpecificParams;
-	if(actionType==0x0900)PropActionParams SpecificParams;
-	if(actionType==0x0F00)PropActionParams SpecificParams;
 	if(actionType==0x0E00)PropActionParams SpecificParams;
+	if(actionType==0x0F00)PropActionParams SpecificParams;
 	if(actionType==0x2000)PropActionParams SpecificParams;
 	if(actionType==0x3000)PropActionParams SpecificParams;
 	uint32 ulExceptionListSize;

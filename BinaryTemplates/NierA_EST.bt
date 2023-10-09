@@ -25,14 +25,18 @@ struct {
         uint32 size;
         uint32 offset;
     } types[header.typeNumber];
+    local int i;
+    for (i = 0; i < header.typeNumber; i++)
+        Printf("%s\n", types[i].id);
 }typeGroups[header.recordCount] <optimize=true>;
 
 typedef struct {
     int16   u_a;
-    int16   u_b;
+    int16   effect_length;
     uint32  u_c <format=hex>;
     uint32  u_d;
-    int16   u_e[8];
+    int16   anchor_bone;
+    int16   u_e[7];
     float  uf_x[3];
     float  uf_y[3];
     float  uf_z[3];
@@ -43,9 +47,15 @@ typedef struct {
     float   offset_x;
     float   offset_y;
     float   offset_z;
-    float   u_b[29];
-    float   scale;
-    float   u_c[16];
+    float   u_b1[13];
+    float   rotation_x;
+    float   rotation_y;
+    float   rotation_z;
+    float   u_b2[12];
+    float   scale_x;
+    float   scale_y;
+    float   scale_z;
+    float   u_c[15];
     float   red;
     float   green;
     float   blue;
@@ -54,21 +64,23 @@ typedef struct {
 } move_s <bgcolor = 0x00FF00FF>;
 
 typedef struct {
-    int16 u_a[6];
+    int16 mesh_dupes;
+    int16 u_a[5];
     float u_b[9];
 } emif_s <bgcolor = 0xFFFF0000>;
 
 typedef struct {
     float u_a;
-    int16 u_b;
+    int16 coreeff_texture_file;
     int16 u_c;
     float u_d[4];
     struct {
         float u_d1;
         int16 u_e;
-        char  u_f[2];
+        byte  coreeff_texture_file_index;
+        byte  u_f;
         float u_g;
-        char  u_h[4];
+        byte  u_h[4];
         float u_i[15];
     } substruct[2];
 } tex_s <bgcolor = 0x0000FFFF>;
