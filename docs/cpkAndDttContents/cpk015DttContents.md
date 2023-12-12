@@ -224,6 +224,7 @@ cok015:
     - bg008d - factory structure
     - bg0140 - Kierkegaard throne (BECOME AS GODS!!!)
     - bg0160 - dead android pile
+    - bg0170 - big metal torch (used in cave underneath city ruins)
     - bg0288 - small broken city building
     - bg0500 - very large ocean/sea/water
     - bg0700 - tent with tools, maybe workshop, maybe resistance camp
