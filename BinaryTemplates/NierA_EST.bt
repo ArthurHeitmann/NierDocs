@@ -44,9 +44,9 @@ typedef struct {
 	float offset_x;
 	float offset_y;
 	float offset_z;
-	float unk_1;
-	float top_pos_1;
-	float right_pos_1;
+	float spawn_area_width;
+	float spawn_area_height;
+	float spawn_area_depth;
 	float move_speed_x;
 	float move_speed_y;
 	float move_speed_z;
@@ -87,7 +87,7 @@ typedef struct {
 } emif_s <bgcolor = 0xFFFF0000>;
 
 typedef struct {
-	float u_a;
+	float speed;
 	int16 texture_file_id;
 	int16 u_c;
 	float u_d1;
@@ -102,7 +102,8 @@ typedef struct {
 	int16  frame_offset;
 	int16  u_h;
 	float distortion_effect_strength;
-	uint32 mesh_id<format=hex>;
+	uint16 mesh_id<format=hex>;
+	uint16 mesh_i1<format=hex>;
 	float u_i2[8];
 	uint32 u_i3<format=hex>;
 	float u_i4[4];
@@ -125,13 +126,51 @@ typedef struct {
 } fvwk_s <bgcolor = 0x00F0FF00>;
 
 typedef struct {
-	int16 u_a[6];
+	int16 u_a0;
+	int16 u_a1;
+	int16 imported_effect_id;
+	int16 u_b[3];
 	int32 u_c[5];
 } fwk_s <bgcolor = 0x00FFFF00>;
 
 typedef struct {
 	uint32 u_a;
-	float u_b[107];   
+	float left_pos1;
+	float top_pos;
+	float unk_pos1;
+	float random_pos1;
+	float top_bottom_random_pos1;
+	float front_back_random_pos1;
+	float left_pos2;
+	float front_pos1;
+	float front_pos2;
+	float left_right_random_pos1;
+	float random_pos2;
+	float front_back_random_pos2;
+	float unk_pos2;
+	float left_pos_random1;
+	float top_pos2;
+	float front_pos3;
+	float unk_pos3;
+	float unk_pos4;
+	float unk_pos5;
+	float unk_pos6;
+	float unk_pos7;
+	float unk_pos8;
+	float unk_pos9;
+	float unk_pos10;
+	float unk_pos11;
+	float unk_pos25;
+	float unk_pos26;
+	float unk_pos27;
+	float unk_pos28;
+	float unk_pos29;
+	float unk_pos30;
+	float unk_pos31;
+	float effect_size;
+	float u_b_1[16];  
+	float sword_pos;
+	float u_b_2[57]; 
 } emmv_s <bgcolor = 0x00FF00AF>;
 
 typedef struct {
