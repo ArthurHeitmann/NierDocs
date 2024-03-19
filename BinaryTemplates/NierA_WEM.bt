@@ -47,28 +47,36 @@ struct RiffChunk
 	ubyte chunkData[chunkSize] <format=hex>;
 };
 
+
+local const uint32 WEM_FORMAT_CHUNK_SIZE = 66;
 struct FormatChunk
 {
 	char chunkID[4];
 	uint32 chunkSize <format=hex>;
-	uint16 audioFormat <format=hex>;
-	uint16 numChannels <format=decimal>;
-	uint32 sampleRate <format=decimal>;
-	uint32 avgBytesPerSec <format=decimal>;
-	uint16 blockAlign <format=hex>;
-	uint16 bitsPerSample <format=decimal>;
-	uint16 extraSize <format=hex>;
-	uint16 zeroMaybe;
-	local int extraOffset = FTell();
-	uint32 channelLayoutMask <comment="https://github.com/etodd/lasercrabs/blob/master/external/wwise/AK/SoundEngine/Common/AkSpeakerConfig.h">;
-	int32 numSamples;
-	ubyte extraUknown[0x10 - 4] <format=hex>;
-	uint32 setupPacketOffset <format=hex>;
-	uint32 firstAudioPacketOffset <format=hex>;
-	ubyte extraDataUknown[0x28 - 0x10 - 0x08 - 0x04] <format=hex>;
-	uint32 uidMaybe;		// fromm https://github.com/hcs64/ww2ogg/blob/master/src/wwriff.cpp#L419
-	ubyte blockSize0Exp <format=hex>;
-	ubyte blockSize1Exp <format=hex>;
+	if (chunkSize < 24) {
+		ubyte chunkData[chunkSize] <format=hex>;
+	}
+	if (chunkSize >= 24) {
+		uint16 audioFormat <format=hex>;
+		uint16 numChannels <format=decimal>;
+		uint32 sampleRate <format=decimal>;
+		uint32 avgBytesPerSec <format=decimal>;
+		uint16 blockAlign <format=hex>;
+		uint16 bitsPerSample <format=decimal>;
+		uint16 extraSize <format=hex>;
+		uint16 zeroMaybe;
+		uint32 channelLayoutMask <comment="https://github.com/etodd/lasercrabs/blob/master/external/wwise/AK/SoundEngine/Common/AkSpeakerConfig.h">;
+	}
+	if (chunkSize == WEM_FORMAT_CHUNK_SIZE) {
+		int32 numSamples;
+		ubyte extraUknown[0x10 - 4] <format=hex>;
+		uint32 setupPacketOffset <format=hex>;
+		uint32 firstAudioPacketOffset <format=hex>;
+		ubyte extraDataUknown[0x28 - 0x10 - 0x08 - 0x04] <format=hex>;
+		uint32 uidMaybe;		// fromm https://github.com/hcs64/ww2ogg/blob/master/src/wwriff.cpp#L419
+		ubyte blockSize0Exp <format=hex>;
+		ubyte blockSize1Exp <format=hex>;
+	}
 };
 
 struct AkdChunk
@@ -190,7 +198,7 @@ struct DataChunk
 {
 	char chunkID[4];
 	uint32 chunkSize <format=hex>;
-	if (exists(format)) {
+	if (exists(format) && format.chunkSize == WEM_FORMAT_CHUNK_SIZE) {
 		ubyte unknownData[format.setupPacketOffset] <format=hex, bgcolor=0x738d9c>;
 		SetupPacket setupPacket <bgcolor=0x346a8a>;
 		Assert(format.firstAudioPacketOffset - format.setupPacketOffset == sizeof(setupPacket));

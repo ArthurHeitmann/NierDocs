@@ -1,4 +1,11 @@
 
+- core.eff
+	- 92 - small weapon ring
+	- 93 - medium weapon ring
+	- 94 - big weapon ring
+	- 95 - big weapon ring
+	- 96 - shock wave sphere (or something) expanding
+
 - pl000f.eff
 	- 301, 303, 305, 307, 309 - Glow while dashing
 	- 308 - Dash lines
