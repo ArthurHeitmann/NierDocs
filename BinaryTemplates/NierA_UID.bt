@@ -39,14 +39,14 @@ struct Header
 	uint32 size1;
 	uint32 size2;
 	uint32 size3;
-	uint32 u_0;
 	uint32 offset1;
 	uint32 offset2;
 	uint32 offset3;
-	uint32 null0;
 	float frameDuration_maybe<comment="1 / 60 FPS">;
-	float width_maybe;
-	float height_maybe;
+	uint32 u_0;
+	uint32 null0;
+	uint32 null1;
+	uint32 null2;
 	uint32 null3;
 };
 
@@ -163,7 +163,7 @@ struct Entry1
 		uint32 null83;				// 84
 		uint32 range84_0_to_6;		// 85
 		uint32 u86;					// 86
-		// uint32 range87_0_to_8;		// 87
+		uint32 range87_0_to_8;		// 87
 	} bunchOfStuff;
 	uint32 dataOffset1;
 	if (dataOffset1 != 0)

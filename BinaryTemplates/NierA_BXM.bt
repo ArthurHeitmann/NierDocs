@@ -8,8 +8,8 @@ BigEndian();
 struct Header {
   char      id[4];
   uint32    unknown;
-  int16     nodeNumber;
-  int16     dataNumber;
+  uint16    nodeNumber;
+  uint16    dataNumber;
   uint32    dataSize;
 } header;
 
@@ -88,9 +88,9 @@ struct {
 		struct NodeInfo {
 			FSeek(pos);
 			int16   childNumber;
-			int16   firstChildIndex;
-			int16   attributeNumber;
-			int16   dataIndex;
+			uint16   firstChildIndex;
+			uint16   attributeNumber;
+			uint16   dataIndex;
 
 			pos = FTell();
 			// tag name

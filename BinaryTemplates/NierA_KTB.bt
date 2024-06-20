@@ -5,8 +5,8 @@ Information about kerning between letters.
 struct Entry {
 	wchar_t left;
 	wchar_t right;
-	int16 kerning<format=hex>;
+	int16 kerning;
 };
 
 uint16 count;
-Entry entries[count];
+Entry entries[count]<optimize=false>;

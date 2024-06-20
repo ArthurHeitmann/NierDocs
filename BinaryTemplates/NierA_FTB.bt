@@ -10,9 +10,11 @@ struct Header
 	ubyte null;
 	char fileName[32];
 	char fontName[32]<comment="SHIFT-JIS">;
-	ubyte unknown[9];
+	ubyte unknown[5];
+	int16 globalKerning;
+	ubyte unknown2[2];
 	uint16 textures_count;
-	uint16 unknown<format=hex>;
+	uint16 unknown3<format=hex>;
 	uint16 chars_count;
 	uint32 textures_offset<format=hex>;
 	uint32 chars_offset<format=hex>;
