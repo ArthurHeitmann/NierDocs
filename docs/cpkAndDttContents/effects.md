@@ -5,6 +5,10 @@
 	- 94 - big weapon ring
 	- 95 - big weapon ring
 	- 96 - shock wave sphere (or something) expanding
+	- 600 - Small Sword
+	- 610 - Large Sword
+	- 630 - Combat Bracers
+	- 640 - More Combat Bracers
 
 - pl000f.eff
 	- 301, 303, 305, 307, 309 - Glow while dashing

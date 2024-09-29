@@ -107,7 +107,7 @@ typedef struct{
 	} else if (bnkVersion <= 48) {
 		ubyte bIsRendered;
 	} else {
-		ubyte bitsFXBypass;
+		ubyte bIsShareSet;
 		ubyte bIsRendered;
 	}
 }FXChunk;
@@ -360,8 +360,8 @@ typedef struct{
 }StateChunk;
 
 typedef struct{
-	float From;
-	float To;
+	float x;
+	float y;
 	uint32 Interpolation;
 }AkRTPCGraphPoint;
 
@@ -394,6 +394,7 @@ typedef struct{
 
 typedef struct{
 	uint16 ulInitialRTPC;
+	if (ulInitialRTPC > 0)
 	for(j=0;j<ulInitialRTPC;j++){
 		RTPC rtpc;
 	};
@@ -564,8 +565,8 @@ typedef struct{
 
 //HIRC 3
 typedef struct{
-	local int32 u;
 	uint32 ulExceptionListSize;
+	local int u;
 	for(u=0;u<ulExceptionListSize;u++){
 		uint32 ulID;
 		byte bIsBus;
@@ -621,7 +622,7 @@ typedef struct(uint16 actionType){
 	if(actionType==0x0F00)PropActionParams SpecificParams;
 	if(actionType==0x2000)PropActionParams SpecificParams;
 	if(actionType==0x3000)PropActionParams SpecificParams;
-	uint32 ulExceptionListSize;
+	ExceptParams exceptions;
 }ValueActionParams;
 
 typedef struct{
@@ -634,6 +635,15 @@ typedef struct{
 	byte uTargetMask;
 	ExceptParams exceptions;
 }BypassFXActionParams;
+
+typedef struct{
+	byte bIsSeekRelativeToDuration;
+	float fSeekValue;
+	float fSeekValueMin;
+	float fSeekValueMax;
+	byte bSnapToNearestMarker;
+	ExceptParams exceptions;
+}SeekActionParams;
 
 typedef struct{
 	uint32 idExt;
@@ -650,6 +660,7 @@ typedef struct{
 	if(actionType == 0x0200)ActiveActionParams ActiveAction(ulActionType);
 	if(actionType == 0x0300)ActiveActionParams ActiveAction(ulActionType);
 	if(actionType == 0x0400)PlayActionParams PlayAction;
+	if(actionType == 0x0500)PlayActionParams PlayAction;
 	if(actionType == 0x0600)ValueActionParams ValueAction(actionType);
 	if(actionType == 0x0700)ValueActionParams ValueAction(actionType);
 	if(actionType == 0x0800)ValueActionParams ValueAction(actionType);
@@ -662,7 +673,10 @@ typedef struct{
 	if(actionType == 0x0F00)ValueActionParams ValueAction(actionType);
 	if(actionType == 0x1300)ValueActionParams ValueAction(actionType);
 	if(actionType == 0x1400)ValueActionParams ValueAction(actionType);
+	if(actionType == 0x1E00)SeekActionParams SeekAction;
 	if(actionType == 0x2000)ValueActionParams ValueAction(actionType);
+	if(actionType == 0x2200)ActiveActionParams ActiveAction(ulActionType);
+	if(actionType == 0x2300)PlayActionParams PlayAction;
 	if(actionType == 0x3000)ValueActionParams ValueAction(actionType);
 	if(actionType == 0x1900)SwitchActionParams SwitchAction;
 	if(actionType == 0x1200)StateActionParams StateAction;
@@ -1387,6 +1401,9 @@ typedef struct{
 			UnknData Object(Header.dwSectionSize-4)<name="Unknown Data",bgcolor=0x000000>;
 			break;
 	};
+	if (Header.dwSectionSize != sizeof(Object) + 4) {
+		Printf("WARNING: Object size mismatch %d != %d (at %d)\n", Header.dwSectionSize, sizeof(Object) + 4, FTell() - Header.dwSectionSize);
+	}
 }HircObject;
 
 typedef struct{
