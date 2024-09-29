@@ -5,8 +5,17 @@
 	- 94 - big weapon ring
 	- 95 - big weapon ring
 	- 96 - shock wave sphere (or something) expanding
+	- 590 - Type-40 Sword
+	- 591 - Type-40 Blade
+	- 592 - Type-40 Lance
+	- 593 - Type-40 Fist
+	- 594 - More Type-40 Fist
+	- 595 - Beastbane
+	- 596 - Beastlord
+	- 597 - Beastcurse
 	- 600 - Small Sword
 	- 610 - Large Sword
+	- 620 - Spear
 	- 630 - Combat Bracers
 	- 640 - More Combat Bracers
 
