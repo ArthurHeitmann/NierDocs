@@ -5,6 +5,8 @@
 	- 94 - big weapon ring
 	- 95 - big weapon ring
 	- 96 - shock wave sphere (or something) expanding
+	- 400 - Shockwave plugin projectile: Slashes
+	- 401 - Shockwave plugin projectile: Punches and Piercings
 	- 590 - Type-40 Sword
 	- 591 - Type-40 Blade
 	- 592 - Type-40 Lance
@@ -31,6 +33,9 @@
 	- 003 - Flying particles on weapon set switch = Color can be changed in Record 0, 3, 4 in "MOVE / EffectMoveData"
 	- 015 - Blue dash = = Color can be changed in Record 0, 2, 3, 5, 6, 8 in "MOVE / EffectMoveData"
 
-
 - bg0170.eff
 	- 000 - Animated fire/flame with embers
+
+- r200.eff
+	- 101 - Eve tornado
+	- 105 - storm onscreen effect
