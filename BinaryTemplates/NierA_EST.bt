@@ -50,9 +50,9 @@ typedef struct {
 	float move_speed_x;
 	float move_speed_y;
 	float move_speed_z;
-	float move_small_speed_x;
-	float move_small_speed_y;
-	float move_small_speed_z;
+	float move_speed_range_x;
+	float move_speed_range_y;
+	float move_speed_range_z;
 	float u_b_1[6];
 	float angle;
 	float u_b_2[12];
@@ -75,7 +75,7 @@ typedef struct {
 } move_s <bgcolor = 0x00FF00FF>;
 
 typedef struct {
-	int16 count;
+	int16 instance_duplicate_count;
 	int16 u_a;
 	int16 u_b;
 	int16 u_c;
@@ -93,8 +93,8 @@ typedef struct {
 	float u_d1;
 	float u_d2;
 	float u_d3;
-	float u_d4;
-	float u_d5;
+	float left_right_distribution<comment = "0.0 left, 1.0 right, 0.5 balanced">;
+	float up_down_distribution<comment = "0.0 below camera, 1.0 above camera, 0.5 balanced">;
 	int16 video_fps_maybe;
 	byte texture_file_texture_index;
 	byte is_single_frame;
@@ -122,14 +122,34 @@ typedef struct {
 } pssa_s;
 
 typedef struct {
-	float u_a[20];
+	float init_rotation_range;
+	float base_rotation_speed;
+	float base_rotation_speed_range;
+	float x_wiggle_range;
+	float x_wiggle_period_seconds;
+	float y_wiggle_speed;
+	float y_wiggle_speed_range;
+	float z_wiggle_range;
+	float z_wiggle_period_seconds;
+	float u_9;
+	float u_10;
+	float u_11;
+	float u_12;
+	float x_repeat_instance_offset_max_range;
+	float y_repeat_instance_offset_max_range;
+	float z_repeat_instance_offset_max_range;
+	float u_16;
+	float u_17;
+	float u_18;
+	float u_19;
 } fvwk_s <bgcolor = 0x00F0FF00>;
 
 typedef struct {
-	int16 u_a0;
-	int16 u_a1;
-	int16 imported_effect_id;
-	int16 u_b[3];
+	int16 particle_count<comment="max 1024">;
+	int16 center_distance;
+	int16 imported_effect_id_or_spawn_radius;
+	int16 edge_fade_range;
+	int16 u_b[2];
 	int32 u_c[5];
 } fwk_s <bgcolor = 0x00FFFF00>;
 
@@ -195,7 +215,7 @@ local int j;
 for ( i=0; i<header.recordCount; i++ ) {
 	FSeek(offsets[i]);
 	struct {
-		for ( j=0; j<23; j++ ) {
+		for ( j=0; j<header.typeNumber; j++ ) {
 			if (typeGroups[i].types[j].size > 0) {
 				FSeek(offsets[i] + typeGroups[i].types[j].offset);
 				if ( Strncmp( typeGroups[i].types[j].id, "PART", 4 ) == 0 ) {
