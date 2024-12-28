@@ -126,11 +126,11 @@ typedef struct {
 	float base_rotation_speed;
 	float base_rotation_speed_range;
 	float x_wiggle_range;
-	float x_wiggle_period_seconds;
+	float x_wiggle_speed;
 	float y_wiggle_speed;
-	float y_wiggle_speed_range;
+	float y_wiggle_speed;
 	float z_wiggle_range;
-	float z_wiggle_period_seconds;
+	float z_wiggle_speed;
 	float u_9;
 	float u_10;
 	float u_11;
