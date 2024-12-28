@@ -127,7 +127,7 @@ typedef struct {
 	float base_rotation_speed_range;
 	float x_wiggle_range;
 	float x_wiggle_speed;
-	float y_wiggle_speed;
+	float y_wiggle_range;
 	float y_wiggle_speed;
 	float z_wiggle_range;
 	float z_wiggle_speed;
