@@ -34,206 +34,260 @@ struct Vector
 	float z;
 };
 
+enum <uint32> LayerType {
+	LOC = 0,
+	IMG = 1,
+	_9GD = 2,
+	MSG = 3,
+	STR = 4,
+	TXT = 5,
+	MSK = 6
+};
+
 struct Header
 {
-	uint32 size1;
-	uint32 size2;
-	uint32 size3;
-	uint32 offset1;
-	uint32 offset2;
-	uint32 offset3;
-	float frameDuration_maybe<comment="1 / 60 FPS">;
-	uint32 u_0;
+	uint32 layerCount;
+	uint32 layerIdMapCount;
+	uint32 animationCount;
+	uint32 layerArrayOffset;
+	uint32 layerIdMapOffset;
+	uint32 animationOffset;
+	float frameDuration<comment="1 / 60 FPS">;
+	uint32 alignmentFlags<comment="bits[7:4] anchorX, bits[3:0] anchorY (0 start, 1 center, 2 end)">;
+	uint32 flag0x20;	// unknown; only set in hud0001/0004/000a/0025/0028/003f/0056
 	uint32 null0;
 	uint32 null1;
 	uint32 null2;
-	uint32 null3;
 };
 
 Header header;
 
-struct Data1;
-struct Data2;
-struct Data3;
-struct Data3Header;
-struct Data3Entry;
-struct Entry1
+// rolled every duration/cycles seconds, scaled by amplitude; active when
+// duration, cycles and amplitude > 0 and the group's randomEnable flag is set
+struct RandomUnit
+{
+	float duration;
+	int32 cycles;
+	float amplitude;
+	int32 interpMode;	// 0 linear, 1 catmull-rom, 2 step; channels 8-15 always linear
+};
+
+struct LayerPayload;
+struct ExtensionSlots;
+struct PropertyCurves;
+struct PropertyCurveHeader;
+struct Keyframe;
+struct TextureSwapKeys;
+struct LayerEntry
 {
 	Vector translation<read=vectorToStr>;
 	Vector rotation<read=vectorToStr>;
 	Vector scale<read=vectorToStr>;
 	Vector RGB<read=vectorToStr>;
 	float alpha;
-	float moreFloats[4];
-	struct {
-		int32 entry2_layerId1;		// 0
-		uint32 entry2_layerId2;		// 1
-		uint32 const0_1;			// 2
-		uint32 range1_0_to_9;		// 3
-		uint32 null2;				// 4
-		uint32 range3_0_to_2;		// 5
-		uint32 u4;					// 6
-		/*
-		_____0__	top edge centered
-		_____1__	Y centered
-		____1___	bottom edge centered
-		___0____	left edge centered
-		___1____	X centered
-		__1_____	right edge centered
-		_1______	Row
-		1_______	Column
-		*/
-		uint32 layoutType<comment="See BT source code for layout types">;	// 7
-		float float7;				// 8
-		uint32 bool8;				// 9
-		uint32 bool9;				// 10
-		uint32 bool10;				// 11
-		uint32 bool11;				// 12
-		uint32 const12_1;			// 13
-		uint32 bool13;				// 14
-		uint32 bool14;				// 15
-		uint32 const15_1;			// 16
-		uint32 bool16;				// 17
-		uint32 bool17;				// 18
-		uint32 bool18;				// 19
-		uint32 bool19;				// 20
-		float float20;				// 21
-		uint32 bool21;				// 22
-		float float22;				// 23
-		uint32 bool23;				// 24
-		float float24;				// 25
-		uint32 u25;					// 26
-		float float26;				// 27
-		uint32 u27;					// 28
-		float float28;				// 29
-		uint32 u29;					// 30
-		float float30;				// 31
-		uint32 bool31;				// 32
-		float float32;				// 33
-		uint32 bool33;				// 34
-		float float34;				// 35
-		uint32 bool35;				// 36
-		float float36;				// 37
-		uint32 bool37;				// 38
-		float float38;				// 39
-		uint32 bool39;				// 40
-		uint32 null40;				// 41
-		uint32 null41;				// 42
-		uint32 null42;				// 43
-		uint32 null43;				// 44
-		float float44;				// 45
-		uint32 u45;					// 46
-		float float46;				// 47
-		uint32 u47;					// 48
-		float float48;				// 49
-		uint32 u49;					// 50
-		float float50;				// 51
-		uint32 u51;					// 52
-		float float52;				// 53
-		uint32 u53;					// 54
-		float float54;				// 55
-		uint32 u55;					// 56
-		float float56;				// 57
-		uint32 u57;					// 58
-		float float58;				// 59
-		uint32 u59;					// 60
-		float float60;				// 61
-		uint32 u61;					// 62
-		float float62;				// 63
-		uint32 u63;					// 64
-		float float64;				// 65
-		uint32 u65;					// 66
-		float float66;				// 67
-		uint32 u67;					// 68
-		float float68;				// 69
-		uint32 u69;					// 70
-		float float70;				// 71
-		uint32 u71;					// 72
-		float float72;				// 73
-		uint32 u73;					// 74
-		float float74;				// 75
-		uint32 u75;					// 76
-		float float76;				// 77
-		uint32 u77;					// 78
-		float float78;				// 79
-		uint32 u79;					// 80
-		uint32 null80;				// 81
-		uint32 null81;				// 82
-		uint32 null82;				// 83
-		uint32 null83;				// 84
-		uint32 range84_0_to_6;		// 85
-		uint32 u86;					// 86
-		uint32 range87_0_to_8;		// 87
-	} bunchOfStuff;
-	uint32 dataOffset1;
-	if (dataOffset1 != 0)
-		Printf("dataOffset1 = %d\n", dataOffset1);
-	uint32 dataOffset2;
-	if (dataOffset2 != 0)
-		Printf("dataOffset2 = %d\n", dataOffset2);
-	uint32 dataOffset3;
-	if (dataOffset3 != 0)
-		Printf("dataOffset3 = %d\n", dataOffset3);
-	uint32 u_4;
-	if (u_4 != 0)
-		Printf("u_4 = %d\n", u_4);
+	float color2[4]<comment="always opaque white; gradient target color, capture-ext params, anim properties 12-15">;
+	int32 parentIndex;		// layer index, -1 = root
+	uint32 layerId;
+	uint32 visibleFlag;
+	uint32 treeDepth;		// depth in the parent chain (root 0); parser rejects > 9
+	uint32 null2;
+	uint16 gradientMode;	// 0 off, 1 horizontal, 2 vertical: RGB -> color2 across the quad
+	uint16 gradientOffsetPx;
+	uint16 gradientLengthPx;
+	uint16 pad0;
+	/*
+	_____0__	top edge centered
+	_____1__	Y centered
+	____1___	bottom edge centered
+	___0____	left edge centered
+	___1____	X centered
+	__1_____	right edge centered
+	_1______	Row
+	1_______	Column
+	*/
+	uint32 layoutType<comment="bits[7:6] anchorH, bits[5:4] anchorV, bits[3:2] pivotMode">;
+	float zOrder;
+	uint32 ignoreParentTranslation;
+	uint32 animEnableTranslation;
+	uint32 randomEnableTranslation;
+	uint32 ignoreParentRotation;
+	uint32 animEnableRotation;
+	uint32 randomEnableRotation;
+	uint32 ignoreParentScale;
+	uint32 animEnableScale;
+	uint32 randomEnableScale;
+	uint32 ignoreParentColor;
+	uint32 animEnableColor;
+	uint32 randomEnableColor;
+	RandomUnit randomUnits[16];	// index = property channel
+	LayerType layerType;
+	uint32 extTypeId;		// cUIEx* type id, 0 = none
+	uint32 propertyCount;
+	uint32 payloadOffset;
+	uint32 extensionOffset;
+	uint32 curvesOffset;
+	uint32 textureSwapOffset;	// unused in shipped files
 
 	local int pos = FTell();
-	if (dataOffset1 != 0) {
-		FSeek(dataOffset1);
-		Data1 data1<bgcolor=color4>;
+	if (payloadOffset != 0) {
+		FSeek(payloadOffset);
+		LayerPayload payload(layerType)<bgcolor=color4>;
 	}
-	if (dataOffset2 != 0) {
-		FSeek(dataOffset2);
-		Data2 data2<bgcolor=color5>;
+	if (curvesOffset != 0 && propertyCount > 0) {
+		FSeek(curvesOffset);
+		PropertyCurves curves(propertyCount)<bgcolor=color6>;
 	}
-	if (dataOffset3 != 0) {
-		FSeek(dataOffset3);
-		Data3 data3<bgcolor=color6>;
+	if (textureSwapOffset != 0) {
+		FSeek(textureSwapOffset);
+		TextureSwapKeys textureSwap<bgcolor=color5>;
 	}
 	FSeek(pos);
 };
-struct Data1
-{
-	// variable length; what length? lol
-	// sometimes this
-	float spriteWidth;
-	float spriteHeight;
-	uint32 u_2[17];		// [6]: 0 or ID from .uvd
-	// other times a char[24]
-	// and sometimes a float & a string :D
-};
-struct Data2
-{
-	uint32 u_0;
-	uint32 u_1;
-	uint32 u_2;
-	uint32 u_3[3];
-	float f_4;
-	float f_5;
-	float f_6;
-	float f_7;
-	float f_8;
-	float f_9;
-	float f_10;
-	uint32 u_11;
-};
 
-struct Data3
+struct LayerPayload(LayerType type)
 {
-	local int firstOffset = ReadInt();
-	local int entriesCount = (firstOffset - FTell()) / 32;
-	Data3Header headers[entriesCount];
-	local int i = 0;
-	for (i = 0; i < entriesCount; i++) {
-		struct {
-			FSeek(headers[i].beginOffset);
-			Data3Entry subEntries[headers[i].size1];
-		} entries;
+	switch (type) {
+	case LOC:
+		char subUidName[16];	// empty = plain container
+		uint16 partIndex;
+		uint16 pad;
+		int32 defaultAnimIndex;
+		break;
+	case IMG:
+		float width;
+		float height;
+		int32 anchorX;			// 0 start, 1 center, 2 end
+		int32 anchorY;
+		int32 pivotX<comment="forwarded to the prim's GPU blend state select">;
+		int32 pivotY;
+		int32 renderMode;		// 0 sprite, 1 fullscreen, 2 flipbook
+		uint32 textureHash;		// 0 = color fill / runtime assigned
+		uint32 spriteId;
+		ubyte useCrop;
+		ubyte textureFlags;
+		uint16 pad0;
+		ubyte flipX;
+		ubyte flipY;
+		uint16 pad1;
+		float cropLeft;
+		float cropTop;
+		float cropRight;
+		float cropBottom;
+		float animSpeed;
+		float frameCount;
+		break;
+	case _9GD:
+		float centerW;
+		float centerH;
+		float borderX;
+		float borderY;
+		int32 anchorX;
+		int32 anchorY;
+		int32 pivotX;
+		int32 pivotY;
+		uint32 textureHash;
+		uint32 spriteId;
+		ubyte useSpriteSize;
+		ubyte textureFlags;
+		ubyte flipX;
+		ubyte flipY;
+		ubyte alphaFlag;
+		ubyte scaleMode;
+		break;
+	case MSG:
+		uint32 flags;
+		char mcdName[16];
+		uint32 msgIds[8];		// crc32_ci event hashes, [0] default
+		int32 paragraphIndex;
+		ubyte pad0[0x20];
+		ubyte anchorPacked;
+		ubyte pad1;
+		byte shadowOffsetX;
+		byte shadowOffsetY;
+		float letterSpacing;	// anim property 16
+		float lineSpacing;		// anim property 17
+		ubyte pad2[0xc];
+		uint16 renderAlign0;
+		uint16 renderAlign1;
+		float shadowColor[4];
+		float mainColor[4];
+		break;
+	case STR:
+		uint32 pad0[2];
+		uint32 anchorH;
+		uint32 anchorV;
+		float letterSpacing;
+		uint32 pad1[2];
+		uint32 kerning;
+		uint32 pad2;
+		uint32 shadowMode;
+		uint32 mainMode;
+		uint32 pad3[2];
+		float shadowColor[4];
+		float mainColor[4];
+		int16 shadowField2;
+		int16 mainField2;
+		uint32 offsetX;
+		uint32 offsetY;
+		break;
+	case TXT:
+		char fontGuid[36];
+		uint32 pad0[3];
+		int16 posX0;
+		int16 posY0;
+		int16 posX1;
+		int16 posY1;
+		float scaleX;
+		float scaleY;
+		ubyte alignH;
+		ubyte alignV;
+		ubyte offsetAlignX;
+		ubyte offsetAlignY;
+		ubyte isEnabled;
+		ubyte pad1;
+		ubyte centerLines;
+		ubyte pad2;
+		uint32 renderFlagsPass1;
+		ubyte wrapMode;
+		ubyte pad3[3];
+		uint32 renderFlagsPass0;
+		ubyte wrapMode2;
+		ubyte pad4[2];
+		ubyte justify;
+		ubyte autoShrink;
+		break;
+	case MSK:
+		ubyte mode0;			// 1 = rect mask
+		ubyte mode1;
+		ubyte mode2;
+		ubyte pad;
+		ubyte anchorX[4];
+		ubyte anchorY[4];
+		float width;
+		float height;
+		break;
 	}
 };
 
-enum Data3PropertyIndex {
+// extension parameter slots; count = size of the cUIEx* data struct
+struct ExtensionSlots
+{
+	uint32 slots[1];
+};
+
+struct PropertyCurves(int count)
+{
+	PropertyCurveHeader headers[count];
+	local int i = 0;
+	for (i = 0; i < count; i++) {
+		struct {
+			FSeek(headers[i].keyframeOffset);
+			Keyframe keys[headers[i].keyCount];
+		} curves;
+	}
+};
+
+enum PropertyIndex {
 	Translation_X = 0,
 	Translation_Y = 1,
 	Translation_Z = 2,
@@ -242,51 +296,75 @@ enum Data3PropertyIndex {
 	Rotation_Z = 5,
 	Scale_X = 6,
 	Scale_Y = 7,
-	Scale_Z = 8
+	Color_R = 8,
+	Color_G = 9,
+	Color_B = 10,
+	Alpha = 11,
+	Color2_R = 12,
+	Color2_G = 13,
+	Color2_B = 14,
+	Color2_A = 15,
+	LetterSpacing = 16,		// MSG/STR only
+	LineSpacing = 17,		// MSG/STR only
+	TextSlot3 = 18			// MSG/STR only
 };
-// potentially animation data
-struct Data3Header
+// every property is sampled every frame against the layer's shared timeline;
+// outside the key range it clamps to the first/last key
+struct PropertyCurveHeader
 {
-	uint32 beginOffset;
-	uint32 size1;
-	Data3PropertyIndex propertyIndex;
+	uint32 keyframeOffset;
+	uint32 keyCount;
+	PropertyIndex propertyIndex;
 	float minValue;
-	float maxValue;
+	float scale;			// maxValue = minValue + scale * 65535
 	float startTime;
 	float endTime;
-	uint32 u_3;
+	uint32 wrapFlag;		// non-zero: wrap sampled time into [start, end]
 };
-struct Data3Entry
+struct Keyframe
 {
 	float time;
-	uint16 val;
-	uint16 u_0;
+	uint16 val;				// value = val * scale + minValue
+	uint16 null0;
 };
 
+// step-sampled texture swap keys (engine feature, unused in shipped files)
+struct TextureSwapKeys
+{
+	uint32 keysOffset;
+	uint32 keyCount;
+	float startTime;
+	float endTime;
+	uint32 wrapFlag;
+};
 
-// maybe stack order?
-struct Entry2
+struct LayerIdMapping
 {
 	uint32 layerId;
-	uint32 entry1_index;
+	uint32 layerIndex;
 };
 
-struct Entry3
+// animations: frame windows on the shared per-layer timeline; playing one
+// retargets the window of every referenced layer and unpauses it
+struct Animation
 {
-	uint32 entry2_index_maybe;
-	float f_0;
-	float f_1;
-	uint32 u_1[13];
+	uint32 animIndex;
+	float startFrame;
+	float endFrame;
+	uint32 reverse;			// 1 = ping-pong/loop
+	ubyte layerRefs[48];	// 1-based layer ids, 0xFF = empty
 };
 
 
-FSeek(header.offset1);
+FSeek(header.layerArrayOffset);
 struct {
-	Entry1 entries[header.size1]<bgcolor=color1, optimize=false>;
-} entries1;
+	LayerEntry layers[header.layerCount]<bgcolor=color1, optimize=false>;
+} layerEntries;
 
-FSeek(header.offset2);
-Entry2 entries2[header.size2]<bgcolor=color2>;
+FSeek(header.layerIdMapOffset);
+LayerIdMapping layerIdMap[header.layerIdMapCount]<bgcolor=color2>;
 
-FSeek(header.offset3);
-Entry3 entries3[header.size3]<bgcolor=color3>;
+if (header.animationOffset != 0) {
+	FSeek(header.animationOffset);
+	Animation animations[header.animationCount]<bgcolor=color3>;
+}
